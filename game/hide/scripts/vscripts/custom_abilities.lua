@@ -253,38 +253,37 @@ function build_tree( event )
 	end
 end
 
-function tower_teleport( event )
-	DebugPrint("PORTAL start")
+function TeleportTower( event )
 	local caster = event.caster
 	local ability = event.ability 
 	local point = ability:GetCursorPosition()
 	local visionRadius = event.Radius
 	local playerID = caster:GetPlayerOwnerID()
 	local unitPos = Vector(point.x, point.y, 0)
-	DebugPrint("PORTAL mid")
 	DebugPrint(unitPos)
-	local nameTeleport1 = caster:GetUnitName()
 	local nameTeleport2
 	local secondTeleport = nil
 	
 	local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
-		local unit_name = unit:GetUnitName()
-		if unit_name == "teleport_1" and playerID == caster:GetPlayerOwnerID() and nameTeleport1 ~= unit_name then
-			nameTeleport = "teleport_2"
-			secondTeleport2 = unit
+		unit_name = caster:GetUnitName()
+		DebugPrint("unit_name" .. unit_name)
+		DebugPrint("playerID" .. playerID)
+		DebugPrint("caster:GetPlayerOwnerID() " .. caster:GetPlayerOwnerID())
+		if string.match(unit_name,"attacker_teleport_1")  and playerID == caster:GetPlayerOwnerID() and caster ~= unit then
+			secondTeleport = unit
+			DebugPrint("secondTeleport " .. secondTeleport:GetUnitName())
 			break
-		elseif unit_name == "teleport_2" and playerID == caster:GetPlayerOwnerID() and nameTeleport1 ~= unit_name then
-			nameTeleport = "teleport_1"
-			secondTeleport2 = unit
-			break
-		end	
+		end
 	end
-	if secondTeleport2 ~= nil then
+	if secondTeleport ~= nil then
 		units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
     	for _, unit in pairs(units) do
-			CreatePortalParticle(unit)
-    		FindClearSpaceForUnit(unit, portalOut:GetOrigin(), true)
+			if unit ~= caster then
+				CreatePortalParticle(unit)
+    			FindClearSpaceForUnit(unit, secondTeleport:GetAbsOrigin(), true)
+				CreatePortalParticle(unit)
+			end
 		end
 	else
 		DebugPrint("no two teleport")

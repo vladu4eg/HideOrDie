@@ -6465,7 +6465,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"9"
+		"AbilityLayout"				"10"
 		"Ability1" 					"train_attacker_2"
 		"Ability2" 					"train_attacker_3"
 		"Ability3" 					"train_attacker_4"
@@ -6475,6 +6475,7 @@
 		"Ability7"					"train_attacker_11"
 		"Ability8"					"train_attacker_12"
 		"Ability9"					"train_attacker_13"
+		"Ability10"					"train_attacker_teleport_1"
 	    
 	    // General
 	    //-----------------------------
@@ -11967,6 +11968,220 @@
 		}
 	}
 	
+	"attacker_teleport_1"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/shadow_demon/shadow_demon.vmdl"
+		"precache"
+		{
+			"model"     "models/heroes/shadow_demon/shadow_demon.vmdl"
+		}
+		"ModelScale"                            "0.8"
+		"Level"                                 "1"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "10"
+		"MagicalResistance"                     "10"
+
+		
+		
+		// Attack
+		//----------------------------------------------------------------
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"1000"		// Damage range min.
+		"AttackDamageMax"			"10000"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"5.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Hero_ShadowDemon"
+	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"tower_teleport_datadriven"
+		"Ability2" 					""
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	
+
+		// Bounty
+		//----------------------------------------------------------------
+	    "BountyXP"          "500"                 // Experience earn.
+	    "BountyGoldMin"       "1"                   // Gold earned min.
+	    "BountyGoldMax"       "5000"                   // Gold earned max.	
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "10"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "10"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "8000"
+		"StatusHealthRegen"                     "5"
+		"StatusMana"                            "300"
+		"StatusManaRegen"                       "1"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"1400"
+		"VisionNighttimeRange"					"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+				"DisableClumpingBehavior"       "1"
+				"AttachWearables"
+				{
+		"Wearable1" {"ItemDef" "14371"}//armor("Crown of Calaphas Armor")
+		"Wearable2" {"ItemDef" "14370"}//back("Crown of Calaphas Back")
+		"Wearable3" {"ItemDef" "14369"}//belt("Crown of Calaphas Belt")
+		"Wearable4" {"ItemDef" "14368"}//tail("Crown of Calaphas Tail")
+				}
+		}
+
+	}
+	
+		"attacker_teleport_2"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/shadow_demon/shadow_demon.vmdl"
+		"precache"
+		{
+			"model"     "models/heroes/shadow_demon/shadow_demon.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "0"
+		"MagicalResistance"                     "0"
+
+		
+		
+		// Attack
+		//----------------------------------------------------------------
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"4000"		// Damage range min.
+		"AttackDamageMax"			"8000"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"5.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"		// Range within a target can be acquired.
+		"AttackRange"				"600"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_shadow_demon/shadow_demon_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Hero_ShadowDemon"
+	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_shadow_demon.vsndevts"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"tower_teleport_datadriven"
+		"Ability2" 					""
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+	
+
+		// Bounty
+		//----------------------------------------------------------------
+	    "BountyXP"          "500"                 // Experience earn.
+	    "BountyGoldMin"       "1"                   // Gold earned min.
+	    "BountyGoldMax"       "5000"                   // Gold earned max.	
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "25"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "5000"
+		"StatusHealthRegen"                     "1"
+		"StatusMana"                            "300"
+		"StatusManaRegen"                       "1"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"1400"
+		"VisionNighttimeRange"					"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+				"DisableClumpingBehavior"       "1"
+				"AttachWearables"
+				{
+						"1"             {       "ItemDef"               "318"          }
+						"2"             {       "ItemDef"               "319"          }
+						"3"             {       "ItemDef"               "320"          }
+						"4"             {       "ItemDef"               "321"          }
+				}
+		}
+
+	}
+	
 	"npc_line_boss_1"
 	{
 		"vscripts"				"ai/line_boss_1"
@@ -13985,9 +14200,7 @@
 		"VisionDaytimeRange"		"400"		// Range of vision during day light.
 		"VisionNighttimeRange"		"300"		// Range of vision at night time.
 	}
-		//=================================================================================
-	// Building: Lone druid
-	//=================================================================================	
+	
 	"teleport_1"
 	{
 	    // Visual
@@ -14030,14 +14243,15 @@
 	    "ArmorPhysical"             "0"
 		"StatusHealth"              "40"
 	    "StatusHealthRegen"         "0"
-	    "StatusMana"                "0"
-	    "StatusManaRegen"           "0"
+	    "StatusMana"                "200"
+	    "StatusManaRegen"           "1"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
 	    "BlockPathingSize"          "2"
 		"CollisionSize"				"64"
-		
+
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
@@ -14060,6 +14274,8 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Tower.Water"
+		
+		"FoodCost"                              "0"
 		
 	}
 	"teleport_2"
@@ -14112,6 +14328,7 @@
 	    "BlockPathingSize"          "2"
 		"CollisionSize"				"64"
 		
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"

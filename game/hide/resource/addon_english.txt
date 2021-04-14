@@ -149,6 +149,7 @@
 		"troll_hut_6"                                                                     "Infernal Hut 6"
 		"troll_hut_7"                                                                     "Infernal Hut 7"
 		
+		"attacker_teleport_1"															 "Teleport"
 		"teleport_1"                                                                     "Teleport 1"
 		"teleport_2"                                                                     "Teleport 2"
 		

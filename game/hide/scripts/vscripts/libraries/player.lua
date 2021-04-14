@@ -274,16 +274,10 @@ end
 
 
 function CDOTA_BaseNPC:IsElf()
-    return self:GetUnitName() == ELF_HERO[1] or self:GetUnitName() == ELF_HERO[2] or self:GetUnitName() == ELF_HERO[3]
+    return self:GetUnitName() == ELF_HERO
 end
 function CDOTA_BaseNPC:IsTroll()
-	if self:GetUnitName() == TROLL_HERO[1] then
-		return self:GetUnitName()
-	elseif self:GetUnitName() == TROLL_HERO[2] then
-		return self:GetUnitName()
-	elseif self:GetUnitName() == TROLL_HERO[3] then 
-		return self:GetUnitName()
-	end
+	return self:GetUnitName() == TROLL_HERO[1] or self:GetUnitName() == TROLL_HERO[2] or self:GetUnitName() == TROLL_HERO[3]
 end
 function CDOTA_BaseNPC:IsAngel()
     return self:GetUnitName() == ANGEL_HERO

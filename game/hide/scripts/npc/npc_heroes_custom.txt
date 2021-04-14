@@ -74,7 +74,7 @@
 		"Ability5"    	    "troll_teleport"
 		"Ability6"    	    "lina_light_strike_infernal_ult_datadriven"
 		"Ability7"    	    "attribute_bonuses"
-		"Ability8"    	    "reveal_area" 
+		"Ability8"    	    "reveal_area"
 		"Ability9"    	    ""
 		"Ability10"   	    ""
 		"Ability11"   	    ""

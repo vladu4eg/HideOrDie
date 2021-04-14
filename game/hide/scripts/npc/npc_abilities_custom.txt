@@ -5155,10 +5155,12 @@
 				"radius"			"300"
 			}
 		}
-		"OnSpellStart"{
-			"RunScript"{
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
 				"ScriptFile"			"custom_abilities.lua"
-				"Function"				"tower_teleport"
+				"Function"				"TeleportTower"
 				"TARGET"				"POINT"
 				"Radius"				"%radius"
 			}
@@ -8893,6 +8895,70 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"90"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		
+		}
+	}
+
+	"train_attacker_teleport_1"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"build_hero_treant"
+		"MaxLevel"					"1"
+		"UnitName"					"attacker_teleport_1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"999999"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"256000"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"10"
 			}	
 			"04"
 			{
