@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+  "TeamCount" "2"
+  "maps"      "seasons"
+  "IsPlayable"  "1"
+  "seasons"
+  {
+    "MaxPlayers"                    "14"
+  }
+}

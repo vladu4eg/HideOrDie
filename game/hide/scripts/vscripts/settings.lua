@@ -1,0 +1,188 @@
+MAXIMUM_ATTACK_SPEED = 600
+MINIMUM_ATTACK_SPEED = 20
+
+TROLL_HERO = {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} -- {"npc_dota_hero_troll_warlord", "npc_dota_hero_pugna","npc_dota_hero_pudge"}
+ELF_HERO = "npc_dota_hero_treant"
+ANGEL_HERO = "npc_dota_hero_crystal_maiden"
+WOLF_HERO = "npc_dota_hero_lycan"
+BEAR_HERO = "npc_dota_hero_bear"
+
+TEAM_CHOICE_TIME = 30
+WOLF_START_SPAWN_TIME = 300 -- When the players will be able to choose wolf instead of auto chosen to angels. In seconds.
+TROLL_SPAWN_TIME = 30
+PRE_GAME_TIME = 40
+
+TROLL_RESPAWN_TIME = 10
+ANGEL_RESPAWN_TIME = 10
+WOLF_RESPAWN_TIME = 15
+WOLF_STARTING_RESOURCES_FRACTION = 0.20 -- What percentage of troll's networth wolves should start with
+
+ELF_STARTING_GOLD = 50
+ELF_STARTING_LUMBER = 100
+TROLL_STARTING_GOLD = 20
+TROLL_STARTING_LUMBER = 20
+TROLL_STARTING_GOLD_X4 = 350
+STARTING_LUMBER_PRICE = 150
+MINIMUM_LUMBER_PRICE = 10
+STARTING_MAX_FOOD = 20
+STARTING_MAX_WISP = 10
+
+BUFF_ENIGMA_TIME = 2100
+BUFF_XP1 = 2100
+BUFF_XP2 = 2400
+BUFF_XP3 = 2520
+END_GAME_TIME = 2700
+
+
+MIN_RATING_PLAYER = 12
+PERC_KICK_PLAYER = 0.80
+MIN_PLAYER_KICK = 8
+
+EVENT_START = false
+
+PLAYER_COLORS = {
+    {0, 102, 255}, -- синий
+    {0, 255, 255}, -- голубой
+    {153, 0, 204}, -- фиолетовый
+    {225, 0, 255},  -- фиолетовый
+    {255, 255, 0},
+    {255, 153, 51},
+    {51, 204, 51},
+    {0, 105, 0},
+    {128, 0, 0},
+    {176, 0, 0},
+    {60,20, 74},
+	{139, 69, 19},
+    {0, 0, 255},
+	{0, 0, 128},
+    {0, 0, 0}
+}
+
+  XP_PER_LEVEL_TABLE = {
+ 0,
+ 50,
+ 500,
+ 900,
+ 1400,
+ 2000,
+ 2700,
+ 3500,
+ 4400,
+ 5400,
+ 6500,
+ 7700,
+ 9000,
+ 10400,
+ 11900,
+ 13500,
+ 15200,
+ 17000,
+ 18900,
+ 20900,
+ 23000,
+ 25200,
+27500,
+29900,
+ 32400,
+ 33000,
+35500,
+38000,
+40500,
+43000,
+45500,
+48000,
+50500,
+53000,
+55500,
+58000,
+60500,
+63000,
+65500,
+68000,
+70500,
+73000,
+75500,
+78000,
+80500,
+83000,
+85500,
+88000,
+90500,
+93000,
+95500,
+98000,
+100500,
+103000,
+105500,
+108000,
+110500,
+113000,
+115500,
+118000,
+120500,
+123000,
+125500,
+128000,
+130500,
+133000,
+135500,
+138000,
+140500,
+143000,
+145500,
+148000,
+150500,
+153000,
+155500,
+158000,
+160500,
+163000,
+165500,
+168000,
+170500,
+173000,
+175500,
+178000,
+180500,
+183000,
+185500,
+188000,
+190500,
+193000,
+195500,
+198000,
+200500,
+203000,
+205500,
+208000,
+210500,
+213000,
+215500,
+218000,
+220500,
+223000,
+225500,
+228000,
+230500,
+233000,
+235500,
+238000,
+240500,
+243000,
+245500,
+248000,
+250500,
+253000,
+255500,
+258000,
+260500,
+263000,
+265500,
+268000,
+270500,
+273000,
+275500,
+278000,
+280500
+ 
+  }
