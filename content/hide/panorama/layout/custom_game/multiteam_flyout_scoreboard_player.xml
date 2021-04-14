@@ -1,0 +1,176 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/dotastyles.css"/>
+        <include
+                src="file://{resources}/styles/custom_game/shared_scoreboard_styles.css"/>
+        <include
+                src="file://{resources}/styles/custom_game/multiteam_flyout_scoreboard.css"/>
+    </styles>
+    <script>
+        const ui = GameUI.CustomUIConfig();
+        function ToggleMute() {
+            const playerId = $.GetContextPanel().GetAttributeInt('player_id', -1);
+            if (playerId !== -1) {
+                const newIsMuted = !Game.IsPlayerMuted(playerId);
+                Game.SetPlayerMuted(playerId, newIsMuted);
+                $.GetContextPanel().SetHasClass('player_muted', newIsMuted);
+            }
+        }
+
+        function OnGiveResourcesButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            const gold = Number(playerPanel.FindChildInLayoutFile('GoldEntry').text) || 0;
+            const lumber =
+                Number(playerPanel.FindChildInLayoutFile('LumberEntry').text) || 0;
+            playerPanel.FindChildInLayoutFile('GoldEntry').text = '';
+            playerPanel.FindChildInLayoutFile('LumberEntry').text = '';
+            GameEvents.SendCustomGameEventToServer('give_resources', {
+                gold,
+                lumber,
+                target,
+                casterID,
+            });
+        }
+
+        function OnVoteKickButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            GameEvents.SendCustomGameEventToServer('votekick_start', {
+                target,
+                casterID,
+            });
+        }
+
+        function OnVoteFlagButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            GameEvents.SendCustomGameEventToServer('flag_start', {
+                target,
+                casterID,
+            });
+            $.Msg('Flag: ');
+        }
+        function OnGiveAllResourcesButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            const gold = ui.playerGold[casterID];
+            const lumber = ui.playerLumber[casterID];
+            playerPanel.FindChildInLayoutFile('GoldEntry').text = '';
+            playerPanel.FindChildInLayoutFile('LumberEntry').text = '';
+            GameEvents.SendCustomGameEventToServer('give_resources', {
+                gold,
+                lumber,
+                target,
+                casterID,
+            });
+        }
+
+        function OnGiveAllGoldButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            const gold = ui.playerGold[casterID];
+            playerPanel.FindChildInLayoutFile('GoldEntry').text = '';
+            playerPanel.FindChildInLayoutFile('LumberEntry').text = '';
+            GameEvents.SendCustomGameEventToServer('give_resources', {
+                gold,
+                lumber: 0,
+                target,
+                casterID,
+            });
+        }
+        function OnGiveAllLumberButton() {
+            const playerPanel = $.GetContextPanel();
+            const casterID = Players.GetLocalPlayer();
+            const target = playerPanel.pID;
+            const lumber = ui.playerLumber[casterID];
+            playerPanel.FindChildInLayoutFile('GoldEntry').text = '';
+            playerPanel.FindChildInLayoutFile('LumberEntry').text = '';
+            GameEvents.SendCustomGameEventToServer('give_resources', {
+                gold: 0,
+                lumber,
+                target,
+                casterID,
+            });
+        }
+        (function () {
+        const playerId = $.GetContextPanel().GetAttributeInt('player_id', -1);
+        $.GetContextPanel().SetHasClass('player_muted', Game.IsPlayerMuted(playerId));
+        })();
+
+        function showHero() {
+            const localPlayer = Game.GetLocalPlayerInfo();
+            const playerPanel = $.GetContextPanel();
+            const target = playerPanel.pID;
+            const localPlayerTeamId = localPlayer ? localPlayer.player_team_id : -1;
+            if ( localPlayer.player_team_id === localPlayerTeamId ) {
+                const targetHeroEntityId = Players.GetPlayerHeroEntityIndex(target);
+                GameUI.MoveCameraToEntity(targetHeroEntityId);
+            }
+        }
+    </script>
+    <Panel class="PlayerRow">
+        <Panel id="PlayerRowContainer">
+            <Panel onactivate="showHero()" id="Hero" class="ScoreCol_Hero ScoreboardPanel">
+                <Image id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect"/>
+                <Panel id="PlayerColor"></Panel>
+            </Panel>
+            <Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
+                <Panel id="PlayerAndHeroName">
+                    <Label id="PlayerName" text="AAAAA"/>
+                    <Label id="HeroNameAndDescription"
+                           text="#custom_scoreboard_hero_name_and_desc"/>
+                </Panel>
+                <Panel id="ResourcesAmount">
+                    <Label id="PlayerGoldAmount" text="999"/>
+                    <Label id="PlayerLumberAmount" text="745"/>
+                </Panel>
+                <Button id="MuteButton" onactivate="ToggleMute();"/>
+            </Panel>
+            <Panel id="TeamScoreSpace" class="ScoreCol_TeamScore"/>
+            <Panel id="KillsContainer" class="ScoreCol_Kills ScoreboardPanel">
+                <Label id="Kills" text="999"/>
+            </Panel>
+            <Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
+                <Label id="Deaths" text="999"/>
+            </Panel>
+            <Panel id="ElfScoreContainer"
+                   class="ScoreCol_ElfScore ScoreboardPanel">
+                <Label id="ElfScore" text="no"/>
+            </Panel>
+            <Panel id="TrollScoreContainer"
+                   class="ScoreCol_TrollScore ScoreboardPanel">
+                <Label id="TrollScore" text="no"/>
+            </Panel>
+            <Panel id="GiveResourcesTable" class="ScoreboardPanel">
+                <TextEntry id="GoldEntry" maxchars="7" placeholder="Gold.."/>
+                <TextEntry id="LumberEntry" maxchars="7" placeholder="Lumber.."/>
+                <Button class="flyout-button"  id="GiveResourcesButton" onactivate="OnGiveResourcesButton()">
+                    <Label id="Give1" text="Give!" />
+                </Button>
+                <Button class="flyout-button" id="GiveAllLumberButton" onactivate="OnGiveAllLumberButton()">
+                    <Image class="lumber" src="file://{images}/custom_game/lumber_icon.png" />
+                </Button>
+                <Button class="flyout-button" id="GiveAllGoldButton" onactivate="OnGiveAllGoldButton()">
+                    <Image class="gold" src="s2r://panorama/images/hud/icon_gold.psd" />
+                </Button>
+                <Button class="flyout-button" id="GiveAllResourcesButton" onactivate="OnGiveAllResourcesButton()">
+                    <Label id="GiveAll1" text="Give All!" />
+                </Button>
+                <Button class="flyout-button" id="VotekickButton" onactivate="OnVoteKickButton()"> 
+                    <Label text="Kick"/>
+                </Button>
+                
+                <Button class="flyout-button" id="FlagButton" onactivate="OnVoteFlagButton()"> 
+                    <Label id="Flag" text="Flag"/>
+                </Button>
+           
+			</Panel>
+        </Panel>
+    </Panel>
+</root>

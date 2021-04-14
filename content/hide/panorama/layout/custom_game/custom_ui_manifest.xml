@@ -1,0 +1,34 @@
+
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/setup.js" />
+		<include src="file://{resources}/scripts/custom_game/physical_resistance.js" />
+		<include src="file://{resources}/scripts/playertables/playertables_base.js" />
+	</scripts>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/setup.css" />
+	</styles>
+
+  <Panel>
+    <!-- CustomUIElements go here.-->
+    <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" /> 
+    <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/building_helper.xml" />
+    <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/selection.xml" /> 
+    <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_help_side.xml" /> 
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_kick_side.xml" /> 
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_flag_side.xml" /> 
+    <CustomUIElement type="GameSetup"			layoutfile="file://{resources}/layout/custom_game/vote_hud.xml" />
+    <!--<CustomUIElement type="GameInfo"			layoutfile="file://{resources}/layout/custom_game/game_info.xml" /> -->
+    <CustomUIElement type="FlyoutScoreboard"    layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml" />
+    <CustomUIElement type="EndScreen"           layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/discord.xml" />
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/patreon.xml" />
+	<!--<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/donate.xml" /> -->
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/tops.xml" />  
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/event.xml" />  
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/particles.xml" />
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/pets.xml" />  
+	<!--<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_worldpanels.xml" /> -->
+  </Panel>
+
+</root>
