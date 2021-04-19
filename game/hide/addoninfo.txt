@@ -1,9 +1,13 @@
 "AddonInfo"
 {
   "TeamCount" "2"
-  "maps"      "seasons"
+  "maps"      "seasons spring9"
   "IsPlayable"  "1"
   "seasons"
+  {
+    "MaxPlayers"                    "14"
+  }
+  "spring9"
   {
     "MaxPlayers"                    "14"
   }

@@ -266,7 +266,7 @@ function TeleportTower( event )
 	
 	local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
-		unit_name = caster:GetUnitName()
+		unit_name = unit:GetUnitName()
 		DebugPrint("unit_name" .. unit_name)
 		DebugPrint("playerID" .. playerID)
 		DebugPrint("caster:GetPlayerOwnerID() " .. caster:GetPlayerOwnerID())
@@ -279,7 +279,7 @@ function TeleportTower( event )
 	if secondTeleport ~= nil then
 		units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
     	for _, unit in pairs(units) do
-			if unit ~= caster then
+			if unit ~= caster  then
 				CreatePortalParticle(unit)
     			FindClearSpaceForUnit(unit, secondTeleport:GetAbsOrigin(), true)
 				CreatePortalParticle(unit)

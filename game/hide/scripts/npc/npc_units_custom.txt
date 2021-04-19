@@ -2052,20 +2052,6 @@
 		"Requirements"{
 		
 		}
-		"Upgrades"
-	    {
-	        "Count"     "2"
-			"1"{
-				"unit_name"			"teleport_1"
-				"gold_cost"			"999999"
-				"lumber_cost"		"128000"
-			}
-			"2"{
-				"unit_name"			"teleport_2"
-				"gold_cost"			"999999"
-				"lumber_cost"		"128000"
-			}
-		}	
 		"Creature"
 	    {
 	        "AttachWearables" // Dark wood set
@@ -6215,7 +6201,7 @@
 		"Ability1" 					"train_wisp_1"
 		"Ability2" 					"train_wisp_2"
 		"Ability3" 					"train_wisp_3"
-		"Ability4" 					"train_wisp_4"
+		"Ability4" 					""
 		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
@@ -8889,8 +8875,8 @@
 		"Ability2"					"commit_suicide"
 		"Ability3"					""
 		"Ability4"					""
-		"LumberInterval"			"8"
-		"LumberAmount"				"5"
+		"LumberInterval"			"1"
+		"LumberAmount"				"16"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -8961,8 +8947,8 @@
 		"Ability2"								"commit_suicide"
 		"Ability3"								""
 		"Ability4"								""
-		"LumberInterval"						"4"
-		"LumberAmount"							"5"
+		"LumberInterval"						"1"
+		"LumberAmount"							"40"
 
 
 		// Bounty
@@ -9035,8 +9021,8 @@
 		"Ability2"								"commit_suicide"
 		"Ability3"								""
 		"Ability4"								""
-		"LumberAmount"							"5"
-		"LumberInterval"						"2"
+		"LumberAmount"							"100"
+		"LumberInterval"						"1"
 
 
 		// Bounty
@@ -12038,7 +12024,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"                         "10"
+		"MovementSpeed"                         "5"
 		"MovementTurnRate"                      "0.6"
 
 		// Status
@@ -12145,7 +12131,7 @@
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"                         "25"
+		"MovementSpeed"                         "5"
 		"MovementTurnRate"                      "0.6"
 
 		// Status

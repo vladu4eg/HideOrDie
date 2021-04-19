@@ -45,6 +45,44 @@
 		}
 	}
 	
+			//Start of file attribute_bonus.txt
+	"attribute_antibonuses"
+	 {
+	  // General
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	  "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	  "BaseClass"	"ability_datadriven" 
+	
+	  "MaxLevel"               "1"
+	  
+	  // Special
+	  //-------------------------------------------------------------------------------------------------------------
+	  "AbilitySpecial"
+	  {
+	   "01"
+	   {
+	    "var_type"      "FIELD_FLOAT"
+	    "attribute_bonus_per_level"  "-14"
+	   }
+	  }
+		"Modifiers"
+		{
+			"modifier_attribute_bonuses"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%attribute_bonus_per_level"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"		"%attribute_bonus_per_level"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%attribute_bonus_per_level"
+				}
+			}
+		}
+	 }
+	
 	"deniable"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -5120,6 +5158,7 @@
 		"AbilityCooldown"				"15"
 		"MaxLevel"						"1"
 		"AOERadius"						"%radius"
+		"AbilityCastRange"				"800"
 		"AbilityManaCost"				"90"
 		"AbilitySpecial"
 		{
@@ -5142,11 +5181,11 @@
 	"tower_teleport_datadriven"{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
-		"AbilityTextureName"			"build_tree"
+		"AbilityTextureName"			"tower_teleport"
 		"AbilityCooldown"				"30"
 		"MaxLevel"						"1"
 		"AOERadius"						"%radius"
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"400"
 		"AbilitySpecial"
 		{
 			"01"
@@ -5826,7 +5865,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"512"
+				"gold_cost"			"128000"
 			}	
 			"02"
 			{
@@ -5889,7 +5928,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"1024"
+				"gold_cost"			"512000"
 			}	
 			"02"
 			{
@@ -5951,7 +5990,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"2048"
+				"gold_cost"			"999999"
 			}	
 			"02"
 			{
@@ -8939,7 +8978,7 @@
 	"train_attacker_teleport_1"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"build_hero_treant"
+		"AbilityTextureName"		"train_attacker_teleport_1"
 		"MaxLevel"					"1"
 		"UnitName"					"attacker_teleport_1"
 		

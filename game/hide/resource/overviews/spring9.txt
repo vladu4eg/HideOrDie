@@ -1,0 +1,8 @@
+spring9
+{
+	material materials/overviews/spring9.vmat
+	pos_x -16706
+	pos_y 17318
+	scale 33.517
+}
+
