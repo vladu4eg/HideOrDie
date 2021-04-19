@@ -12671,5 +12671,218 @@
 		}
 	}
 	
+	"gather_lumber_worker"
+	{
+	  "BaseClass"                 "ability_datadriven"
+	  "AbilityTextureName"      "treant_living_armor"
+	  "MaxLevel"            "1"
+	
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
+	  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_BUILDING"
+	
+	  "AbilityMultiOrder" "1"
+	
+	  "AbilityCastPoint"        "0.1"
+	
+	  "OnAbilityPhaseStart"
+	  {
+	    "RunScript"
+	    {
+	      "ScriptFile"  "ai/peasant.lua"
+	      "Function"    "Gather"
+	    }
+	    "ApplyModifier"
+	    {
+	      "Target"      "CASTER"
+	      "ModifierName"    "modifier_ability_gather_lumber_no_col"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_ability_gather_lumber_no_col"
+	    {
+	      "Passive"         "1"
+	      "IsHidden"          "1"
+	      "IsBuff"          "1"
+	      "IsDebuff"          "0"
+	      
+	      "States"
+	      {
+	        "MODIFIER_STATE_NO_UNIT_COLLISION"    "MODIFIER_STATE_VALUE_ENABLED"
+	      }
+	    }
+	
+	    "modifier_gathering_lumber"
+	    {
+	      "IsHidden"        "1"
+	        
+	      "ThinkInterval"  "0.03"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "CheckTreePosition"
+	        }
+	      }
+	
+	      "OnOrder"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "ToggleOffGather"
+	          "arg" "modifier_gathering_lumber"
+	        }
+	      }
+	      
+	    }
+	
+	    "modifier_chopping_wood"
+	    {
+	      "IsHidden"        "1"
+	
+	      "OnOrder"
+	      { 
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "ToggleOffGather"
+	          "arg" "modifier_chopping_wood"
+	        }
+	      }
+	
+	      "OnCreated"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "PlayAttackAnimation"
+	        }
+	      }
+	
+	      "OnDestroy"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "StopAnimation"
+	        }
+	      }
+	
+	      "ThinkInterval"  "1.0"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "PlayAttackAnimation"
+	        }
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "GatherLumber"
+	        }
+	      }   
+	    }
+	  }
+	}
+	
+	"attack_tree"
+	{
+	  "BaseClass"                 "ability_datadriven"
+	  "AbilityTextureName"      "treant_living_armor"
+	  "MaxLevel"            "1"
+	
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
+	  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_BUILDING"
+	  
+	  "AbilityCooldown"			"3"
+	  "AbilityMultiOrder" "1"
+	
+	  "AbilityCastPoint"        "0.1"
+	
+	  "OnAbilityPhaseStart"
+	  {
+	    "RunScript"
+	    {
+	      "ScriptFile"  "ai/attack_tree.lua"
+	      "Function"    "Gather"
+	    }
+	    "ApplyModifier"
+	    {
+	      "Target"      "CASTER"
+	      "ModifierName"    "modifier_ability_gather_lumber_no_col"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_ability_gather_lumber_no_col"
+	    {
+	      "Passive"         "1"
+	      "IsHidden"          "1"
+	      "IsBuff"          "1"
+	      "IsDebuff"          "0"
+	    }
+	
+	    "modifier_gathering_lumber"
+	    {
+	      "IsHidden"        "1"
+	        
+	      "ThinkInterval"  "0.03"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/attack_tree.lua"
+	          "Function"    "CheckTreePosition"
+	        }
+	      }
+	      
+	    }
+	
+	    "modifier_chopping_wood"
+	    {
+	      "IsHidden"        "1"
+	
+	      "OnCreated"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/attack_tree.lua"
+	          "Function"    "PlayAttackAnimation"
+	        }
+	      }
+	
+	      "OnDestroy"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/attack_tree.lua"
+	          "Function"    "StopAnimation"
+	        }
+	      }
+	
+	      "ThinkInterval"  "1.0"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/attack_tree.lua"
+	          "Function"    "PlayAttackAnimation"
+	        }
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/attack_tree.lua"
+	          "Function"    "GatherLumber"
+	        }
+	      }   
+	    }
+	  }
+	}
 	
 }

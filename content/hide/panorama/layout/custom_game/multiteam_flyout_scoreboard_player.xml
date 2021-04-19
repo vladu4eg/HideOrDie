@@ -162,13 +162,6 @@
                 <Button class="flyout-button" id="GiveAllResourcesButton" onactivate="OnGiveAllResourcesButton()">
                     <Label id="GiveAll1" text="Give All!" />
                 </Button>
-                <Button class="flyout-button" id="VotekickButton" onactivate="OnVoteKickButton()"> 
-                    <Label text="Kick"/>
-                </Button>
-                
-                <Button class="flyout-button" id="FlagButton" onactivate="OnVoteFlagButton()"> 
-                    <Label id="Flag" text="Flag"/>
-                </Button>
            
 			</Panel>
         </Panel>

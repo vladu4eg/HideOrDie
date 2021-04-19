@@ -14327,4 +14327,57 @@
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
+	
+	"npc_petri_peasant"
+	{
+	  "BaseClass"     "npc_dota_creature"
+	  "Model"      "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl"
+	  "ModelScale"    "0.8"
+	  "Level"      "1"
+	  "HealthBarOffset"    "140"
+	
+	  "vscripts"     "ai/peasant.lua"
+	
+	  "AbilityLayout"    "6"
+	  "Ability1"     "gather_lumber_worker"
+	  "Ability2"     ""
+	  "Ability3"     ""
+	  "Ability4"     ""
+	  "Ability5"     ""
+	
+	  "ArmorPhysical"    "0"
+	  "MagicalResistance"   "0"
+	
+	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
+	
+	  "BountyGoldMin"    "6.0"
+	  "BountyGoldMax"    "14.0"
+	
+	  "BoundsHullName"   "DOTA_HULL_SIZE_SMALL"
+	  "RingRadius"    "40"
+	  "CollisionSize"    "16"
+	  "FormationRank"    "4"
+	
+	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
+	  "MovementSpeed"    "522"
+	  "MovementTurnRate"   "0.6"
+	
+	  "StatusHealth"    "10"
+	  "StatusHealthRegen"   "0.20"
+	  "StatusMana"    "5"
+	  "StatusManaRegen"    "0"
+	
+	  "VisionDaytimeRange"  "800"
+	  "VisionNighttimeRange"  "600"
+	
+	  "TeamName"     "DOTA_TEAM_GOODGUYS"
+	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	  "Creature"
+	  {
+	    "DisableClumpingBehavior"  "1"
+	  }
+	}
 }

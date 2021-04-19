@@ -18,8 +18,8 @@
 			<Label class="LegendPanel ScoreCol_TeamScore" text="#custom_end_screen_legend_team_score" />
 			<Label class="LegendPanel ScoreCol_Kills" text="#custom_end_screen_legend_kills" />
 			<Label class="LegendPanel ScoreCol_Deaths" text="#custom_end_screen_legend_deaths" />
-			<Label class="LegendPanel ScoreCol_ElfScore" text="Elf" />
-			<Label class="LegendPanel ScoreCol_TrollScore" text="Troll" />
+			<Label class="LegendPanel ScoreCol_ElfScore" text="Treant" />
+			<Label class="LegendPanel ScoreCol_TrollScore" text="Ifernal" />
 		</Panel>
 		<Panel id="TeamsContainer" />
   </Panel>
