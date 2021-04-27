@@ -6198,9 +6198,9 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"10"
-		"Ability1" 					"train_wisp_1"
-		"Ability2" 					"train_wisp_2"
-		"Ability3" 					"train_wisp_3"
+		"Ability1" 					"train_wood_worker_1"
+		"Ability2" 					"train_wood_worker_2"
+		"Ability3" 					"train_wood_worker_3"
 		"Ability4" 					""
 		"Ability5"					""
 		"Ability6" 					""
@@ -9568,8 +9568,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9631,8 +9631,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9694,8 +9694,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9757,8 +9757,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9774,7 +9774,7 @@
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
 	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
-	    "ModelScale"                "2.5"
+	    "ModelScale"                "3"
 	    "ModelRotation"             "0"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
@@ -9819,8 +9819,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9836,7 +9836,7 @@
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
 	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
-	    "ModelScale"                "2.5"
+	    "ModelScale"                "3"
 	    "ModelRotation"             "0"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
@@ -9882,8 +9882,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9899,7 +9899,7 @@
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
 	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
-	    "ModelScale"                "2.5"
+	    "ModelScale"                "3"
 	    "ModelRotation"             "0"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
@@ -9944,8 +9944,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -9961,7 +9961,7 @@
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
 	    "Model"                     "models/props_gameplay/gold_bag.vmdl"
-	    "ModelScale"                "2.5"
+	    "ModelScale"                "3"
 	    "ModelRotation"             "0"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
@@ -10006,8 +10006,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "50"
-	    "VisionNighttimeRange"        "25"
+	    "VisionDaytimeRange"        "1"
+	    "VisionNighttimeRange"        "1"
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -14328,7 +14328,7 @@
 	    "MovementSpeed"             "0"
 	}
 	
-	"npc_petri_peasant"
+	"wood_worker_1"
 	{
 	  "BaseClass"     "npc_dota_creature"
 	  "Model"      "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee.vmdl"
@@ -14340,7 +14340,7 @@
 	
 	  "AbilityLayout"    "6"
 	  "Ability1"     "gather_lumber_worker"
-	  "Ability2"     ""
+	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
 	  "Ability5"     ""
@@ -14359,11 +14359,113 @@
 	  "FormationRank"    "4"
 	
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
-	  "MovementSpeed"    "522"
+	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
 	
 	  "StatusHealth"    "10"
 	  "StatusHealthRegen"   "0.20"
+	  "StatusMana"    "5"
+	  "StatusManaRegen"    "0"
+	
+	  "VisionDaytimeRange"  "800"
+	  "VisionNighttimeRange"  "600"
+	
+	  "TeamName"     "DOTA_TEAM_GOODGUYS"
+	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	  "Creature"
+	  {
+	    "DisableClumpingBehavior"  "1"
+	  }
+	}
+	"wood_worker_2"
+	{
+	  "BaseClass"     "npc_dota_creature"
+	  "Model"      "models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged_mega.vmdl"
+	  "ModelScale"    "0.8"
+	  "Level"      "1"
+	  "HealthBarOffset"    "140"
+	
+	  "vscripts"     "ai/peasant.lua"
+	
+	  "AbilityLayout"    "6"
+	  "Ability1"     "gather_lumber_worker"
+	  "Ability2"     "return_resources"
+	  "Ability3"     ""
+	  "Ability4"     ""
+	  "Ability5"     ""
+	
+	  "ArmorPhysical"    "0"
+	  "MagicalResistance"   "0"
+	
+	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
+	
+	  "BountyGoldMin"    "6.0"
+	  "BountyGoldMax"    "14.0"
+	
+	  "BoundsHullName"   "DOTA_HULL_SIZE_SMALL"
+	  "RingRadius"    "40"
+	  "CollisionSize"    "16"
+	  "FormationRank"    "4"
+	
+	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
+	  "MovementSpeed"    "100"
+	  "MovementTurnRate"   "0.6"
+	
+	  "StatusHealth"    "10"
+	  "StatusHealthRegen"   "0.20"
+	  "StatusMana"    "5"
+	  "StatusManaRegen"    "0"
+	
+	  "VisionDaytimeRange"  "800"
+	  "VisionNighttimeRange"  "600"
+	
+	  "TeamName"     "DOTA_TEAM_GOODGUYS"
+	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	  "Creature"
+	  {
+	    "DisableClumpingBehavior"  "1"
+	  }
+	}
+	"wood_worker_3"
+	{
+	  "BaseClass"     "npc_dota_creature"
+	  "Model"      "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee_mega.vmdl"
+	  "ModelScale"    "0.8"
+	  "Level"      "1"
+	  "HealthBarOffset"    "140"
+	
+	  "vscripts"     "ai/peasant.lua"
+	
+	  "AbilityLayout"    "5"
+	  "Ability1"     "gather_lumber_worker"
+	  "Ability2"     "return_resources"
+	  "Ability3"     ""
+	  "Ability4"     ""
+	  "Ability5"     ""
+	
+	  "ArmorPhysical"    "0"
+	  "MagicalResistance"   "0"
+	
+	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
+	
+	  "BountyGoldMin"    "11.0"
+	  "BountyGoldMax"    "31.0"
+	
+	  "BoundsHullName"   "DOTA_HULL_SIZE_REGULAR"
+	  "RingRadius"    "40"
+	
+	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
+	  "MovementSpeed"    "100"
+	  "MovementTurnRate"   "0.6"
+	
+	  "StatusHealth"    "6"
+	  "StatusHealthRegen"   "0.25"
 	  "StatusMana"    "5"
 	  "StatusManaRegen"    "0"
 	

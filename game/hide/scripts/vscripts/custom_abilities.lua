@@ -194,7 +194,7 @@ function shrapnel_fire( keys )
 		local damage_delay = ability:GetLevelSpecialValueFor( "damage_delay", ( ability:GetLevel() - 1 ) ) + 0.1
 		local next_charge = 0
 		if caster:HasModifier("modifier_troll_warlord_presence") then
-			charge_replenish_time = 30
+			charge_replenish_time = 20
 		end
 		next_charge = caster.shrapnel_charges - 1
 		if caster.shrapnel_charges == maximum_charges then
@@ -263,6 +263,7 @@ function TeleportTower( event )
 	DebugPrint(unitPos)
 	local nameTeleport2
 	local secondTeleport = nil
+	local helpTeleport = nil
 	
 	local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
@@ -270,10 +271,13 @@ function TeleportTower( event )
 		DebugPrint("unit_name" .. unit_name)
 		DebugPrint("playerID" .. playerID)
 		DebugPrint("caster:GetPlayerOwnerID() " .. caster:GetPlayerOwnerID())
-		if string.match(unit_name,"attacker_teleport_1")  and playerID == caster:GetPlayerOwnerID() and caster ~= unit then
+		if string.match(unit_name,"attacker_teleport_1")  and playerID == unit:GetPlayerOwnerID() and caster ~= unit then
 			secondTeleport = unit
+			helpTeleport = nil
 			DebugPrint("secondTeleport " .. secondTeleport:GetUnitName())
 			break
+		elseif string.match(unit_name,"attacker_teleport_1")  and playerID ~= unit:GetPlayerOwnerID() and caster ~= unit then 
+			helpTeleport = unit
 		end
 	end
 	if secondTeleport ~= nil then
@@ -284,7 +288,16 @@ function TeleportTower( event )
     			FindClearSpaceForUnit(unit, secondTeleport:GetAbsOrigin(), true)
 				CreatePortalParticle(unit)
 			end
-		end
+		end	
+	elseif helpTeleport ~= nil then
+		units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
+    	for _, unit in pairs(units) do
+			if unit ~= caster  then
+				CreatePortalParticle(unit)
+    			FindClearSpaceForUnit(unit, helpTeleport:GetAbsOrigin(), true)
+				CreatePortalParticle(unit)
+			end
+		end	
 	else
 		DebugPrint("no two teleport")
 	end
@@ -954,7 +967,6 @@ function ItemBlink(keys)
 	
 	keys.caster:SetAbsOrigin(target_point)
 	FindClearSpaceForUnit_IgnoreNeverMove(keys.caster, target_point, true)
-	
 	ParticleManager:CreateParticle("particles/items_fx/blink_dagger_end.vpcf", PATTACH_ABSORIGIN, keys.caster)
 end
 

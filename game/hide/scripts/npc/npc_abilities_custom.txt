@@ -635,7 +635,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 	"AbilityTextureName"			"antimage_blink"
 	"MaxLevel"						"3"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -657,27 +657,51 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityManaCost"				"120 80 60"
 	
-		// Special  
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+	// Special	
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
 		{
-			"01"
-			{
-				"var_type"                      "FIELD_INTEGER"
-				"max_blink_range"               "300 400 500"
-			}
+			"var_type"				"FIELD_INTEGER"
+			"blink_range"			"925 1000 1075 1150"
 		}
 		
-		"OnSpellStart"
+		"02"
 		{
-			"RunScript"
-			{
-				"ScriptFile"            "custom_abilities.lua"
-				"Function"              "ItemBlink"
-				"Target"                "POINT"
-				"MaxBlinkRange"         "%max_blink_range"
-			}
+			"var_type"				"FIELD_INTEGER"
+			"min_blink_range"		"200"
 		}
+	}
+
+	"OnSpellStart"
+	{
+		"RunScript"
+		{
+			"ScriptFile"	"scripts/vscripts/heroes/hero_antimage/blink.lua"
+			"Function"		"Blink"
+			"Target"		"POINT"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Antimage.Blink_out"
+			"Target"		"CASTER"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Antimage.Blink_in"
+			"Target"		"CASTER"
+		}
+
+		"AttachEffect"
+		{
+			"EffectName"	"particles/units/heroes/hero_antimage/antimage_blink_end.vpcf"
+			"Target"		"CASTER"
+			"EffectAttachType"	"follow_origin"
+		}
+	}
 	}
 
 "searing_arrows_datadriven"
@@ -5091,7 +5115,7 @@
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityTextureName"			"keeper_of_the_light_blinding_light"
-		"AbilityCooldown"				"80"
+		"AbilityCooldown"				"20"
 		"MaxLevel"						"1"
 		"AbilitySpecial"
 		{
@@ -5113,7 +5137,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"charge_replenish_time"	"80.0"
+				"charge_replenish_time"	"20.0"
 			}
 			"05"
 			{
@@ -5213,7 +5237,7 @@
 		"AbilityTextureName"			"clinkz_wind_walk"
 		"AbilityCooldown"				"45"
 		"MaxLevel"						"3"
-		"RequiredLevel"          "2"
+		"RequiredLevel"          "3"
 		"precache"
 		{
 			"soundfile"                     "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
@@ -5242,8 +5266,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
 		"AbilityCastRange"              "0"
 		"AbilityChannelTime" 			"3.0"
-		"AbilityCooldown"               "60"
-		"AbilityManaCost"				"120"
+		"AbilityCooldown"               "45"
 		"MaxLevel"						"1"
 		
 		
@@ -6412,6 +6435,196 @@
 			}
 		}
 	}
+	
+	"train_wood_worker_1"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"wood_worker_1"
+		"MaxLevel"					"1"
+		"UnitName"					"wood_worker_1"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"128000"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"0"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+	
+	"train_wood_worker_2"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"wood_worker_2"
+		"MaxLevel"					"1"
+		"UnitName"					"wood_worker_2"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"512000"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"0"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+	
+	"train_wood_worker_3"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"wood_worker_3"
+		"MaxLevel"					"1"
+		"UnitName"					"wood_worker_3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"999999"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"0"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+	 
 	"buy_item_dmg_1"
 	{
 		"BaseClass"					"ability_datadriven"
@@ -7910,7 +8123,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	"AbilityTextureName"			"block"
 	"MaxLevel"						"1"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	"Modifiers"
 	{
 		"modifier_item_treant_debuff"
@@ -8821,7 +9034,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"70"
+		"AbilityChannelTime"		"60"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8885,7 +9098,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"110"
+		"AbilityChannelTime"		"60"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -10619,6 +10832,39 @@
 	}
 }
 
+	"attack_tree_skill"{
+	
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"treant_living_armor"
+		"MaxLevel"					"1"
+			
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"AbilityCastRange"				"200"
+		"AbilityCooldown"				"2.5"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"64"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"DestroyTrees"
+		    {
+		    	"Target"	"POINT"
+				"Radius"	"%radius"
+		    }
+		}
+	}
+
+
 	"lina_light_strike_infernal_array_datadriven"
 	{
 	// General
@@ -10633,7 +10879,7 @@
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.45"
 	"AOERadius"						"%light_strike_array_aoe"
-	"RequiredLevel"          		"2"
+	"RequiredLevel"          		"3"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -10780,6 +11026,9 @@
 	}
 	}
 
+
+
+
 // Rewrite of the Lion Impale ability
 // Author: Pizzalol
 // Date: 18.01.2015.
@@ -10796,7 +11045,7 @@
 	"FightRecapLevel"				"1"
 	"AbilityTextureName"			"lion_impale"
 	"MaxLevel"						"3"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -10952,7 +11201,7 @@
 	"AbilityManaCost"				"160 160 160"
 	"AOERadius"						"%area_of_effect"
 	
-	"RequiredLevel"          		"6"
+	"RequiredLevel"          		"8"
 	"MaxLevel"						"3"
 
 	// Special
@@ -11173,7 +11422,7 @@
 	"AbilityTextureName"			"sven_storm_bolt"
 	"AOERadius"						"%bolt_aoe"
 	"MaxLevel"						"3"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -11328,7 +11577,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	"AbilityTextureName"			"lycan_summon_wolves"
 	"MaxLevel"						"3"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -11619,7 +11868,7 @@
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	"MaxLevel"						"3"
 	"AbilityTextureName"			"shadow_shaman_mass_serpent_ward"
-	"RequiredLevel"          "2"
+	"RequiredLevel"          "3"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"450 550 600"
@@ -11856,7 +12105,7 @@
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.45"
 	"AOERadius"						"%light_strike_array_aoe"
- 	"RequiredLevel"          "6"
+ 	"RequiredLevel"          "8"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -11887,7 +12136,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"light_strike_array_aoe"	"200 300 400"
+			"light_strike_array_aoe"	"300 400 500"
 		}
 		"02"
 		{
@@ -11933,20 +12182,6 @@
 					"EffectName"	"Ability.LightStrikeArray"
 					"Target"		"CASTER"
 				}
-
-				"FireEffect"
-				{
-					"EffectName"	"particles/units/heroes/hero_lina/lina_spell_light_strike_array.vpcf"
-					"EffectAttachType"	"start_at_customorigin"
-					"TargetPoint"		"CASTER"
-
-					"ControlPoints"
-		            {
-		            	"00"	"CASTER"
-		            	"01"	"%light_strike_array_aoe 0 0"
-		            	"03"	"0 0 0"
-		            }
-				}
 				
 				"DestroyTrees"
 		        {
@@ -11975,7 +12210,7 @@
 
 		            	"ApplyModifier"
 		            	{
-		            		"ModifierName"	"modifier_light_infernal_strike_array_datadriven"
+		            		"ModifierName"	"modifier_light_infernal_strike2_array_datadriven"
 		            		"Target"		"TARGET"
 		            		"Duration"		"%light_strike_array_stun_duration"
 		            	}		            	
@@ -11987,7 +12222,7 @@
 
 	"Modifiers"
 	{
-		"modifier_light_infernal_strike_array_datadriven"
+		"modifier_light_infernal_strike2_array_datadriven"
 		{
 			"IsDebuff"	"1"
 			"OverrideAnimation"	"ACT_DOTA_DISABLED"
@@ -12017,7 +12252,7 @@
 	"AbilityCastRange"				"600"
 	"AbilityCastPoint"				"0.45"
 	"AOERadius"						"%light_strike_array_aoe"
- 	"RequiredLevel"          "6"
+ 	"RequiredLevel"          "8"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -12160,7 +12395,7 @@
 	  "BaseClass"	"ability_datadriven" 
 	
 	  "MaxLevel"               "20"
-	  "RequiredLevel"          "3"
+	  "RequiredLevel"          "6"
 	  
 	  // Special
 	  //-------------------------------------------------------------------------------------------------------------
@@ -12671,6 +12906,62 @@
 		}
 	}
 	
+	"return_resources"
+	{
+	  "BaseClass"                 "ability_datadriven"
+	  "AbilityTextureName"      "custom/return_resources"
+	  "MaxLevel"            "1"
+	
+	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN" //Fake Toggle
+	
+	  "OnSpellStart"
+	  {
+	    "ApplyModifier"
+	    {
+	      "ModifierName"  "modifier_returning_resources"
+	      "Target"    "CASTER"
+	    }
+	
+	    "RunScript"
+	    {
+	      "ScriptFile"  "ai/peasant.lua"
+	      "Function"    "ReturnResources"
+	    }
+	  }
+	
+	  "Modifiers"
+	  {
+	    "modifier_returning_resources_on_order_cancel"
+	    {
+	      "IsHidden"        "1"
+	
+	      "ThinkInterval"  "0.03"
+	      "OnIntervalThink"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "CheckBuildingPosition"
+	        }
+	      }
+	
+	      "OnOrder"
+	      {
+	        "RunScript"
+	        {
+	          "ScriptFile"  "ai/peasant.lua"
+	          "Function"    "ToggleOffReturn"
+	        }
+	      }  
+	    }
+	    "modifier_returning_resources"
+	    {
+	      "IsHidden"        "0"
+	      "TextureName"     "furion_sprout"
+	    }
+	  }
+	} 
+	
 	"gather_lumber_worker"
 	{
 	  "BaseClass"                 "ability_datadriven"
@@ -12790,99 +13081,5 @@
 	  }
 	}
 	
-	"attack_tree"
-	{
-	  "BaseClass"                 "ability_datadriven"
-	  "AbilityTextureName"      "treant_living_armor"
-	  "MaxLevel"            "1"
-	
-	  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-	  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_BOTH"
-	  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_BUILDING"
-	  
-	  "AbilityCooldown"			"3"
-	  "AbilityMultiOrder" "1"
-	
-	  "AbilityCastPoint"        "0.1"
-	
-	  "OnAbilityPhaseStart"
-	  {
-	    "RunScript"
-	    {
-	      "ScriptFile"  "ai/attack_tree.lua"
-	      "Function"    "Gather"
-	    }
-	    "ApplyModifier"
-	    {
-	      "Target"      "CASTER"
-	      "ModifierName"    "modifier_ability_gather_lumber_no_col"
-	    }
-	  }
-	
-	  "Modifiers"
-	  {
-	    "modifier_ability_gather_lumber_no_col"
-	    {
-	      "Passive"         "1"
-	      "IsHidden"          "1"
-	      "IsBuff"          "1"
-	      "IsDebuff"          "0"
-	    }
-	
-	    "modifier_gathering_lumber"
-	    {
-	      "IsHidden"        "1"
-	        
-	      "ThinkInterval"  "0.03"
-	      "OnIntervalThink"
-	      {
-	        "RunScript"
-	        {
-	          "ScriptFile"  "ai/attack_tree.lua"
-	          "Function"    "CheckTreePosition"
-	        }
-	      }
-	      
-	    }
-	
-	    "modifier_chopping_wood"
-	    {
-	      "IsHidden"        "1"
-	
-	      "OnCreated"
-	      {
-	        "RunScript"
-	        {
-	          "ScriptFile"  "ai/attack_tree.lua"
-	          "Function"    "PlayAttackAnimation"
-	        }
-	      }
-	
-	      "OnDestroy"
-	      {
-	        "RunScript"
-	        {
-	          "ScriptFile"  "ai/attack_tree.lua"
-	          "Function"    "StopAnimation"
-	        }
-	      }
-	
-	      "ThinkInterval"  "1.0"
-	      "OnIntervalThink"
-	      {
-	        "RunScript"
-	        {
-	          "ScriptFile"  "ai/attack_tree.lua"
-	          "Function"    "PlayAttackAnimation"
-	        }
-	        "RunScript"
-	        {
-	          "ScriptFile"  "ai/attack_tree.lua"
-	          "Function"    "GatherLumber"
-	        }
-	      }   
-	    }
-	  }
-	}
 	
 }

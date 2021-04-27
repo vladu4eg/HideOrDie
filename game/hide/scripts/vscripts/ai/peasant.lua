@@ -1,6 +1,6 @@
-LUMBER_STACK_T1 = 10
-LUMBER_STACK_T2 = 185
-LUMBER_STACK_T3 = 1250
+LUMBER_STACK_T1 = 16
+LUMBER_STACK_T2 = 40
+LUMBER_STACK_T3 = 100
 
 Debug_Peasant = false
 
@@ -48,7 +48,7 @@ end
 -- Toggles Off Gather
 function ToggleOffGather( event )
 	local caster = event.caster
-	local gather_ability = caster:FindAbilityByName("gather_lumber")
+	local gather_ability = caster:FindAbilityByName("gather_lumber_worker")
 
 	--print(caster.lastOrder)
 
@@ -120,23 +120,18 @@ function GatherLumber( event )
 		return
 	end
 
-	local hero = GameMode.assignedPlayerHeroes[caster:GetPlayerOwnerID()]
-
-	local max_lumber_carried = LUMBER_STACK_T1 * 2
+	local max_lumber_carried = LUMBER_STACK_T1 * 1
 	local single_chop = LUMBER_STACK_T1
 
-	if caster:GetUnitName() == "npc_petri_super_peasant" then 
+	if caster:GetUnitName() == "wood_worker_2" then 
 		max_lumber_carried = LUMBER_STACK_T2 * 2
 		single_chop = LUMBER_STACK_T2
 	end
 
-	if caster:GetUnitName() == "npc_petri_mega_peasant" then 
-		max_lumber_carried = LUMBER_STACK_T3 * 2
+	if caster:GetUnitName() == "wood_worker_3" then 
+		max_lumber_carried = LUMBER_STACK_T3 * 3
 		single_chop = LUMBER_STACK_T3
 	end
-
-	max_lumber_carried = max_lumber_carried + (hero.bonusLumber * 2)
-	single_chop = single_chop + hero.bonusLumber 
 
 	local return_ability = caster:FindAbilityByName("return_resources")
 
@@ -198,7 +193,7 @@ function CheckBuildingPosition( event )
 	local target = caster.target_building -- Index building so we know which target to start with
 	local ability = event.ability
 
-	local hero = GameMode.assignedPlayerHeroes[caster:GetPlayerOwnerID()]
+	local hero = PlayerResource:GetSelectedHeroEntity(caster:GetPlayerOwnerID())
 
 	if not target or not caster or not caster.target_building then
 		return
@@ -231,16 +226,15 @@ function CheckBuildingPosition( event )
 			    lumber_gathered = lumber_gathered * 2
 			end
 			--
-			
-		    PopupParticle(lumber_gathered, Vector(10, 200, 90), 3.0, caster)
 		    
 		   	-- EmitSoundOnLocationWithCaster(caster:GetAbsOrigin(), "KVN.GatherWood", caster)
 		   	caster:EmitSound("KVN.GatherWood")
 
-			AddLumber( hero:GetPlayerOwner(), lumber_gathered )
+			PlayerResource:ModifyLumber(hero,lumber_gathered,true)
+			
 		end
 
-		-- Return Ability Off
+-- Return Ability Off
 		if ability:ToggleAbility() == true then
 			ability:ToggleAbility()
 			if Debug_Peasant then
@@ -249,7 +243,7 @@ function CheckBuildingPosition( event )
 		end
 
 		-- Gather Ability
-		local gather_ability = caster:FindAbilityByName("gather_lumber")
+		local gather_ability = caster:FindAbilityByName("gather_lumber_worker")
 		if gather_ability:ToggleAbility() == false then
 			-- Fake toggle On
 			gather_ability:ToggleAbility() 
@@ -267,10 +261,10 @@ end
 function FindClosestResourceDeposit( caster )
 	local position = caster:GetAbsOrigin()
 
-	local buildings = Entities:FindAllByClassname("npc_dota_base_additive*") 
+	local buildings = Entities:FindAllByClassname("npc_dota_creature*") 
 	local sawmills = {}
 	for _,building in pairs(buildings) do
-		if string.match("tent", building:GetUnitName())  then
+		if string.match("hero_treant", building:GetUnitName())  then
 			table.insert(sawmills, building)
 		end
 	end
@@ -432,8 +426,6 @@ function RepairBy1Percent( event )
 				healAmount = 0
 			end
 
-			PopupParticle(math.floor(healAmount), Vector(50,221,60), 1.5, caster, nil, POPUP_SYMBOL_POST_SHIELD)
-
 			target:Heal(healAmount, caster)
 
 			caster.repairing_cooldown = true
@@ -461,15 +453,10 @@ end
 
 function Spawn( t )
 	local pID = thisEntity:GetPlayerOwnerID()
-	local ability = thisEntity:FindAbilityByName("gather_lumber")
+	local ability = thisEntity:FindAbilityByName("gather_lumber_worker")
 
-	InitAbilities(thisEntity)
 
 	thisEntity.spawnPosition = thisEntity:GetAbsOrigin()
-
-	Timers:CreateTimer(function ( )
-		SetCustomBuildingModel(thisEntity, PlayerResource:GetSteamAccountID(thisEntity:GetPlayerOwnerID()))
-	end)
 
 	Timers:CreateTimer(0.2, function()
 		local trees = GridNav:GetAllTreesAroundPoint(thisEntity:GetAbsOrigin(), 750, true)

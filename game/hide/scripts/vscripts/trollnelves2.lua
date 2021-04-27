@@ -30,6 +30,7 @@ require('libraries/popups')
 require('libraries/team')
 require('libraries/player')
 require('libraries/entity')
+require('libraries/animations')
 
 require('internal/trollnelves2')
 
@@ -366,7 +367,7 @@ function InitializeTroll(hero)
         hero:AddNewModifier(hero, nil, "modifier_movespeed_x4", {})
     end
     hero:AddNewModifier(hero, nil, "modifier_attack_trees", {})
-    hero:AddItemByName("item_quelling_blade")
+   -- hero:AddItemByName("item_quelling_blade")
     hero:RemoveAbility("lone_druid_spirit_bear_datadriven")    
     if GameRules.test then
         hero:AddItemByName("item_dmg_12")
@@ -406,23 +407,25 @@ function InitializeTroll(hero)
     end)    
     
     
-    Timers:CreateTimer(BUFF_XP1, function() 
-        hero:AddExperience(2000, DOTA_ModifyXP_Unspecified, false,false)
+    Timers:CreateTimer(BUFF_XP1_TIME, function() 
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
         hero:AddAbility("reveal_area")
         local abil = hero:FindAbilityByName("reveal_area")
         abil:SetLevel(abil:GetMaxLevel())
     end)  
-    Timers:CreateTimer(BUFF_XP2, function() 
+    Timers:CreateTimer(BUFF_XP2_TIME, function() 
         -- Setup game mode
         mode = GameRules:GetGameModeEntity()     
         mode:SetUnseenFogOfWarEnabled(true)
-        hero:AddExperience(2000, DOTA_ModifyXP_Unspecified, false,false)
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
         mode = nil
     end)  
-    Timers:CreateTimer(BUFF_XP3, function() 
-        hero:AddExperience(4000, DOTA_ModifyXP_Unspecified, false,false)
+    Timers:CreateTimer(BUFF_XP3_TIME, function() 
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
     end) 
     hero:RemoveAbility("reveal_area")
+    hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
+    
 end
 
 function InitializeAngel(hero)

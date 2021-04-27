@@ -44,7 +44,7 @@
 				"Function"              "RevealAreaItem"
 				"Target"				"POINT"
 				"Duration"				"5"
-				"Radius"				"400"
+				"Radius"				"450"
 			}
 		}
 	}
@@ -977,15 +977,15 @@
 				"var_type"				"FIELD_INTEGER"
 				"radius"				"400"
 			}
-					"02"
+			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
+				"gold_cost"				"800"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"0"
+				"lumber_cost"			"1100"
 			}
 		}
 	}
@@ -4230,7 +4230,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
-		"ItemPurchasable"				"1"
+		"ItemPurchasable"				"0"
 		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
@@ -4238,7 +4238,7 @@
 		"ItemDisplayCharges"			"1"
 	    "IsTempestDoubleClonable"		"0"
 		"ItemCastOnPickup" 				"0"
-		"ItemStockMax"					"30"	
+		"ItemStockMax"					"999"	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -4246,17 +4246,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10"
+				"bonus_stat"			"50"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"500"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100"
+				"lumber_cost"			"500"
 			}
 		}
 	}
@@ -4274,7 +4274,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
-		"ItemPurchasable"				"1"
+		"ItemPurchasable"				"0"
 		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
@@ -4283,7 +4283,7 @@
 	    "IsTempestDoubleClonable"		"0"
 		"ItemCastOnPickup" 				"0"
 
-		"ItemStockMax"					"30"		
+		"ItemStockMax"					"999"		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -4291,17 +4291,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10"
+				"bonus_stat"			"50"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"500"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100"
+				"lumber_cost"			"500"
 			}
 		}
 	}
@@ -4317,10 +4317,9 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"500"
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
-		"ItemPurchasable"				"1"
+		"ItemPurchasable"				"0"
 		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
@@ -4328,6 +4327,7 @@
 		"ItemDisplayCharges"			"1"
 	    "IsTempestDoubleClonable"		"0"
 		"ItemCastOnPickup" 				"0"
+		"ItemStockMax"					"999"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -4336,17 +4336,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"10"
+				"bonus_stat"			"50"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"500"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"100"
+				"lumber_cost"			"500"
 			}
 		}
 	}

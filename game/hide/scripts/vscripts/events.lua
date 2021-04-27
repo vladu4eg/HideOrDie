@@ -133,77 +133,9 @@ function trollnelves2:OnDisconnect(event)
                     break
                 end
             end
-            if lastAlive then
-                Timers:CreateTimer(function()
-                    if elfLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 4 then
-                        Notifications:ClearBottomFromAll()
-                        Notifications:BottomToAll(
-                            {
-                                text = "The Elf will lose in " .. elfLoseTimer,
-                                style = {color = '#E62020'},
-                                duration = 1
-                            })
-                            elfLoseTimer = elfLoseTimer - 1
-                            return 1.0
-                            elseif elfLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 2 then
-                            return nil
-                            elseif elfLoseTimer <= 0 or PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 4 then
-                            GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
-                            GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
-                            local status, nextCall = ErrorCheck(function() 
-                                Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
-                            end)
-                            GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
-                    end
-                end)
-            end
-        end
         elseif team == DOTA_TEAM_BADGUYS then
-        hero:MoveToPosition(Vector(0, 0, 0))
-        if hero:IsWolf() then
-            hero:AddNewModifier(nil, nil, "modifier_disconnected", {})
-            Timers:CreateTimer(60, function()
-                if hero ~= nil then
-                    if PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2 then
-                        local wolfNetworth = hero:GetNetworth()
-                        local lumber = wolfNetworth / 64000 or 0
-                        local gold = math.floor((lumber - math.floor(lumber)) * 64000) or 0
-                        lumber = math.floor(lumber)
-                        hero:ClearInventory()
-                        hero:RemoveDesol2()
-                        PlayerResource:ModifyGold(GameRules.trollHero, gold, true)
-                        PlayerResource:ModifyLumber(GameRules.trollHero, lumber, true)
-                        PlayerResource:SetGold(hero, 0, true)
-                        PlayerResource:SetLumber(hero, 0, true)
-                    end
-                end
-            end)
-            
+            hero:MoveToPosition(Vector(0, 0, 0))
         end
-    end
-    if hero:IsTroll() then
-        Timers:CreateTimer(function()
-            if trollLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 2  and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) ~= 4 then
-                Notifications:ClearBottomFromAll()
-                Notifications:BottomToAll(
-                    {
-                        text = "The Troll will lose in " .. trollLoseTimer,
-                        style = {color = '#E62020'},
-                        duration = 1
-                    })
-                    trollLoseTimer = trollLoseTimer - 1
-                    return 1.0
-                    elseif trollLoseTimer > 0 and PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 2 then
-                    return nil
-                    elseif trollLoseTimer <= 0 or PlayerResource:GetConnectionState(hero:GetPlayerOwnerID()) == 4 then
-                    GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
-                    GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
-                    local status, nextCall = ErrorCheck(function() 
-                        Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
-                    end)
-                    GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
-            end
-        end)
     end
 end
 
@@ -300,7 +232,6 @@ function trollnelves2:OnEntityKilled(keys)
             bounty = math.max(killed:GetNetworth() * 0.70,
             GameRules:GetGameTime())
             killed:SetRespawnPosition(Vector(0, -640, 256))
-            killed:SetTimeUntilRespawn(ANGEL_RESPAWN_TIME * PlayerResource:GetDeaths(playerID))
             killed:RemoveDesol2()
             GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
             drop:RollItemDrop(killed)
@@ -317,7 +248,7 @@ function trollnelves2:OnEntityKilled(keys)
             end
             drop:RollItemDrop(killed)
             Pets.DeletePet(info)
-            elseif killed:IsAngel() then
+            elseif killed:IsAngel() then            
             ReturnElf(killedPlayerID)
             Pets.DeletePet(info)
         end
@@ -583,6 +514,7 @@ function ReturnElf(event)
         InitializeHero(hero)
         InitializeBuilder(hero)
     PlayerResource:SetCameraTarget(playerID, nil)
+        hero:AddNewModifier(hero, nil, "modifier_fountain_glyph", {duration = FOUNTAIN_GLYPH_TIME})
 end
 
 function RandomAngelLocation()
