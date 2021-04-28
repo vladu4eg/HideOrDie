@@ -28,12 +28,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"120"
+				"gold_cost"				"150"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"120"
+				"lumber_cost"			"150"
 			}
 		}
 		"OnSpellStart"
@@ -44,7 +44,7 @@
 				"Function"              "RevealAreaItem"
 				"Target"				"POINT"
 				"Duration"				"5"
-				"Radius"				"450"
+				"Radius"				"400"
 			}
 		}
 	}

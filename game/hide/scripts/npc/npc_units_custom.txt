@@ -10979,7 +10979,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11078,7 +11078,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11174,7 +11174,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11272,7 +11272,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11308,6 +11308,7 @@
 		//----------------------------------------------------------------
 		"Creature"
 	    {
+			"DisableClumpingBehavior"       "1"
 	        "AttachWearables" // Dark wood set
 	        {
 	            "1" { "ItemDef" "370" } // Shoulders
@@ -11327,6 +11328,7 @@
 		"precache"
 		{
 			"model"     "models/heroes/gyro/gyro.vmdl"
+			"particle"	"particles/units/heroes/hero_gyrocopter/gyro_base_attack.vpcf"	
 		}
 		"ModelScale"                            "0.6"
 		"Level"                                 "2"
@@ -11378,7 +11380,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11414,6 +11416,7 @@
 		//----------------------------------------------------------------
 		"Creature"
 		{
+			"DisableClumpingBehavior"       "1"
 				"AttachWearables"
 				{
 		"Wearable1" {"ItemDef" "5967"}//("Gatling Cannon of the Dragon Emperor")
@@ -11432,6 +11435,7 @@
 		"precache"
 		{
 			"model"     "models/heroes/lina/lina.vmdl"
+			"particle"	"particles/units/heroes/hero_lina/lina_base_attack.vpcf"	
 		}
 		"ModelScale"                            "0.6"
 		"Level"                                 "2"
@@ -11483,7 +11487,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11589,7 +11593,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11696,7 +11700,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11754,6 +11758,7 @@
 		"precache"
 		{
 			"model"     "models/heroes/visage/visage.vmdl"
+			"particle"	"particles/units/heroes/hero_visage/visage_base_attack.vpcf"	
 		}
 		"ModelScale"                            "0.6"
 		"Level"                                 "2"
@@ -11805,7 +11810,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11858,6 +11863,7 @@
 		"precache"
 		{
 			"model"     "models/heroes/treant_protector/treant_protector.vmdl"
+			"particle"	"particles/base_attacks/ranged_tower_good.vpcf"
 		}
 		"ModelScale"                            "1"
 		"Level"                                 "2"
@@ -11908,7 +11914,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -11944,6 +11950,7 @@
 		//----------------------------------------------------------------
 		"Creature"
 		{
+			"DisableClumpingBehavior"       "1"
 				"AttachWearables"
 				{
 		"Wearable1" {"ItemDef" "7807"}//shoulder("Bearing of the Ancient Seal")
@@ -12014,7 +12021,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats
@@ -12121,7 +12128,7 @@
 		//----------------------------------------------------------------
 		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
 		"RingRadius"                            "70"
-		"CollisionSize"                         "8"
+		"CollisionSize"                         "1"
 		"FormationRank"                         "0"
 
 		// Building Cost Stats

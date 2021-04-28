@@ -232,6 +232,7 @@ function trollnelves2:OnEntityKilled(keys)
             bounty = math.max(killed:GetNetworth() * 0.70,
             GameRules:GetGameTime())
             killed:SetRespawnPosition(Vector(0, -640, 256))
+            killed:SetTimeUntilRespawn(TROLL_RESPAWN_TIME)
             killed:RemoveDesol2()
             GameRules.Bonus[attackerPlayerID] = GameRules.Bonus[attackerPlayerID] + 1
             drop:RollItemDrop(killed)
