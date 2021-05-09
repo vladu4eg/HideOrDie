@@ -177,7 +177,6 @@ function StartBuildingHelper( params )
                 // Put tree dummies on a separate table to skip trees
                 if (Entities.GetUnitName(entities[i]) == 'npc_dota_units_base2')
                 {
-                    if (HasModifier(entities[i], "modifier_tree_cut"))
                         cutTrees[entPos] = entities[i]
                 }
                 // Block 2x2 squares if its an enemy unit
@@ -225,7 +224,7 @@ function StartBuildingHelper( params )
                     var treePos = Entities.GetAbsOrigin(tree_entities[i]);
                     // Block the grid if the tree isn't chopped
                     if (cutTrees[treePos] === undefined)
-                        BlockGridSquares(treePos, 2, "TREE")
+                        BlockGridSquares(treePos, 2, "BLOCKED")
                 }
             }
         }

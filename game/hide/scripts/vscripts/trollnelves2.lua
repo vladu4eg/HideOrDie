@@ -243,7 +243,7 @@ function InitializeBadHero(hero)
     Timers:CreateTimer(function()
         if not hero or hero:IsNull() then return end
         if hero:IsAlive() then
-            AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 370, 0.1,
+            AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 100, 0.1,
             false)
         end
         return 0.1

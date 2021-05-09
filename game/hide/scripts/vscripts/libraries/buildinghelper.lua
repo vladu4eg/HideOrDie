@@ -79,6 +79,9 @@ function BuildingHelper:Init()
                 LinkLuaModifier("modifier_disconnected",
                     "libraries/modifiers/modifier_disconnected",
                 LUA_MODIFIER_MOTION_NONE)
+                LinkLuaModifier("modifier_leave",
+                    "libraries/modifiers/modifier_leave",
+                LUA_MODIFIER_MOTION_NONE)
                 LinkLuaModifier("modifier_out_of_world",
                     "libraries/modifiers/modifier_out_of_world",
                 LUA_MODIFIER_MOTION_NONE)

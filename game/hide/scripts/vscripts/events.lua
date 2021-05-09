@@ -18,20 +18,20 @@ end
 
 -- A player leveled up
 function trollnelves2:OnPlayerLevelUp(keys)
-  DebugPrint('[BAREBONES] OnPlayerLevelUp')
-  DebugPrintTable(keys)
-
-  --PrintTable(keys)
-  
-  local player = PlayerResource:GetPlayer(keys.player_id) --EntIndexToHScript(keys.player)
-  local level = keys.level
-  local hero = player:GetAssignedHero()  
- 
-  --времменый фикс вольво пока они сука не вернут всё как было
-  if level > 20 and level < 126 then
-    hero:SetAbilityPoints(hero:GetAbilityPoints() + 1)
-  end
-  --
+    DebugPrint('[BAREBONES] OnPlayerLevelUp')
+    DebugPrintTable(keys)
+    
+    --PrintTable(keys)
+    
+    local player = PlayerResource:GetPlayer(keys.player_id) --EntIndexToHScript(keys.player)
+    local level = keys.level
+    local hero = player:GetAssignedHero()  
+    
+    --времменый фикс вольво пока они сука не вернут всё как было
+    if level > 20 and level < 126 then
+        hero:SetAbilityPoints(hero:GetAbilityPoints() + 1)
+    end
+    --
 end
 
 -- An NPC has spawned somewhere in game.  This includes heroes
@@ -78,7 +78,11 @@ function trollnelves2:OnPlayerReconnect(event)
     end
     local notSelectedHero = GameRules.disconnectedHeroSelects[playerID]
     if notSelectedHero then
+        DebugPrint("notSelectedHero " .. notSelectedHero)
+        PlayerResource:ReplaceHeroWith(playerID, notSelectedHero, 0, 0)
         PlayerResource:SetSelectedHero(playerID, notSelectedHero)
+        local npc = PlayerResource:GetSelectedHeroEntity(playerID)
+        trollnelves2:OnHeroInGame(npc)
     end
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     if hero:IsAngel() then hero:RemoveModifierByName("modifier_disconnected") end
@@ -115,26 +119,28 @@ end
 function trollnelves2:OnDisconnect(event)
     local playerID = event.PlayerID
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-    local team = hero:GetTeamNumber()
+    
     local trollLoseTimer = 300
     local elfLoseTimer = 180
-    
-    if team == DOTA_TEAM_GOODGUYS then
-        hero:AddNewModifier(nil, nil, "modifier_disconnected", {})
-        if hero.alive == true then
-            hero.alive = false
-            hero.dced = true
-            local lastAlive = true
-            for i = 0, PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) do
-                local pID = PlayerResource:GetNthPlayerIDOnTeam(2, i)
-                local hero2 = PlayerResource:GetSelectedHeroEntity(pID) or false
-                if hero2 and hero2.alive then
-                    lastAlive = false
-                    break
+    if hero ~= nil then
+        local team = hero:GetTeamNumber()
+        if team == DOTA_TEAM_GOODGUYS then
+            hero:AddNewModifier(nil, nil, "modifier_disconnected", {})
+            if hero.alive == true then
+                hero.alive = false
+                hero.dced = true
+                local lastAlive = true
+                for i = 0, PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) do
+                    local pID = PlayerResource:GetNthPlayerIDOnTeam(2, i)
+                    local hero2 = PlayerResource:GetSelectedHeroEntity(pID) or false
+                    if hero2 and hero2.alive then
+                        lastAlive = false
+                        break
+                    end
                 end
+                elseif team == DOTA_TEAM_BADGUYS then
+                hero:MoveToPosition(Vector(0, 0, 0))
             end
-        elseif team == DOTA_TEAM_BADGUYS then
-            hero:MoveToPosition(Vector(0, 0, 0))
         end
     end
 end
@@ -162,17 +168,17 @@ function trollnelves2:OnItemPickedUp(keys)
     local itemname = keys.itemname
     
     if (hero:IsAngel() or hero:IsElf()) and (string.match(itemname,"hp") or string.match(itemname,"armor") or string.match(itemname,"dmg") or string.match(itemname,"spd") or string.match(itemname,"boots")  or string.match(itemname,"repair")) then 
-        hero:RemoveItem(itemEntity)
-        return
-    end  
-    
-    if hero:GetNumItemsInInventory() > 6 then
-        local spawnPoint = hero:GetAbsOrigin() + RandomFloat(50, 100)
-        local newItem = CreateItem(itemname, nil, nil)
-        local drop = CreateItemOnPositionForLaunch(spawnPoint, newItem)
-        newItem:LaunchLootInitialHeight(false, 0, 150, 0.5, spawnPoint)
-        hero:RemoveItem(itemEntity)
-    end
+    hero:RemoveItem(itemEntity)
+    return
+end  
+
+if hero:GetNumItemsInInventory() > 6 then
+    local spawnPoint = hero:GetAbsOrigin() + RandomFloat(50, 100)
+    local newItem = CreateItem(itemname, nil, nil)
+    local drop = CreateItemOnPositionForLaunch(spawnPoint, newItem)
+    newItem:LaunchLootInitialHeight(false, 0, 150, 0.5, spawnPoint)
+    hero:RemoveItem(itemEntity)
+end
 end
 
 --[[
@@ -229,6 +235,15 @@ function trollnelves2:OnEntityKilled(keys)
             drop:RollItemDrop(killed)
             Pets.DeletePet(info)
             elseif killed:IsTroll() then
+            if CheckElfVictory() then
+                GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
+                GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
+                local status, nextCall = ErrorCheck(function() 
+                    Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
+                end)
+                GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
+                return
+            end
             bounty = math.max(killed:GetNetworth() * 0.70,
             GameRules:GetGameTime())
             killed:SetRespawnPosition(Vector(0, -640, 256))
@@ -382,6 +397,18 @@ function CheckTrollVictory()
     return true
 end
 
+function CheckElfVictory()
+    for i = 1, PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS) do
+        local playerID = PlayerResource:GetNthPlayerIDOnTeam(DOTA_TEAM_BADGUYS,i)
+        local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+        DebugPrint("hero:GetRespawnTime() " .. hero:GetRespawnTime())
+        if hero and hero:IsAlive() and hero:IsTroll() then 
+            return false 
+        end
+    end
+    return true
+end
+
 function GiveResources(eventSourceIndex, event)
     DebugPrint("Give resources, event source index: ", eventSourceIndex)
     local targetID = event.target
@@ -464,6 +491,9 @@ function ChooseHelpSide(eventSourceIndex, event)
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
     
+    local gold = math.floor(PlayerResource:GetLumber(playerID)/2)
+    local lumber = math.floor(PlayerResource:GetGold(playerID)/2)
+    
     local newHeroName
     local message
     local timer
@@ -485,14 +515,19 @@ function ChooseHelpSide(eventSourceIndex, event)
         hero = PlayerResource:GetSelectedHeroEntity(playerID)
         PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
         FindClearSpaceForUnit(hero, pos, true)
+        PlayerResource:SetGold(hero, gold)
+        PlayerResource:SetLumber(hero, lumber)
     end)
-    
+
 end
 
 function ReturnElf(event)
     local playerID = event
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
+    
+    local gold = math.floor(PlayerResource:GetLumber(playerID))
+    local lumber = math.floor(PlayerResource:GetGold(playerID))
     
     local newHeroName
     local message
@@ -507,19 +542,21 @@ function ReturnElf(event)
     end)
     
     hero:SetTimeUntilRespawn(timer)
-        PlayerResource:ReplaceHeroWith(playerID, newHeroName, 0, 0)
-        UTIL_Remove(hero)
-        hero = PlayerResource:GetSelectedHeroEntity(playerID)
-        PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
-        FindClearSpaceForUnit(hero, pos, true)
-        InitializeHero(hero)
-        InitializeBuilder(hero)
+    PlayerResource:ReplaceHeroWith(playerID, newHeroName, 0, 0)
+    UTIL_Remove(hero)
+    hero = PlayerResource:GetSelectedHeroEntity(playerID)
+    PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
+    FindClearSpaceForUnit(hero, pos, true)
+    InitializeHero(hero)
+    InitializeBuilder(hero)
     PlayerResource:SetCameraTarget(playerID, nil)
-        hero:AddNewModifier(hero, nil, "modifier_fountain_glyph", {duration = FOUNTAIN_GLYPH_TIME})
+    hero:AddNewModifier(hero, nil, "modifier_fountain_glyph", {duration = FOUNTAIN_GLYPH_TIME} )
+    PlayerResource:SetGold(hero, gold+200)
+    PlayerResource:SetLumber(hero, lumber+200)
 end
 
 function RandomAngelLocation()
-        return (GameRules.angel_spawn_points and #GameRules.angel_spawn_points and
+    return (GameRules.angel_spawn_points and #GameRules.angel_spawn_points and
     #GameRules.angel_spawn_points > 0) and
     GameRules.angel_spawn_points[RandomInt(1,
     #GameRules.angel_spawn_points)]:GetAbsOrigin() or
@@ -563,4 +600,4 @@ function Halloween(npc)
         UpdateModel(npc, "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl", 1)  
         end
         end 
-        end                                
+        end                                        

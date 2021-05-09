@@ -237,7 +237,7 @@ function Stats.RequestVip(pID, steam, callback)
 		local obj,pos,err = json.decode(res.Body)
 		DeepPrintTable(obj)
 		DebugPrint("***********************************************")
-		for id = 1, 35 do
+		for id = 1, 37 do
 			parts[id] = "nill"
 		end
 		CustomNetTables:SetTableValue("Particles_Tabel",tostring(pID),parts)

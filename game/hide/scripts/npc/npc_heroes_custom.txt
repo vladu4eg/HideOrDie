@@ -93,11 +93,11 @@
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
-		"AttributeBaseStrength"   "15"                   // Base strength
+		"AttributeBaseStrength"   "0"                   // Base strength
 		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "15"                   // Base intelligence
+		"AttributeBaseIntelligence" "0"                   // Base intelligence
 		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "20"                   // Base agility
+		"AttributeBaseAgility"    "5"                   // Base agility
 		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
@@ -112,7 +112,7 @@
 		"MovementSpeed"       "400"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
-		"StatusHealth"        "15000"                 // Base health.
+		"StatusHealth"        "12000"                 // Base health.
 		"StatusHealthRegen"     "0.1"                 // Health regeneration rate.
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.
@@ -153,11 +153,11 @@
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
-		"AttributeBaseStrength"   "15"                   // Base strength
+		"AttributeBaseStrength"   "0"                   // Base strength
 		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "20"                   // Base intelligence
+		"AttributeBaseIntelligence" "5"                   // Base intelligence
 		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "15"                   // Base agility
+		"AttributeBaseAgility"    "0"                   // Base agility
 		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
@@ -172,7 +172,7 @@
 		"MovementSpeed"       "400"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
-		"StatusHealth"        "15000"                 // Base health.
+		"StatusHealth"        "12000"                 // Base health.
 		"StatusHealthRegen"     "0.1"                 // Health regeneration rate.
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.
@@ -212,11 +212,11 @@
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "20"                   // Base strength
+		"AttributeBaseStrength"   "5"                   // Base strength
 		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "15"                   // Base intelligence
+		"AttributeBaseIntelligence" "0"                   // Base intelligence
 		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "15"                   // Base agility
+		"AttributeBaseAgility"    "0"                   // Base agility
 		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
@@ -231,7 +231,7 @@
 		"MovementSpeed"       "400"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
-		"StatusHealth"        "15000"                 // Base health.
+		"StatusHealth"        "12000"                 // Base health.
 		"StatusHealthRegen"     "0.1"                 // Health regeneration rate.
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.

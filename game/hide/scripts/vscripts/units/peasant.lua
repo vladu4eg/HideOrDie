@@ -1,6 +1,7 @@
 LUMBER_STACK_T1 = 16
 LUMBER_STACK_T2 = 40
 LUMBER_STACK_T3 = 100
+LUMBER_STACK_T4 = 300
 
 Debug_Peasant = false
 
@@ -132,6 +133,11 @@ function GatherLumber( event )
 		max_lumber_carried = LUMBER_STACK_T3 * 3
 		single_chop = LUMBER_STACK_T3
 	end
+	
+	if caster:GetUnitName() == "wood_worker_4" then 
+		max_lumber_carried = LUMBER_STACK_T4 * 4
+		single_chop = LUMBER_STACK_T4
+	end
 
 	local return_ability = caster:FindAbilityByName("return_resources")
 
@@ -226,8 +232,6 @@ function CheckBuildingPosition( event )
 			    lumber_gathered = lumber_gathered * 2
 			end
 			--
-			
-		    PopupLumber(target,tonumber(lumber_gathered),true)
 		    
 		   	-- EmitSoundOnLocationWithCaster(caster:GetAbsOrigin(), "KVN.GatherWood", caster)
 		   	caster:EmitSound("KVN.GatherWood")
@@ -236,7 +240,7 @@ function CheckBuildingPosition( event )
 			
 		end
 
-		-- Return Ability Off
+-- Return Ability Off
 		if ability:ToggleAbility() == true then
 			ability:ToggleAbility()
 			if Debug_Peasant then
@@ -428,8 +432,6 @@ function RepairBy1Percent( event )
 				healAmount = 0
 			end
 
-			PopupParticle(math.floor(healAmount), Vector(50,221,60), 1.5, caster, nil, POPUP_SYMBOL_POST_SHIELD)
-
 			target:Heal(healAmount, caster)
 
 			caster.repairing_cooldown = true
@@ -459,13 +461,8 @@ function Spawn( t )
 	local pID = thisEntity:GetPlayerOwnerID()
 	local ability = thisEntity:FindAbilityByName("gather_lumber_worker")
 
-	InitAbilities(thisEntity)
 
 	thisEntity.spawnPosition = thisEntity:GetAbsOrigin()
-
-	Timers:CreateTimer(function ( )
-		SetCustomBuildingModel(thisEntity, PlayerResource:GetSteamAccountID(thisEntity:GetPlayerOwnerID()))
-	end)
 
 	Timers:CreateTimer(0.2, function()
 		local trees = GridNav:GetAllTreesAroundPoint(thisEntity:GetAbsOrigin(), 750, true)

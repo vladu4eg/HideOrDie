@@ -207,7 +207,7 @@
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"50"
+	"AbilityDamage"					"500"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -664,7 +664,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"925 1000 1075 1150"
+			"blink_range"			"200 300 400"
 		}
 		
 		"02"
@@ -1568,7 +1568,7 @@
 		"03"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"COOLDOWN_REDUCTION"			"20"
+			"COOLDOWN_REDUCTION"			"10"
 		}
 		"04"
 		{
@@ -6448,7 +6448,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"128000"
+				"gold_cost"			"64000"
 			}	
 			"02"
 			{
@@ -6511,7 +6511,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"512000"
+				"gold_cost"			"128000"
 			}	
 			"02"
 			{
@@ -6568,6 +6568,69 @@
 		"AbilityTextureName"		"wood_worker_3"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_3"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"512000"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"0"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+	
+	"train_wood_worker_4"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"wood_worker_4"
+		"MaxLevel"					"1"
+		"UnitName"					"wood_worker_4"
 		
 		"AbilitySpecial"
 		{
@@ -8655,7 +8718,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"10"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8717,7 +8780,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"15"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8779,7 +8842,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"10"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8842,7 +8905,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8905,7 +8968,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9034,7 +9097,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"60"
+		"AbilityChannelTime"		"40"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9082,7 +9145,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"1"
+				"food_cost"			"0"
 			}	
 			"04"
 			{
@@ -9162,7 +9225,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"50"
+		"AbilityChannelTime"		"40"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9226,7 +9289,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"70"
+		"AbilityChannelTime"		"60"
 		"OnSpellStart"{
 			"RunScript"
 			{

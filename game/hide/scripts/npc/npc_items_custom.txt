@@ -4116,12 +4116,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"200"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"50"
+				"lumber_cost"			"200"
 			}
 			"04"
 			{
@@ -5443,17 +5443,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"200"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"50"
+				"lumber_cost"			"200"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lifetime"				"180"
+				"lifetime"				"60"
 			}
 			"05"
 			{

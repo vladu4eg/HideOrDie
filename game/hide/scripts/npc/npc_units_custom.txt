@@ -428,7 +428,7 @@
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		
+		"Limit"						"20"		
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "1"
@@ -6166,7 +6166,7 @@
 		{
 			"model"     "models/heroes/treant_protector/treant_protector.vmdl"
 		}
-	    "ModelScale"                "1.2"
+	    "ModelScale"                "0.7"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -6201,7 +6201,7 @@
 		"Ability1" 					"train_wood_worker_1"
 		"Ability2" 					"train_wood_worker_2"
 		"Ability3" 					"train_wood_worker_3"
-		"Ability4" 					""
+		"Ability4" 					"train_wood_worker_4"
 		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
@@ -6218,9 +6218,9 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
-		"CollisionSize"				"128"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -6333,7 +6333,7 @@
 		{
 			"model"     "models/heroes/monkey_king/monkey_king.vmdl"
 		}
-	    "ModelScale"                "1"
+	    "ModelScale"                "0.6"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -6393,9 +6393,9 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
-		"CollisionSize"				"128"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -6420,7 +6420,7 @@
 		{
 			"model"     "models/heroes/monkey_king/monkey_king.vmdl"
 		}
-	    "ModelScale"                "1.3"
+	    "ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -6473,9 +6473,9 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
-		"CollisionSize"				"128"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -11229,6 +11229,7 @@
 		"precache"
 		{
 			"model"                                 "models/heroes/puck/puck.vmdl"
+			"particle"								"particles/units/heroes/hero_puck/puck_base_attack.vpcf"
 		}
 		"ModelScale"                            "0.6"
 		"Level"                                 "2"
@@ -11241,13 +11242,19 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
-		"AttackDamageMin"                       "5"
-		"AttackDamageMax"                       "5"
-		"AttackRate"                            "1.00"
-		"AttackAnimationPoint"					"0.5"
-		"AttackAcquisitionRange"				"500"
-		"AttackRange"							"90"
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"10"		// Damage range min.
+		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
+		"AttackRange"				"500"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_puck/puck_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Hero_Puck"
+	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_puck.vsndevts"
 
 		"AbilityLayout"				"4"
 		"Ability1" 					"reveal_area"
@@ -11657,7 +11664,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "4"
+		"ArmorPhysical"                         "20"
 		"MagicalResistance"                     "0"
 
 		
@@ -11716,7 +11723,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"                          "5000"
-		"StatusHealthRegen"                     "0.25"
+		"StatusHealthRegen"                     "2"
 		"StatusMana"                            "0"
 		"StatusManaRegen"                       "0"
 
@@ -11849,8 +11856,9 @@
 				"DisableClumpingBehavior"       "1"
 				"AttachWearables"
 				{
-		"Wearable1" {"ItemDef" "7292"}//back("Wings of the Iceburnt Elegy")
-		"Wearable2" {"ItemDef" "7291"}//head("Crown of the Iceburnt Elegy")
+		"Wearable1" {"ItemDef" "12865"}//summon("Familiars of the Keeper's Gaze")
+		"Wearable2" {"ItemDef" "12864"}//head("Helm of the Keeper's Gaze")
+		"Wearable3" {"ItemDef" "12863"}//armor("Wings of the Keeper's Gaze")
 				}
 		}
 	}
@@ -11892,7 +11900,7 @@
 	    "SoundSet"                  "Hero_Treant"
 		
 		"AbilityLayout"				"4"
-		"Ability1" 					""
+		"Ability1" 					"attack_tree_skill"
 		"Ability2" 					""
 		"Ability3" 					""
 		"Ability4" 					""
@@ -14390,7 +14398,7 @@
 	"wood_worker_2"
 	{
 	  "BaseClass"     "npc_dota_creature"
-	  "Model"      "models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged_mega.vmdl"
+	  "Model"      "models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged.vmdl"
 	  "ModelScale"    "0.8"
 	  "Level"      "1"
 	  "HealthBarOffset"    "140"
@@ -14442,6 +14450,56 @@
 	"wood_worker_3"
 	{
 	  "BaseClass"     "npc_dota_creature"
+	  "Model"      "models/creeps/lane_creeps/creep_bad_ranged/lane_dire_ranged_mega.vmdl"
+	  "ModelScale"    "0.8"
+	  "Level"      "1"
+	  "HealthBarOffset"    "140"
+	
+	  "vscripts"     "ai/peasant.lua"
+	
+	  "AbilityLayout"    "5"
+	  "Ability1"     "gather_lumber_worker"
+	  "Ability2"     "return_resources"
+	  "Ability3"     ""
+	  "Ability4"     ""
+	  "Ability5"     ""
+	
+	  "ArmorPhysical"    "0"
+	  "MagicalResistance"   "0"
+	
+	  "AttackCapabilities"  "DOTA_UNIT_CAP_NO_ATTACK"
+	
+	  "BountyGoldMin"    "11.0"
+	  "BountyGoldMax"    "31.0"
+	
+	  "BoundsHullName"   "DOTA_HULL_SIZE_REGULAR"
+	  "RingRadius"    "40"
+	
+	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
+	  "MovementSpeed"    "100"
+	  "MovementTurnRate"   "0.6"
+	
+	  "StatusHealth"    "6"
+	  "StatusHealthRegen"   "0.25"
+	  "StatusMana"    "5"
+	  "StatusManaRegen"    "0"
+	
+	  "VisionDaytimeRange"  "800"
+	  "VisionNighttimeRange"  "600"
+	
+	  "TeamName"     "DOTA_TEAM_GOODGUYS"
+	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+	
+	  "Creature"
+	  {
+	    "DisableClumpingBehavior"  "1"
+	  }
+	}
+	"wood_worker_4"
+	{
+	  "BaseClass"     "npc_dota_creature"
 	  "Model"      "models/creeps/lane_creeps/creep_bad_melee/creep_bad_melee_mega.vmdl"
 	  "ModelScale"    "0.8"
 	  "Level"      "1"
@@ -14489,4 +14547,5 @@
 	    "DisableClumpingBehavior"  "1"
 	  }
 	}
+	
 }
