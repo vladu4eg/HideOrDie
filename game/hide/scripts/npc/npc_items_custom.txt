@@ -16,9 +16,9 @@
 		"AbilityCooldown"				"60"
 		"AbilityCastPoint"              "0.0"
 		"AbilityManaCost"               "50"
-		"ItemSellable"					"0"
-		"ItemDroppable"					"1"
-		"ItemPurchasable" 				"0"
+		"ItemSellable"					"1"
+		"ItemDroppable"					"0"
+		"ItemPurchasable" 				"1"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemQuality"					"rare"
@@ -28,12 +28,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"150"
+				"gold_cost"				"300"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"150"
+				"lumber_cost"			"0"
 			}
 		}
 		"OnSpellStart"
@@ -44,7 +44,7 @@
 				"Function"              "RevealAreaItem"
 				"Target"				"POINT"
 				"Duration"				"5"
-				"Radius"				"400"
+				"Radius"				"600"
 			}
 		}
 	}
@@ -980,12 +980,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"800"
+				"gold_cost"				"1900"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"1100"
+				"lumber_cost"			"0"
 			}
 		}
 	}
@@ -1258,12 +1258,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"600"
+				"gold_cost"				"1000"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"400"
+				"lumber_cost"			"0"
 			}			
 			"04"
 			{
@@ -4116,12 +4116,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
+				"gold_cost"				"400"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"200"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{
@@ -4224,7 +4224,6 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0.0"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4237,7 +4236,7 @@
 		"ItemInitialCharges"			"1"
 		"ItemDisplayCharges"			"1"
 	    "IsTempestDoubleClonable"		"0"
-		"ItemCastOnPickup" 				"0"
+		"ItemCastOnPickup" 				"1"
 		"ItemStockMax"					"999"	
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -4251,12 +4250,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
+				"gold_cost"				"1000"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"500"
+				"lumber_cost"			"0"
 			}
 		}
 	}
@@ -4268,7 +4267,6 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4281,7 +4279,7 @@
 		"ItemInitialCharges"			"1"
 		"ItemDisplayCharges"			"1"
 	    "IsTempestDoubleClonable"		"0"
-		"ItemCastOnPickup" 				"0"
+		"ItemCastOnPickup" 				"1"
 
 		"ItemStockMax"					"999"		
 		// Special
@@ -4296,12 +4294,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
+				"gold_cost"				"1000"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"500"
+				"lumber_cost"			"0"
 			}
 		}
 	}
@@ -4313,7 +4311,6 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"0.0"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4326,7 +4323,7 @@
 		"ItemInitialCharges"			"1"
 		"ItemDisplayCharges"			"1"
 	    "IsTempestDoubleClonable"		"0"
-		"ItemCastOnPickup" 				"0"
+		"ItemCastOnPickup" 				"1"
 		"ItemStockMax"					"999"
 		
 		// Special
@@ -4341,12 +4338,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"500"
+				"gold_cost"				"1000"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"500"
+				"lumber_cost"			"0"
 			}
 		}
 	}
@@ -4375,7 +4372,7 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
 		"ItemDisplayCharges"			"1"
-		"ItemStockMax"					"30"
+		"ItemStockMax"					"999"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"600.0"			  
 		"ItemInitialStockTime"			"690.0"  
@@ -4383,7 +4380,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemSupport"					"1"	
 		"IsTempestDoubleClonable"		"0"
-		"ItemCastOnPickup" 				"0"
+		"ItemCastOnPickup" 				"1"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -4397,12 +4394,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"100"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"50"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{
@@ -5050,7 +5047,61 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"180"
+				"duration"				"45"
+			}
+		}
+	}
+	
+		//Start of file item_lia_boar.txt
+	"item_medusa"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"            "medusa"
+		
+	 	//"ItemStockInitial" "1"
+		//"ItemStockMax" "1"
+		//"ItemStockTime" "30"	
+	
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"кабан;boar"
+		"ItemPermanent"					"0"
+		"AbilityCooldown"               "20"
+		"ItemKillable"                  "0"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemInitialCharges"            "1"
+		"ItemStackable"					"1"
+		
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile"	"items\medusa.lua"
+				"Function"		"SpawnMedusa"
+			}
+			
+		}
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"0"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"2"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"300"
 			}
 		}
 	}
@@ -5229,7 +5280,7 @@
 		"ItemAliases"					"мгл;меч гнева ловкоѿть;rsa;rage sword agility"
 		"AbilityTextureName"			"custom/lia_blade_of_rage_agi"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"60"
 		"AbilityManacost"				"90"
 	
 		"precache"
@@ -5243,12 +5294,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"1800"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"800"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{
@@ -5268,7 +5319,7 @@
 			"07"
 			{
 				"var_type" "FIELD_INTEGER"
-				"duration" "10"
+				"duration" "30"
 			}
 			"08"
 			{
@@ -5289,7 +5340,7 @@
 		"ItemAliases"					"мги;меч гнева интеллект;rsi;rage sword intellect"
 		"AbilityTextureName"			"custom/lia_blade_of_rage_int"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"60"
 		"AbilityManacost"				"90"
 	
 		"precache"
@@ -5303,12 +5354,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"1800"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"800"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{
@@ -5328,7 +5379,7 @@
 			"07"
 			{
 				"var_type" "FIELD_INTEGER"
-				"duration" "10"
+				"duration" "30"
 			}
 			"08"
 			{
@@ -5349,7 +5400,7 @@
 		"ItemAliases"					"мгѿ;меч гнева ѿила;rss;rage sword strength"
 		"AbilityTextureName"			"custom/lia_blade_of_rage_str"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityCooldown"				"16"
+		"AbilityCooldown"				"45"
 		"AbilityManacost"				"90"
 	
 		"precache"
@@ -5365,12 +5416,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"1800"
 			}	
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"800"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{
@@ -5390,7 +5441,7 @@
 			"07"
 			{
 				"var_type" "FIELD_INTEGER"
-				"duration" "10"
+				"duration" "30"
 			}
 			"08"
 			{
@@ -5448,7 +5499,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"200"
+				"lumber_cost"			"0"
 			}
 			"04"
 			{

@@ -453,7 +453,7 @@ function BuildingHelper:OnTreeCut(keys)
     
     BuildingHelper:FreeGridSquares(2, treePos)
 
-	local randTime = RandomInt( 120, 240 )
+	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
             if tree.chopped_dummy ~= nil then
                 UTIL_Remove(tree.chopped_dummy)

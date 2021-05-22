@@ -119,6 +119,11 @@
 		"attacker_10"                                                                     "Warrior 10"
 		"attacker_11"                                                                     "Warrior 11"
 		"attacker_12"                                                                     "Warrior 12"
+		"attacker_teleport_1"															  "Teleport"
+		"attacker_wood_worker_1"															  "Lumberjack 1"
+		"attacker_wood_worker_2"															  "Lumberjack 2"
+		"attacker_wood_worker_3"															  "Lumberjack 3"
+		"attacker_wood_worker_4"															  "Lumberjack 4"
 		"wisp_1"                                                                          "Wisp 1"
 		"wisp_2"                                                                          "Wisp 2"
 		"wisp_3"                                                                          "Wisp 3"
@@ -164,7 +169,8 @@
 		"hell_beast"	"Hell Beast"
 		"spherical_staff_fire_golem"	"Fire Golem"
 		"npc_lia_boar" 	"Boar"
-
+		"npc_medusa_creep" 	"Medusa"
+		
 		"white_wolf_bm"	"White Wolf"
 		"jungle_stalker_bm" "Elder Jungle Stalker"
 		"phoenix_bm" "Phoenix"
@@ -180,6 +186,7 @@
 		"dev"																		  	  "DEVELOPER"
 		
 		"monkey_king"																	 "Keeper of the forest"
+		"monkey_king_2"																	 "Keeper of the forest 2"
 		
 		"SPEECH_TEST1"																	"хуй<br>thingsd fsd fsd  get<br>a reward from me"
 		
@@ -269,25 +276,28 @@
 		"DOTA_Tooltip_ability_build_flag"                                                 "Build Flag" 
 		"DOTA_Tooltip_ability_build_flag_Description"                                     "Allows you to block the base from other Elves.<br>You can only block 1 base.<br>You can allow other Elves to build on your base, BUT they will lose the block on their base."
 
+		"DOTA_Tooltip_ability_upgrade_to_monkey_king_2"                                   "Upgrade To Keeper of the forest 2"
+		"DOTA_Tooltip_ability_upgrade_to_monkey_king_2_Description"                       "Creates new warriors."
+
 		"DOTA_Tooltip_ability_build_tent"                                                 "Build Tent"
-		"DOTA_Tooltip_ability_build_tent_Description"                                     "Build tent to gain gold every 5 second."
+		"DOTA_Tooltip_ability_build_tent_Description"                                     "Build tent to gain gold and lumber."
 		"DOTA_Tooltip_ability_build_tent_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tent_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_2"                                          "Upgrade To Tent 2"
-		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent!<br>Gold: 1<br>Lumber: 2"
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent!<br>Gold: 2<br>Lumber: 3"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Upgrade To Tent 3"
-		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent!<br>Gold: 2<br>Lumber: 3"
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent!<br>Gold: 4<br>Lumber: 4"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Upgrade To Tent 4"
-		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent!<br>Gold: 4<br>Lumber: 4"
+		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent!<br>Gold: 16<br>Lumber: 16"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_5"                                          "Upgrade To Tent 5"
-		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Upgrade your tent!<br>Gold: 16<br>Lumber: 16"
+		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Upgrade your tent!<br>Gold: 128<br>Lumber: 128"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_6"                                          "Upgrade To Tent 6"
-		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Upgrade your tent!<br>Gold: 128<br>Lumber: 128"
+		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Upgrade your tent!<br>Gold: 256<br>Lumber: 256"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_7"                                          "Upgrade To Tent 7"
 		"DOTA_Tooltip_ability_upgrade_to_tent_7_Description"                              "Upgrade your tent! X1:64 or X2:128 gold per/sec"
@@ -310,19 +320,19 @@
 		"DOTA_Tooltip_ability_build_rock_1_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_2"                                          "Upgrade To Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Upgrade your Tree!<br>HP:400<br>ARMOR:2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Upgrade your Tree!<br>HP:1200<br>ARMOR:2"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_3"                                          "Upgrade To Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Upgrade your Tree!<br>HP:600<br>ARMOR:2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Upgrade your Tree!<br>HP:1800<br>ARMOR:2"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_4"                                          "Upgrade To Armored Tree 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your Armored Tree!<br>HP:200<br>ARMOR:4"
+		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your Armored Tree!<br>HP:800<br>ARMOR:4"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_5"                                          "Upgrade To Armored Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your Armored Tree!<br>HP:400<br>ARMOR:10"
+		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your Armored Tree!<br>HP:1200<br>ARMOR:10"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_6"                                    "Upgrade To Armored Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your Armored Tree!<br>HP:600<br>ARMOR:80"
+		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your Armored Tree!<br>HP:2500<br>ARMOR:80"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_7"                                    "Upgrade To Invisible Guardian"
 		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Upgrade your Invisible Guardian!<br>HP:200<br>ARMOR:0"
@@ -588,13 +598,13 @@
 		"DOTA_Tooltip_ability_ursa_fury_swipes2_datadriven_Description"                 "20 magic damage per hit. 6 seconds work."
 		
 		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven"                             "Lunar Blessing"
-		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven_Description"                 "Gives 150,000 damage and 400 range of vision at night in a radius of 600."
+		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven_Description"                 "Gives 200 damage and 400 range of vision at night in a radius of 600."
 		
 		"DOTA_Tooltip_modifier_lunar_blessing_datadriven"                             "Lunar Blessing"
-		"DOTA_Tooltip_modifier_lunar_blessing_datadriven_Description"                 "Gives 150,000 damage and 400 range of vision at night in a radius of 600."
+		"DOTA_Tooltip_modifier_lunar_blessing_datadriven_Description"                 "Gives 200 damage and 400 range of vision at night in a radius of 600."
 		
 		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect"                             "Lunar Blessing"
-		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect_Description"                 "Gives 150,000 damage and 400 range of vision at night in a radius of 600."
+		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect_Description"                 "Gives 200 damage and 400 range of vision at night in a radius of 600."
 		
 		"DOTA_Tooltip_ability_medusa_split_shot_lua"                             "Split Shot"
 		"DOTA_Tooltip_ability_medusa_split_shot_lua_Description"                 ""
@@ -695,13 +705,44 @@
 
 		"DOTA_Tooltip_ability_block_buff"											"Composure"
 		"DOTA_Tooltip_ability_block_buff_Description"  								"Your armor grows stronger at the sight of a flight of Elves.<br>If there are 3 or more Elves in the 900 radius, then you receive 16 damage blocks with a 50% chance."
+		
+		
 
+		"DOTA_Tooltip_Ability_blink_datadriven"												"Blink"
+		"DOTA_Tooltip_Ability_blink_datadriven_Description"										"Allows you to travel short distances. "
+
+		"DOTA_Tooltip_Ability_blink"												"Blink"
+		"DOTA_Tooltip_Ability_blink_Description"										"Allows you to travel short distances. "
+
+		"DOTA_Tooltip_Ability_blink_infernal_datadriven"												"Blink"
+		"DOTA_Tooltip_Ability_blink_infernal_datadriven_Description"										"Allows you to travel short distances. "
 
 		"DOTA_Tooltip_Ability_lone_druid_spirit_bear_datadriven"						"Teddy bear"
 		"DOTA_Tooltip_Ability_lone_druid_spirit_bear_datadriven_Description"			"Creates a tame bear that fights by your side. If the bear died, then you will lose 99.9% HP and will be able to revive the bear in 6 minutes, and the bear itself will lose all its items. The skill becomes active after purchasing a level 7 Troll hut and if there are no wolves in the team."
 		
 		"DOTA_Tooltip_modifier_shrapnel_stack_counter_datadriven"							"Number of charges"
 		
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_array_datadriven"						"Light Strike Array"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_array_datadriven_Description"			"Summons a pillar of flame that destroys trees. Gives the opportunity to go into the forest."
+
+		"DOTA_Tooltip_Ability_lina_light_strike_array_datadriven"						"Light Strike Array"
+		"DOTA_Tooltip_Ability_lina_light_strike_array_datadriven_Description"			"Summons a pillar of flame that destroys trees. Gives the opportunity to go into the forest."
+
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult_datadriven"				"Light Strike Array Ultimate"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult_datadriven_Description"	"Summons a pillar of flame that destroys trees. Imposes a stun on opponents. Gives the opportunity to go into the forest."
+		
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal2_ult_datadriven"				"Light Strike Array Ultimate"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal2_ult_datadriven_Description"	"Summons a pillar of flame that destroys trees. Imposes a stun on opponents. Gives the opportunity to go into the forest."
+
+		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+3 to all attributes."
+
+		"DOTA_Tooltip_ability_build_tree"                                                     "Power of nature"
+		"DOTA_Tooltip_ability_build_tree_Description"                                         "Restores felled trees. Does not work if there is a building on the tree."
+		
+		"DOTA_Tooltip_Ability_attack_tree_skill"										"Devouring trees"
+		"DOTA_Tooltip_Ability_attack_tree_skill_Description"										"Allows you to break one tree."
+
 		"DOTA_Tooltip_ability_repair"                                                     "Repair"
 		"DOTA_Tooltip_ability_repair_Description"                                         "Repair your buildings!<br>Right click to auto-cast."
 		
@@ -784,9 +825,14 @@
 		"DOTA_Tooltip_ability_train_worker_6_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_worker_6_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_worker_6_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_worker_6_unit_count"                                  "UNIT COUNT: "
+		"DOTA_Tooltip_ability_train_worker_6_unit_count"                                  "UNIT COUNT: "		
+		
+		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Создает дровосеков для добычи древесины. Lumberjack Guardian должен быть возле дерева."
+		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_train_attacker_1"                                             "Train Worker 1"
+		"DOTA_Tooltip_ability_train_attacker_1"                                             "Train Warrior 1"
 		"DOTA_Tooltip_ability_train_attacker_1_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_1_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_1_lumber_cost"                                 "LUMBER COST: "
@@ -794,7 +840,7 @@
 		"DOTA_Tooltip_ability_train_attacker_1_unit_count"                                  "UNIT COUNT: "
 		
 		
-		"DOTA_Tooltip_ability_train_attacker_2"                                             "Train Worker 2"
+		"DOTA_Tooltip_ability_train_attacker_2"                                             "Train Warrior 2"
 		"DOTA_Tooltip_ability_train_attacker_2_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_2_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_2_lumber_cost"                                 "LUMBER COST: "
@@ -802,23 +848,21 @@
 		"DOTA_Tooltip_ability_train_attacker_2_unit_count"                                  "UNIT COUNT: "
 		
 		
-		"DOTA_Tooltip_ability_train_attacker_3"                                             "Train Worker 3"
+		"DOTA_Tooltip_ability_train_attacker_3"                                             "Train Warrior 3"
 		"DOTA_Tooltip_ability_train_attacker_3_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_3_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_3_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_3_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_3_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_4"                                             "Train Worker 4"
+
+		"DOTA_Tooltip_ability_train_attacker_4"                                             "Train Warrior 4"
 		"DOTA_Tooltip_ability_train_attacker_4_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_4_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_4_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_4_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_4_unit_count"                                  "UNIT COUNT: "
+		"DOTA_Tooltip_ability_train_attacker_4_unit_count"                                  "UNIT COUNT: "		
 		
-		
-		"DOTA_Tooltip_ability_train_attacker_5"                                             "Train Worker 5"
+		"DOTA_Tooltip_ability_train_attacker_5"                                             "Train Warrior 5"
 		"DOTA_Tooltip_ability_train_attacker_5_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_5_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_5_lumber_cost"                                 "LUMBER COST: "
@@ -826,58 +870,89 @@
 		"DOTA_Tooltip_ability_train_attacker_5_unit_count"                                  "UNIT COUNT: "
 		
 		
-		"DOTA_Tooltip_ability_train_attacker_6"                                             "Train Worker 6"
+		"DOTA_Tooltip_ability_train_attacker_6"                                             "Train Warrior 6"
 		"DOTA_Tooltip_ability_train_attacker_6_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_6_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_6_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_6_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_6_unit_count"                                  "UNIT COUNT: "
 		
-		
-		"DOTA_Tooltip_ability_train_attacker_7"                                             "Train Worker 7"
+		"DOTA_Tooltip_ability_train_attacker_7"                                             "Train Warrior 7"
 		"DOTA_Tooltip_ability_train_attacker_7_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_7_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_7_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_7_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_7_unit_count"                                  "UNIT COUNT: "
 		
-		"DOTA_Tooltip_ability_train_attacker_8"                                             "Train Worker 8"
+		"DOTA_Tooltip_ability_train_attacker_8"                                             "Train Warrior 8"
 		"DOTA_Tooltip_ability_train_attacker_8_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_8_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_8_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_8_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_8_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_9"                                             "Train Worker 9"
+
+		"DOTA_Tooltip_ability_train_attacker_9"                                             "Train Warrior 9"
 		"DOTA_Tooltip_ability_train_attacker_9_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_9_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_9_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_9_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_9_unit_count"                                  "UNIT COUNT: "
+		"DOTA_Tooltip_ability_train_attacker_9_unit_count"                                  "UNIT COUNT: "			
 		
-		
-		"DOTA_Tooltip_ability_train_attacker_10"                                             "Train Worker 10"
-		"DOTA_Tooltip_ability_train_attacker_10_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
-		"DOTA_Tooltip_ability_train_attacker_10_gold_cost"                                   "GOLD COST: "
-		"DOTA_Tooltip_ability_train_attacker_10_lumber_cost"                                 "LUMBER COST: "
-		"DOTA_Tooltip_ability_train_attacker_10_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_10_unit_count"                                  "UNIT COUNT: "
-		
-		
-		"DOTA_Tooltip_ability_train_attacker_11"                                             "Train Worker 11"
+		"DOTA_Tooltip_ability_train_attacker_teleport_1"                                             "Teleport"
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_Description"                                 "Create a second teleport on another base and you can quickly move between them.<br>If you do not have a second teleporter, then the teleporter will send you to the allied teleporter. "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_attacker_11"                                             "Train Warrior 11"
 		"DOTA_Tooltip_ability_train_attacker_11_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_11_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_11_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_11_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_11_unit_count"                                  "UNIT COUNT: "
 
-		"DOTA_Tooltip_ability_train_attacker_12"                                             "Train Worker 12"
+		"DOTA_Tooltip_ability_train_attacker_11"                                             "Train Warrior 11"
+		"DOTA_Tooltip_ability_train_attacker_11_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
+		"DOTA_Tooltip_ability_train_attacker_11_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_attacker_11_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_attacker_11_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_attacker_11_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_attacker_12"                                             "Train Warrior 12"
 		"DOTA_Tooltip_ability_train_attacker_12_Description"                                 "To battle!!! Death to enemy elves! The skin of the Infernal will only be ours! "
 		"DOTA_Tooltip_ability_train_attacker_12_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_12_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_12_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_attacker_12_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_1"                                            "Train Lumberjack 1"
+		"DOTA_Tooltip_ability_train_wood_worker_1_Description"                                 "Lumberjack specialises in gathering lumber!"
+		"DOTA_Tooltip_ability_train_wood_worker_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_2"                                            "Train Lumberjack 2"
+		"DOTA_Tooltip_ability_train_wood_worker_2_Description"                                 "Lumberjack specialises in gathering lumber!"
+		"DOTA_Tooltip_ability_train_wood_worker_2_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_3"                                            "Train Lumberjack 3"
+		"DOTA_Tooltip_ability_train_wood_worker_3_Description"                                 "Lumberjack specialises in gathering lumber!"
+		"DOTA_Tooltip_ability_train_wood_worker_3_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_4"                                            "Train Lumberjack 4"
+		"DOTA_Tooltip_ability_train_wood_worker_4_Description"                                 "Lumberjack specialises in gathering lumber!"
+		"DOTA_Tooltip_ability_train_wood_worker_4_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_unit_count"                                  "UNIT COUNT: "
 
 		"DOTA_Tooltip_ability_train_wisp_1"                                               "Train Son of Nature 1"
 		"DOTA_Tooltip_ability_train_wisp_1_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
@@ -947,8 +1022,31 @@
 
 		"DOTA_Tooltip_ability_troll_invis_invis_duration"                                 "DURATION: "
 		"DOTA_Tooltip_ability_troll_invis_bonus_movement_speed"                           "BONUS MOVEMENT SPEED: "
+
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven"							"Wolf Spawn"
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven_Description"							"Creates two Wolves."
 		
+		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven"							"Shaman's Ward"
+		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven_Description"							"Creates 1 to 3 snakes."
 		
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven"							"Wolf Spawn"
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven_Description"							"Creates two Wolves."
+
+		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge"													 "Experience Book"
+		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge_Description"										""
+
+		"DOTA_Tooltip_modifier_book_of_strength"													 "Book of Strength"
+		"DOTA_Tooltip_modifier_book_of_agility"													 "Book of Agility"
+		"DOTA_Tooltip_modifier_book_of_intelligence"													 "Book of Intelligence"
+		
+		"DOTA_Tooltip_ability_buy_item_book_of_strength"													 "Book of Strength"
+		"DOTA_Tooltip_ability_buy_item_book_of_strength_Description"										""
+		
+		"DOTA_Tooltip_ability_buy_item_book_of_agility"													 "Book of Agility"
+		"DOTA_Tooltip_ability_buy_item_book_of_agility_Description"										""
+		
+		"DOTA_Tooltip_ability_buy_item_book_of_intelligence"													 "Book of Intelligence"		
+		"DOTA_Tooltip_ability_buy_item_book_of_intelligence_Description"										""
 		
 		"DOTA_Tooltip_ability_buy_item_dmg_1"                                             "Buy Item Shield of Fury"
 		"DOTA_Tooltip_ability_buy_item_dmg_1_Description"                                 "Gives + 10% damage and +8 armor."
@@ -1008,6 +1106,14 @@
 		
 		"DOTA_Tooltip_ability_upgrade_to_troll_hut_7"                                     "Upgrade To Infernal Hut 7"
 		"DOTA_Tooltip_ability_upgrade_to_troll_hut_7_Description"                         "Allows you to create a Bear."
+
+		"DOTA_Tooltip_Ability_attribute_antibonuses"										""
+		"DOTA_Tooltip_Ability_attribute_antibonuses_Description"							""
+
+		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Creates lumberjacks to extract wood. Lumberjack Guardian should be near the tree."
+		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_build_gold_mine_1"                                          "Build Gold Mine 1"
 		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "Gold mine gives gold like a tent, but you can build as many as you like and it expires after 8 min/x1 and 4 min/x2."
@@ -1184,7 +1290,7 @@
 		"DOTA_Tooltip_ability_buy_item_hp_reg_4"                                          "Buy Troll Healer"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_4_Description"                              ""
 
-		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy HP Reg.  Lv 5"
+		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy Medusa"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5_Description"                              ""
 
 		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy HP Reg.  Lv 6"
@@ -1277,6 +1383,11 @@
 		// ******************** ITEMS ********************
 		// ***********************************************
 		
+		
+
+		"DOTA_Tooltip_Ability_itemь_medusa"                                      "Spawn Medusa"
+		"DOTA_Tooltip_Ability_itemь_medusa_Description"                          ""
+
 		"DOTA_Tooltip_ability_item_building_destroy"                                      "Destroy Building"
 		"DOTA_Tooltip_ability_item_building_destroy_Description"                          "Destroy building. You do not get your resources back, cannot destroy if enemy is nearby! "
 
@@ -1356,7 +1467,7 @@
 		"DOTA_Tooltip_ability_item_mask_of_madness_datadriven_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi"	"Blade of Rage (Agility)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_Description"	"<h1>Active: Rage</h1> Gives bonus agility equal to %agi_percent%%% of base agility for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_Description"	"<h1>Active: Rage</h1> Gives bonus agility equal to 75% of base agility for 30 seconds."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_agility"	"+$agi"	
@@ -1365,7 +1476,7 @@
 		"DOTA_Tooltip_modifier_item_lia_blade_of_rage_agi_active_Description"	"Agility of this hero is increased."
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str"	"Blade of Rage (Strength)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_Description"	"<h1>Active: Rage</h1> Gives bonus strength equal to %str_percent%%% of base strength for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_Description"	"<h1>Active: Rage</h1> Gives bonus strength equal to 75% of base strength for 30 seconds."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_strength"	"+$str"	
@@ -1374,7 +1485,7 @@
 		"DOTA_Tooltip_modifier_item_lia_blade_of_rage_str_active_Description"	"Strength of this hero is increased."
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int"	"Blade of Rage (Intelligence)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_Description"	"<h1>Active: Rage</h1> Gives bonus intelligence equal to %int_percent%%% of base intelligence for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_Description"	"<h1>Active: Rage</h1> Gives bonus intelligence equal to 75% of base intelligence for 30 seconds."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_intellect"	"+$int"	
@@ -1464,13 +1575,13 @@
 		"DOTA_Tooltip_modifier_lia_potion_of_invisibility_windwalk_Description" "This unit is invisible for his enemies."
 
 		"DOTA_Tooltip_ability_item_lia_boar"	"Boar"
-		"DOTA_Tooltip_ability_item_lia_boar_Description"	"<h1>Use: </h1>Summons an invulnerable Boar with a poison attack for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_boar_Description"	"<h1>Use: </h1>Summons an invulnerable Boar with a poison attack for 45 seconds."
 
 		"DOTA_Tooltip_ability_item_lia_book_of_the_dead"	"Book of the Dead"
-		"DOTA_Tooltip_ability_item_lia_book_of_the_dead_Description"	"<h1>Use: </h1>Summons two Skeleton Warriors and two Skeleton Archers for %duration% seconds."
+		"DOTA_Tooltip_ability_item_lia_book_of_the_dead_Description"	"<h1>Use: </h1>Summons two Skeleton Warriors and two Skeleton Archers for 180 seconds."
 
 		"DOTA_Tooltip_ability_item_lia_troll_defender"	"Troll Defender"
-		"DOTA_Tooltip_ability_item_lia_troll_defender_Description"	"<h1>Use: </h1>Summons an invulnerable Troll Defender for %duration% seconds. Troll has an armor aure."
+		"DOTA_Tooltip_ability_item_lia_troll_defender_Description"	"<h1>Use: </h1>Summons an invulnerable Troll Defender for 120 seconds. Troll has an armor aure."
 		
 		"DOTA_Tooltip_ability_item_lia_hell_mask"	"Hell Mask"
 		"DOTA_Tooltip_ability_item_lia_hell_mask_Description"	"<h1>Active: Summon Hell Beast</h1>Summons a Hell Beast which has abilities Bloodlust and Sleep. Lasts %creep_duration% seconds."
@@ -1512,7 +1623,7 @@
 		"DOTA_Tooltip_ability_boar_poison_Description"	"Boar's attacks slow enemies' movement speed by 25%% and attack speed by 25 for 3 seconds."		
 
 		"DOTA_Tooltip_ability_item_lia_troll_healer"	"Troll Healer"
-		"DOTA_Tooltip_ability_item_lia_troll_healer_Description"	"<h1>Use: </h1>Summons a magic immune Troll Healer that can heal his allies for %duration% seconds."	
+		"DOTA_Tooltip_ability_item_lia_troll_healer_Description"	"<h1>Use: </h1>Summons a magic immune Troll Healer that can heal his allies for 120 seconds."	
 
 		"DOTA_Tooltip_ability_item_armor_7"                                               "Armor 7"
 		"DOTA_Tooltip_ability_item_armor_7_Description"                                   ""
@@ -1651,9 +1762,8 @@
 		"DOTA_Tooltip_ability_item_hp_reg_4_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_item_hp_reg_4_lumber_cost"                                  "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_item_hp_reg_5"                                              "Hp Reg 5"
+		"DOTA_Tooltip_ability_item_hp_reg_5"                                              "Medusa"
 		"DOTA_Tooltip_ability_item_hp_reg_5_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_5_bonus_hp_regen"                               "BONUS HP REGEN: "
 		"DOTA_Tooltip_ability_item_hp_reg_5_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_item_hp_reg_5_lumber_cost"                                  "LUMBER COST: "
 

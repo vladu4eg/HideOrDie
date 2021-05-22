@@ -1,7 +1,7 @@
-var names = new Array("TOP1 AUTUMN", "TOP1 WINTER ", "TOP1 SPRING", "TOP1 SUMMER", "PET LVL 1", "PET LVL 2", "PET LVL 3", "PET LVL 4", "PET LVL 5", "PET LVL 6", "DESERT EVENT", "WINTER EVENT");
+var names = new Array("TOP1 AUTUMN", "TOP1 WINTER ", "TOP1 SPRING", "TOP1 SUMMER", "PET LVL 1", "PET LVL 2", "PET LVL 3", "PET LVL 4", "PET LVL 5", "PET LVL 6", "DESERT EVENT", "WINTER EVENT", "SPRING EVENT");
 					//        1              2                  3          4            5           6         7           8             9          10            11              12               13             14              15          16                     17       18           19           20         21             22          23        24       25              26         27               28                29              30             31           32         33                 34                35                 36
-var needs = new Array("#ptop1autumn", "#ptop1winter", "#ptop1spring", "#ptop1summer", "#ppatron1", "#ppatron2", "#ppatron3", "#ppatron4", "#ppatron5", "#ppatron6", "#peventdesert", "#peventwinter");
-var poriadok = new Array( 0,1,  2, 3, 4, 5, 6, 7, 8,9,10,11);//"#birthday2"
+var needs = new Array("#ptop1autumn", "#ptop1winter", "#ptop1spring", "#ptop1summer", "#ppatron1", "#ppatron2", "#ppatron3", "#ppatron4", "#ppatron5", "#ppatron6", "#peventdesert", "#peventwinter", "#peventspring");
+var poriadok = new Array( 0,1,  2, 3, 4, 5, 6, 7, 8,9,10,11,12);//"#birthday2"
 					
 function UpdateParticles( table_name, key, data )
 {
@@ -25,15 +25,6 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = data[poriadok[x-1]+1];
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                         else 
@@ -42,15 +33,6 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                     }
@@ -61,15 +43,6 @@ function UpdateParticles( table_name, key, data )
                             $("#NAPartButt"+myint).visible = true;
                             $("#napartname"+myint).text = names[poriadok[x-1]];
                             $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                     }
@@ -81,15 +54,6 @@ function UpdateParticles( table_name, key, data )
                         $("#NAPartButt"+myint).visible = true;
                         $("#napartname"+myint).text = names[poriadok[x-1]];
                         $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                        if ($("#NewTooltip"+myint) == null)
-                        {
-                            $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                        }
-                        else
-                        {
-                            $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                            $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                        }
                         myint = myint + 1;
                     }
                 }
@@ -104,15 +68,6 @@ function UpdateParticles( table_name, key, data )
                     $("#NAPartButt"+myint).visible = true;
                     $("#napartname"+myint).text = names[poriadok[x-1]];
                     $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                    if ($("#NewTooltip"+myint) == null)
-                    {
-                        $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                    }
-                    else
-                    {
-                        $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                        $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/pets_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                    }
                     myint = myint + 1;
                 }
             }

@@ -79,10 +79,11 @@ function trollnelves2:OnPlayerReconnect(event)
     local notSelectedHero = GameRules.disconnectedHeroSelects[playerID]
     if notSelectedHero then
         DebugPrint("notSelectedHero " .. notSelectedHero)
-        PlayerResource:ReplaceHeroWith(playerID, notSelectedHero, 0, 0)
-        PlayerResource:SetSelectedHero(playerID, notSelectedHero)
-        local npc = PlayerResource:GetSelectedHeroEntity(playerID)
-        trollnelves2:OnHeroInGame(npc)
+        local player = PlayerResource:GetPlayer(playerID)
+        player:SetSelectedHero(notSelectedHero)
+        player:RespawnHero(false,false)
+        local hero = player:GetAssignedHero()
+        trollnelves2:OnHeroInGame(hero)       
     end
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     if hero:IsAngel() then hero:RemoveModifierByName("modifier_disconnected") end
@@ -234,6 +235,7 @@ function trollnelves2:OnEntityKilled(keys)
             end
             drop:RollItemDrop(killed)
             Pets.DeletePet(info)
+            PlayerResource:ModifyLumber( PlayerResource:GetSelectedHeroEntity(attackerPlayerID), 1)
             elseif killed:IsTroll() then
             if CheckElfVictory() then
                 GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
@@ -244,8 +246,7 @@ function trollnelves2:OnEntityKilled(keys)
                 GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
                 return
             end
-            bounty = math.max(killed:GetNetworth() * 0.70,
-            GameRules:GetGameTime())
+            bounty = 1000
             killed:SetRespawnPosition(Vector(0, -640, 256))
             killed:SetTimeUntilRespawn(TROLL_RESPAWN_TIME)
             killed:RemoveDesol2()
@@ -357,6 +358,9 @@ function trollnelves2:OnEntityKilled(keys)
             elseif killed:GetKeyValue("WispCost") then
             local wisp = killed:GetKeyValue("WispCost")
             PlayerResource:ModifyWisp(hero, -wisp)
+            if killed:GetUnitName() == "tent_5" or killed:GetUnitName() == "tent_6" then
+                GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 9 or 0
+            end
         end
     end
 end
@@ -390,7 +394,7 @@ function CheckTrollVictory()
     for i = 1, PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) do
         local playerID = PlayerResource:GetNthPlayerIDOnTeam(DOTA_TEAM_GOODGUYS,i)
         local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-        if hero and hero.alive and hero:IsElf() then 
+        if hero and hero:IsAlive() and hero:IsElf() then 
             return false 
         end
     end

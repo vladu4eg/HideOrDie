@@ -136,7 +136,7 @@ function CDOTA_PlayerResource:ModifyFood(hero,food)
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_food_changed", {
 		playerID = playerID,
 		food = math.floor(hero.food),
-		maxFood = GameRules.maxFood,
+		maxFood = GameRules.maxFood[playerID],
 	})
 	end
 end

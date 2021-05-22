@@ -1,10 +1,10 @@
 "DOTAHeroes"
 {
-	"npc_dota_hero_treant"
+	"npc_dota_hero_furion"
 	{
-		"override_hero"				"npc_dota_hero_treant"
+		"override_hero"				"npc_dota_hero_furion"
 		"Model"						"models/heroes/furion/treant.vmdl"
-		"SoundSet"					"Hero_Wisp"
+		"SoundSet"					"Hero_Furion"
 		"UnitLabel"					"builder"
 		"AbilityLayout"				"13"
 		"Ability1" 					"build_tent"
@@ -40,9 +40,9 @@
 	    "AttributeBaseAgility"    "0"                   // Base agility
 	    "AttributeAgilityGain"    "0"                   // Agility bonus per level.
 	
-	    "BountyXP"          "150"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "300"                   // Gold earned max.
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "600"                   // Gold earned max.
 	
 	    //"BoundsHullName"      "DOTA_HULL_SIZE_SMALL"
 	    //"RingRadius"        "70"
@@ -53,7 +53,7 @@
 	
 	    "StatusHealth"        "25"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
-	    "StatusMana"        "135"                   // Base mana.
+	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
 	
 	    "VisionDaytimeRange"    "800"                  // Range of vision at night time.
@@ -94,19 +94,19 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "5"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "20"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
 		"BountyGoldMax"       "0"                   // Gold earned max.
 		
 		"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
-		"RingRadius"        "90"
-		"CollisionSize"			"64"
+		"RingRadius"        "70"
+		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"       "400"                 // Speed.
@@ -154,11 +154,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "5"                   // Base intelligence
-		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "20"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -213,11 +213,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"   "5"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "20"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -297,8 +297,8 @@
 		"StatusMana"        "200"                   // Base mana.
 		"StatusManaRegen"     "1"                 // Mana regeneration rate.
 		
-		"VisionDaytimeRange"    "800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "600"                  // Range of vision at night time.1
+		"VisionDaytimeRange"    "100"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "300"                  // Range of vision at night time.1
 		"DisableWearables"         "1"
 	}
 }

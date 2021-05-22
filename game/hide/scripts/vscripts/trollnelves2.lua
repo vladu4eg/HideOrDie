@@ -67,8 +67,8 @@ function trollnelves2:GameSetup()
     if IsServer() then
         for pID = 0, DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
-                PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
-                PlayerResource:SetSelectedHero(pID, ELF_HERO)
+                --PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
+               -- PlayerResource:SetSelectedHero(pID, ELF_HERO)
                 GameRules.Score[pID] = 0
                 GameRules.PlayersFPS[pID] = false
                 local steam = tostring(PlayerResource:GetSteamID(pID))
@@ -248,11 +248,32 @@ function InitializeBadHero(hero)
         end
         return 0.1
     end)
+    
+    Timers:CreateTimer(BUFF_XP1_TIME, function() 
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+        hero:AddAbility("reveal_area")
+        local abil = hero:FindAbilityByName("reveal_area")
+        abil:SetLevel(abil:GetMaxLevel())
+    end)  
+    Timers:CreateTimer(BUFF_XP2_TIME, function() 
+        -- Setup game mode
+        mode = GameRules:GetGameModeEntity()     
+        mode:SetUnseenFogOfWarEnabled(true)
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+        mode = nil
+    end)  
+    Timers:CreateTimer(BUFF_XP3_TIME, function() 
+        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+    end) 
+    hero:RemoveAbility("reveal_area")
+    hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
+
     --hero:SetStashEnabled(false)
 end
 
 function InitializeBuilder(hero)
     DebugPrint("Initialize builder")
+    GameRules.maxFood[hero:GetPlayerOwnerID()] = 30
     hero.food = 0
     hero.wisp = 0
     hero.alive = true
@@ -266,10 +287,7 @@ function InitializeBuilder(hero)
         }
     end
     hero:SetRespawnsDisabled(true)
-    
-    hero:AddItemByName("item_quelling_blade")
-    hero:AddItemByName("item_blink_datadriven")
-    
+        
     hero.goldPerSecond = 0
     hero.lumberPerSecond = 0
     Timers:CreateTimer(function()
@@ -284,11 +302,22 @@ function InitializeBuilder(hero)
     PlayerResource:SetLumber(hero, ELF_STARTING_LUMBER)
     PlayerResource:ModifyFood(hero, 0)
     PlayerResource:ModifyWisp(hero, 0)
-    hero:SetStashEnabled(false) 
-    Timers:CreateTimer(BUFF_ENIGMA_TIME, function() 
+    hero:SetStashEnabled(false)
+    hero:AddItemByName("item_quelling_blade")
+    hero:AddItemByName("item_blink_datadriven")
+    if GameRules:GetGameTime() > BUFF_ENIGMA_TIME then
         hero:AddAbility("troll_warlord_battle_trance_datadriven")
         local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
         abil:SetLevel(abil:GetMaxLevel())
+    end
+    Timers:CreateTimer(BUFF_ENIGMA_TIME, function() 
+        if hero:IsElf() then
+            hero:AddAbility("troll_warlord_battle_trance_datadriven")
+            local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
+            abil:SetLevel(abil:GetMaxLevel())
+            RESPAWN_TREE_TIME_MIN = RESPAWN_TREE_TIME_LAST_MIN
+            RESPAWN_TREE_TIME_MAX = RESPAWN_TREE_TIME_LAST_MAX
+        end
     end)  
     
 end
@@ -405,26 +434,6 @@ function InitializeTroll(hero)
         end
         return 0.1
     end)    
-    
-    
-    Timers:CreateTimer(BUFF_XP1_TIME, function() 
-        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-        hero:AddAbility("reveal_area")
-        local abil = hero:FindAbilityByName("reveal_area")
-        abil:SetLevel(abil:GetMaxLevel())
-    end)  
-    Timers:CreateTimer(BUFF_XP2_TIME, function() 
-        -- Setup game mode
-        mode = GameRules:GetGameModeEntity()     
-        mode:SetUnseenFogOfWarEnabled(true)
-        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-        mode = nil
-    end)  
-    Timers:CreateTimer(BUFF_XP3_TIME, function() 
-        hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-    end) 
-    hero:RemoveAbility("reveal_area")
-    hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
     
 end
 

@@ -1,8 +1,8 @@
 spring
 {
 	material materials/overviews/spring.vmat
-	pos_x -16706
-	pos_y 17318
-	scale 33.517
+	pos_x -10864
+	pos_y 10897
+	scale 20.871
 }
 

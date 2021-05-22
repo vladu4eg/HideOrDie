@@ -1542,9 +1542,9 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	"OnCastbar"					"0"
 	"AbilityTextureName"			"troll_warlord_battle_trance"
 	
 	// Casting
@@ -2598,7 +2598,7 @@
 	"upgrade_to_tent_6"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tent_6"
+		"AbilityTextureName"			"build_barracks"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -4977,7 +4977,7 @@
 			"01"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"radius"                "900"
+				"radius"                "1200"
 			}
 		}
 
@@ -5206,7 +5206,7 @@
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityTextureName"			"tower_teleport"
-		"AbilityCooldown"				"30"
+		"AbilityCooldown"				"90"
 		"MaxLevel"						"1"
 		"AOERadius"						"%radius"
 		"AbilityCastRange"				"400"
@@ -6439,7 +6439,7 @@
 	"train_wood_worker_1"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"wood_worker_1"
+		"AbilityTextureName"		"worker_wood"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_1"
 		
@@ -6502,7 +6502,7 @@
 	"train_wood_worker_2"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"wood_worker_2"
+		"AbilityTextureName"		"worker_wood"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_2"
 		
@@ -6565,7 +6565,7 @@
 	"train_wood_worker_3"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"wood_worker_3"
+		"AbilityTextureName"		"worker_wood"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_3"
 		
@@ -6628,7 +6628,7 @@
 	"train_wood_worker_4"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"wood_worker_4"
+		"AbilityTextureName"		"worker_wood"
 		"MaxLevel"					"1"
 		"UnitName"					"wood_worker_4"
 		
@@ -7433,10 +7433,10 @@
 	"buy_item_hp_reg_5"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"item_hp_reg_5"
+		"AbilityTextureName"		"medusa"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"MaxLevel"					"1"
-		"ItemName"					"item_hp_reg_5"
+		"ItemName"					"item_medusa"
 		
 		"BuyItem"					"1"
 				
@@ -7800,7 +7800,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"MaxLevel"					"1"
 		"ItemName"					"item_ward_sentry"
-		"AbilityCooldown"			"120"
+		"AbilityCooldown"			"60"
 		"BuyItem"					"1"
 		
 		"OnSpellStart"{
@@ -8618,12 +8618,12 @@
 	}
 
 	
-	"train_attacker_2"
+	"train_attacker_1"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_2"
+		"AbilityTextureName"		"train_attacker_1"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_2"
+		"UnitName"					"attacker_1"
 		
 		"AbilitySpecial"
 		{
@@ -8680,12 +8680,12 @@
 			}
 		}
 	}
-	"train_attacker_3"
+	"train_attacker_2"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_3"
+		"AbilityTextureName"		"train_attacker_2"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_3"
+		"UnitName"					"attacker_2"
 		
 		"AbilitySpecial"
 		{
@@ -8742,12 +8742,12 @@
 			}
 		}
 	}
-	"train_attacker_4"
+	"train_attacker_3"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_4"
+		"AbilityTextureName"		"train_attacker_3"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_4"
+		"UnitName"					"attacker_3"
 		
 		"AbilitySpecial"
 		{
@@ -8930,12 +8930,12 @@
 		}
 	}
 
-	"train_attacker_9"
+	"train_attacker_4"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_9"
+		"AbilityTextureName"		"train_attacker_4"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_9"
+		"UnitName"					"attacker_4"
 		
 		"AbilitySpecial"
 		{
@@ -8994,12 +8994,12 @@
 		}
 	}
 
-	"train_attacker_10"
+	"train_attacker_6"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_10"
+		"AbilityTextureName"		"train_attacker_6"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_10"
+		"UnitName"					"attacker_6"
 		
 		"AbilitySpecial"
 		{
@@ -9059,12 +9059,12 @@
 	}
 
 
-	"train_attacker_11"
+	"train_attacker_7"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_11"
+		"AbilityTextureName"		"train_attacker_7"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_11"
+		"UnitName"					"attacker_7"
 		
 		"AbilitySpecial"
 		{
@@ -9123,24 +9123,24 @@
 		}
 	}
 
-	"train_attacker_12"
+	"train_attacker_8"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_12"
+		"AbilityTextureName"		"train_attacker_8"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_12"
+		"UnitName"					"attacker_8"
 		
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"60000"
+				"gold_cost"			"120000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"80000"
+				"lumber_cost"		"160000"
 			}	
 			"03"
 			{
@@ -9187,12 +9187,12 @@
 		}
 	}
 
-	"train_attacker_13"
+	"train_attacker_9"
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityTextureName"		"build_hero_treant"
 		"MaxLevel"					"1"
-		"UnitName"					"attacker_13"
+		"UnitName"					"attacker_9"
 		
 		"AbilitySpecial"
 		{
@@ -10605,7 +10605,7 @@
 			"03"
 			{	
 				"var_type"					"FIELD_INTEGER"
-				"arrow_count"				"3"
+				"arrow_count"				"2"
 			}
 			"04"
 			{
@@ -10906,14 +10906,14 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 		"AbilityCastRange"				"200"
-		"AbilityCooldown"				"2.5"
+		"AbilityCooldown"				"0.5"
 		
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"64"
+				"radius"					"80"
 			}
 		}
 		
@@ -11151,7 +11151,7 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"length"			"300 400 600"
+			"length"			"400 500 600"
 		}
 		"04"
 		{
@@ -11299,7 +11299,7 @@
 	{
 		"particle" 	"particles/units/heroes/hero_furion/furion_force_of_nature_cast.vpcf"
 		"soundfile" "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
-		"model"		"models/heroes/furion/treant.vmdl"
+		"model"		"models/heroes/undying/undying_flesh_golem.vmdl"
 	}
 
 	"OnAbilityPhaseStart"
@@ -11530,7 +11530,7 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"bolt_aoe"			"255"
+			"bolt_aoe"			"255 350 900"
 		}
 		"04"
 		{
@@ -12714,7 +12714,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"value_heal"			"50"
+				"value_heal"			"500"
 			}
 			"02"
 			{

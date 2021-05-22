@@ -124,7 +124,7 @@ function Pets:OnThink()
 				end
 			-- end
 		elseif distance < 90 then
-			pet:MoveToPosition( owner_pos + ( pet_pos - owner_pos ):Normalized() * RandomInt( 110, 140 ) )
+			pet:MoveToPosition( owner_pos + ( pet_pos - owner_pos ):Normalized() * RandomInt( 80, 130 ) )
 		-- elseif near and ( near:GetAbsOrigin() - pet_pos ):Length2D() < 110 then
 		-- 	pet:MoveToPosition( pet_pos + ( pet_pos - near:GetAbsOrigin() ):Normalized() * RandomInt( 100, 150 ) )
 		end

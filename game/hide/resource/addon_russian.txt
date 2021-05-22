@@ -164,7 +164,13 @@
 
 		"DOTA_Tooltip_modifier_gathering_lumber"                                          "Gathering Lumber"
 		"DOTA_Tooltip_modifier_gathering_lumber_Description"                              ""
-		
+
+		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Создает дровосеков для добычи древесины(lumber). Lumberjack Guardian должен быть возле дерева."
+		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
+
+
 		"DOTA_Tooltip_modifier_gathering_lumber_1"                                          "Gathering Lumber"
 		"DOTA_Tooltip_modifier_gathering_lumber_1_Description"                              ""
 		"DOTA_Tooltip_modifier_gathering_lumber_6"                                          "Gathering Lumber"
@@ -223,24 +229,24 @@
 		"DOTA_Tooltip_ability_build_flag_Description"                                     "Позволяет заблокировать базу от других Эльфов.<br>Можно заблокировать только 1 базу.<br>Вы можете разрешить строить на вашей базе другим Эльфам, НО они потеряют блокировку на своей базе."
 		
 		"DOTA_Tooltip_ability_build_tent"                                                 "Build Tent"
-		"DOTA_Tooltip_ability_build_tent_Description"                                     "Постройте Tent, чтобы получать золото каждых 5 секунд."
+		"DOTA_Tooltip_ability_build_tent_Description"                                     "Постройте Tent, чтобы получать золото и дерево(lumber)."
 		"DOTA_Tooltip_ability_build_tent_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tent_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_2"                                          "Upgrade To Tent 2"
-		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Улучшить свой tent!<br>Gold: 1<br>Lumber: 2"
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Улучшить свой tent!<br>Gold: 2<br>Lumber: 3"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Upgrade To Tent 3"
-		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Улучшить свой Tent!<br>Gold: 2<br>Lumber: 3"
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Улучшить свой Tent!<br>Gold: 4<br>Lumber: 4"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Upgrade To Tent 4"
-		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Улучшить свой Tent!<br>Gold: 4<br>Lumber: 4"
+		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Улучшить свой Tent!<br>Gold: 16<br>Lumber: 16"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_5"                                          "Upgrade To Tent 5"
-		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Улучшить свой Tent<br>Gold: 16<br>Lumber: 16"
+		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Улучшить свой Tent<br>Gold: 128<br>Lumber: 128"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_6"                                          "Upgrade To Tent 6"
-		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Улучшить свой Tent!<br>Gold: 128<br>Lumber: 128"
+		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Улучшить свой Tent!<br>Gold: 256<br>Lumber: 256"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_7"                                          "Upgrade To Tent 7"
 		"DOTA_Tooltip_ability_upgrade_to_tent_7_Description"                              "Улучшить свой Tent! X1:64 or X2:128 gold per/sec"
@@ -257,25 +263,28 @@
 		"DOTA_Tooltip_ability_gain_gold"                                                  "Gain Gold"
 		"DOTA_Tooltip_ability_gain_gold_Description"                                      "Каждую секунду дает определенное количество золота"
 
+		"DOTA_Tooltip_ability_upgrade_to_monkey_king_2"                                   "Upgrade To Keeper of the forest 2"
+		"DOTA_Tooltip_ability_upgrade_to_monkey_king_2_Description"                       "Создает новых Воинов."
+
 		"DOTA_Tooltip_ability_build_rock_1"                                                 "Build Tree"
 		"DOTA_Tooltip_ability_build_rock_1_Description"                                     "Постройте защитное дерево на середине прохода, чтобы заблокировать дорогу Инферналам на вашу базу."
 		"DOTA_Tooltip_ability_build_rock_1_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_build_rock_1_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_2"                                          "Upgrade To Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Улучшить свой Tree!<br>HP:400<br>ARMOR:2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Улучшить свой Tree!<br>HP:1200<br>ARMOR:2"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_3"                                          "Upgrade To Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Улучшить свой Tree!<br>HP:600<br>ARMOR:2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Улучшить свой Tree!<br>HP:1800<br>ARMOR:2"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_4"                                          "Upgrade To Armored Tree 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Улучшить свой Armored Tree!<br>HP:200<br>ARMOR:4"
+		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Улучшить свой Armored Tree!<br>HP:800<br>ARMOR:4"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_5"                                          "Upgrade To Armored Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Улучшить свой Armored Tree!<br>HP:400<br>ARMOR:10"
+		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Улучшить свой Armored Tree!<br>HP:1200<br>ARMOR:10"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_6"                                    "Upgrade To Armored Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Улучшить свой Armored Tree!<br>HP:600<br>ARMOR:80"
+		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Улучшить свой Armored Tree!<br>HP:2500<br>ARMOR:80"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_7"                                    "Upgrade To Invisible Guardian"
 		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Улучшить свой Invisible Guardian!<br>HP:200<br>ARMOR:0"
@@ -541,13 +550,13 @@
 		"DOTA_Tooltip_ability_ursa_fury_swipes_datadriven_Description"                 "20 магического урона за удар. Действует 6 секунд."
 		
 		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven"                             "Lunar Blessing"
-		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven_Description"                 "Дает 150 000 урона и 400 радиуса обзора ночью в радиусе 600."
+		"DOTA_Tooltip_ability_luna_lunar_blessing_datadriven_Description"                 "Дает 200 урона и 400 радиуса обзора ночью в радиусе 600."
 		
 		"DOTA_Tooltip_modifier_lunar_blessing_datadriven"                             "Lunar Blessing"
-		"DOTA_Tooltip_modifier_lunar_blessing_datadriven_Description"                 "Дает 150 000 урона и 400 радиуса обзора ночью в радиусе 600."
+		"DOTA_Tooltip_modifier_lunar_blessing_datadriven_Description"                 "Дает 200 урона и 400 радиуса обзора ночью в радиусе 600."
 		
 		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect"                             "Lunar Blessing"
-		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect_Description"                 "Дает 150 000 урона и 400 радиуса обзора ночью в радиусе 600."
+		"DOTA_Tooltip_modifier_lunar_blessing_damage_effect_Description"                 "Дает 200 урона и 400 радиуса обзора ночью в радиусе 600."
 		
 		"DOTA_Tooltip_ability_medusa_split_shot_lua"                             "Split Shot"
 		"DOTA_Tooltip_ability_medusa_split_shot_lua_Description"                 ""
@@ -639,12 +648,25 @@
 		"DOTA_Tooltip_ability_block_buff"											"Хладнокровность"
 		"DOTA_Tooltip_ability_block_buff_Description"  								"Ваша броня крепчает при виде стаи Эльфов.<br>Если радиусе 900 находятся 3 и более Эльфов, то вы получаете 16 блока урона с шансом в 50%."
 
+		"DOTA_Tooltip_Ability_attack_tree_skill"										"Пожерание дерева"
+		"DOTA_Tooltip_Ability_attack_tree_skill_Description"										"Позволяет сломать одно дерево. "
 
 		"DOTA_Tooltip_Ability_lone_druid_spirit_bear_datadriven"						"Teddy bear"
 		"DOTA_Tooltip_Ability_lone_druid_spirit_bear_datadriven_Description"			"Создает ручного медведя, который сражается на вашей стороне. Если медведь умер, то вы потеряете 99,9% HP и сможете оживить медведя через 6 минут, а сам медведь потеряет все свои предметы. Умение становится активным после покупки Infernal Hut 7 уровня и если в команде нет Волков."
 		
 		"DOTA_Tooltip_modifier_shrapnel_stack_counter_datadriven"							"Number of charges"
-		
+
+		"DOTA_Tooltip_Ability_lina_light_strike_array_datadriven"						"Light Strike Array"
+		"DOTA_Tooltip_Ability_lina_light_strike_array_datadriven_Description"			"Вызывает столб пламени, разрушающий деревья. Дает возможность уйти в лес."
+
+
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_array_datadriven"						"Light Strike Array"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_array_datadriven_Description"			"Вызывает столб пламени, разрушающий деревья. Дает возможность уйти в лес."
+
+
+		"DOTA_Tooltip_ability_build_tree"                                                     "Power of nature"
+		"DOTA_Tooltip_ability_build_tree_Description"                                         "Восстанавливает срубленные деревья. Не работает, если на дереве есть постройка."
+
 		"DOTA_Tooltip_ability_repair"                                                     "Repair"
 		"DOTA_Tooltip_ability_repair_Description"                                         "Отремонтируйте свои постройки! <br>Щелкните правой кнопкой мыши для автоматического ремонта стены."
 		
@@ -1032,7 +1054,7 @@
 		"DOTA_Tooltip_ability_buy_item_hp_reg_4"                                          "Buy Troll Healer"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_4_Description"                              ""
 
-		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy HP Reg.  Lv 5"
+		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy Medusa"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5_Description"                              ""
 
 		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy HP Reg.  Lv 6"
@@ -1118,6 +1140,25 @@
 		"DOTA_Tooltip_ability_invul_ability"                                              "Invulnerability"
 		"DOTA_Tooltip_ability_invul_ability_Description"                                  "Делает юнитов бессмертными! "
 
+		"DOTA_Tooltip_Ability_blink_infernal_datadriven"												"Blink"
+		"DOTA_Tooltip_Ability_blink_infernal_datadriven_Description"										"Позволяет перемещаться на небольшое расстояние."
+
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult_datadriven"				"Light Strike Array Ultimate"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult_datadriven_Description"	"Вызывает столб пламени, разрушающий деревья. Оглушает противников. Дает возможность уйти в лес."
+
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult2_datadriven"				"Light Strike Array Ultimate"
+		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult2_datadriven_Description"	"Вызывает столб пламени, разрушающий деревья. Оглушает противников. Дает возможность уйти в лес."
+
+
+		"DOTA_Tooltip_Ability_blink_datadriven"												"Blink"
+		"DOTA_Tooltip_Ability_blink_datadriven_Description"										"Позволяет перемещаться на небольшое расстояние."
+
+		"DOTA_Tooltip_Ability_blink"												"Blink"
+		"DOTA_Tooltip_Ability_blink_Description"										"Позволяет перемещаться на небольшое расстояние."
+
+
+		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+3 ко всем атрибутам."
 
 		// ***********************************************
 		// ******************** ITEMS ********************
@@ -1183,6 +1224,24 @@
 		"DOTA_Tooltip_ability_item_gem"                                                 "Gem of True Sight"
 		"DOTA_Tooltip_ability_item_gem_Description"                                     ""
 
+		"DOTA_Tooltip_ability_buy_item_ward_sentry"													 "Sentry Ward"
+		"DOTA_Tooltip_ability_buy_item_ward_sentry_Description"										""
+
+		"DOTA_Tooltip_ability_buy_item_ward_observer"													 "Observer Ward"
+		"DOTA_Tooltip_ability_buy_item_ward_observer_Description"										""
+
+		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge"													 "Книга Опыта"
+		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge_Description"										""
+
+		"DOTA_Tooltip_ability_buy_item_book_of_strength"													 "Книга Силы"
+		"DOTA_Tooltip_ability_buy_item_book_of_strength_Description"										""
+		
+		"DOTA_Tooltip_ability_buy_item_book_of_agility"													 "Книга Ловкости"
+		"DOTA_Tooltip_ability_buy_item_book_of_agility_Description"										""
+		
+		"DOTA_Tooltip_ability_buy_item_book_of_intelligence"													 "Книга Интеллекта"		
+		"DOTA_Tooltip_ability_buy_item_book_of_intelligence_Description"										""
+
 		"DOTA_Tooltip_ability_buy_item_gem"                                                 "Gem of True Sight"
 		"DOTA_Tooltip_ability_buy_item_gem_Description"                                     ""
 
@@ -1205,7 +1264,7 @@
 		"DOTA_Tooltip_ability_item_mask_of_madness_datadriven_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi"	"Меч Гнева (Ловкость)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает ловкость героя на %agi_percent%%% от базовой на %duration% секунд."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает ловкость героя на 75% от базовой на 30 секунд."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_agi_bonus_agility"	"+$agi"	
@@ -1214,7 +1273,7 @@
 		"DOTA_Tooltip_modifier_item_lia_blade_of_rage_agi_active_Description"	"Ловкость этого героя увеличена."
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str"	"Меч Гнева (Сила)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает силу героя на %str_percent%%% от базовой на %duration% секунд."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает силу героя на 75% от базовой на 30 секунд."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_str_bonus_strength"	"+$str"	
@@ -1223,7 +1282,7 @@
 		"DOTA_Tooltip_modifier_item_lia_blade_of_rage_str_active_Description"	"Сила этого героя увеличена."		
 
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int"	"Меч Гнева (Интеллект)"
-		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает интеллект героя на %int_percent%%% от базового на %duration% секунд."
+		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_Description"	"<h1>Активируемая: Гнев</h1> Увеличивает интеллект героя на 75% от базового на 30 секунд."
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_damage"	"+$damage"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_attack_speed"	"+$attack"
 		"DOTA_Tooltip_ability_item_lia_blade_of_rage_int_bonus_intellect"	"+$int"	
@@ -1447,9 +1506,8 @@
 		"DOTA_Tooltip_ability_item_hp_reg_4_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_item_hp_reg_4_lumber_cost"                                  "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_item_hp_reg_5"                                              "Hp Reg 5"
+		"DOTA_Tooltip_ability_item_hp_reg_5"                                              "Medusa"
 		"DOTA_Tooltip_ability_item_hp_reg_5_Description"                                  ""
-		"DOTA_Tooltip_ability_item_hp_reg_5_bonus_hp_regen"                               "BONUS HP REGEN: "
 		"DOTA_Tooltip_ability_item_hp_reg_5_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_item_hp_reg_5_lumber_cost"                                  "LUMBER COST: "
 

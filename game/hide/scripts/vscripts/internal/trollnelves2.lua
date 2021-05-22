@@ -137,7 +137,6 @@ function trollnelves2:GoldFilter( kv )
     local hero = PlayerResource:GetSelectedHeroEntity(kv.player_id_const)
     if hero:IsTroll() then
         PlayerResource:ModifyGold(hero,kv.gold)
-        PlayerResource:ModifyLumber(hero,kv.gold)
     end
     return true
 end

@@ -1,8 +1,8 @@
 MAXIMUM_ATTACK_SPEED = 600
 MINIMUM_ATTACK_SPEED = 20
 
-TROLL_HERO = {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} -- {"npc_dota_hero_troll_warlord", "npc_dota_hero_pugna","npc_dota_hero_pudge"}
-ELF_HERO = "npc_dota_hero_treant"
+TROLL_HERO = {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} -- {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} 
+ELF_HERO = "npc_dota_hero_furion"
 ANGEL_HERO = "npc_dota_hero_crystal_maiden"
 WOLF_HERO = "npc_dota_hero_lycan"
 BEAR_HERO = "npc_dota_hero_bear"
@@ -19,8 +19,8 @@ WOLF_STARTING_RESOURCES_FRACTION = 0.20 -- What percentage of troll's networth w
 
 ELF_STARTING_GOLD = 50
 ELF_STARTING_LUMBER = 100
-TROLL_STARTING_GOLD = 20
-TROLL_STARTING_LUMBER = 20
+TROLL_STARTING_GOLD = 40
+TROLL_STARTING_LUMBER = 0
 TROLL_STARTING_GOLD_X4 = 350
 STARTING_LUMBER_PRICE = 150
 MINIMUM_LUMBER_PRICE = 10
@@ -43,6 +43,12 @@ PERC_KICK_PLAYER = 0.80
 MIN_PLAYER_KICK = 8
 
 FOUNTAIN_GLYPH_TIME = 3.5
+
+RESPAWN_TREE_TIME_MIN = 30
+RESPAWN_TREE_TIME_MAX = 120
+
+RESPAWN_TREE_TIME_LAST_MIN = 10
+RESPAWN_TREE_TIME_LAST_MAX = 20
 
 EVENT_START = false
 

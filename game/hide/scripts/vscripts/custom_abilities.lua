@@ -117,7 +117,7 @@ function GainGoldTeamThinker(event)
 				local hero = PlayerResource:GetSelectedHeroEntity(playerID) or false
 				if hero then
 					PlayerResource:ModifyGold(hero,amount)
-					PlayerResource:ModifyLumber(hero,amount)
+					--PlayerResource:ModifyLumber(hero,amount)
 				end
 			end
 		end
@@ -193,6 +193,7 @@ function shrapnel_fire( keys )
 		local dummy_duration = ability:GetLevelSpecialValueFor( "duration", ( ability:GetLevel() - 1 ) ) + 0.1
 		local damage_delay = ability:GetLevelSpecialValueFor( "damage_delay", ( ability:GetLevel() - 1 ) ) + 0.1
 		local next_charge = 0
+
 		if caster:HasModifier("modifier_troll_warlord_presence") then
 			charge_replenish_time = 20
 		end
@@ -344,7 +345,7 @@ function RevealArea( event )
 	if IsServer() then
 		local caster = event.caster
 		local point = event.target_points[1]
-		local visionRadius = string.match(GetMapName(),"standart") and event.Radius*0.58 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
+		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*2 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
 		local visionDuration = event.Duration
 		AddFOWViewer(caster:GetTeamNumber(), point, visionRadius, visionDuration, false)
 	end
@@ -773,7 +774,7 @@ function BuyItem(event)
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
 	
-	if not IsInsideShopArea(hero) and item_name ~=  "item_book_of_agility" and item_name ~=  "item_book_of_strength" and item_name ~=  "item_book_of_intelligence" then
+	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
 		return
@@ -788,7 +789,7 @@ function BuyItem(event)
 		ability:EndCooldown()
 		return
 	end
-	if hero:GetNumItemsInInventory() >= 6 then
+	if hero:GetNumItemsInInventory() >= 6 and item_name ~=  "item_book_of_agility" and item_name ~=  "item_book_of_strength" and item_name ~=  "item_book_of_intelligence" and item_name ~=  "item_tome_of_knowledge" and CheckItemStack(hero, item_name) then
 		hero:DropStash()
 		SendErrorMessage(playerID, "#error_full_inventory")
 		ability:EndCooldown()
@@ -809,6 +810,20 @@ function BuyItem(event)
 	PlayerResource:ModifyGold(hero,-gold_cost)
 	local item = CreateItem(item_name, hero, hero)
 	hero:AddItem(item)
+end
+
+function CheckItemStack(hero, item_name)
+	local item = hero:FindItemInInventory(item_name)
+	if item ~= nil then
+		if hero:FindItemInInventory(item_name):IsStackable() then
+			return false
+		else
+			return true
+		end
+	else
+		return true
+	end
+
 end
 
 function IsInsideShopArea(unit) 

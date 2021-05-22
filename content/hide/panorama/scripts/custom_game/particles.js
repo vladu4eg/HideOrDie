@@ -19,21 +19,12 @@ function UpdateParticles( table_name, key, data )
                     $("#NAPartButt"+x).visible = false;
                     if (data[poriadok[x-1]+1] != "nill")
                     {
-                        if (data[poriadok[x-1]+1] != "normal" && x < 17)
+                        if (data[poriadok[x-1]+1] != "normal")
                         {
                             $("#NewPartButt"+myint).visible = true;
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = data[poriadok[x-1]+1];
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                         else 
@@ -42,15 +33,6 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NewPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                     }
@@ -61,15 +43,6 @@ function UpdateParticles( table_name, key, data )
                             $("#NAPartButt"+myint).visible = true;
                             $("#napartname"+myint).text = names[poriadok[x-1]];
                             $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                            if ($("#NewTooltip"+myint) == null)
-                            {
-                                $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
-                            else
-                            {
-                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                                $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                            }
                             myint = myint + 1;
                         }
                     }
@@ -81,39 +54,8 @@ function UpdateParticles( table_name, key, data )
                         $("#NAPartButt"+myint).visible = true;
                         $("#napartname"+myint).text = names[poriadok[x-1]];
                         $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                        if ($("#NewTooltip"+myint) == null)
-                        {
-                            $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                        }
-                        else
-                        {
-                            $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                            $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                        }
                         myint = myint + 1;
                     }
-                }
-            }
-        }
-        else
-        {
-            for (var x = 1; x < names.length+1; x = x + 1)
-            {
-                if (needs[poriadok[x-1]] != false)
-                {
-                    $("#NAPartButt"+myint).visible = true;
-                    $("#napartname"+myint).text = names[poriadok[x-1]];
-                    $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
-                    if ($("#NewTooltip"+myint) == null)
-                    {
-                        $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                    }
-                    else
-                    {
-                        $("#NewTooltip"+myint).RemoveAndDeleteChildren();
-                        $("#NAPartButt"+myint).BCreateChildren("<Panel id='NewTooltip"+myint+"' class='NewTooltip' onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip"+myint+",file://{resources}/layout/custom_game/particles_tooltips.xml,num="+(poriadok[x-1]+1)+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip"+myint+")' />");
-                    }
-                    myint = myint + 1;
                 }
             }
         }
