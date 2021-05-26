@@ -329,9 +329,7 @@ function UpgradeBuilding( event )
         local abil = hero:FindAbilityByName("lone_druid_spirit_bear_datadriven")
         abil:SetLevel(abil:GetMaxLevel())
     end
-    if newBuildingName == "tent_5" or newBuildingName == "tent_6" then
-        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 9 
-    end
+
     Timers:CreateTimer(buildTime,function()
         if newBuilding:IsNull() or not newBuilding:IsAlive() then
             return
@@ -348,5 +346,9 @@ function UpgradeBuilding( event )
             UpdateUpgrades(value)
         end
     end)
+    if newBuilding:GetUnitName() == "tent_5" or newBuilding:GetUnitName() == "tent_6" then
+        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 9 
+        PlayerResource:ModifyFood(hero, 0)
+    end
 end
 

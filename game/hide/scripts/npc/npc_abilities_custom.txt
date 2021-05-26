@@ -7800,7 +7800,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"MaxLevel"					"1"
 		"ItemName"					"item_ward_sentry"
-		"AbilityCooldown"			"60"
+		"AbilityCooldown"			"30"
 		"BuyItem"					"1"
 		
 		"OnSpellStart"{
@@ -7821,7 +7821,7 @@
 		"ItemName"					"item_ward_observer"
 		
 		"BuyItem"					"1"
-		"AbilityCooldown"			"120"
+		"AbilityCooldown"			"45"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8640,7 +8640,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -8702,7 +8702,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"10"
 			}	
 			"04"
 			{
@@ -8764,7 +8764,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -8826,7 +8826,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"50"
 			}	
 			"04"
 			{
@@ -8867,7 +8867,7 @@
 		}
 	}
 	
-	"train_attacker_6"
+	"train_attacker_6_1"
 	{
 		"BaseClass"					"ability_datadriven"
 		"AbilityTextureName"		"train_attacker_6"
@@ -8889,7 +8889,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -8952,7 +8952,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -9016,7 +9016,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -9032,7 +9032,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9081,7 +9081,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -9097,7 +9097,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"40"
+		"AbilityChannelTime"		"5"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9145,7 +9145,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"10"
 			}	
 			"04"
 			{
@@ -9161,7 +9161,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"25"
+		"AbilityChannelTime"		"35"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9273,7 +9273,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"10"
+				"food_cost"			"101"
 			}	
 			"04"
 			{
@@ -11120,7 +11120,7 @@
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"500"
-	"AbilityCastPoint"				"0.3 0.3 0.3"
+	"AbilityCastPoint"				"0.3 0.1 0"
 	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -11132,7 +11132,7 @@
 	
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"25 45 65"
+	"AbilityDamage"					"5 10 15"
 	
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -11151,12 +11151,12 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"length"			"400 500 600"
+			"length"			"500 6700 1100"
 		}
 		"04"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"speed"				"600 900 1200"
+			"speed"				"600 900 1000"
 		}
 		// Extra variables
 		"05"
@@ -11507,7 +11507,7 @@
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"10 25 35"
+	"AbilityDamage"					"5 10 15"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -13143,6 +13143,68 @@
 	    }
 	  }
 	}
+	//=================================================================================================================
+	// Techies: Land Mines
+	//=================================================================================================================
+	"techies_land_mines"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"            "3"
+		"RequiredLevel"          "25"
+		"FightRecapLevel"		"5"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120 90 50"
 	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 130 170"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"				"100"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"proximity_threshold"				"1.6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"5 10 18"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"burn_duration"				"5"
+			}	
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"building_damage_pct"		"1"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"activation_delay"			"1.75"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}	
 	
 }

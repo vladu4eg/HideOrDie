@@ -568,13 +568,13 @@
 		"DOTA_Tooltip_modifier_convert_gold_Description"			"Автоматический перевод золота в дерево при атаке."
 
 		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven"                  "Buff Infernal"
-		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven_Description"      "Buff Infernal: Максимальная скорость атаки. +6131 armor. Нет КД у скиллов. +1000 Regenaration."
+		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven_Description"      "Buff Infernal: +600 скорость атаки. +100 armor. -10% CD скиллов. +100 Regenaration. +500 ко всем атрибутам."
 
 		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven"                  "Buff Infernal"
-		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven_Description"      "Buff Infernal: Максимальная скорость атаки. +6131 armor. Нет КД у скиллов. +1000 Regenaration."
+		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven_Description"      "Buff Infernal: +600 скорость атаки. +100 armor. -10% CD скиллов. +100 Regenaration. +500 ко всем атрибутам."
 		
 		"DOTA_Tooltip_modifier_troll_warlord_presence"							  "Buff Infernal"
-		"DOTA_Tooltip_modifier_troll_warlord_presence_Description"				  "Buff Infernal: Максимальная скорость атаки. +6131 armor. Нет КД у скиллов. +1000 Regenaration."
+		"DOTA_Tooltip_modifier_troll_warlord_presence_Description"				  "Buff Infernal: +600 скорость атаки. +100 armor. -10% CD скиллов. +100 Regenaration. +500 ко всем атрибутам."
 		
 		"DOTA_Tooltip_modifier_weave_friendly_datadriven"							"Shadow Wave"
 		"DOTA_Tooltip_modifier_weave_friendly_datadriven_Description"				"+1 защиты в секунду для союзников. -50 защиты для врагов. Длится 20 секунд."
@@ -1132,7 +1132,7 @@
 		"DOTA_Tooltip_ability_cm_stun_Description"                                        "Оглушает врага на 2 секунды. "
 
 		"DOTA_Tooltip_ability_cm_haste"                                                   "Haste"
-		"DOTA_Tooltip_ability_cm_haste_Description"                                       "Максимально увеличивает вашу скорость передвижения и дает 100% уклонение от волков, но не от Тролля."
+		"DOTA_Tooltip_ability_cm_haste_Description"                                       "Максимально увеличивает вашу скорость передвижения."
 
 		"DOTA_Tooltip_ability_cm_heal_building"                                           "Heal Building"
 		"DOTA_Tooltip_ability_cm_heal_building_Description"                               "Используйте эту способность на здании, чтобы вылечить его. Восстанавливает 300 здоровья или 30% - в зависимости от того, что больше. На время восстановления способности здание получает дебафф, который заставляет других ангелов лечить в 3 раза меньше. "
@@ -1149,6 +1149,20 @@
 		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult2_datadriven"				"Light Strike Array Ultimate"
 		"DOTA_Tooltip_Ability_lina_light_strike_infernal_ult2_datadriven_Description"	"Вызывает столб пламени, разрушающий деревья. Оглушает противников. Дает возможность уйти в лес."
 
+		"DOTA_Tooltip_Ability_lion_impale_datadriven"											"Earth Spike"
+		"DOTA_Tooltip_Ability_lion_impale_datadriven_Description"								"Из земли прорывается полоса каменных шипов. Они подбрасывают врагов в воздух, а по приземлении оглушают их и наносят урон."
+		
+		"DOTA_Tooltip_Ability_sven_storm_bolt_datadriven"										"Storm Hammer"
+		"DOTA_Tooltip_Ability_sven_storm_bolt_datadriven_Description"							"Герой высвобождает всю мощь своей магической рукавицы, нанося жертве и её союзникам в небольшой области урон и оглушая их."
+		
+		"DOTA_Tooltip_Ability_furion_force_of_nature_datadriven"								"Death call"
+		"DOTA_Tooltip_Ability_furion_force_of_nature_datadriven_Description"					"Преобразует деревья в выбранной области в подконтрольных Мертвых Юнитов."
+
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven"							"Wolf Spawn"
+		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven_Description"							"Создает двух Волков."
+		
+		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven"							"Shaman's Ward"
+		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven_Description"							"Создает от 1 до 3 змей."
 
 		"DOTA_Tooltip_Ability_blink_datadriven"												"Blink"
 		"DOTA_Tooltip_Ability_blink_datadriven_Description"										"Позволяет перемещаться на небольшое расстояние."
@@ -1751,7 +1765,7 @@
         "DOTA_Chat_PlayerKilledAssistNearby"        ""
 		"DOTA_Chat_PlayerKilledAssistNearbySingle"  ""
 		
-		"elf_tips1"																		"<br><br><b>Подсказки для Эльфа</b>
+		"elf_tips1"																		"<br><br><b>Подсказки для Treant</b>
 		<br>·Вы можете построить палатку в самом начале игры рядом с базой Тролля, пока идете искать базу. Таким образом, у вас будет преимущество, просто не достраивайте палатку, иначе вы не сможете ее уничтожить, так как Тролль будет поблизости.
 		<br>·Поставьте камень посередине ступенек, чтобы сбоку камня было по 1 клетки. 
 		"
@@ -1763,7 +1777,7 @@
 					<br>·Щелкните правой кнопкой мыши на способности ремонта, чтобы включить авторемонт построек! "
 		"elf_tips3"																	"·Поделитесь своими ресурсами. Если у вас есть лишние ресурсы, поделитесь ими! В этой игре необходима командная работа, чтобы Тролля не фидили слишком быстро! "
 		
-		"troll_tips"																		"<b>Подсказки для Тролля/Волка</b>
+		"troll_tips"																		"<b>Подсказки для Infernal</b>
 					<br>·ВАМ НЕЛЬЗЯ УМИРАТЬ! Если Тролль умрет, то игра сразу же закончится. 
 					<br>·Каждая атака дает вам золото в зависимости от того, сколько урона вы нанесли
 					<br>·Покупайте предметы, чтобы стать сильнее!
@@ -1774,7 +1788,7 @@
 					<br>·Вы можете использовать телепорт и невидимость вместе. Таким образом, вы сможете телепортироваться, оставаясь невидимым.
 					<br>·Удачного троллинга этих маленьких эльфов.
 					"
-		"angel_tips"																		"<br><br><b>Подсказки для Ангела</b>
+		"angel_tips"																		"<br><br><b>Подсказки для Death Treant</b>
 		<br/>·Пожертвуйте золото тем, кто действительно в нем нуждается, например, Эльфу, которого вначале игры душил Тролль.
 		<br/>·Не позволяйте троллю убить вас! Ваше золото уйдет Троллю и сделает его сильнее!!                    
 		<br/>·Всегда отправляйте золото Эльфам! ВСЕГДА!!!         

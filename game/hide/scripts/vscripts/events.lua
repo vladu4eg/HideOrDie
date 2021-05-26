@@ -358,10 +358,13 @@ function trollnelves2:OnEntityKilled(keys)
             elseif killed:GetKeyValue("WispCost") then
             local wisp = killed:GetKeyValue("WispCost")
             PlayerResource:ModifyWisp(hero, -wisp)
-            if killed:GetUnitName() == "tent_5" or killed:GetUnitName() == "tent_6" then
-                GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 9 or 0
-            end
         end
+        
+        if killed:GetUnitName() == "tent_5" or killed:GetUnitName() == "tent_6" then
+            GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 9
+            PlayerResource:ModifyFood(hero, 0)
+        end
+        
     end
 end
 

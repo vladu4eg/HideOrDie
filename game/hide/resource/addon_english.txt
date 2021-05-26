@@ -158,6 +158,11 @@
 		"teleport_1"                                                                     "Teleport 1"
 		"teleport_2"                                                                     "Teleport 2"
 		
+		"npc_dota_furion_treant_1"														"Dead Golem"
+		"npc_dota_furion_treant_2"														"Dead Golem"
+		"npc_dota_furion_treant_3"														"Dead Golem"
+		"npc_dota_furion_treant_4"														"Dead Golem"
+		
 		"golem_stone"                                                                     "Golem Stone"
 		"golem_fire"                                                                      "Golem Stun"
 		
@@ -616,7 +621,7 @@
 		"DOTA_Tooltip_modifier_troll_warlord_convert_gold_Description"			"Automatic exchange of gold for wood when attacking."
 
 		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven"                  "Buff Infernal"
-		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven_Description"      "Buff Infernal: Max attack speed. +6131 armor. No cooldown skill. +1000 Regenaration."
+		"DOTA_Tooltip_ability_troll_warlord_battle_trance_datadriven_Description"      "Buff Infernal: +600 attack speed. +100 armor. -10% cooldown skill. +100 Regenaration. +500 to all attributes."
 		
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_datadriven"                  "Wraithfire Blast"
 		"DOTA_Tooltip_ability_skeleton_king_hellfire_blast_datadriven_Description"      "Stun 1 sec. Reduce movespeed by -20 for 4 sec. Added to celebrate Halloween 2020."
@@ -628,10 +633,10 @@
 		"DOTA_Tooltip_ability_silence_datadriven_Description"      "Prevents enemies in the target area from casting abilities for 3 seconds. Added to celebrate Halloween 2020."
 
 		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven"                  "Buff Infernal"
-		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven_Description"      "Buff Infernal: Max attack speed. +6131 armor. No cooldown skill. +1000 Regenaration."
+		"DOTA_Tooltip_ability_troll_warlord_presence_datadriven_Description"      "Buff Infernal: +600 attack speed. +100 armor. -10% cooldown skill. +100 Regenaration. +500 to all attributes."
 		
 		"DOTA_Tooltip_modifier_troll_warlord_presence"							  "Buff Infernal"
-		"DOTA_Tooltip_modifier_troll_warlord_presence_Description"				  "Buff Infernal: Max attack speed. +6131 armor. No cooldown skill. +1000 Regenaration."
+		"DOTA_Tooltip_modifier_troll_warlord_presence_Description"				  "Buff Infernal: +600 attack speed. +100 armor. -10% cooldown skill. +100 Regenaration. +500 to all attributes."
 		
 		"DOTA_Tooltip_modifier_weave_friendly_datadriven"							"Shadow Wave"
 		"DOTA_Tooltip_modifier_weave_friendly_datadriven_Description"				"+1 defense per second for allies. -50 defense for enemies. Lasts 20 seconds."
@@ -733,7 +738,16 @@
 		
 		"DOTA_Tooltip_Ability_lina_light_strike_infernal2_ult_datadriven"				"Light Strike Array Ultimate"
 		"DOTA_Tooltip_Ability_lina_light_strike_infernal2_ult_datadriven_Description"	"Summons a pillar of flame that destroys trees. Imposes a stun on opponents. Gives the opportunity to go into the forest."
-
+		
+		"DOTA_Tooltip_Ability_lion_impale_datadriven"											"Earth Spike"
+		"DOTA_Tooltip_Ability_lion_impale_datadriven_Description"								"Rock spikes burst from the earth along a straight path. Enemy units are hurled into the air, then are stunned and take damage when they fall."
+		
+		"DOTA_Tooltip_Ability_sven_storm_bolt_datadriven"										"Storm Hammer"
+		"DOTA_Tooltip_Ability_sven_storm_bolt_datadriven_Description"							"Sven unleashes his magical gauntlet that deals damage and stuns enemy units in a small area around the target."
+		
+		"DOTA_Tooltip_Ability_furion_force_of_nature_datadriven"								"Death call"
+		"DOTA_Tooltip_Ability_furion_force_of_nature_datadriven_Description"					"Converts an area of trees into Death units."
+		
 		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
 		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+3 to all attributes."
 
@@ -1028,9 +1042,6 @@
 		
 		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven"							"Shaman's Ward"
 		"DOTA_Tooltip_ability_shadow_shaman_mass_serpent_ward_datadriven_Description"							"Creates 1 to 3 snakes."
-		
-		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven"							"Wolf Spawn"
-		"DOTA_Tooltip_ability_lycan_summon_wolves_datadriven_Description"							"Creates two Wolves."
 
 		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge"													 "Experience Book"
 		"DOTA_Tooltip_ability_buy_item_tome_of_knowledge_Description"										""
@@ -1370,7 +1381,7 @@
 		"DOTA_Tooltip_ability_cm_stun_Description"                                        "Stuns the enemy for 2 seconds. "
 
 		"DOTA_Tooltip_ability_cm_haste"                                                   "Haste"
-		"DOTA_Tooltip_ability_cm_haste_Description"                                       "Increases your movement speed to the maximum. 100% evasion from wolves, but not from the Infernal."
+		"DOTA_Tooltip_ability_cm_haste_Description"                                       "Increases your movement speed to the maximum."
 
 		"DOTA_Tooltip_ability_cm_heal_building"                                           "Heal Building"
 		"DOTA_Tooltip_ability_cm_heal_building_Description"                               "Use this ability on the building to heal it. Restores 300 Health or 30% - whichever is bigger. For ability cooldown duration the building receives a debuff that makes other angel heals heal 3 times less. "
@@ -1892,7 +1903,10 @@
 		"DOTA_Tooltip_ability_item_disable_repair_2_bonus_damage"                                   "BONUS DAMAGE: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_gold_cost"                                      "GOLD COST: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_lumber_cost"                                    "LUMBER COST: "
-	
+
+"DOTA_Tooltip_ability_techies_land_mines"	"Proximity Mines"
+"DOTA_Tooltip_ability_techies_land_mines_Description"	"Устанавливает невидимую мину. Её невидимость невозможно развеять, но она станет видна, если противник зайдет в радиус её действия. Мина сдетонирует, если противник будет +%proximity_threshold% сек. находиться на расстоянии в %radius% от неё. Взрыв наносит полный урон по всей области срабатывания. Наносит постройкам %building_damage_pct%%% урона."
+
         "topptext"                                      									"The best players in the overall ranking: "
         "topwtext"                                      									"The best players for the Treant: "
         "tophtext"                                      									"The best players for the Infernal: "

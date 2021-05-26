@@ -2789,7 +2789,7 @@
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"10"
+		"AbilityLayout"				"12"
 		"Ability1" 					"train_attacker_1"
 		"Ability2" 					"train_attacker_2"
 		"Ability3" 					"train_attacker_3"
@@ -3871,7 +3871,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "2"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -3970,7 +3970,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "10"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4066,7 +4066,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "2"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4144,9 +4144,9 @@
 	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_puck.vsndevts"
 
 		"AbilityLayout"				"4"
-		"Ability1" 					"reveal_area"
-		"Ability2" 					"cm_haste"
-		"Ability3" 					"true_sight_ability"
+		"Ability1" 					"cm_haste"
+		"Ability2" 					"true_sight_ability"
+		"Ability3" 					""
 		"Ability4" 					""
 		"Ability5"					""
 		"Ability6" 					""
@@ -4171,12 +4171,12 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "25"
 
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"                         "110"
+		"MovementSpeed"                         "200"
 		"MovementTurnRate"                      "0.6"
 
 		// Status
@@ -4188,7 +4188,7 @@
 
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"					"800"
+		"VisionDaytimeRange"					"1100"
 		"VisionNighttimeRange"					"600"
 
 		// Team
@@ -4386,7 +4386,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "2"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4492,7 +4492,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "2"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4599,7 +4599,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "2"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4709,7 +4709,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "0"
+		"FoodCost"                              "10"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4788,7 +4788,7 @@
 		
 		"AbilityLayout"				"4"
 		"Ability1" 					"attack_tree_skill"
-		"Ability2" 					""
+		"Ability2" 					"blink_datadriven"
 		"Ability3" 					""
 		"Ability4" 					""
 		"Ability5"					""
@@ -4921,7 +4921,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "150"
+		"FoodCost"                              "101"
 
 		// Movement
 		//----------------------------------------------------------------

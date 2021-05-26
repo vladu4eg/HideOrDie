@@ -135,9 +135,10 @@ function shrapnel_start_charge( keys )
 	local modifierName = "modifier_shrapnel_stack_counter_datadriven"
 	local maximum_charges = ability:GetLevelSpecialValueFor( "maximum_charges", ( ability:GetLevel() - 1 ) )
 	local charge_replenish_time = ability:GetLevelSpecialValueFor( "charge_replenish_time", ( ability:GetLevel() - 1 ) )
-	if GameRules.MapSpeed ~= 1  then
-		charge_replenish_time = 30
-	end
+	--if caster:HasModifier("modifier_troll_warlord_presence")  then
+	--	maximum_charges = maximum_charges * 2
+	--	charge_replenish_time = charge_replenish_time - 10
+	--end
 	-- Initialize stack
 	caster:SetModifierStackCount( modifierName, caster, 0 )
 	caster.shrapnel_charges = maximum_charges
@@ -194,9 +195,10 @@ function shrapnel_fire( keys )
 		local damage_delay = ability:GetLevelSpecialValueFor( "damage_delay", ( ability:GetLevel() - 1 ) ) + 0.1
 		local next_charge = 0
 
-		if caster:HasModifier("modifier_troll_warlord_presence") then
-			charge_replenish_time = 20
-		end
+		--if caster:HasModifier("modifier_troll_warlord_presence") then
+		--	maximum_charges = maximum_charges * 2
+		--	charge_replenish_time = charge_replenish_time - 10
+		--end
 		next_charge = caster.shrapnel_charges - 1
 		if caster.shrapnel_charges == maximum_charges then
 			caster:RemoveModifierByName( modifierName )
@@ -462,7 +464,7 @@ function SpawnUnitOnSpellStart(event)
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			return false
 		end
-		if hero.food > GameRules.maxFood and food ~= 0 then
+		if hero.food > GameRules.maxFood[playerID] and food ~= 0 then
 			SendErrorMessage(playerID, "#error_not_enough_food")
 			caster:AddNewModifier(nil, nil, "modifier_stunned", {duration=0.03})
 			return false
@@ -820,6 +822,8 @@ function CheckItemStack(hero, item_name)
 		else
 			return true
 		end
+	elseif string.match(item_name,"ward_") and (hero:FindItemInInventory("item_ward_sentry") ~= nil or  hero:FindItemInInventory("item_ward_observer") ~= nil or hero:FindItemInInventory("item_ward_dispenser") ~= nil) then
+		return false
 	else
 		return true
 	end

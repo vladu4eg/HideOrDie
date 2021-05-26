@@ -26,9 +26,9 @@ end
 function CDOTA_PlayerResource:SetGold(hero,gold)
     local playerID = hero:GetPlayerOwnerID()
 	if GameRules.MapSpeed >= 4 then
-		gold = math.min(gold, 2000000)
+		gold = math.min(gold, 5000000)
 	else
-		gold = math.min(gold, 1000000)
+		gold = math.min(gold, 5000000)
 	end
     GameRules.gold[playerID] = gold
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_custom_gold_changed", {
@@ -39,7 +39,7 @@ end
 
 function CDOTA_PlayerResource:ModifyGold(hero,gold,noGain)
     if GameRules.test2 then
-		PlayerResource:SetGold(hero, 1000000)
+		PlayerResource:SetGold(hero, 5000000)
 		return
 	end
     noGain = noGain or false
@@ -59,9 +59,9 @@ function CDOTA_PlayerResource:SetLumber(hero, lumber)
     local playerID = hero:GetPlayerOwnerID()
 	
 	if GameRules.MapSpeed >= 4 then
-		lumber = math.min(lumber, 2000000)
+		lumber = math.min(lumber, 5000000)
 	else
-		lumber = math.min(lumber, 1000000)
+		lumber = math.min(lumber, 5000000)
 	end
 	GameRules.lumber[playerID] = lumber
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_lumber_changed", {
@@ -72,7 +72,7 @@ end
 
 function CDOTA_PlayerResource:ModifyLumber(hero,lumber,noGain)
     if GameRules.test2 then
-		PlayerResource:SetLumber(hero,1000000)
+		PlayerResource:SetLumber(hero,5000000)
 		return
 	end
     noGain = noGain or false
@@ -128,16 +128,20 @@ function CDOTA_PlayerResource:GetAllStats(pID)
 	return sum
 end
 
-function CDOTA_PlayerResource:ModifyFood(hero,food)
+function CDOTA_PlayerResource:ModifyFood(hero, food)
     food = string.match(food,"[-]?%d+") or 0
     local playerID = hero:GetPlayerOwnerID()
 	if hero.food ~= nil then
+		if GameRules.maxFood[playerID] == nil then
+			GameRules.maxFood[playerID] = 30
+		end
     hero.food = hero.food + food
 	CustomGameEventManager:Send_ServerToTeam(hero:GetTeam(), "player_food_changed", {
 		playerID = playerID,
 		food = math.floor(hero.food),
 		maxFood = GameRules.maxFood[playerID],
 	})
+	DebugPrint("maxFood = GameRules.maxFood[playerID] " .. GameRules.maxFood[playerID])
 	end
 end
 

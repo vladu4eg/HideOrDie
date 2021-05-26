@@ -4488,7 +4488,7 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
 		"ItemAliases"					"зн;зелье невидимоѿти;potion of invisibility;poi"
-	
+		"ItemStockMax"					"999"
 		"AbilitySpecial"
 		{
 			"02"
@@ -4608,21 +4608,20 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 	
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"70"
 		
 		"ItemKillable"                  "0"
 		"ItemSellable"                  "1"
 		"ItemDroppable"                 "1"
 		"ItemPermanent"					"0"
 		
-		"ItemCost"						"80"
 		"ItemShopTags"					"common"
 		"ItemQuality"					"common"
 		"ItemAliases"					"poi;potion of invulnerability;зелье неуѿзвимоѿти;зн"
-		"ItemStackable"					"0"
+		"ItemStackable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
 		"ItemInitialCharges"			"1"
-	
+		"ItemStockMax"					"999"
 		"AbilitySpecial"
 		{
 			"02"
@@ -4638,7 +4637,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15"
+				"duration"				"10"
 			}
 		}
 	

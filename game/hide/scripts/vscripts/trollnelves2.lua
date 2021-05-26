@@ -157,6 +157,7 @@ function SelectHeroes()
             if countTroll > 0 then
                 DebugPrint("in countTroll > 0 pID " .. pID)
                 trollPlayerID[#trollPlayerID+1] = pID
+                table.remove(allPlayersIDs, i)
                 countTroll = countTroll - 1
             end
         end
@@ -273,7 +274,8 @@ end
 
 function InitializeBuilder(hero)
     DebugPrint("Initialize builder")
-    GameRules.maxFood[hero:GetPlayerOwnerID()] = 30
+    local playerID = hero:GetPlayerOwnerID()
+    GameRules.maxFood[playerID] = 30
     hero.food = 0
     hero.wisp = 0
     hero.alive = true
