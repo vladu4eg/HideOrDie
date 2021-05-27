@@ -30,7 +30,7 @@ var uiWaitingSchedules = [];
 
     var tooltipManager = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("Tooltips");
     tooltipManager.AddClass("CustomTooltipStyle");
-
+	
     var newUI = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements");
     var centerBlock = newUI.FindChildTraverse("center_block");
 
@@ -103,7 +103,7 @@ function UpdateHpRegLabel() {
 }
 
 function UpdateTooltips() {
-    UpdateItemTooltips();
+   // UpdateItemTooltips();
     UpdateAbilityTooltips();
 }
 
@@ -178,12 +178,6 @@ function UpdateAbilityTooltips() {
             var abilityName = Abilities.GetAbilityName(Entities.GetAbility(selectedUnit, abilitySlot));
 
             var buttonWell = abilityPanel.FindChildTraverse("ButtonWell");
-            abilityPanel.SetPanelEvent("onmouseover", (function (index, tooltipParent) {
-                return function () {
-                    $.DispatchEvent("UIShowCustomLayoutParametersTooltip", tooltipParent, "AbilityTooltip",
-                        "file://{resources}/layout/custom_game/ability_tooltip.xml", "entityIndex=" + selectedUnit + "&abilityName=" + abilityName);
-                }
-            })(abilitySlot, buttonWell));
             abilityPanel.SetPanelEvent("onmouseout",
                 function () {
                     $.DispatchEvent("UIHideCustomLayoutTooltip", "AbilityTooltip");
@@ -253,7 +247,7 @@ function UpdateItemTooltips() {
 }
 
 function UpdateItemTooltipsAndAbilityCustomHotkeys() {
-    UpdateItemTooltips();
+    //UpdateItemTooltips();
     UpdateAbilityCustomHotkeys();
 }
 

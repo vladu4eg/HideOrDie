@@ -29,6 +29,8 @@
 	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/pets.xml" />  
     <CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_worldpanels.xml" />
     <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" /> 
+	<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/ability_tooltip.xml" />
+ 	<!--<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_hud_base.xml" /> -->
   </Panel>
 
 </root>

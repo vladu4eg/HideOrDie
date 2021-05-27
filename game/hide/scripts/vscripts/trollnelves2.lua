@@ -101,9 +101,9 @@ function SelectHeroes()
     end
     local countTroll = 0
     
-    if GameRules.PlayersCount >= 1 and GameRules.PlayersCount <= 4 then
+    if GameRules.PlayersCount >= 1 and GameRules.PlayersCount <= 5 then
         countTroll = 1
-        elseif GameRules.PlayersCount >= 5 and GameRules.PlayersCount <= 7 then
+        elseif GameRules.PlayersCount >= 6 and GameRules.PlayersCount <= 8 then
         countTroll = 2
         else
         countTroll = 3
