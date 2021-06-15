@@ -5,8 +5,8 @@ end
 require('settings')
 item_drop = {
 	--{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
-	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_crystal_maiden","npc_dota_hero_lycan","npc_dota_hero_treant"} },
-	
+	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
+	{items = {"item_event_birthday"}, limit = 1, chance = 2, units = {"barracks_3"} },
 	--{items = {"item_lifesteal"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
 	--{items = {"item_dmg_14"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
 	--{items = {"item_reaver"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
@@ -70,12 +70,12 @@ function drop:RollItemDrop(unit)
 		
 		local randTime = RandomInt( 30, 240 )
 		Timers:CreateTimer(randTime, function()
-			if string.match(GetMapName(),"winter")  then
+			--if string.match(GetMapName(),SEASON_MAP)  then
 				RandomDropLoot()
 				--elseif string.match(GetMapName(),"halloween") then 
 				--	RandomDropLoot()
 				--	RandomDropLoot()
-			end
+			--end
 		end);
 		
 	end
@@ -99,8 +99,8 @@ end
 
 function RandomDropLoot()
 	local spawnPoint = Vector(-320,-320,256)
-	local newItem = CreateItem( "item_winter_1", nil, nil )
-	local dropRadius = RandomFloat( 3600, 7800 )
+	local newItem = CreateItem( SEASON_ITEM, nil, nil )
+	local dropRadius = RandomFloat( 3600, 25000 )
 	local randRadius = spawnPoint + RandomVector( dropRadius )
 	local drop = CreateItemOnPositionForLaunch( randRadius, newItem )
 	newItem:LaunchLootInitialHeight( false, 0, 150, 0.5, randRadius )
@@ -112,9 +112,9 @@ function TimerRandomDrop(event)
 	local maxGift = RandomInt( 25, 200 )
 	Timers:CreateTimer(function()
 		if countGift < maxGift then
-			local randTime = RandomInt( 20, 120 )
+			local randTime = RandomInt( 20, 60 )
 			local spawnPoint = unit:GetAbsOrigin()	
-			local newItem = CreateItem( "item_winter_1", nil, nil )
+			local newItem = CreateItem( SEASON_ITEM, nil, nil )
 			local dropRadius = RandomFloat( 10, 360 )
 			local randRadius = spawnPoint + RandomVector( dropRadius )
 			local drop = CreateItemOnPositionForLaunch( randRadius, newItem )

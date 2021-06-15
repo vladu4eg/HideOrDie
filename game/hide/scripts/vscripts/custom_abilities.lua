@@ -56,7 +56,7 @@ function ItemEvent(event)
 	data.Srok = "01/09/2020"
 	if GameRules.PlayersCount >= MIN_RATING_PLAYER then
 		Stats.GetVip(data, callback)
-		local item = caster:FindItemInInventory("item_winter_1")
+		local item = caster:FindItemInInventory(event.ability:GetAbilityName())
 		caster:RemoveItem(item)
 	end
 end
@@ -234,7 +234,8 @@ function shrapnel_start_cooldown( caster, charge_replenish_time )
 end
 
 function RevealAreaItem( event )
-	event.Radius = event.Radius/GameRules.MapSpeed
+	event.Radius = event.Radius/GameRules.TrollCount
+	event.Duration = event.Duration/GameRules.TrollCount
 	RevealArea(event)
 end
 
@@ -252,6 +253,7 @@ function build_tree( event )
         if IsInsideBoxEntity2(point, pos) then
 			DebugPrint("in")
             UTIL_Remove(t.chopped_dummy)
+			BuildingHelper:BlockGridSquares(2, 2, pos)
 		end
 	end
 end
@@ -347,8 +349,8 @@ function RevealArea( event )
 	if IsServer() then
 		local caster = event.caster
 		local point = event.target_points[1]
-		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*2 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
-		local visionDuration = event.Duration
+		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*2.5 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
+		local visionDuration = string.match(GetMapName(),"creeptown") and event.Duration * 1.5 or event.Duration
 		AddFOWViewer(caster:GetTeamNumber(), point, visionRadius, visionDuration, false)
 	end
 end
@@ -775,7 +777,7 @@ function BuyItem(event)
 	local lumber_cost = GetItemKV(item_name)["AbilitySpecial"]["03"]["lumber_cost"];
 	local playerID = caster.buyer
 	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
-	
+	hero:DropStash()
 	if not IsInsideShopArea(hero) then
 		SendErrorMessage(playerID, "#error_shop_out_of_range")
 		ability:EndCooldown()
@@ -792,7 +794,6 @@ function BuyItem(event)
 		return
 	end
 	if hero:GetNumItemsInInventory() >= 6 and item_name ~=  "item_book_of_agility" and item_name ~=  "item_book_of_strength" and item_name ~=  "item_book_of_intelligence" and item_name ~=  "item_tome_of_knowledge" and CheckItemStack(hero, item_name) then
-		hero:DropStash()
 		SendErrorMessage(playerID, "#error_full_inventory")
 		ability:EndCooldown()
 		return		
@@ -806,8 +807,7 @@ function BuyItem(event)
 		SendErrorMessage(playerID, "#error_no_time_boots")
 		ability:EndCooldown()
 		return	
-	end
-	
+	end	hero:DropStash()
 	PlayerResource:ModifyLumber(hero,-lumber_cost)
 	PlayerResource:ModifyGold(hero,-gold_cost)
 	local item = CreateItem(item_name, hero, hero)

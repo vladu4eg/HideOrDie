@@ -16,7 +16,7 @@
 				</Panel> 
 				<Panel class="DonateInfoPanel" />
 			</Panel>
-			<Button class="DonateInfo"  onactivate="DOTADisplayURL('https://www.patreon.com/vulkantsk')">
+			<Button class="DonateInfo"  onactivate="DOTADisplayURL('https://patreon.com/hidedie')">
 			</Button>
 		</Panel>
 		<Button id="DonateToggleButton" onactivate="DonateToggleButtonActivate()">

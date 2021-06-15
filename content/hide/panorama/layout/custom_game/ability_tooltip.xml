@@ -41,6 +41,8 @@
           <Label text="0" class="Cost" id="FoodText">
               <Image class="Icon" src="file://{images}/custom_game/custom_variables/food.png" />
           </Label>
+          <Label text="0" class="Cost" id="RepairText">
+          </Label>  
           <Label text="0" class="Cost" id="ManaText">
               <Image class="Icon" src="file://{images}/custom_game/icon_mana.png" />
           </Label>             

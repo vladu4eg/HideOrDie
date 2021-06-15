@@ -6,7 +6,7 @@
 function Teleport( event )
 	local caster = event.caster
 	local point = event.target_points[1]
-	
+	caster:SetHullRadius(1) --160
     FindClearSpaceForUnit(caster, point, true)
     caster:Stop() 
     EndTeleport(event)   
@@ -22,6 +22,10 @@ end
 
 function EndTeleport( event )
 	local caster = event.caster
+	local team = caster:GetTeamNumber()
 	ParticleManager:DestroyParticle(caster.teleportParticle, false)
 	caster:StopSound("Hero_Furion.Teleport_Grow")
+	if team == DOTA_TEAM_BADGUYS then
+		caster:SetHullRadius(32) --160
+	end
 end

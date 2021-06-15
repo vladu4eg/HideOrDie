@@ -165,6 +165,7 @@ function SelectHeroes()
     if not GameRules.test then
         DebugPrint("not GameRules.test countTroll " .. countTroll)
         DebugPrint("not GameRules.test #trollPlayerID " .. #trollPlayerID)
+        GameRules.TrollCount = #trollPlayerID
 		for i=1, #trollPlayerID do
             DebugPrint("trollPlayerID[i] " .. trollPlayerID[i])
 			PlayerResource:SetCustomTeamAssignment(trollPlayerID[i] , DOTA_TEAM_BADGUYS)
@@ -307,7 +308,7 @@ function InitializeBuilder(hero)
     hero:SetStashEnabled(false)
     hero:AddItemByName("item_quelling_blade")
     hero:AddItemByName("item_blink_datadriven")
-    if GameRules:GetGameTime() > BUFF_ENIGMA_TIME then
+    if GameRules:GetGameTime() >= BUFF_ENIGMA_TIME then
         hero:AddAbility("troll_warlord_battle_trance_datadriven")
         local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
         abil:SetLevel(abil:GetMaxLevel())

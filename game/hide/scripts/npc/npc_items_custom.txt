@@ -43,8 +43,8 @@
 				"ScriptFile"            "custom_abilities.lua"
 				"Function"              "RevealAreaItem"
 				"Target"				"POINT"
-				"Duration"				"5"
-				"Radius"				"600"
+				"Duration"				"15"
+				"Radius"				"1800"
 			}
 		}
 	}
@@ -246,6 +246,69 @@
 		}
 	}
 	
+	"item_spring"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"AbilityTextureName"            "item_spring"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"Model"                         "models/items/courier/onibi_lvl_03/onibi_lvl_03.vmdl"
+		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		// Stats        
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"              "0"
+		"AbilityCooldown"				"0.1"
+		"AbilityCastPoint"              "0.0"
+		"AbilityManaCost"               "0"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemPurchasable" 				"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE "
+		"ItemPermanent"					"0"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"Event item"
+		"OnSpellStart"
+		{	
+			"RunScript"
+			{
+				"ScriptFile"            "custom_abilities.lua"
+				"Function"              "ItemEvent"
+			}
+		}
+	}
+	
+	"item_summer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"AbilityTextureName"            "item_summer"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"Model"                         "models/items/courier/chocobo/chocobo.vmdl"
+		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		// Stats        
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"              "0"
+		"AbilityCooldown"				"0.1"
+		"AbilityCastPoint"              "0.0"
+		"AbilityManaCost"               "0"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemPurchasable" 				"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE "
+		"ItemPermanent"					"0"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"Event item"
+		"OnSpellStart"
+		{	
+			"RunScript"
+			{
+				"ScriptFile"            "custom_abilities.lua"
+				"Function"              "ItemEvent"
+			}
+		}
+	}
 	
 	"item_recipe_winter_end"
 	{
@@ -1016,7 +1079,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"60"
+				"gold_cost"				"90"
 			}	
 			"03"
 			{
@@ -4090,7 +4153,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"500"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"60.0"
+		"AbilityCooldown"				"0.0"
+
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -4109,6 +4173,7 @@
 		"IsTempestDoubleClonable"		"0"
 		"ShouldBeInitiallySuggested"	"1"
 		"ItemPurchasable" 				"0"
+		"ItemSellable"                  "0"
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -4230,7 +4295,7 @@
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemPurchasable"				"0"
-		"ItemStackable"					"1"
+		"ItemStackable"					"0"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
@@ -4245,12 +4310,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"50"
+				"bonus_stat"			"10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"100"
 			}	
 			"03"
 			{
@@ -4273,7 +4338,7 @@
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemPurchasable"				"0"
-		"ItemStackable"					"1"
+		"ItemStackable"					"0"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
@@ -4289,12 +4354,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"50"
+				"bonus_stat"			"10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"100"
 			}	
 			"03"
 			{
@@ -4317,7 +4382,7 @@
 		"ItemShopTags"					"consumable"
 		"ItemQuality"					"consumable"
 		"ItemPurchasable"				"0"
-		"ItemStackable"					"1"
+		"ItemStackable"					"0"
 		"ItemShareability"				"ITEM_NOT_SHAREABLE"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
@@ -4333,12 +4398,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_stat"			"50"
+				"bonus_stat"			"10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1000"
+				"gold_cost"				"100"
 			}	
 			"03"
 			{
@@ -4480,7 +4545,6 @@
 		"ItemSellable"                  "1"
 		"ItemDroppable"                 "1"
 	
-		"ItemCost"						"60"
 		"ItemShopTags"					"common"
 		"ItemQuality"					"common"
 		"ItemStackable"					"1"
@@ -4701,7 +4765,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"90"
 			}	
 			"03"
 			{
@@ -5100,7 +5164,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"300"
+				"duration"				"600"
 			}
 		}
 	}
@@ -5122,7 +5186,7 @@
 		"ItemAliases"					"botd;bd;book of the dead;км;книга мертвых"
 		"ItemPermanent"					"0"
 		"AbilityCastRange"              "400"
-		"AbilityCooldown"               "40"
+		"AbilityCooldown"               "60"
 		"AbilityManaCost"               "0"
 		"ItemKillable"                  "0"
 		"ItemSellable"                  "1"
@@ -5145,7 +5209,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"150"
+				"gold_cost"				"400"
 			}	
 			"03"
 			{
@@ -5155,7 +5219,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"duration"				"180"
+				"duration"				"120"
 			}
 		}
 	}
@@ -5449,6 +5513,164 @@
 			}
 		}
 	}	
+
+	//=================================================================================================================
+	// Ward Dispenser
+	//=================================================================================================================
+	"item_ward_dispenser"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemQuality"					"common"
+		"ItemAliases"					"ward"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemPurchasable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"IsTempestDoubleClonable"		"0"
+		"ItemSellable"                  "0"
+		"ItemStockTime"					"0.0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"500"
+		"AbilityCooldown"				"0"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"100"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_cost"			"75"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sentry_cost"			"100"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime_observer"				"360"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime_sentry"				"360"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creation_delay"		"0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_vision_range_tooltip"		"1600"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_duration_minutes_tooltip"		"6"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"true_sight_range"		"1000"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"sentry_duration_minutes_tooltip"		"6"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_range"			"500"
+			}
+		}
+	}
+	
+	//=================================================================================================================
+	// Teleport Scroll
+	//=================================================================================================================
+	"item_tpscroll"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOASSIST | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_BUILDING"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"Model"							"models/props_gameplay/tpscroll01.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCooldown"				"45.0"
+		"AbilityChannelTime"			"3.0"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable;tutorial"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tp;town portal scroll;teleport"
+		"ItemStackable"					"1"
+		"ItemSellable"					"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"10"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"minimun_distance"		"70"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maximum_distance"		"999999"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_radius"			"200"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"tooltip_channel_time"			"3.0"
+			}
+		}
+	}
 	
 	//=================================================================================================================
 	// Sentry Ward
@@ -5467,7 +5689,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"500"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"60.0"
+		"AbilityCooldown"				"0.0"
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -5480,11 +5702,12 @@
 		"ItemInitialCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"4"
-		"ItemStockTime"					"70.0"
+		"ItemStockTime"					"0.0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemSupport"					"1"
 		"IsTempestDoubleClonable"		"0"
 		"ShouldBeInitiallySuggested"	"1"
+		"ItemSellable"                  "0"
 		
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------

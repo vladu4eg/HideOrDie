@@ -567,16 +567,16 @@
 		"DOTA_Tooltip_modifier_poison_counter_Description"                                 "Each stack reduces 5\% of original hp regen"
 		
 		"DOTA_Tooltip_modifier_dark_lord_presence"                                         "Nevermore"
-		"DOTA_Tooltip_modifier_dark_lord_presence_Description"                             "Aura -1500  amor"
+		"DOTA_Tooltip_modifier_dark_lord_presence_Description"                             "Aura -50 armor"
 
 		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven"                                         		"Nevermore"
-		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_Description"                             	"Aura -1500  amor"
+		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_Description"                             	"Aura -50 armor"
 		
 		"DOTA_Tooltip_modifier_dark_lord_presence_2"                                         "Nevermore"
-		"DOTA_Tooltip_modifier_dark_lord_presence_2_Description"                             "Aura -3065  amor"
+		"DOTA_Tooltip_modifier_dark_lord_presence_2_Description"                             "Aura -3065 armor"
 
 		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2"                                         		"Nevermore"
-		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2_Description"                             	"Aura -3065  amor"
+		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2_Description"                             	"Aura -3065 armor"
 		
 		"DOTA_Tooltip_modifier_psi_blades"                                         		   "Templar"
 		"DOTA_Tooltip_modifier_psi_blades_Description"                             		   "Psi Blades.  Deals 5000 pure damage to a second target."
@@ -697,7 +697,10 @@
 		"DOTA_Tooltip_ability_troll_invis_Description"                                    ""
 
 		"DOTA_Tooltip_ability_troll_teleport"                                             "Troll Teleport"
-		"DOTA_Tooltip_ability_troll_teleport_Description"                                 "Teleport to base or your companions to move around faster! "
+		"DOTA_Tooltip_ability_troll_teleport_Description"                                 "Teleports to an ally. "
+		
+		"DOTA_Tooltip_Ability_tower_teleport_datadriven"									"TELEPORT"
+		"DOTA_Tooltip_Ability_tower_teleport_datadriven_Description"                        "Teleports the hero and units to the second Teleport. Only 2 teleports can be created.<br>The teleport works over the area. If you have one teleport, then you will be teleported to a random teleport of allies, if they are in the game."
 
 		"DOTA_Tooltip_ability_attack_gold"                                                "Attack Gold"
 		"DOTA_Tooltip_ability_attack_gold_Description"                                    "Gives gold every time you deal damage to an enemy"
@@ -1879,7 +1882,14 @@
 		
 		"DOTA_Tooltip_ability_item_winter_1"                                           "Event Item"
 		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 12 people."
-		
+
+		"DOTA_Tooltip_ability_item_spring"                                           "Event Item"
+		"DOTA_Tooltip_ability_item_spring_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 12 people."
+
+		"DOTA_Tooltip_ability_item_summer"                                           "Event Item"
+		"DOTA_Tooltip_ability_item_summer_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 12 people."
+
+
 		"DOTA_Tooltip_ability_item_winter_stress"                                           "Event Item by stresS_"
 		"DOTA_Tooltip_ability_item_winter_stress_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>You can only activate from 12 people."
 		
@@ -1888,6 +1898,13 @@
 		
 		"DOTA_Tooltip_ability_item_event_winter"                                           "Winter Event Item"
 		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Winter 2.<br>You can only activate from 12 people."
+
+		"DOTA_Tooltip_ability_item_event_birthday"                                           "Happy Birthday!"
+		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "The TvE3 community is 1 year old!<br>Thank you for your active support!<br>I appreciate your help!<br>Activate the item to collect the item for yourself.<br>Non-activated items do not sync at the end of the game!<br>Gives the effect Birthday.<br>You can only activate from 12 people."
+
+		"DOTA_Tooltip_ability_item_max_move"                                          	 "Speed ​​bottle."
+		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Gives +190 running speed for 20 seconds."
+
 
 		"DOTA_Tooltip_ability_drop_gift"                                           "Happy New Year!"
 		"DOTA_Tooltip_ability_drop_gift_Description"                               "Thanks for completing the quest!<br>Festive stresS_ will give you 25 to 200 event items at a random time.<br>Quest developed in collaboration with stresS_"
@@ -1903,9 +1920,6 @@
 		"DOTA_Tooltip_ability_item_disable_repair_2_bonus_damage"                                   "BONUS DAMAGE: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_gold_cost"                                      "GOLD COST: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_lumber_cost"                                    "LUMBER COST: "
-
-"DOTA_Tooltip_ability_techies_land_mines"	"Proximity Mines"
-"DOTA_Tooltip_ability_techies_land_mines_Description"	"Устанавливает невидимую мину. Её невидимость невозможно развеять, но она станет видна, если противник зайдет в радиус её действия. Мина сдетонирует, если противник будет +%proximity_threshold% сек. находиться на расстоянии в %radius% от неё. Взрыв наносит полный урон по всей области срабатывания. Наносит постройкам %building_damage_pct%%% урона."
 
         "topptext"                                      									"The best players in the overall ranking: "
         "topwtext"                                      									"The best players for the Treant: "
@@ -1963,7 +1977,13 @@
 		"ppatron6"																				"Available to sixth level donater or higher. Pets are not included in the donation effect."
 		"peventdesert"																			"Awarded for participating in a Desert event. Pets are not included in the donation effect."
 		
-		
+		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon.</font>"
+		"donate2"																			"<font color='#58ACFA'>You can increase the chance of getting a Infernal, increase the number of points you receive or get one of the unique cosmetic effects by supporting our project on Patreon.</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"
+		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/9k29hP2uVy</font>"
+		"donate5"																			"<font color='#58ACFA'>Submit your ideas on what to add to the game in our Discord server!</font>"
+		"donate6"																			"<font color='#58ACFA'>Thanks to all the testers for such a significant contribution to the development of the game! Thank:*</font>"
+		"donate7"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"		
 		
 		"seveasdefault"																			"Save as default"
 		
@@ -1972,7 +1992,7 @@
 		"patreonbuttontext1"																"Donate PayPal Page"
 		"patreonbuttontext2"																"Donate Yandex Page"
 		"patreontext"	"If you want to support the project and help in development, 
-then you can make your donations using the site https://patreon.com/troll_vs_elves3 or https://paypal.me/vladu4eg or https://donate.stream/en/vladu4eg
+then you can make your donations using the site https://patreon.com/hidedie or https://paypal.me/vladu4eg or https://donate.stream/en/vladu4eg
 The money received will be spent on maintaining the servers and improving the quality of the content.
 Be sure to include a link to the profile in Steam, nickname in Discord / Steam. 
 Please provide as much information as possible about yourself so that I can thank you for your support. 
@@ -1990,7 +2010,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_not_buy_wolf"																"Wolf can't upgrade a tent! "
 		"error_castable_only_on_troll_hut"													"Castable only on Infernal Hut! "
 		"error_not_enough_food"																"Food beyond the capacity! "
-		"error_not_enough_wisp"																"Wisp limit exceeded! "
+		"error_not_enough_wisp"																"Units limit exceeded!"
 		"error_full_inventory"																"Full inventory! "
 		"error_shop_out_of_range"															"Shop is out of range! "
 		"error_not_enough_resources"														"You do not have enough resources! "
@@ -2013,9 +2033,8 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_need_buy_hut_7"																"You need to buy a level 7 hut!"		
 		"error_not_upgrade_tower19_x4"														"You cannot build Enigma in x4."
 		"error_not_destroy_building"														"The owner has not left the game. Wait until the game is completely exited."
-		"loading_text"																		"&lt;=Click this for tips!<br>
-		                                                                                    Don't change your hotkeys after starting the game.
-		                                                                                    "
+		"loading_text"																		"Don't change your hotkeys after starting the game."
+		
 		"loading_text_no_troll"																"Do not choose Infernal if you are playing for the first time, please."
 		"DOTA_Chat_PlayerKilled"                    ""
         "DOTA_Chat_PlayerKilledNearby"              ""

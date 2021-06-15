@@ -22,7 +22,7 @@
                         <Label hittest="false" id="patreontext" text="#patreontext" style="width:540px; margin-top:-30px; margin-left:10px;"/>
                         <Image id="img1" src="file://{images}/custom_game/donate/info.png" style="height:250px;width:500px; margin-top:5px; margin-left:10px;"/>
                         <!--<Image id="img2" src="s2r://panorama/images/custom_game/all/pet_png.vtex" style="height:275px;width:350px; margin-top:10px; margin-left:75px;"/>-->
-						<Button id="PatreonButton" onactivate="ExternalBrowserGoToURL('https://patreon.com/troll_vs_elves3')">
+						<Button id="PatreonButton" onactivate="ExternalBrowserGoToURL('https://patreon.com/hidedie')">
                         	<Label hittest="false" id="patreonbuttontext" text="#patreonbuttontext"/>
 						</Button>
 						<Button id="PatreonButton1" onactivate="ExternalBrowserGoToURL('https://paypal.me/vladu4eg')">

@@ -225,7 +225,6 @@ function trollnelves2:OnEntityKilled(keys)
             GameRules.Bonus[attackerPlayerID] =
             GameRules.Bonus[attackerPlayerID] + 1
             if CheckTrollVictory() then
-                GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
                 GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                 local status, nextCall = ErrorCheck(function() 
                     Stats.SubmitMatchData(DOTA_TEAM_BADGUYS, callback)
@@ -238,7 +237,6 @@ function trollnelves2:OnEntityKilled(keys)
             PlayerResource:ModifyLumber( PlayerResource:GetSelectedHeroEntity(attackerPlayerID), 1)
             elseif killed:IsTroll() then
             if CheckElfVictory() then
-                GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
                 GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                 local status, nextCall = ErrorCheck(function() 
                     Stats.SubmitMatchData(DOTA_TEAM_GOODGUYS, callback)
@@ -435,8 +433,7 @@ function GiveResources(eventSourceIndex, event)
                     return
                 end
                 if (lastSendTime[event.target] == nil or
-                lastSendTime[event.target] + 120 < GameRules:GetGameTime()) or
-                casterHero:IsAngel() then
+                lastSendTime[event.target] + 120 < GameRules:GetGameTime()) or casterHero:IsAngel() or casterHero:IsTroll() then
                 PlayerResource:ModifyGold(casterHero, -gold, true)
                 PlayerResource:ModifyLumber(casterHero, -lumber, true)
                 PlayerResource:ModifyGold(hero, gold, true)
@@ -533,8 +530,8 @@ function ReturnElf(event)
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
     
-    local gold = math.floor(PlayerResource:GetLumber(playerID))
-    local lumber = math.floor(PlayerResource:GetGold(playerID))
+    local lumber = math.floor(PlayerResource:GetLumber(playerID))
+    local gold = math.floor(PlayerResource:GetGold(playerID))
     
     local newHeroName
     local message

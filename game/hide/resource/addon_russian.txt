@@ -514,16 +514,16 @@
 		"DOTA_Tooltip_modifier_poison_counter_Description"                                 "Каждый стак снижает 5% регенерации."
 		
 		"DOTA_Tooltip_modifier_dark_lord_presence"                                         "Nevermore"
-		"DOTA_Tooltip_modifier_dark_lord_presence_Description"                             "Aura -1500  amor"
+		"DOTA_Tooltip_modifier_dark_lord_presence_Description"                             "Aura -50 armor"
 
 		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven"                                         		"Nevermore"
-		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_Description"                             	"Aura -1500  amor"
+		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_Description"                             	"Aura -50 armor"
 		
 		"DOTA_Tooltip_modifier_dark_lord_presence_2"                                         "Nevermore"
-		"DOTA_Tooltip_modifier_dark_lord_presence_2_Description"                             "Aura -3065  amor"
+		"DOTA_Tooltip_modifier_dark_lord_presence_2_Description"                             "Aura -3065  armor"
 
 		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2"                                         		"Nevermore"
-		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2_Description"                             	"Aura -3065  amor"
+		"DOTA_Tooltip_ability_nevermore_dark_lord_datadriven_2_Description"                             	"Aura -3065 armor"
 		
 		"DOTA_Tooltip_modifier_psi_blades"                                         		   "Templar"
 		"DOTA_Tooltip_modifier_psi_blades_Description"                             		   "Psi Blades. Наносит 5000 чистого урона второй цели."
@@ -634,7 +634,11 @@
 		"DOTA_Tooltip_ability_troll_invis_Description"                                    ""
 
 		"DOTA_Tooltip_ability_troll_teleport"                                             "Infernal Teleport"
-		"DOTA_Tooltip_ability_troll_teleport_Description"                                 "Телепорт на базу Тролля! "
+		"DOTA_Tooltip_ability_troll_teleport_Description"                                 "Телепортирует к союзнику! "
+
+		"DOTA_Tooltip_Ability_tower_teleport_datadriven"									"TELEPORT"
+		"DOTA_Tooltip_Ability_tower_teleport_datadriven_Description"                        "Телепортирует героя и юнитов ко второму Телепорту. Можно создать только 2 телепорта.<br>Телепорт работает по области. Если у вас один телепорт, то вас телепортирует к случайному телепорту союзников, если они есть в игре. "
+
 
 		"DOTA_Tooltip_ability_attack_gold"                                                "Attack Gold"
 		"DOTA_Tooltip_ability_attack_gold_Description"                                    "Дает золото каждый раз, когда вы наносите урон врагу!"
@@ -1620,7 +1624,15 @@
 		
 		"DOTA_Tooltip_ability_item_winter_1"                                           "Event Item"
 		"DOTA_Tooltip_ability_item_winter_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
-		
+
+
+		"DOTA_Tooltip_ability_item_spring"                                           "Event Item"
+		"DOTA_Tooltip_ability_item_spring_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
+
+		"DOTA_Tooltip_ability_item_summer"                                           "Event Item"
+		"DOTA_Tooltip_ability_item_summer_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
+
+
 		"DOTA_Tooltip_ability_item_winter_stress"                                           "Event Item by stresS_"
 		"DOTA_Tooltip_ability_item_winter_tree_1_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
 		
@@ -1630,9 +1642,17 @@
 		"DOTA_Tooltip_ability_item_event_winter"                                           "Winter Event Item"
 		"DOTA_Tooltip_ability_item_event_winter_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Winter 2.<br>Можно активаровать только от 12 человек."
 
-		"DOTA_Tooltip_ability_drop_gift"                                           "Happy New Year!"
-		"DOTA_Tooltip_ability_drop_gift_Description"                               "Спасибо за прохождение квеста!<br>Праздничный stresS_ выдаст вам от 25 до 200 ивент предметов в случайное время.<br>Квест разработан совместно с stresS_"
+		"DOTA_Tooltip_ability_item_event_helheim"                                           "Helheim Event Item"
+		"DOTA_Tooltip_ability_item_event_helheim_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Donater 10.<br>Можно активаровать только от 12 человек."
 
+		"DOTA_Tooltip_ability_item_event_birthday"                                           "C Днем Рождения!"
+		"DOTA_Tooltip_ability_item_event_birthday_Description"                               "Сообществу ТвЕ3 исполнился 1 год!<br>Спасибо за активную поддержку!<br>Я ценю Вашу помощь!<br>Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохроняются в конце игры!<br>Выдается эффект Birthday.<br>Можно активаровать только от 12 человек."
+
+		"DOTA_Tooltip_ability_drop_gift"                                           "Chest of the Damned!"
+		"DOTA_Tooltip_ability_drop_gift_Description"                               "Спасибо за прохождение квеста!<br>Сундук Проклятых выдаст вам от 25 до 200 ивент предметов в случайное время."
+
+		"DOTA_Tooltip_ability_item_max_move"                                          	 "Бутылка скорости."
+		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Дает +190 к скорости бега на 20 секунд."
 
 		"DOTA_Tooltip_ability_item_event"                                           "Event Item"
 		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
@@ -1706,14 +1726,22 @@
 		"ppatron5"																				"Доступно донатеру пятого уровня и выше. Питомцы не входят в донат эффектов."
 		"ppatron6"																				"Доступно донатеру шестого уровня и выше. Питомцы не входят в донат эффектов."
 		"peventdesert"																			"Выдается за участие в Desert event."
-		
+
+		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon.</font>"
+		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Infernal, увеличить количество получаемых очков или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
+		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"
+		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/9k29hP2uVy</font>"
+		"donate5"																			"<font color='#58ACFA'>Вы можете поделиться идеями/багами/пожеланиями на нашем сервере Discord!</font>"
+		"donate6"																			"<font color='#58ACFA'>Спасибо всем  тестирам  за  такой значительный  вклад  в развитие кастомки! Спасибо:*</font>"
+		"donate7"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"
+
 		"seveasdefault"																			"Сохранить по умолчанию"
 		
 		"patreonbuttontext"																	"Donate Patreon"
 		"patreonbuttontext1"																"Donate PayPal Page"
 		"patreonbuttontext2"																"Donate Yandex Page"
 		"patreontext"	"Если вы хотите поддержать проект и помочь в развитии,
-то вы можете сделать пожертвования с помощью сайта https://patreon.com/troll_vs_elves3 или https://paypal.me/vladu4eg или https://donate.stream/en/vladu4eg
+то вы можете сделать пожертвования с помощью сайта https://patreon.com/hidedie или https://paypal.me/vladu4eg или https://donate.stream/en/vladu4eg
 Полученные деньги будут потрачены на обслуживание серверов и улучшение качества контента.
 Обязательно укажите ссылку на профиль в Steam, ник в Discord/Steam.
 Пожалуйста, предоставьте как можно больше информации о себе, чтобы я мог поблагодарить вас за поддержку.
@@ -1730,7 +1758,7 @@
 		"error_not_buy_wolf"																"Волк не может улучшать Infernal Hut! "
 		"error_castable_only_on_troll_hut"													"Можно использовать только на Infernal Hut!"
 		"error_not_enough_food"																"Закончилась еда! "
-		"error_not_enough_wisp"																"Превышен лимит Wisp 1-6 или Gold Wisp! "
+		"error_not_enough_wisp"																"Превышен лимит Юнитов!"
 		"error_full_inventory"																"Полный инвентарь! "
 		"error_shop_out_of_range"															"Вы не в радиусе магазина! "
 		"error_not_enough_resources"														"Вам не хватает ресурсов! "
@@ -1753,9 +1781,7 @@
 		"error_need_buy_hut_7"																"Вам нужно улучшить  Infernal Hut до 7 уровня!"	
 		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
 		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
-		"loading_text"																		"&lt;=Щелкните здесь, чтобы получить советы!<br>
-		                                                                                    Не меняйте горячие клавиши после запуска игры.
-		                                                                                    "
+		"loading_text"																		"Не меняйте горячие клавиши после запуска игры."
 		"loading_text_no_troll"																		"Не выбирайте Инфернала, если  играете в первый раз, пожалуйста."
 		
 		"DOTA_Chat_PlayerKilled"                    ""
@@ -1778,13 +1804,11 @@
 		"elf_tips3"																	"·Поделитесь своими ресурсами. Если у вас есть лишние ресурсы, поделитесь ими! В этой игре необходима командная работа, чтобы Тролля не фидили слишком быстро! "
 		
 		"troll_tips"																		"<b>Подсказки для Infernal</b>
-					<br>·ВАМ НЕЛЬЗЯ УМИРАТЬ! Если Тролль умрет, то игра сразу же закончится. 
-					<br>·Каждая атака дает вам золото в зависимости от того, сколько урона вы нанесли
+					<br>·ВАМ НЕЛЬЗЯ УМИРАТЬ ВСЕ КОМАНДОЙ! Если все Infernal умрут, то игра сразу же закончится. 
 					<br>·Покупайте предметы, чтобы стать сильнее!
 					<br>·Вы должны заменять предметы, продавая их и покупая более сильные
-					<br>·Всегда используйте свой 1-й навык (Reveal), чтобы не тратить время на поиски Эльфов!. 
+					<br>·Всегда покупайте (Telescope), чтобы не тратить время на поиски Treant!. 
 					<br>·Попробуйте найти врагов, у которых нет сильных башен, чтобы их было легче фармить.
-					<br>·Не забывайте улучшать свою хижину! Это не только поможет вам в тяжелые времена, но и если в вашей команде будут Волки.
 					<br>·Вы можете использовать телепорт и невидимость вместе. Таким образом, вы сможете телепортироваться, оставаясь невидимым.
 					<br>·Удачного троллинга этих маленьких эльфов.
 					"

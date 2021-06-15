@@ -3,12 +3,16 @@ require('top')
 Stats = Stats or {}
 local dedicatedServerKey = GetDedicatedServerKeyV2("1")
 local isTesting = IsInToolsMode() and false
-Stats.server = "https://tve3.us/test/" -- "https://localhost:5001/test/" --
+Stats.server = "https://localhost:5001/hide/" -- "https://tve3.us/hide/" -- 
 
 function Stats.SubmitMatchData(winner,callback)
-	if not isTesting then
-		if GameRules:IsCheatMode() then return end
-	end
+	--if not isTesting then
+	--	if GameRules:IsCheatMode() then 
+	--		GameRules:SetGameWinner(winner)
+	--		SetResourceValues()
+	--		return 
+	--	end
+	--end
 	local data = {}
 	local koeff = string.match(GetMapName(),"%d+") or 1
 	local maxGoldId = 0
@@ -74,58 +78,38 @@ function Stats.SubmitMatchData(winner,callback)
 					data.Type = tostring(PlayerResource:GetType(pID) or "null")
 					if PlayerResource:GetConnectionState(pID) == 2 then
 						if PlayerResource:GetTeam(pID) == winner then
-							if hero:IsTroll() then
-								data.Score = tostring(math.floor(10/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-								if tonumber(data.Score) < math.floor(10/koeff)  then
-									data.Score = tostring(math.floor(10/koeff))
-								end
-								elseif hero:IsElf() and PlayerResource:GetDeaths(pID) == 0 then 
-								data.Score = tostring(math.floor(10/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-								if tonumber(data.Score) < 1  then
-									data.Score = tostring(1)
-								end
-							end
-							elseif PlayerResource:GetTeam(pID) ~= winner then
-							if hero:IsTroll() then
-								data.Score = tostring( math.floor(-10 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-								elseif hero:IsElf() then 
-								data.Score = tostring(math.floor(0 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-							end
+							data.Score = tostring(1)
+						elseif PlayerResource:GetTeam(pID) ~= winner then
+							data.Score = tostring(-1)
 						end 
-						if hero:IsAngel() or hero:IsWolf() then 
-							data.Score = tostring(math.floor(-5 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-							data.Team = tostring(2)
-							elseif hero:IsElf() and PlayerResource:GetDeaths(pID) > 0 then 
-							data.Score = tostring(math.floor(-2 + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-						end
-					elseif PlayerResource:GetConnectionState(pID) ~= 2 and hero:IsTroll() and PlayerResource:GetTeam(pID) == winner then
-						data.Score = tostring(math.floor(10/koeff + GameRules.Bonus[pID] + tonumber(data.GetScoreBonus)))
-						if tonumber(data.Score) < math.floor(10/koeff)  then
-							data.Score = tostring(math.floor(10/koeff))
-						end
+					elseif PlayerResource:GetConnectionState(pID) ~= 2 and PlayerResource:GetTeam(pID) == winner then
+						data.Score = tostring(1)
 					elseif PlayerResource:GetConnectionState(pID) ~= 2 then
-						data.Score = tostring(math.floor(-35 + tonumber(data.GetScoreBonus)))
+						data.Score = tostring(-2)
 					end
-					if tonumber(data.Score) >=  0 then
-						data.Score = tostring(math.floor(tonumber(data.Score) *  (1 + GameRules.BonusPercent)))
-						else 
-						data.Score = tostring(math.floor(tonumber(data.Score) *  (1 - GameRules.BonusPercent)))
-					end
-					else
+					--if tonumber(data.Score) >=  0 then
+					--	data.Score = tostring(math.floor(tonumber(data.Score) *  (1 + GameRules.BonusPercent)))
+					--	else 
+					--	data.Score = tostring(math.floor(tonumber(data.Score) *  (1 - GameRules.BonusPercent)))
+					--end
+				else
 					data.Type = "Elf"
-					data.Score = tostring(-45)
+					data.Score = tostring(-2)
 					data.Team = tostring(2)
 				end
 				data.Key = dedicatedServerKey
 				data.BonusPercent = tostring(GameRules.BonusPercent)
 				local text = tostring(PlayerResource:GetPlayerName(pID)) .. " got " .. data.Score
-				GameRules.Score[pID] = data.Score
+				GameRules.Score[pID] = tostring(data.Score)
 				GameRules:SendCustomMessage(text, 1, 1)
 				Stats.SendData(data,callback)
 			end 
 		end
 	end
-	SetResourceValues()
+	Timers:CreateTimer(5, function() 
+		SetResourceValues()
+		GameRules:SetGameWinner(winner)
+	end)
 end
 
 function Stats.SendData(data,callback)
@@ -181,16 +165,16 @@ function Stats.RequestData(pId, callback)
 		if #obj > 0 then
 			if obj[1].score ~= nil and #obj == 1 then
 				if obj[1].team == "2" then 
-					message = nick .. " has a Elf score: " .. obj[1].score
+					message = nick .. " has a Treant score: " .. obj[1].score
 					GameRules.scores[pId].elf = obj[1].score
 					GameRules.scores[pId].troll = 0
 					elseif obj[1].team == "3" then
-					message = nick .. " has a Troll score: " .. obj[1].score
+					message = nick .. " has a Infernal score: " .. obj[1].score
 					GameRules.scores[pId].troll = obj[1].score
 					GameRules.scores[pId].elf = 0
 				end 
 				elseif  #obj == 2 then
-				message =  nick .. " has a Elf score: " .. obj[1].score .. "; Troll score: " .. obj[2].score 
+				message =  nick .. " has a Treant score: " .. obj[1].score .. "; Infernal score: " .. obj[2].score 
 				GameRules.scores[pId].elf = obj[1].score
 				GameRules.scores[pId].troll = obj[2].score
 			end

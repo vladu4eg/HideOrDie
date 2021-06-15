@@ -70,7 +70,7 @@
 		"Ability1" 			"attack_tree_skill"
 		"Ability2" 			"lina_light_strike_infernal_array_datadriven"
 		"Ability3" 			"blink_infernal_datadriven"
-		"Ability4" 			"troll_invis"
+		"Ability4" 			"bounty_hunter_track"
 		"Ability5" 			"techies_land_mines"
 		"Ability6"    	    "troll_teleport"
 		"Ability7"    	    "lina_light_strike_infernal_ult_datadriven"
@@ -94,11 +94,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "15"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "15"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "5"                   // Base agility
-		"AttributeAgilityGain"    "20"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "30"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -106,7 +106,7 @@
 		
 		"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
 		"RingRadius"        "70"
-		"CollisionSize"			"48"
+		"CollisionSize"			"40"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"       "400"                 // Speed.
@@ -132,7 +132,7 @@
 		"Ability4" 			"shadow_shaman_mass_serpent_ward_datadriven"
 		"Ability5" 			"techies_land_mines"
 		"Ability6"    	    "troll_teleport"
-		"Ability7"    	    "lina_light_strike_infernal2_ult_datadriven"
+		"Ability7"    	    "furion_force_of_nature_datadriven"
 		"Ability8"    	    "attribute_bonuses"
 		"Ability9"    	    "reveal_area"
 		"Ability10"    	    ""
@@ -154,11 +154,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "15"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "5"                   // Base intelligence
-		"AttributeIntelligenceGain" "20"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "15"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "30"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -166,7 +166,7 @@
 		
 		"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
 		"RingRadius"        "70"
-		"CollisionSize"			"48"
+		"CollisionSize"			"40"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"       "400"                 // Speed.
@@ -192,7 +192,7 @@
 		"Ability4" 			"sven_storm_bolt_datadriven"
 		"Ability5" 			"techies_land_mines"
 		"Ability6"    	    "troll_teleport"
-		"Ability7"    	    "furion_force_of_nature_datadriven"
+		"Ability7"    	    "tidehunter_ravage"
 		"Ability8"    	    "attribute_bonuses"
 		"Ability9"    	    "reveal_area"
 		"Ability10"    	    ""
@@ -213,11 +213,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"   "5"                   // Base strength
-		"AttributeStrengthGain"   "20"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "30"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "15"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "15"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -225,7 +225,7 @@
 		
 		"BoundsHullName"      "DOTA_HULL_SIZE_HERO"
 		"RingRadius"        "70"
-		"CollisionSize"			"48"
+		"CollisionSize"			"40"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
 		"MovementSpeed"       "400"                 // Speed.

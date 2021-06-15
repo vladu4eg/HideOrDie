@@ -724,9 +724,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "100"                 // Experience earn.
+	    "BountyXP"          "200"                 // Experience earn.
 	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.	
+	    "BountyGoldMax"       "300"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "8"
@@ -797,9 +797,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "100"                 // Experience earn.
+	    "BountyXP"          "300"                 // Experience earn.
 	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.	
+	    "BountyGoldMax"       "400"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "9"
@@ -2119,7 +2119,7 @@
 		"AttackDamageMin"			"301"		// Damage range min.
 		"AttackDamageMax"			"305"		// Damage range max.
 	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+		"StatusHealth"              "1200"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2399,7 +2399,7 @@
 		"AttackDamageMin"			"1201"		// Damage range min.
 		"AttackDamageMax"			"1205"		// Damage range max.
 	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+		"StatusHealth"              "1200"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2465,9 +2465,9 @@
 		"Ability4"					""
 		"Ability10"					""
 
-		"BountyXP"					"50"		// Experience earn.
-		"BountyGoldMin"				"12"		// Gold earned min.
-		"BountyGoldMax"				"18"		// Gold earned max.	
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"50"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.	
 		
 	    // General
 	    //-----------------------------
@@ -2733,7 +2733,7 @@
 		
 		"ConstructionSize"          "2"
 	    "BlockPathingSize"          "2"
-		"CollisionSize"				"64"
+		"CollisionSize"				"32"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -2742,8 +2742,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "48"
+	    "RingRadius"                "48"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -2813,7 +2813,7 @@
 		
 		"ConstructionSize"          "2"
 	    "BlockPathingSize"          "2"
-		"CollisionSize"				"64"
+		"CollisionSize"				"32"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -2822,8 +2822,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "48"
+	    "RingRadius"                "48"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 		
@@ -3022,6 +3022,7 @@
 		"Ability10"					"buy_item_dmg_6"
 		"Ability11"					"buy_item_ward_sentry"
 		"Ability12"					"buy_item_ward_observer"
+		"Ability13"					""
 
 
 	    // General
@@ -3858,9 +3859,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "80"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -3957,9 +3958,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "250"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4053,9 +4054,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "80"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4145,7 +4146,7 @@
 
 		"AbilityLayout"				"4"
 		"Ability1" 					"cm_haste"
-		"Ability2" 					"true_sight_ability"
+		"Ability2" 					""
 		"Ability3" 					""
 		"Ability4" 					""
 		"Ability5"					""
@@ -4158,9 +4159,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "300"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4171,11 +4172,11 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "25"
+		"FoodCost"                              "50"
 
 		// Movement
 		//----------------------------------------------------------------
-		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_FLY"
 		"MovementSpeed"                         "200"
 		"MovementTurnRate"                      "0.6"
 
@@ -4373,9 +4374,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "100"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "150"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4453,9 +4454,9 @@
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"50"		// Damage range min.
-		"AttackDamageMax"			"200"		// Damage range max.
+		"AttackDamageMax"			"500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackRate"				"0.50"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"150"		// Range within a target can be acquired.
 		"AttackRange"				"150"		// Range within a target can be attacked.
@@ -4479,9 +4480,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "150"                   // Gold earned min.
+	    "BountyGoldMax"       "250"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4586,9 +4587,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.	
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "150"                   // Gold earned min.
+	    "BountyGoldMax"       "350"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4599,7 +4600,7 @@
 
 		// Building Cost Stats
 		//----------------------------------------------------------------
-		"FoodCost"                              "2"
+		"FoodCost"                              "20"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4696,9 +4697,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "80"                 // Experience earn.
-	    "BountyGoldMin"       "50"                   // Gold earned min.
-	    "BountyGoldMax"       "100"                   // Gold earned max.	
+	    "BountyXP"          "300"                 // Experience earn.
+	    "BountyGoldMin"       "250"                   // Gold earned min.
+	    "BountyGoldMax"       "350"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4801,9 +4802,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "300"                 // Experience earn.
+	    "BountyXP"          "500"                 // Experience earn.
 	    "BountyGoldMin"       "100"                   // Gold earned min.
-	    "BountyGoldMax"       "500"                   // Gold earned max.	
+	    "BountyGoldMax"       "800"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -4908,9 +4909,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-	    "BountyXP"          "500"                 // Experience earn.
-	    "BountyGoldMin"       "1"                   // Gold earned min.
-	    "BountyGoldMax"       "5000"                   // Gold earned max.	
+	    "BountyXP"          "2000"                 // Experience earn.
+	    "BountyGoldMin"       "1000"                   // Gold earned min.
+	    "BountyGoldMax"       "9000"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -6079,8 +6080,8 @@
 	
 		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackDamageMin" "30" 
-		"AttackDamageMax" "30" 
+		"AttackDamageMin" "2" 
+		"AttackDamageMax" "5" 
 		"AttackRate" "1.6" 
 		"AttackAnimationPoint" "0.4" 
 		"AttackAcquisitionRange" "500" 

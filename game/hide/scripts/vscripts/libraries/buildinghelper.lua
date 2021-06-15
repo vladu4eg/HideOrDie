@@ -159,7 +159,7 @@ function BuildingHelper:HookFunctions()
         BuildingHelper.TreeRegrowTime = time
         oldSetTreeRegrowTime(gameRules, time)
     end
-
+    
     local oldRegrowAllTrees = GridNav.RegrowAllTrees
     GridNav.RegrowAllTrees = function(gridNav)
         for _,dummy in pairs(BuildingHelper.TreeDummies) do
@@ -451,12 +451,15 @@ function BuildingHelper:OnTreeCut(keys)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
     BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
     
-    BuildingHelper:FreeGridSquares(2, treePos)
+    --if not GridNav:IsBlocked(treePos) then
+        BuildingHelper:FreeGridSquares(2, treePos)
+    --end
 
 	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
             if tree.chopped_dummy ~= nil then
                 UTIL_Remove(tree.chopped_dummy)
+                BuildingHelper:BlockGridSquares(2, 2, treePos)
             end
 		end);
     randTime = nil
@@ -1459,10 +1462,11 @@ end
 ]] --
 function BuildingHelper:RemoveBuilding(building, bSkipEffects)
     if building.blockers then
-        for _, v in pairs(building.blockers) do UTIL_Remove(v) end
+        for _, v in pairs(building.blockers) do 
+            UTIL_Remove(v) 
+        end
     end
-    BuildingHelper:FreeGridSquares(BuildingHelper:GetConstructionSize(building),
-    building:GetAbsOrigin())
+    BuildingHelper:FreeGridSquares(BuildingHelper:GetConstructionSize(building), building:GetAbsOrigin())
     
     if building.prop then UTIL_Remove(building.prop) end
     
@@ -2233,8 +2237,7 @@ function BuildingHelper:NewGridType(grid_type)
     grid_type = string.upper(grid_type)
     BuildingHelper.GridTypes[grid_type] = BuildingHelper.NextGridValue
     BuildingHelper.NextGridValue = BuildingHelper.NextGridValue * 2
-    CustomNetTables:SetTableValue("building_settings", "grid_types",
-    BuildingHelper.GridTypes)
+    CustomNetTables:SetTableValue("building_settings", "grid_types", BuildingHelper.GridTypes)
 end
 
 -- Adds a grid_type to a square of size at centered at a location

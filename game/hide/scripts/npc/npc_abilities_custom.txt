@@ -587,7 +587,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"300"
+			"blink_range"			"500"
 		}
 		
 		"02"
@@ -647,7 +647,7 @@
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.6 0.5 0.4"
+	"AbilityCastPoint"				"0.3 0.2 0.1"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -664,7 +664,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"200 300 400"
+			"blink_range"			"200 350 500"
 		}
 		
 		"02"
@@ -5257,7 +5257,118 @@
 			}
 		}
 	}
-	"troll_teleport"{
+	
+	
+	// Rewrite of Furion Teleportation
+// Author: Noya
+// Date: April 5, 2015
+// TODO: Check all sort of cancelling shenanigans
+"troll_teleport"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+	"AbilityTextureName"		"chen_penitence"
+	"MaxLevel"						"1"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"0" // ?? global
+	"AbilityCastPoint"				"3"
+	"AbilityCooldown"				"45"
+
+	"precache"
+	{
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end_team.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport.vpcf"
+		"particle"  "particles/units/heroes/hero_furion/furion_teleport_e.vpcf"	//Endcap if canceled
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
+	}
+
+	"OnAbilityPhaseStart"
+	{
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_teleportation"
+			"Target" 		"CASTER"
+			"Duration"		"3"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Grow"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+			"Function"		"CreateTeleportParticles"
+			"Target"		"POINT"
+		}
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Disappear"
+			"Target" 		"CASTER"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+			"Function"		"Teleport"
+			"Target"		"POINT"
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Furion.Teleport_Appear"
+			"Target" 		"CASTER"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_teleportation"
+		{
+			"IsHidden"			"0"
+	
+			"EffectName"		"particles/econ/events/league_teleport_2014/teleport_end_league.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"OnOrder"
+			{
+				"FireSound"
+				{
+					"EffectName"	"Hero_Furion.Teleport_Disappear"
+					"Target" 		"CASTER"
+				}
+
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_furion/teleportation.lua"
+					"Function"		"EndTeleport"
+				}
+
+				"RemoveModifier"
+				{
+					"ModifierName"	"modifier_teleportation"
+					"Target" 		"CASTER"
+				}
+			}
+		}
+	}
+}
+	
+	"troll_teleport_2"{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitTargetFlags" 		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
@@ -7800,7 +7911,24 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"MaxLevel"					"1"
 		"ItemName"					"item_ward_sentry"
-		"AbilityCooldown"			"30"
+		"BuyItem"					"1"
+		
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+	}
+	
+	"buy_item_tpscroll"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"item_tpscroll"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_tpscroll"
 		"BuyItem"					"1"
 		
 		"OnSpellStart"{
@@ -7821,7 +7949,7 @@
 		"ItemName"					"item_ward_observer"
 		
 		"BuyItem"					"1"
-		"AbilityCooldown"			"45"
+		"AbilityCooldown"			"30"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -8650,7 +8778,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -8712,7 +8840,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -8774,7 +8902,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -8962,7 +9090,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -9026,7 +9154,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -9081,7 +9209,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"2"
+				"food_cost"			"20"
 			}	
 			"04"
 			{
@@ -9097,7 +9225,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"5"
+		"AbilityChannelTime"		"45"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -10318,111 +10446,7 @@
 	}
 }
 
-// Rewrite of Furion Teleportation
-// Author: Noya
-// Date: April 5, 2015
-// TODO: Check all sort of cancelling shenanigans
-"furion_teleportation_datadriven"
-{
-	// General
-	//-------------------------------------------------------------------------------------------------------------
-	"BaseClass"				"ability_datadriven"
-	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-	"AbilityTextureName"		"furion_teleportation"
 
-	// Stats
-	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"0" // ?? global
-	"AbilityCastPoint"				"3"
-	"AbilityCooldown"				"30"
-	"AbilityManaCost"				"100"
-
-	"precache"
-	{
-		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end.vpcf"
-		"particle"  "particles/units/heroes/hero_furion/furion_teleport_end_team.vpcf"
-		"particle"  "particles/units/heroes/hero_furion/furion_teleport.vpcf"
-		"particle"  "particles/units/heroes/hero_furion/furion_teleport_e.vpcf"	//Endcap if canceled
-		"soundfile" "soundevents/game_sounds_heroes/game_sounds_furion.vsndevts"
-	}
-
-	"OnAbilityPhaseStart"
-	{
-		"ApplyModifier"
-		{
-			"ModifierName"	"modifier_teleportation"
-			"Target" 		"CASTER"
-			"Duration"		"3"
-		}
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_Furion.Teleport_Grow"
-			"Target" 		"CASTER"
-		}
-
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
-			"Function"		"CreateTeleportParticles"
-			"Target"		"POINT"
-		}
-	}
-
-	"OnSpellStart"
-	{
-		"FireSound"
-		{
-			"EffectName"	"Hero_Furion.Teleport_Disappear"
-			"Target" 		"CASTER"
-		}
-
-		"RunScript"
-		{
-			"ScriptFile"	"heroes/hero_furion/teleportation.lua"
-			"Function"		"Teleport"
-			"Target"		"POINT"
-		}
-
-		"FireSound"
-		{
-			"EffectName"	"Hero_Furion.Teleport_Appear"
-			"Target" 		"CASTER"
-		}
-	}
-
-	"Modifiers"
-	{
-		"modifier_teleportation"
-		{
-			"IsHidden"			"0"
-	
-			"EffectName"		"particles/units/heroes/hero_furion/furion_teleport.vpcf"
-			"EffectAttachType"	"follow_origin"
-
-			"OnOrder"
-			{
-				"FireSound"
-				{
-					"EffectName"	"Hero_Furion.Teleport_Disappear"
-					"Target" 		"CASTER"
-				}
-
-				"RunScript"
-				{
-					"ScriptFile"	"heroes/hero_furion/teleportation.lua"
-					"Function"		"EndTeleport"
-				}
-
-				"RemoveModifier"
-				{
-					"ModifierName"	"modifier_teleportation"
-					"Target" 		"CASTER"
-				}
-			}
-		}
-	}
-}
 
 // Rewrite of the Chen Penitence ability
 // Author: Pizzalol
@@ -10905,7 +10929,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-		"AbilityCastRange"				"200"
+		"AbilityCastRange"				"300"
 		"AbilityCooldown"				"0.5"
 		
 		"AbilitySpecial"
@@ -10913,7 +10937,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"80"
+				"radius"					"90"
 			}
 		}
 		
@@ -10940,7 +10964,7 @@
 	"AbilityTextureName"			"lina_light_strike_array"
 	"MaxLevel"              		 "3"
 	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.45"
+	"AbilityCastPoint"				"0.3 0.2 0.1"
 	"AOERadius"						"%light_strike_array_aoe"
 	"RequiredLevel"          		"3"
 	// Precache
@@ -12166,7 +12190,7 @@
 	"AbilityTextureName"			"invoker_sun_strike"
 	"MaxLevel"              		 "3"
 	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.45"
+	"AbilityCastPoint"				"0.3 0.2 0.1"
 	"AOERadius"						"%light_strike_array_aoe"
  	"RequiredLevel"          "8"
 	// Precache
@@ -12820,7 +12844,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"	"30"
+				"bonus_armor"	"45"
 			}
 		}
 	
@@ -13196,15 +13220,150 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"building_damage_pct"		"1"
+				"building_damage_pct"		"50"
 			}	
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"activation_delay"			"0.1"
+				"activation_delay"			"0.01"
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}	
 	
+//=================================================================================================================
+	// Tidehunter: Ravage
+	//=================================================================================================================
+	"tidehunter_ravage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5121"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Ability.Ravage"
+		"RequiredLevel"          "8"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.6 0.4 0.2"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"90.0 70.0 55.0"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"15 50 1000"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120 100 80"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"400 600 900"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"725"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"1.4 1.9 2.7"
+			}
+		}
+	}
+	
+//=================================================================================================================
+	// Bounty Hunter: Track
+	//=================================================================================================================
+	"bounty_hunter_track"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5288"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_BountyHunter.Target"
+		"FightRecapLevel"				"2"
+		"MaxLevel"						"3"
+		// Unit Targeting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityCooldown"				"80 60 50"
+		"AbilityManaCost"				"150 120 80"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"target_crit_multiplier"	"140 170 200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold_radius"		"0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold_self"		"0"
+				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_gold"			"0"
+				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"10.0 15.0 20.0"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_tooltip"			"300 500 900"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"gold_steal"			"0"
+			}			
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed_pct"	"20 30 45"
+			}
+
+		}
+	}
 }

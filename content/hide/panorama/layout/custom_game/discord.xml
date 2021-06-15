@@ -3,7 +3,7 @@
 		<include src="file://{resources}/styles/custom_game/discord.css" />
 	</styles>
 	<Panel class="Hud" hittest="false"> 
-		<Button id="DonateToggleButton" onactivate="ExternalBrowserGoToURL('https://discord.gg/zwYYbex')"> 
+		<Button id="DonateToggleButton" onactivate="ExternalBrowserGoToURL('https://discord.gg/9k29hP2uVy')"> 
 			<Panel id="Arrow" />
 		</Button> 
 	</Panel>
