@@ -26,10 +26,12 @@
 				<Label id = "CheeseText" class="Texts" text="" html="true"/>
 				<Image hittest="false" id="CheeseIcon" src="file://{images}/custom_game/cheese_icon.png" />
 			</Panel>
+			<!--
 			<Panel class="ResourcePanels" id = "LumberPricePanel">
 				<Label id = "LumberPriceText" class="Texts" text="" html="true"/>
 				<Image hittest="false" id="LumberPriceIcon" src="file://{images}/custom_game/lumberprice_icon.png" />
 			</Panel>
+			-->
 		</Panel> 
 	</Panel>
 </root>

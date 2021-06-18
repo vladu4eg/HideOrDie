@@ -1141,7 +1141,7 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "5"
+	        "Count"     "6"
 	        "1"{
 				"unit_name"			"rock_2"
 				"gold_cost"			"25"
@@ -1158,11 +1158,16 @@
 				"lumber_cost"		"50"
 			}
 			"4"{
+				"unit_name"			"rock_10"
+				"gold_cost"			"20248"
+				"lumber_cost"		"6969"
+			}
+			"5"{
 				"unit_name"			"rock_8"
 				"gold_cost"			"256000"
 				"lumber_cost"		"20000"
 			}
-			"5"{
+			"6"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
 				"lumber_cost"		"128000"
@@ -1699,9 +1704,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-		"BountyXP"					"50"		// Experience earn.
-		"BountyGoldMin"				"10"		// Gold earned min.
-		"BountyGoldMax"				"50"		// Gold earned max.		
+		"BountyXP"					"500"		// Experience earn.
+		"BountyGoldMin"				"250"		// Gold earned min.
+		"BountyGoldMax"				"500"		// Gold earned max.		
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "9"
@@ -1767,6 +1772,78 @@
 	    "SoundSet"                  "Tower.Water"
 	}
 
+	//=================================================================================
+	// Building: Ultra Wall 4
+	//=================================================================================	
+	"rock_10"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/props_structures/tower_upgrade/tower_upgrade.vmdl"
+
+		"ModelScale"                "0.4"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"BountyXP"					"50"		// Experience earn.
+		"BountyGoldMin"				"10"		// Gold earned min.
+		"BountyGoldMax"				"50"		// Gold earned max.		
+	    // Stats
+	    //----------------------------- 
+	    "Level"                     "10"
+	    "BuildTime"                 "15"
+		"Requirements"{
+		
+		}
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					"mars_bulwark"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "500"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "100"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		
+		"AttackDamageMin"			"100"		// Damage range min.
+		"AttackDamageMax"			"300"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
+	}
 	//=================================================================================
 	// Building: Basic Tower
 	//=================================================================================	

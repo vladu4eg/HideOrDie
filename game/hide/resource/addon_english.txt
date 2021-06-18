@@ -32,7 +32,7 @@
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
 		"rock_9"                                                                    "Ultra Wall 4"
-		"rock_10"                                                                    "Ultra Wall 5"
+		"rock_10"                                                                    "Magnet"
 		"rock_11"                                                                  "Demonic Wall 1"
 		"rock_12"                                                                  "Demonic Wall 2"
 		"rock_13"                                                                  "Demonic Wall 3"
@@ -348,8 +348,8 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Ultra Wall 4"
 		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your ultra wall!<br>HP:2560<br>ARMOR:4"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Ultra Wall 5"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your ultra wall!<br>HP:5120<br>ARMOR:5"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your Magnet!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Demonic Wall 1"
 		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Upgrade your ultra wall!<br>HP:10240<br>ARMOR:6"
@@ -1863,7 +1863,7 @@
 		"DOTA_Tooltip_ability_item_reveal_Description"                              	 "Expands visibility in the area of ​​your choice."
 		
 		"DOTA_Tooltip_ability_buy_item_reveal"                                          	 "Telescope"
-		"DOTA_Tooltip_ability_buy_item_reveal_Description"                              	 "Expands visibility in the area of ​​your choice, BUT disappears upon activation."
+		"DOTA_Tooltip_ability_buy_item_reveal_Description"                              	 "Expands visibility in the area of ​​your choice."
 
 		"DOTA_Tooltip_ability_item_troll_boots"                                           "Boots of Infernal"
 		"DOTA_Tooltip_ability_item_troll_boots_Description"                               "Provides bonus movement speed to the carrier. "
@@ -2033,7 +2033,23 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_need_buy_hut_7"																"You need to buy a level 7 hut!"		
 		"error_not_upgrade_tower19_x4"														"You cannot build Enigma in x4."
 		"error_not_destroy_building"														"The owner has not left the game. Wait until the game is completely exited."
-		"loading_text"																		"Don't change your hotkeys after starting the game."
+		"loading_text"																		"Genre: hide and seek, strategy, survival.
+<br> Playing time: 40 minutes or if you kill all Infernal in 60 seconds.
+<br> Map:
+<br> CreepTown - maximum map size in Dota2 (high difficulty).
+<br> Spring is a medium sized map (medium difficulty).
+<br> Recommended number of players: 3 vs 1; 6 vs 2; 9 vs 3.
+<br>
+<br> Treant
+<br> Objective: Survive for 40 minutes; Create your own army; Build a teleport to quickly move around the map; Free Dead Treant from the trap.
+<br> Hint: Don't stay in one place for too long. Infernal can easily get to your base; DO NOT build all the tents in one place (it is better to distribute them evenly across the map).
+<br>
+<br> Infernal
+<br> Objective: Kill all Treants in 40 minutes; Prevent Dead Treant from being saved;
+<br> Hint: You can buy units in the shop; Buy Ward; Buy books to improve your performance; The telescope will help you scout the map.
+<br>
+<br>
+<br> Do not change hotkeys after starting the game!"
 		
 		"loading_text_no_troll"																"Do not choose Infernal if you are playing for the first time, please."
 		"DOTA_Chat_PlayerKilled"                    ""

@@ -32,7 +32,7 @@
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
 		"rock_9"                                                                    "Ultra Wall 4"
-		"rock_10"                                                                    "Ultra Wall 5"
+		"rock_10"                                                                    "Magnet"
 		"rock_11"                                                                  "Demonic Wall 1"
 		"rock_12"                                                                  "Demonic Wall 2"
 		"rock_13"                                                                  "Demonic Wall 3"
@@ -295,8 +295,8 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Ultra Wall 4"
 		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Улучшить свой Ultra Wall!<br>HP:2560<br>ARMOR:4"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Ultra Wall 5"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Улучшить свой Ultra Wall!<br>HP:5120<br>ARMOR:5"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Улучшить свой Magnet!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Demonic Wall 1"
 		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Улучшить свой Ultra Wall!<br>HP:10240<br>ARMOR:6"
@@ -1781,7 +1781,24 @@
 		"error_need_buy_hut_7"																"Вам нужно улучшить  Infernal Hut до 7 уровня!"	
 		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
 		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
-		"loading_text"																		"Не меняйте горячие клавиши после запуска игры."
+		"loading_text"																		"Жанр: прятки, стратегия, выживание. 
+<br>Время игры: 40 мин или если убить всех Infernal за 60 секунд.
+<br>Карта: 
+<br>CreepTown - максимальный размер карты в Dota2(высокая сложность).
+<br>Spring - карта среднего размера (средняя сложность).
+<br>Рекомендуемое количество игроков: 3 против 1; 6 против 2; 9 против 3.
+<br> 
+<br>Treant
+<br>Задача: Выжить в течение 40 мин; Создать свою армию; Построить телепорт для быстрого перемещения по карте; Освобождать Dead Treant из ловушки. 
+<br>Подсказка: Не оставайтесь на одном месте слишком долго. Infernal с лёгкостью может попасть к вам на базу; НЕ стройте все палатки в одном месте(лучше распределить их равномерно по карте). 
+<br> 
+<br>Infernal
+<br>Задача: Убить всех Treant за 40 мин; Не дать спасти Dead Treant;
+<br>Подсказка: Вы можете купить юнитов в магазине; Покупайте Ward; Покупайте книги для улучшения ваших характеристик; Телескоп поможет вам разведывать карту.
+<br>
+<br>
+<br>Не меняйте горячие клавиши после запуска игры!"
+		
 		"loading_text_no_troll"																		"Не выбирайте Инфернала, если  играете в первый раз, пожалуйста."
 		
 		"DOTA_Chat_PlayerKilled"                    ""

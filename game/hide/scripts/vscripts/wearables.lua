@@ -143,7 +143,7 @@ function SetModelVip(npc)
 		--	wearables:AttachWearable(npc, "models/items/troll_warlord/lord_of_war_shoulder/lord_of_war_shoulder.vmdl")
 		elseif npc:IsElf() then
 		wearables:RemoveWearables(npc)
-		wearables:AttachWearable(npc, "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl")
+		wearables:AttachWearable(npc, "models/items/furion/treant/the_ancient_guardian_the_ancient_treants/the_ancient_guardian_the_ancient_treants.vmdl")
 	end
 	--if npc.bear ~= nil  then
 	--	wearables:RemoveWearables(npc.bear)

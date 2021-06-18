@@ -2986,22 +2986,12 @@
 	"upgrade_to_rock_10"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_ultra_wall"
+		"AbilityTextureName"			"build_rock_10"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
 		"Building"						"1"
-		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-		}
+		"BuildTime"				"15.0"
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -13364,6 +13354,58 @@
 				"bonus_move_speed_pct"	"20 30 45"
 			}
 
+		}
+	}
+	
+	"mars_bulwark"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+        
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"physical_damage_reduction"		"0"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"forward_angle"					"140"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"physical_damage_reduction_side"	"0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"side_angle"					"360"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"redirect_chance"				"100"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"redirect_range"				"600"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"redirect_speed_penatly"				"20"
+			}
+
+			
 		}
 	}
 }

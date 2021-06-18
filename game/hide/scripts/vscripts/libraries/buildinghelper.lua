@@ -451,15 +451,13 @@ function BuildingHelper:OnTreeCut(keys)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
     BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
     
-    --if not GridNav:IsBlocked(treePos) then
-        BuildingHelper:FreeGridSquares(2, treePos)
-    --end
+    BuildingHelper:FreeGridSquares(2, treePos)
 
 	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
             if tree.chopped_dummy ~= nil then
-                UTIL_Remove(tree.chopped_dummy)
                 BuildingHelper:BlockGridSquares(2, 2, treePos)
+                UTIL_Remove(tree.chopped_dummy)
             end
 		end);
     randTime = nil
@@ -886,7 +884,7 @@ function BuildingHelper:OrderFilter(order)
                     string.match(
                         EntIndexToHScript(abilityIndex):GetAbilityName(),
                     "upgrade_to") and
-                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[0] then
+                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[1] then
                     SendErrorMessage(issuerID, "#error_only_troll_can_upgrade")
                     return false
                 end
