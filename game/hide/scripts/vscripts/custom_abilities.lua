@@ -253,7 +253,7 @@ function build_tree( event )
         if IsInsideBoxEntity2(point, pos) then
 			DebugPrint("in")
             UTIL_Remove(t.chopped_dummy)
-			BuildingHelper:BlockGridSquares(2, 2, pos)
+			--BuildingHelper:BlockGridSquares(2, 2, pos)
 		end
 	end
 end
