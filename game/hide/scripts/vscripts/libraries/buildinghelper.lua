@@ -153,6 +153,8 @@ end
 
 -- This requires that buildinghelper is required before the usage of these functions
 function BuildingHelper:HookFunctions()
+    local treePos 
+    
     local oldSetTreeRegrowTime = GameRules.SetTreeRegrowTime
     BuildingHelper.TreeRegrowTime = 1
     GameRules.SetTreeRegrowTime = function(gameRules, time)
@@ -184,6 +186,7 @@ function BuildingHelper:HookFunctions()
         UTIL_Remove(tree.chopped_dummy)
         oldGrowBack(tree)
     end
+
 end
 
 function BuildingHelper:LoadSettings()
@@ -1454,6 +1457,20 @@ function BuildingHelper:UpgradeBuilding(building, newName)
     return newBuilding
 end
 
+function IsInsideBoxEntity2(box, location)
+    local origin = box
+    local X = location.x
+    local Y = location.y
+    local minX = -32 + origin.x
+    local minY = -32 + origin.y
+    local maxX = 32 + origin.x
+    local maxY = 32 + origin.y
+    local betweenX = X >= minX and X <= maxX
+    local betweenY = Y >= minY and Y <= maxY
+    
+    return betweenX and betweenY
+end
+
 --[[
     RemoveBuilding
     * Removes a building, removing it from the gridnav, with an optional parameter to skip particle effects
@@ -1461,12 +1478,22 @@ end
 function BuildingHelper:RemoveBuilding(building, bSkipEffects)
     if building.blockers then
         for _, v in pairs(building.blockers) do 
+            DebugPrint("DeepPrintTable(v)")
+            DeepPrintTable(v)
             UTIL_Remove(v) 
         end
     end
     BuildingHelper:FreeGridSquares(BuildingHelper:GetConstructionSize(building), building:GetAbsOrigin())
     
-    if building.prop then UTIL_Remove(building.prop) end
+    for _, t in pairs(BuildingHelper.AllTrees) do
+        local pos = t:GetAbsOrigin()
+        if IsInsideBoxEntity2(building:GetAbsOrigin(), pos) then
+			DebugPrint("in")
+            BuildingHelper:BlockGridSquares(2, 2, pos)
+		end
+	end
+    
+    if building.prop then DebugPrint("DeepPrintTable(building.prop)") DeepPrintTable(building.prop)  UTIL_Remove(building.prop) end
     
     if building.minimapEntity then
         building.minimapEntity.correspondingEntity = "dead"
