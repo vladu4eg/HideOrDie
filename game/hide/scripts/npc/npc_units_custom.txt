@@ -446,9 +446,9 @@
 		"Requirements"{
 		
 		}
-	    "BountyXP"          "100"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.		
+	    "BountyXP"          "25"                 // Experience earn.
+	    "BountyGoldMin"       "25"                   // Gold earned min.
+	    "BountyGoldMax"       "50"                   // Gold earned max.		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -503,9 +503,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "100"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.	
+	    "BountyXP"          "30"                 // Experience earn.
+	    "BountyGoldMin"       "30"                   // Gold earned min.
+	    "BountyGoldMax"       "60"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "2"
@@ -576,9 +576,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "100"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.	
+	    "BountyXP"          "40"                 // Experience earn.
+	    "BountyGoldMin"       "40"                   // Gold earned min.
+	    "BountyGoldMax"       "70"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "3"
@@ -650,9 +650,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "100"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "200"                   // Gold earned max.	
+	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "80"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "5"
@@ -724,8 +724,8 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "200"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
+	    "BountyXP"          "100"                 // Experience earn.
+	    "BountyGoldMin"       "80"                   // Gold earned min.
 	    "BountyGoldMax"       "300"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
@@ -797,9 +797,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "300"                 // Experience earn.
-	    "BountyGoldMin"       "10"                   // Gold earned min.
-	    "BountyGoldMax"       "400"                   // Gold earned max.	
+	    "BountyXP"          "150"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "350"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "9"
@@ -5530,7 +5530,7 @@
 		// Bounds
 		//----------------------------------------------------------------
 		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
-		"RingRadius"				"50"
+		"RingRadius"				"32"
 		"HealthBarOffset"			"-1"		// -1 means use the models
 
 		// Movement

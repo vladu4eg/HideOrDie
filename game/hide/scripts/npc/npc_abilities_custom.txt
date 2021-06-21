@@ -664,7 +664,7 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"200 350 500"
+			"blink_range"			"200 250 350"
 		}
 		
 		"02"
@@ -6675,7 +6675,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"512000"
+				"gold_cost"			"256000"
 			}	
 			"02"
 			{
@@ -6738,7 +6738,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"999999"
+				"gold_cost"			"512000"
 			}	
 			"02"
 			{
@@ -12958,7 +12958,7 @@
 		"AbilityCastRange"				"800"
 		"AbilityCastPoint"				"0.0"
 	
-		"AbilityCooldown"				"12.0"
+		"AbilityCooldown"				"60.0"
 	
 		"AbilityManaCost"				"100"	
 	
@@ -12968,7 +12968,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration_hero"	"4"
+				"duration_hero"	"2"
 			}
 			"02"
 			{

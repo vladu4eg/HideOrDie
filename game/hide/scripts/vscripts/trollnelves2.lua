@@ -511,9 +511,11 @@ function trollnelves2:PreStart()
                         DebugPrint("#trollPlayerID " .. #trollPlayerID)
                         local trollHero = PlayerResource:GetSelectedHeroEntity(trollPlayerID[i])
                         trollHero:AddNewModifier(nil, nil, "modifier_stunned", {duration = trollSpawnTimer})
-                        if GameRules.MapSpeed >= 4 then
-                            PlayerResource:SetGold(trollHero, TROLL_STARTING_GOLD_X4)
-                            else
+                        if GameRules.TrollCount  == 1 then
+                            PlayerResource:SetGold(trollHero, TROLL_STARTING_GOLD_X1)
+                        elseif GameRules.TrollCount  == 2 then 
+                            PlayerResource:SetGold(trollHero, TROLL_STARTING_GOLD_X2)
+                        else
                             PlayerResource:SetGold(trollHero, TROLL_STARTING_GOLD)
                         end
                         PlayerResource:SetLumber(trollHero, TROLL_STARTING_LUMBER)

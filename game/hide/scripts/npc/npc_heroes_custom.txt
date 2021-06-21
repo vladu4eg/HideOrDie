@@ -109,7 +109,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "400"                 // Speed.
+		"MovementSpeed"       "380"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.
@@ -169,7 +169,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "400"                 // Speed.
+		"MovementSpeed"       "380"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.
@@ -228,7 +228,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "400"                 // Speed.
+		"MovementSpeed"       "380"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.

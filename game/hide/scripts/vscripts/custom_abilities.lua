@@ -252,6 +252,7 @@ function build_tree( event )
         local pos = t:GetAbsOrigin()
         if IsInsideBoxEntity2(point, pos) then
 			DebugPrint("in")
+			BuildingHelper.TreeDummies[t:GetEntityIndex()] = nil
             UTIL_Remove(t.chopped_dummy)
 			--BuildingHelper:BlockGridSquares(2, 2, pos)
 		end

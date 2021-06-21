@@ -1,8 +1,8 @@
 creeptown
 {
 	material materials/overviews/creeptown.vmat
-	pos_x -16992
-	pos_y 17152
-	scale 33.188
+	pos_x -17198
+	pos_y 17234
+	scale 33.357
 }
 

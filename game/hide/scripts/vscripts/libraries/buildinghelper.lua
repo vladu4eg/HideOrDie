@@ -155,37 +155,6 @@ end
 function BuildingHelper:HookFunctions()
     local treePos 
     
-    local oldSetTreeRegrowTime = GameRules.SetTreeRegrowTime
-    BuildingHelper.TreeRegrowTime = 1
-    GameRules.SetTreeRegrowTime = function(gameRules, time)
-        BuildingHelper.TreeRegrowTime = time
-        oldSetTreeRegrowTime(gameRules, time)
-    end
-    
-    local oldRegrowAllTrees = GridNav.RegrowAllTrees
-    GridNav.RegrowAllTrees = function(gridNav)
-        for _,dummy in pairs(BuildingHelper.TreeDummies) do
-            UTIL_Remove(dummy)
-        end
-        BuildingHelper.TreeDummies = {}
-        oldRegrowAllTrees(gridNav)
-    end
-
-    local oldCutDownRegrowAfter = CDOTA_MapTree.CutDownRegrowAfter
-    CDOTA_MapTree.CutDownRegrowAfter = function(tree, time, team)
-        oldCutDownRegrowAfter(tree, time, team)
-        Timers:CreateTimer(time, function()
-            BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
-            UTIL_Remove(tree.chopped_dummy)
-        end)
-    end
-
-    local oldGrowBack = CDOTA_MapTree.GrowBack
-    CDOTA_MapTree.GrowBack = function(tree)
-        BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
-        UTIL_Remove(tree.chopped_dummy)
-        oldGrowBack(tree)
-    end
 
 end
 
@@ -433,6 +402,7 @@ end
 
 function BuildingHelper:OnTreeCut(keys)
     local treePos = Vector(keys.tree_x, keys.tree_y, 0)
+    BuildingHelper:FreeGridSquares(2, treePos)
     local tree -- Figure out which tree was cut
     for _, t in pairs(BuildingHelper.AllTrees) do
         local pos = t:GetAbsOrigin()
@@ -441,30 +411,34 @@ function BuildingHelper:OnTreeCut(keys)
             break
         end
     end
+    DebugPrint("Test1")
     if not tree then
         BuildingHelper:print("ERROR: OnTreeCut couldn't find a tree for pos " ..
         treePos.x .. "," .. treePos.y)
         return
     elseif tree.chopped_dummy then
+        DebugPrint("elseif tree.chopped_dummy then")
+        BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
     
     --Create a dummy for clients to be able to detect trees standing and block their grid
-    tree.chopped_dummy = CreateUnitByName("npc_dota_units_base2", treePos, true, nil, nil, DOTA_TEAM_NOTEAM)
+    tree.chopped_dummy = CreateUnitByName("npc_dota_units_base2", treePos, false, nil, nil, DOTA_TEAM_NOTEAM)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
     BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
     
-    BuildingHelper:FreeGridSquares(2, treePos)
-
+DebugPrint("BuildingHelper:FreeGridSquares(2, treePos)")
 	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
-            if tree.chopped_dummy ~= nil then
-                BuildingHelper:BlockGridSquares(2, 2, treePos)
+            if IsValidEntity(tree.chopped_dummy) then
+                BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
                 UTIL_Remove(tree.chopped_dummy)
+                DebugPrint("delete")
+               -- BuildingHelper:BlockGridSquares(2, 2, treePos)
             end
 		end);
     randTime = nil
-
+    BuildingHelper:FreeGridSquares(2, treePos)
 end
 
 function BuildingHelper:InitGNV()
@@ -887,7 +861,7 @@ function BuildingHelper:OrderFilter(order)
                     string.match(
                         EntIndexToHScript(abilityIndex):GetAbilityName(),
                     "upgrade_to") and
-                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[1] then
+                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[0] then
                     SendErrorMessage(issuerID, "#error_only_troll_can_upgrade")
                     return false
                 end
@@ -1478,20 +1452,10 @@ end
 function BuildingHelper:RemoveBuilding(building, bSkipEffects)
     if building.blockers then
         for _, v in pairs(building.blockers) do 
-            DebugPrint("DeepPrintTable(v)")
-            DeepPrintTable(v)
             UTIL_Remove(v) 
         end
     end
     BuildingHelper:FreeGridSquares(BuildingHelper:GetConstructionSize(building), building:GetAbsOrigin())
-    
-    for _, t in pairs(BuildingHelper.AllTrees) do
-        local pos = t:GetAbsOrigin()
-        if IsInsideBoxEntity2(building:GetAbsOrigin(), pos) then
-			DebugPrint("in")
-            BuildingHelper:BlockGridSquares(2, 2, pos)
-		end
-	end
     
     if building.prop then DebugPrint("DeepPrintTable(building.prop)") DeepPrintTable(building.prop)  UTIL_Remove(building.prop) end
     

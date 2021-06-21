@@ -1978,7 +1978,7 @@
 		"peventdesert"																			"Awarded for participating in a Desert event. Pets are not included in the donation effect."
 		
 		"donate1"																			"<font color='#58ACFA'>You can support the game on Patreon.</font>"
-		"donate2"																			"<font color='#58ACFA'>You can increase the chance of getting a Infernal, increase the number of points you receive or get one of the unique cosmetic effects by supporting our project on Patreon.</font>"
+		"donate2"																			"<font color='#58ACFA'>You can increase the chance of getting a Infernal  or get one of the unique cosmetic effects by supporting our project on Patreon.</font>"
 		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"
 		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/9k29hP2uVy</font>"
 		"donate5"																			"<font color='#58ACFA'>Submit your ideas on what to add to the game in our Discord server!</font>"

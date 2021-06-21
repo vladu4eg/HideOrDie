@@ -3,7 +3,7 @@ require('top')
 Stats = Stats or {}
 local dedicatedServerKey = GetDedicatedServerKeyV2("1")
 local isTesting = IsInToolsMode() and false
-Stats.server = "https://localhost:5001/hide/" -- "https://tve3.us/hide/" -- 
+Stats.server =  "https://tve3.us/hide/" -- "https://localhost:5001/hide/" --
 
 function Stats.SubmitMatchData(winner,callback)
 	--if not isTesting then

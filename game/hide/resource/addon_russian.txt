@@ -1728,7 +1728,7 @@
 		"peventdesert"																			"Выдается за участие в Desert event."
 
 		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon.</font>"
-		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Infernal, увеличить количество получаемых очков или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
+		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Infernal или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
 		"donate3"																			"<font color='#58ACFA'>Patreon: https://patreon.com/hidedie</font>"
 		"donate4"																			"<font color='#58ACFA'>Discord: https://discord.gg/9k29hP2uVy</font>"
 		"donate5"																			"<font color='#58ACFA'>Вы можете поделиться идеями/багами/пожеланиями на нашем сервере Discord!</font>"
