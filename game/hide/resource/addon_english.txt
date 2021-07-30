@@ -31,9 +31,9 @@
 		"rock_6"                                                                    "Armored Tree 3"
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
-		"rock_9"                                                                    "Ultra Wall 4"
-		"rock_10"                                                                    "Magnet"
-		"rock_11"                                                                  "Demonic Wall 1"
+		"rock_9"                                                                    "Mega Tree"
+		"rock_10"                                                                    "Magnet LVL 1"
+		"rock_11"                                                                  "Magnet LVL 2"
 		"rock_12"                                                                  "Demonic Wall 2"
 		"rock_13"                                                                  "Demonic Wall 3"
 		"rock_14"                                                                  "Demonic Wall 4"
@@ -124,6 +124,8 @@
 		"attacker_wood_worker_2"															  "Lumberjack 2"
 		"attacker_wood_worker_3"															  "Lumberjack 3"
 		"attacker_wood_worker_4"															  "Lumberjack 4"
+		"attacker_wood_worker_5"															  "Lumberjack 5"
+		"hero_treant"                                        							  "Lumberjack Guardian"
 		"wisp_1"                                                                          "Wisp 1"
 		"wisp_2"                                                                          "Wisp 2"
 		"wisp_3"                                                                          "Wisp 3"
@@ -182,6 +184,12 @@
 		"phoenix_egg_bm" "Phoenix Egg"
 		"bear_bm"	"Bear"
 		
+		"toppatron"																				"Awarded for TOP1-3 donators on Patreon."
+		
+		"top1-3patreon"																			"TOP PATREON"
+		
+		"block"																					"The effect is blocked until the event is released."
+
 		"flag"                                                                            "Flag"
 		"top1autumn"																	  "TOP1 AUTUMN"
 		"top2-3autumn"																	  "TOP2-3 AUTUMN"
@@ -189,7 +197,17 @@
 		"tester1"																		  "TESTER"
 		"moder"																		  	  "MODERATOR"
 		"dev"																		  	  "DEVELOPER"
-		
+		"top"                                          											"Players are rewarded for getting the TOP 1-10 of the season."
+		"top1"                                          											"Players are rewarded for getting the TOP 1 of the season."
+		"top2-3"                                          											"Players are rewarded for getting the TOP 2-3 of the season."
+		"top2"                                          											"Players are rewarded for getting the TOP 2 of the season."
+		"top3"                                          											"Players are rewarded for getting the TOP 3 of the season."
+		"patron12"																				"Level 12 Donation. Available to tenth level donater or higher."
+		"peventwinter"																			"Awarded for participating in a Winter event. Pets are not included in the donation effect."
+		"peventspring"																			"Awarded for participating in a Spring event. Pets are not included in the donation effect."
+		"peventsummer"																			"Awarded for participating in a Spring event. Pets are not included in the donation effect."
+		"discordnitro"																			"Awarded for boosting the Discord server."
+
 		"monkey_king"																	 "Keeper of the forest"
 		"monkey_king_2"																	 "Keeper of the forest 2"
 		
@@ -348,11 +366,11 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Ultra Wall 4"
 		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your ultra wall!<br>HP:2560<br>ARMOR:4"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your Magnet!"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet LVL 1"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Upgrade your Magnet LVL 1!"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Demonic Wall 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Upgrade your ultra wall!<br>HP:10240<br>ARMOR:6"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Magnet LVL 2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Upgrade your Magnet LVL 2"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_12"                                  "Upgrade To Demonic Wall 2"
 		"DOTA_Tooltip_ability_upgrade_to_rock_12_Description"                      "Upgrade your demonic wall!<br>HP:20480<br>ARMOR:7"
@@ -970,6 +988,13 @@
 		"DOTA_Tooltip_ability_train_wood_worker_4_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_wood_worker_4_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_wood_worker_4_unit_count"                                  "UNIT COUNT: "
+		
+		"DOTA_Tooltip_ability_train_wood_worker_5"                                            "Train Lumberjack 5"
+		"DOTA_Tooltip_ability_train_wood_worker_5_Description"                                 "Lumberjack specialises in gathering lumber!"
+		"DOTA_Tooltip_ability_train_wood_worker_5_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_unit_count"                                  "UNIT COUNT: "
 
 		"DOTA_Tooltip_ability_train_wisp_1"                                               "Train Son of Nature 1"
 		"DOTA_Tooltip_ability_train_wisp_1_Description"                                   "Train Son of Nature. Son of Nature specialises in gathering lumber! "
@@ -1409,7 +1434,10 @@
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           "Cancel building"
 
 		"DOTA_Tooltip_ability_item_blink_datadriven"									  "Blink"
-		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 1200"
+		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 900"
+
+		"DOTA_Tooltip_ability_item_blink_mega_datadriven"									  "Blink LVL 2"
+		"DOTA_Tooltip_ability_item_blink_mega_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 1500"
 
 		"DOTA_Tooltip_ability_item_root_ability"                                          "Root"
 		"DOTA_Tooltip_ability_item_root_ability_Description"                              "Roots the Infernal.<br/>The Infernal is unable to move and is visible throughout the duration, but still can cast spells. "
@@ -1909,6 +1937,25 @@
 		"DOTA_Tooltip_ability_drop_gift"                                           "Happy New Year!"
 		"DOTA_Tooltip_ability_drop_gift_Description"                               "Thanks for completing the quest!<br>Festive stresS_ will give you 25 to 200 event items at a random time.<br>Quest developed in collaboration with stresS_"
 
+		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven" "RECIPE: Arcane Boots"
+		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven_Description" "Infernal Boots + Sage's Mask + Mana Cloak = Arcane Boots"
+
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven" "Arcane Boots"
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description" "Movement speed +85. Mana +55. Attack +10. Intelligence +40."
+
+		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven" "RECIPE: Phase Boots"
+		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven_Description" "Infernal Boots + Drums of Speed ​​= Phase Boots"
+		
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven" "Phase Boots"
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description" "Running speed +85. Agility +40. Attack +10."
+
+		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven" 		"RECIPE: Power Treads"
+		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven_Description" 	"Infernal Boots + Shield of Fury + Anti Magic Mask = Power Treads"
+
+		"DOTA_Tooltip_ability_item_power_treads_datadriven" "Power Treads"
+		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description" "Movement speed +75. Attack +10. Strength +50. Defense +20. Magic resistance + 10%."
+
+
 		"DOTA_Tooltip_ability_item_disable_repair"                                                "No Hammer Time! Level 1!"
 		"DOTA_Tooltip_ability_item_disable_repair_Description"                                    "Applies a debuff on an autoattack that makes the target unrepairable & lessens the effect of angel heal twice! Lasts for 5 seconds. "
 		"DOTA_Tooltip_ability_item_disable_repair_bonus_damage"                                   "BONUS DAMAGE: "
@@ -2034,7 +2081,7 @@ The effect is issued for 1 year. Your support helps the game develop."
 		"error_not_upgrade_tower19_x4"														"You cannot build Enigma in x4."
 		"error_not_destroy_building"														"The owner has not left the game. Wait until the game is completely exited."
 		"loading_text"																		"Genre: hide and seek, strategy, survival.
-<br> Playing time: 40 minutes or if you kill all Infernal in 60 seconds.
+<br> Playing time: 40 minutes or if you kill all Infernal in 120 seconds.
 <br> Map:
 <br> CreepTown - maximum map size in Dota2 (high difficulty).
 <br> Spring is a medium sized map (medium difficulty).

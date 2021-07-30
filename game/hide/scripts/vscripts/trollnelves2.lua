@@ -519,6 +519,11 @@ function trollnelves2:PreStart()
                             PlayerResource:SetGold(trollHero, TROLL_STARTING_GOLD)
                         end
                         PlayerResource:SetLumber(trollHero, TROLL_STARTING_LUMBER)
+                        
+                        if GameRules.test and trollHero:IsElf() then
+                            PlayerResource:SetGold(trollHero, ELF_STARTING_GOLD)
+                            PlayerResource:SetLumber(trollHero, ELF_STARTING_LUMBER)
+                        end
                     end
                     
                     Timers:CreateTimer(function()

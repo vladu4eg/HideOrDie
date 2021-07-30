@@ -535,7 +535,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityCastPoint"				"0"
 		"AbilityCastRange"				"600"
-		"AbilityCooldown"				"300"
+		"AbilityCooldown"				"360"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
 		
@@ -547,7 +547,7 @@
 			"ApplyModifier"{
 				"Target"				"TARGET"
 				"ModifierName"			"modifier_fountain_glyph"
-				"Duration"				"10"
+				"Duration"				"5"
 			}
 		}
 	}
@@ -648,6 +648,52 @@
 			{
 				"var_type"                      "FIELD_INTEGER"
 				"max_blink_range"               "900"
+			}
+		}
+		
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"            "custom_abilities.lua"
+				"Function"              "ItemBlink"
+				"Target"                "POINT"
+				"MaxBlinkRange"         "%max_blink_range"
+			}
+		}
+	}
+	
+	
+	"item_blink_mega_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"Model"                         "models/props_gameplay/red_box.vmdl"
+		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"            "item_super_blink"
+		
+		// Stats        
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"              "0"
+		"AbilityCastPoint"              "0.0"
+		"AbilityCooldown"               "35"
+		"AbilityManaCost"               "0"
+		"ItemSellable"					"0"
+		"ItemDisplayCharges"			"0"
+		"ItemDroppable"					"0"
+		"ItemPurchasable" 				"0"
+		
+
+		// Special  
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"max_blink_range"               "1500"
 			}
 		}
 		
@@ -5755,5 +5801,450 @@
 			}
 		}
 	}
+	
+	
+	"item_recipe2_arcane_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_recipe_pickup_world"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"ItemCost"						"0"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					""
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"0"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+	}
+	
+	"item_recipe_arcane_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		
+		"ItemCost"						"0"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_arcane_boots_datadriven"
+		"ItemRequirements"
+		{
+			"01"						"item_troll_boots;item_dmg_7;item_dmg_4;item_recipe2_arcane_boots_datadriven"
+		}
+	}
+	
+	
+	//=================================================================================================================
+	// Dragon Lance
+	//=================================================================================================================
+	"item_arcane_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"ItemShopTags"					"damage"
+		
+		"ItemAliases"					"arcane boots"
+		
+		"ItemQuality"                   "component"
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"1"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+		"AbilityTextureName"            "item_arcane_boots"
+		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{   
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"700"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+
+			"04"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_ms"				"85"
+			}	
+			"05"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_mana"            "55"
+			}
+			"06"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_damage"							"10"
+		}
+			"05"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_stats"							"40"
+		}
+		}
+	
+	
+	    "Modifiers"
+		{
+			"modifier_item_ms_datadriven_2"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"        "%bonus_ms"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"        "%bonus_mana"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_stats"
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+			}
+		}
+	}
+	"item_recipe_phase_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					"dmg"
+		"ItemCost"						"0"	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_phase_boots_datadriven"
+		"ItemRequirements"
+		{
+			"01"						"item_troll_boots;item_dmg_2;item_recipe2_phase_boots_datadriven"
+		}
+	}
+	
+		"item_recipe2_phase_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_recipe_pickup_world"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"ItemCost"						"0"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					""
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"0"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+	}
+
+	
+	
+	//=================================================================================================================
+	// Dragon Lance
+	//=================================================================================================================
+	"item_phase_boots_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"ItemShopTags"					"damage"
+		
+		"ItemAliases"					"phase boots"
+		
+		"ItemQuality"                   "component"
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"1"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+		"AbilityTextureName"            "item_phase_boots"
+		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{   
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"800"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+
+			"04"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_ms"				"85"
+			}
+			"06"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_damage"							"10"
+		}
+			"05"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_stats"							"40"
+		}	
+			
+		}
+	
+	
+	    "Modifiers"
+		{
+			"modifier_item_ms_datadriven_3"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"        "%bonus_ms"
+					
+				
+				"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_stats"
+				
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				}
+			}
+		}
+	}
+	"item_recipe_power_treads_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					"dmg"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_power_treads_datadriven"
+		"ItemRequirements"
+		{
+			"01"						"item_troll_boots;item_dmg_1;item_dmg_3;item_recipe2_power_treads_datadriven"
+		}
+	}
+	
+	"item_recipe2_power_treads_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_recipe_pickup_world"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		"ItemCost"						"0"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+			
+		"ItemShopTags"					""
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"0"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+	}
+
+	
+	//=================================================================================================================
+	// Dragon Lance
+	//=================================================================================================================
+	"item_power_treads_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                        "item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		
+		"ItemShopTags"					"damage"
+		
+		"ItemAliases"					"power treads"
+		
+		"ItemQuality"                   "component"
+		
+		"ItemStackable"                 "0"
+		"ItemSellable" 					"1"
+		"ItemPermanent"                 "1"
+		"ItemDroppable"					"1"
+		"AbilityTextureName"            "item_power_treads"
+		
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{   
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"725"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+
+			"04"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_ms"				"75"
+			}
+			"06"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_damage"							"10"
+		}
+			"05"
+		{
+			"var_type"								"FIELD_INTEGER"
+			"bonus_stats"							"50"
+		}	
+		    "07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"20"
+			}
+			"08"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_resist"          		"20"
+			}
+			
+		}
+	
+	
+	    "Modifiers"
+		{
+			"modifier_item_ms_datadriven_3"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+				
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"        "%bonus_ms"
+					
+				
+				"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_stats"
+				"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"        		"%bonus_armor"
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"		"%bonus_damage"
+				"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bonus_resist"
+				}
+			}
+		}
+	}
+	
+		//=================================================================================================================
+	// Aegis of Immortality
+	//=================================================================================================================
+	"item_aegis"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"117"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/aegis.vmdl"		
+		"Effect"						"particles/generic_gameplay/dropped_aegis.vpcf"
+		"FightRecapLevel"				"2"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemQuality"					"artifact"
+
+		// Items		
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"0"
+		"ItemSellable"					"0"
+		"ItemKillable"					"1"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"AllowedInBackpack"				"0"
+		"IsTempestDoubleClonable"		"0"
+
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"reincarnate_time"		"5.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"disappear_time"		"300.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"disappear_time_minutes_tooltip"		"5"
+			}
+		}
+	}
+	
 	
 }

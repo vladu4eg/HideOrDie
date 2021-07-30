@@ -80,7 +80,15 @@
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%attribute_bonus_per_level"
 				}
 			}
+			"modifier_anti_map"
+			{
+				"States"
+				{
+					"MODIFIER_STATE_NOT_ON_MINIMAP"					"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
 		}
+
 	 }
 	
 	"deniable"
@@ -3005,23 +3013,12 @@
 	"upgrade_to_rock_11"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_demonic_wall"
+		"AbilityTextureName"			"build_rock_10"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
 		"Building"						"1"
-		"BuildTime"				"2.0"
-		"SkipRequirements"{
-			"1"							"rock_2"
-			"2"							"rock_3"
-			"3"							"rock_4"
-			"4"							"rock_5"
-			"5"							"rock_6"
-			"6"							"rock_7"
-			"7"							"rock_8"
-			"8"							"rock_9"
-			"9"							"rock_10"
-		}
+		"BuildTime"				"5.0"
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -5190,6 +5187,7 @@
 				"Radius"				"%radius"
 			}
 		}
+
 	}
 	
 	"tower_teleport_datadriven"{
@@ -6759,6 +6757,69 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+	 
+	"train_wood_worker_5"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"worker_wood"
+		"MaxLevel"					"1"
+		"UnitName"					"wood_worker_5"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"999999"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"999999"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"1"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -9215,7 +9276,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"45"
+		"AbilityChannelTime"		"20"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9279,7 +9340,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"35"
+		"AbilityChannelTime"		"16"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9343,7 +9404,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"40"
+		"AbilityChannelTime"		"25"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -10758,7 +10819,6 @@
 	"AbilityTextureName"			"lina_light_strike_array"
 	
 	"AbilityCastRange"				"600"
-	"AbilityCastPoint"				"0.45"
 	"AOERadius"						"%light_strike_array_aoe"
 
 	// Precache
@@ -10778,7 +10838,7 @@
 
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityDamage"					"1"
+	"AbilityDamage"					"500"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -10797,13 +10857,13 @@
 		"02"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"light_strike_array_delay_time"	"0.5"
+			"light_strike_array_delay_time"	"0.1"
 		}
 					
 		"03"
 		{
 			"var_type"						"FIELD_FLOAT"
-			"light_strike_array_stun_duration"	"0"
+			"light_strike_array_stun_duration"	"0.5"
 		}
 	}
 

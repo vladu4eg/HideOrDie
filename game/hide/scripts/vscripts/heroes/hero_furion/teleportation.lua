@@ -7,7 +7,17 @@ function Teleport( event )
 	local caster = event.caster
 	local point = event.target_points[1]
 	caster:SetHullRadius(1) --160
-    FindClearSpaceForUnit(caster, point, true)
+	if point == caster:GetAbsOrigin() then
+		local units = Entities:FindAllByClassname("npc_dota_creature")
+        for _, unit in pairs(units) do
+            local unit_name = unit:GetUnitName();
+            if string.match(unit_name, "hut") then
+				FindClearSpaceForUnit(caster, unit:GetAbsOrigin(), true)
+            end
+        end
+	else
+		FindClearSpaceForUnit(caster, point, true)
+	end
     caster:Stop() 
     EndTeleport(event)   
 end

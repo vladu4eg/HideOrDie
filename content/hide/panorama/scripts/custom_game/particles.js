@@ -1,7 +1,7 @@
-var names = new Array("DEVELOPER2", "SUMMER ", "DONATOR LVL 7", "TESTER", "TOP", "SPRING", "DEVELOPER", "MODERATOR", "NEW YEAR", "AUTUMN", "DONATOR LVL 1", "DONATOR LVL 2", "DONATOR LVL 3", "DONATOR LVL 4", "DONATOR LVL 5", "DONATOR LVL 6", "COLD FIRE", "WINTER 2", "WINTER 3", "SUPRISE", "AUTUMN TOP1", "SPRING 2", "BIRTHDAY", "DIRT", "AUTUMN TOP2-3", "STORM", "DONATOR LVL 8", "DONATOR LVL 9", "DONATOR LVL 10", "AUTUMN 2", "SUMMER 2", "DONATOR LVL 11", "DONATOR LVL 11", "DONATOR LVL 11", "DONATOR LVL 11", "WINTER TOP2-3", "WINTER TOP1", "38", "39", "40");
+var names = new Array("DEVELOPER2", "SUMMER ", "DONATOR LVL 7", "TESTER", "TOP", "SPRING", "DEVELOPER", "MODERATOR", "NEW YEAR", "AUTUMN", "DONATOR LVL 1", "DONATOR LVL 2", "DONATOR LVL 3", "DONATOR LVL 4", "DONATOR LVL 5", "DONATOR LVL 6", "COLD FIRE", "WINTER 2", "WINTER 3", "SUPRISE", "AUTUMN TOP1", "SPRING 2", "BIRTHDAY", "DIRT", "AUTUMN TOP2-3", "STORM", "DONATOR LVL 8", "DONATOR LVL 9", "DONATOR LVL 10", "AUTUMN 2", "SUMMER 2", "DONATOR LVL 11", "DONATOR LVL 11", "DONATOR LVL 11", "DONATOR LVL 11", "WINTER TOP2-3", "WINTER TOP1", "SPRING TOP1", "SPRING TOP2", "SPRING TOP3", "SUMMER TOP1", "SUMMER TOP2", "SUMMER TOP3", "DONATOR LVL 12", "TOP PATREON");
 					//     1              2         3          4            5           6         7           8             9          10            11              12               13             14              15          16                     17       18           19           20        21     22          23          24       25       26         27               28                29              30             31           32         33                 34                35                 36
-var needs = new Array(false, "#summer", "#patron7", "#tester", "#top", "#spring", "#developer2", "#moderator", "#newyear", "#autumn", "#patron1", "#patron2", "#patron3", "#patron4", "#patron5", "#patron6", "#coldfire", "#winter2", "#winter3", "#suprise", "#top1", "#spring2", "#birthday", "#dirt", "#top2-3", "#storm", "#patron8", "#patron9", "#patron10", "#autumn2", "#summer2", "#patron11", "#patron11", "#patron11", "#patron11", "#top2-3", "top1", false, false, false);
-var poriadok = new Array(0, 3, 7, 6, 10, 11, 12, 13, 14, 15, 1, 2, 4, 8, 9, 16, 5, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39);//"#birthday2"
+var needs = new Array(false, "#summer", "#patron7", "#tester", "#top", "#spring", "#developer2", "#moderator", "#newyear", "#autumn", "#patron1", "#patron2", "#patron3", "#patron4", "#patron5", "#patron6", "#coldfire", "#winter2", "#winter3", "#suprise", "#top1", "#spring2", "#birthday", "#dirt", "#top2-3", "#storm", "#patron8", "#patron9", "#patron10", "#autumn2", "#summer2", "#patron11", "#patron11", "#patron11", "#patron11", "#top2-3", "top1", "top1", "top2", "top3", "top1", "top2", "top3", "patron12","toppatron");
+var poriadok = new Array(0, 3, 7, 6, 10, 11, 12, 13, 14, 15, 1, 2, 4, 8, 9, 16, 5, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,40,41,42,43,44,45,46);//"#birthday2"
 					//   1  2  3  4  5   6    7   8  9   10 11 12 13 14 15  16  17  18 19  20
 function UpdateParticles( table_name, key, data )
 {
@@ -56,6 +56,19 @@ function UpdateParticles( table_name, key, data )
                         $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
                         myint = myint + 1;
                     }
+                }
+            }
+        }
+        else
+        {
+            for (var x = 1; x < names.length+1; x = x + 1)
+            {
+                if (needs[poriadok[x-1]] != false)
+                {
+                    $("#NAPartButt"+myint).visible = true;
+                    $("#napartname"+myint).text = names[poriadok[x-1]];
+                    $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                    myint = myint + 1;
                 }
             }
         }

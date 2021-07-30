@@ -2,6 +2,7 @@ LUMBER_STACK_T1 = 16
 LUMBER_STACK_T2 = 40
 LUMBER_STACK_T3 = 100
 LUMBER_STACK_T4 = 300
+LUMBER_STACK_T4 = 900
 
 Debug_Peasant = false
 
@@ -137,6 +138,11 @@ function GatherLumber( event )
 	if caster:GetUnitName() == "wood_worker_4" then 
 		max_lumber_carried = LUMBER_STACK_T4 * 4
 		single_chop = LUMBER_STACK_T4
+	end
+
+	if caster:GetUnitName() == "wood_worker_5" then 
+		max_lumber_carried = LUMBER_STACK_T5 * 4
+		single_chop = LUMBER_STACK_T5
 	end
 
 	local return_ability = caster:FindAbilityByName("return_resources")

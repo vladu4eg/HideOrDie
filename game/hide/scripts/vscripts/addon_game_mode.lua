@@ -235,6 +235,26 @@ function Precache( context )
 	PrecacheResource("particle", "particles/econ/courier/courier_venoling_gold/courier_venoling_ambient_gold.vpcf", context)
 	PrecacheResource("particle", "particles/econ/courier/courier_beetlejaw_gold/courier_beetlejaw_gold_ambient.vpcf", context)
 
+	PrecacheResource("particle", "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_casterribbons_arcana1.vpcf", context)
+	PrecacheResource("particle", "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_snow_arcana1.vpcf", context)
+	PrecacheResource("model", "models/courier/baby_rosh/babyroshan_ti10_dire.vmdl", context)
+    PrecacheResource("model", "models/courier/baby_rosh/babyroshan_elemental.vmdl", context)
+	PrecacheResource("model", "models/items/courier/duskie/duskie.vmdl", context)
+	
+	PrecacheResource("model", "models/items/courier/dc_demon/dc_demon_flying.vmdl", context)
+	PrecacheResource("model", "models/items/courier/little_sapplingnew_bloom_style/little_sapplingnew_bloom_style.vmdl", context) -- spring winner
+	
+	PrecacheResource("particle", "particles/econ/events/fall_major_2016/radiant_fountain_regen_fm06_lvl3.vpcf", context)
+	PrecacheResource("particle", "particles/econ/events/fall_major_2016/force_staff_fm06.vpcf", context)
+	PrecacheResource("particle", "particles/econ/events/fall_major_2016/force_staff_fm06_glow_trail.vpcf", context)
+	
+	PrecacheResource("particle", "particles/econ/items/omniknight/omniknight_fall20_immortal/omniknight_fall20_immortal_degen_aura_debuff.vpcf", context)
+	PrecacheResource("particle", "particles/econ/events/ti10/aghanim_aura_ti10/agh_aura_ti10.vpcf", context)
+	
+	PrecacheResource("particle", "particles/econ/events/summer_2021/summer_2021_emblem_effect.vpcf", context)
+    PrecacheResource("particle", "particles/econ/events/spring_2021/fountain_regen_spring_2021_lvl3.vpcf", context)
+    PrecacheResource("particle", "particles/econ/events/spring_2021/agh_aura_spring_2021_lvl2.vpcf", context) 
+
 	
 	PrecacheLoad:PrecacheLoad (context)
 	

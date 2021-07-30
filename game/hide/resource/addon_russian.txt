@@ -31,9 +31,9 @@
 		"rock_6"                                                                    "Armored Tree 3"
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
-		"rock_9"                                                                    "Ultra Wall 4"
-		"rock_10"                                                                    "Magnet"
-		"rock_11"                                                                  "Demonic Wall 1"
+		"rock_9"                                                                    "Mega Tree"
+		"rock_10"                                                                    "Magnet LVL 1"
+		"rock_11"                                                                  "Magnet LVL 2"
 		"rock_12"                                                                  "Demonic Wall 2"
 		"rock_13"                                                                  "Demonic Wall 3"
 		"rock_14"                                                                  "Demonic Wall 4"
@@ -295,11 +295,11 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Ultra Wall 4"
 		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Улучшить свой Ultra Wall!<br>HP:2560<br>ARMOR:4"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Улучшить свой Magnet!"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet LVL 1"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Улучшить свой Magnet LVL 1!"
 
-		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Demonic Wall 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Улучшить свой Ultra Wall!<br>HP:10240<br>ARMOR:6"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Magnet LVL 2"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Улучшить свой Magnet LVL 2!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_12"                                  "Upgrade To Demonic Wall 2"
 		"DOTA_Tooltip_ability_upgrade_to_rock_12_Description"                      "Улучшить свой Demonic Wall!<br>HP:20480<br>ARMOR:7"
@@ -1189,7 +1189,10 @@
 		"DOTA_Tooltip_ability_item_building_cancel_Description"                           "Отменить постройку"
 
 		"DOTA_Tooltip_ability_item_blink_datadriven"									  "Blink"
-		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 1200"
+		"DOTA_Tooltip_ability_item_blink_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 900"
+
+		"DOTA_Tooltip_ability_item_blink_mega_datadriven"									  "Blink LVL 2"
+		"DOTA_Tooltip_ability_item_blink_mega_datadriven_Description"						  "Blink away from the mighty Infernal.<br/>Max range: 1500"
 
 		"DOTA_Tooltip_ability_item_root_ability"                                          "Root"
 		"DOTA_Tooltip_ability_item_root_ability_Description"                              "Roots the Infernal.<br/>Тролль не может двигаться и виден на протяжении всего действия, но все же может читать заклинания. "
@@ -1651,8 +1654,30 @@
 		"DOTA_Tooltip_ability_drop_gift"                                           "Chest of the Damned!"
 		"DOTA_Tooltip_ability_drop_gift_Description"                               "Спасибо за прохождение квеста!<br>Сундук Проклятых выдаст вам от 25 до 200 ивент предметов в случайное время."
 
+		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven"                                          	 "РЕЦЕПТ: Arcane Boots"
+		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven_Description"                              	 "Infernal Boots + Sage's Mask + Mana Cloak = Arcane Boots"
+
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven"                                          	 "Arcane Boots"
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description"                              	 "Скорость бега + 85. Мана +55. Атака +10. Интеллект +40."
+
+		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven"                                          	 "РЕЦЕПТ: Phase Boots"
+		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven_Description"                              	 "Infernal Boots + Drums of Speed = Phase Boots"
+		
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven"                                          	 "Phase Boots"
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description"                              	 "Скорость бега +85. Ловкость +40. Атака +10."
+
+		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven"                                          	 "РЕЦЕПТ: Power Treads"
+		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven_Description"                              	 "Infernal Boots + Shield of Fury + Anti Magic Mask = Power Treads"
+		
+		"DOTA_Tooltip_ability_item_power_treads_datadriven"                                          	 "Power Treads"
+		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description"                              	 "Скорость бега + 75. Атака +10. Силы +50. Защита +20. Сопротивление магии +10%"
+		
+		
+		
+
 		"DOTA_Tooltip_ability_item_max_move"                                          	 "Бутылка скорости."
 		"DOTA_Tooltip_ability_item_max_move_Description"                              	 "Дает +190 к скорости бега на 20 секунд."
+
 
 		"DOTA_Tooltip_ability_item_event"                                           "Event Item"
 		"DOTA_Tooltip_ability_item_event_Description"                               "Активируйте предмет, чтобы забрать предмет себе.<br>Неактивированные предметы не сохраняются в конце игры!<br>Можно активировать только от 12 человек. "
@@ -1683,6 +1708,7 @@
 		"top"                                          											"Награждаются игроки за ТОП 1-10 сезона."
 		"top1"                                          										"Награждается игроки за ТОП 1 сезона."
 		"top2-3"                                          										"Награждаются игроки за ТОП 2-3 сезона."
+		
 		"spring"                                          										"Выдается за участие в Spring event."
 		"developer2"                                          									"Эффект разработчика."
 		"moderator"                                          									"Эффект модератора."
@@ -1699,6 +1725,7 @@
 		"patron9"                                          										"Level 9 Donation. Доступно донатеру девятого уровня и выше."
 		"patron10"                                          									"Level 10 Donation. Доступно донатеру десятого уровня и выше."
 		"patron11"                                          									"Level 11 Donation. Доступно донатеру десятого уровня и выше."
+		"patron12"                                          									"Level 12 Donation. Доступно донатеру десятого уровня и выше."
 		"coldfire"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
 		"winter2"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
 		"suprise"																				"Выдается вместе с эффектом 9 уровня или в особых событиях."
@@ -1726,6 +1753,11 @@
 		"ppatron5"																				"Доступно донатеру пятого уровня и выше. Питомцы не входят в донат эффектов."
 		"ppatron6"																				"Доступно донатеру шестого уровня и выше. Питомцы не входят в донат эффектов."
 		"peventdesert"																			"Выдается за участие в Desert event."
+
+		"peventwinter"																			"Выдается за участие в Winter event."
+		"peventspring"																			"Выдается за участие в Spring event."
+		"peventsummer"																			"Выдается за участие в Summer event."
+		"discordnitro"																			"Awarded for boosting the Discord server."
 
 		"donate1"																			"<font color='#58ACFA'>Вы можете поддержать игру на Patreon.</font>"
 		"donate2"																			"<font color='#58ACFA'>Вы можете повысить шанс на получения Infernal или получить один из уникальных косметических эффектов, поддержав наш проект на Patreon.</font>"
@@ -1782,7 +1814,7 @@
 		"error_not_upgrade_tower19_x4"														"Вы не можете построить Enigma в х4."
 		"error_not_destroy_building"														"Владелец не покинул игру. Дождитесь полного выхода из игры. "
 		"loading_text"																		"Жанр: прятки, стратегия, выживание. 
-<br>Время игры: 40 мин или если убить всех Infernal за 60 секунд.
+<br>Время игры: 40 мин или если убить всех Infernal за 120 секунд.
 <br>Карта: 
 <br>CreepTown - максимальный размер карты в Dota2(высокая сложность).
 <br>Spring - карта среднего размера (средняя сложность).

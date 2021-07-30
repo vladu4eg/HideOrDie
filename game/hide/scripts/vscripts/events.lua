@@ -1,4 +1,6 @@
 local lastSendTime = {}
+local GoldHero = {}
+local LumberHero = {}
 require('stats')
 require('libraries/entity')
 require('drop')
@@ -208,6 +210,7 @@ function trollnelves2:OnEntityKilled(keys)
     local attacker = EntIndexToHScript(keys.entindex_attacker)
     local killedPlayerID = killed:GetPlayerOwnerID()
     local attackerPlayerID = attacker:GetPlayerOwnerID()
+    local attacker_hero = PlayerResource:GetSelectedHeroEntity(attackerPlayerID)
     if GameRules.Bonus[attackerPlayerID] == nil then
         GameRules.Bonus[attackerPlayerID] = 0
     end
@@ -236,6 +239,17 @@ function trollnelves2:OnEntityKilled(keys)
             Pets.DeletePet(info)
             PlayerResource:ModifyLumber( PlayerResource:GetSelectedHeroEntity(attackerPlayerID), 1)
             elseif killed:IsTroll() then
+            
+                local roll_chance = RandomFloat(0, 500)
+                if roll_chance <= 1000 then
+                    attacker_hero:AddItemByName("item_glyph_ability")
+                end
+                local roll_chance = RandomFloat(0, 500)
+                if roll_chance <= 500 then
+                    attacker_hero:ClearInventoryBlink()
+                    attacker_hero:AddItemByName("item_blink_mega_datadriven")
+                end
+            
             if CheckElfVictory() then
                 GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                 local status, nextCall = ErrorCheck(function() 
@@ -244,7 +258,7 @@ function trollnelves2:OnEntityKilled(keys)
                 GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
                 return
             end
-            bounty = 1000
+            bounty = 512000
             killed:SetRespawnPosition(Vector(0, -640, 256))
             killed:SetTimeUntilRespawn(TROLL_RESPAWN_TIME)
             killed:RemoveDesol2()
@@ -266,6 +280,7 @@ function trollnelves2:OnEntityKilled(keys)
             elseif killed:IsAngel() then            
             ReturnElf(killedPlayerID)
             Pets.DeletePet(info)
+            
         end
         if bounty >= 0 and attacker ~= killed then
             local killedName = PlayerResource:GetSelectedHeroEntity(
@@ -495,9 +510,10 @@ function ChooseHelpSide(eventSourceIndex, event)
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
     
-    local gold = math.floor(PlayerResource:GetLumber(playerID)/2)
-    local lumber = math.floor(PlayerResource:GetGold(playerID)/2)
-    
+    GoldHero[playerID] = math.floor(PlayerResource:GetLumber(playerID)/2+200)
+    LumberHero[playerID] = math.floor(PlayerResource:GetGold(playerID)/2+200)
+    PlayerResource:SetGold(hero, 0)
+    PlayerResource:SetLumber(hero, 0)
     local newHeroName
     local message
     local timer
@@ -519,8 +535,8 @@ function ChooseHelpSide(eventSourceIndex, event)
         hero = PlayerResource:GetSelectedHeroEntity(playerID)
         PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
         FindClearSpaceForUnit(hero, pos, true)
-        PlayerResource:SetGold(hero, gold)
-        PlayerResource:SetLumber(hero, lumber)
+        PlayerResource:SetGold(hero, 0)
+        PlayerResource:SetLumber(hero, 0)
     end)
 
 end
@@ -529,10 +545,7 @@ function ReturnElf(event)
     local playerID = event
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
-    
-    local lumber = math.floor(PlayerResource:GetLumber(playerID))
-    local gold = math.floor(PlayerResource:GetGold(playerID))
-    
+       
     local newHeroName
     local message
     local pos
@@ -555,8 +568,8 @@ function ReturnElf(event)
     InitializeBuilder(hero)
     PlayerResource:SetCameraTarget(playerID, nil)
     hero:AddNewModifier(hero, nil, "modifier_fountain_glyph", {duration = FOUNTAIN_GLYPH_TIME} )
-    PlayerResource:SetGold(hero, gold+200)
-    PlayerResource:SetLumber(hero, lumber+200)
+    PlayerResource:SetGold(hero, GoldHero[playerID])
+    PlayerResource:SetLumber(hero, LumberHero[playerID])
 end
 
 function RandomAngelLocation()

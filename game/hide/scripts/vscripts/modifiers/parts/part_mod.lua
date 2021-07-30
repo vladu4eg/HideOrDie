@@ -39,6 +39,35 @@ function part_mod:GetEffectName()
     "particles/econ/events/diretide_2020/emblem/fall20_emblem_v1_effect.vpcf", --34
 	"particles/econ/events/diretide_2020/emblem/fall20_emblem_effect.vpcf", --35
     
+    "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_casterribbons_arcana1.vpcf", --36 top2-3
+    "particles/econ/items/crystal_maiden/crystal_maiden_maiden_of_icewrack/maiden_freezing_field_snow_arcana1.vpcf", --37 top1
+    
+    "particles/econ/events/fall_major_2016/radiant_fountain_regen_fm06_lvl3.vpcf", -- 38 top1 spring
+    "particles/econ/events/fall_major_2016/force_staff_fm06.vpcf", -- 39 top2 spring
+    "particles/econ/events/fall_major_2016/force_staff_fm06_glow_trail.vpcf", -- 40 top3 sring
+
+
+    "particles/econ/items/omniknight/omniknight_fall20_immortal/omniknight_fall20_immortal_degen_aura_debuff.vpcf", -- 41 TOP1 SUMMER
+    "particles/econ/events/ti10/aghanim_aura_ti10/agh_aura_ti10.vpcf", --TOP2 SUMMER 42
+    "particles/econ/events/spring_2021/agh_aura_spring_2021_lvl2.vpcf", --TOP2 SUMMER 43
+    
+    "particles/econ/events/summer_2021/summer_2021_emblem_effect.vpcf", --44 донат 12
+    "particles/econ/events/spring_2021/fountain_regen_spring_2021_lvl3.vpcf", --45 топ патреон
+
+    
+    "particles/econ/courier/courier_dc/dccourier_angel_flame.vpcf", -- ангелы и лед
+    
+    "particles/econ/events/ti9/bottle_ti9.vpcf", -- 39 top2 sring
+    "particles/econ/events/ti9/bottle_b_ti9.vpcf", -- 40 top3 spring
+    
+    "particles/customgames/capturepoints/cp_allied_fire.vpcf", -- крутой зеленый эффект
+    
+    "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_ambient.vpcf", --38
+	"particles/econ/courier/courier_donkey_ti7/courier_donkey_ti7_ambient.vpcf", --39
+
+    
+
+    
     --"particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_eztzhok.vpcf", --30
 
     --------------------------------------------------------------------------------------------------------------------------------   
