@@ -1,7 +1,7 @@
 -- This is the primary trollnelves2 trollnelves2 script and should be used to assist in initializing your game mode
 -- Set this to true if you want to see a complete debug output of all events/processes done by trollnelves2
 -- You can also change the cvar 'trollnelves2_spew' at any time to 1 or 0 for output/no output
-TROLLNELVES2_DEBUG_SPEW = true
+TROLLNELVES2_DEBUG_SPEW = false
 LinkLuaModifier("modifier_movespeed_x4",
     "libraries/modifiers/modifier_movespeed_x4.lua",
 LUA_MODIFIER_MOTION_NONE)
@@ -245,29 +245,29 @@ function InitializeBadHero(hero)
     Timers:CreateTimer(function()
         if not hero or hero:IsNull() then return end
         if hero:IsAlive() then
-            AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 100, 0.1,
-            false)
+            AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 50, 0.1, false)
         end
         return 0.1
     end)
     
     Timers:CreateTimer(BUFF_XP1_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-        hero:AddAbility("reveal_area")
         local abil = hero:FindAbilityByName("reveal_area")
-        abil:SetLevel(abil:GetMaxLevel())
+        abil:EndCooldown()
     end)  
     Timers:CreateTimer(BUFF_XP2_TIME, function() 
-        -- Setup game mode
-        mode = GameRules:GetGameModeEntity()     
-        mode:SetUnseenFogOfWarEnabled(true)
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
-        mode = nil
     end)  
     Timers:CreateTimer(BUFF_XP3_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
     end) 
-    hero:RemoveAbility("reveal_area")
+    local abil2 = hero:FindAbilityByName("reveal_area")
+    abil2:StartCooldown(999999)
+    abil2:SetLevel(abil2:GetMaxLevel())
+    abil2 = hero:FindAbilityByName("attack_tree_skill")
+    abil2:SetLevel(abil2:GetMaxLevel())
+    abil2 = hero:FindAbilityByName("troll_teleport")
+    abil2:SetLevel(abil2:GetMaxLevel())
     hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
 
     --hero:SetStashEnabled(false)

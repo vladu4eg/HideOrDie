@@ -6,13 +6,13 @@ local isTesting = IsInToolsMode() and false
 Stats.server =  "https://tve3.us/hide/" -- "https://localhost:5001/hide/" --
 
 function Stats.SubmitMatchData(winner,callback)
-	--if not isTesting then
-	--	if GameRules:IsCheatMode() then 
-	--		GameRules:SetGameWinner(winner)
-	--		SetResourceValues()
-	--		return 
-	--	end
-	--end
+	if not isTesting then
+		if GameRules:IsCheatMode() then 
+			GameRules:SetGameWinner(winner)
+			SetResourceValues()
+			return 
+		end
+	end
 	local data = {}
 	local koeff = string.match(GetMapName(),"%d+") or 1
 	local maxGoldId = 0
@@ -275,9 +275,9 @@ function Stats.RequestEvent(pID, steam, callback)
 end
 
 function Stats.GetVip(data,callback)
-	--if not isTesting then
-	--	if GameRules:IsCheatMode() then return end
-	--end
+	if not isTesting then
+		if GameRules:IsCheatMode() then return end
+	end
 	local req = CreateHTTPRequest("POST",Stats.server)
 	local encData = json.encode(data)
 	DebugPrint("***********************************************")

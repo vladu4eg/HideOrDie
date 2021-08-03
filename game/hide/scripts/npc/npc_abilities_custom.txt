@@ -644,6 +644,7 @@
 	"AbilityTextureName"			"antimage_blink"
 	"MaxLevel"						"3"
 	"RequiredLevel"          "3"
+	"FightRecapLevel"				"2"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -655,7 +656,7 @@
 
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastPoint"				"0.3 0.2 0.1"
+	"AbilityCastPoint"				"0.6 0.5 0.3"
 
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
@@ -663,7 +664,7 @@
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 80 60"
+	"AbilityManaCost"				"160 120 90"
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -672,13 +673,13 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"200 250 350"
+			"blink_range"			"100 155 255"
 		}
 		
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"min_blink_range"		"200"
+			"min_blink_range"		"100"
 		}
 	}
 
@@ -1566,7 +1567,7 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"presence_armor_reduction"		"100"
+			"presence_armor_reduction"		"50"
 		}
 		"02"
 		{
@@ -1581,17 +1582,17 @@
 		"04"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"ATTACKSPEED_BONUS"				"600"
+			"ATTACKSPEED_BONUS"				"100"
 		}
 		"05"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"regen"							"100"
+			"regen"							"25"
 		}
 		"06"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"attribute_bonus_per_level"		"500"
+			"attribute_bonus_per_level"		"10"
 		}	
 	}
 
@@ -2779,7 +2780,7 @@
 		"AbilityTextureName"	"build_rock"
 		"AbilityCastRange"		"150"
 		"Building"				"1"
-		"BuildTime"				"2.0"
+		"BuildTime"				"0.5"
 		"Scale"					"1"
 		"UnitName"				"rock_1"
 		"MaxLevel"				"1"
@@ -2793,7 +2794,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"10"
+				"lumber_cost"			"0"
 			}
 		}
 		
@@ -3439,7 +3440,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"75"
+				"lumber_cost"			"15"
 			}
 		}
 		
@@ -4239,12 +4240,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"100"
+				"gold_cost"				"50"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"200"
+				"lumber_cost"			"85"
 			}
 		}
 		
@@ -4297,7 +4298,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"200"
+				"lumber_cost"			"100"
 			}
 		}
 		
@@ -11010,7 +11011,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"lina_light_strike_array"
 	"MaxLevel"              		 "3"
 	"AbilityCastRange"				"600"
@@ -11179,10 +11180,11 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"lion_impale"
 	"MaxLevel"						"3"
 	"RequiredLevel"          "3"
+
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -11340,7 +11342,7 @@
 	
 	"RequiredLevel"          		"8"
 	"MaxLevel"						"3"
-
+	"FightRecapLevel"				"3"
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilitySpecial"
@@ -11555,7 +11557,7 @@
 	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	"FightRecapLevel"				"2"
 	"AbilityTextureName"			"sven_storm_bolt"
 	"AOERadius"						"%bolt_aoe"
 	"MaxLevel"						"3"
@@ -11715,6 +11717,7 @@
 	"AbilityTextureName"			"lycan_summon_wolves"
 	"MaxLevel"						"3"
 	"RequiredLevel"          "3"
+	"FightRecapLevel"				"2"
 	// Precache
 	//-------------------------------------------------------------------------------------------------------------
 	"precache"
@@ -11757,12 +11760,12 @@
 		"04"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"wolf_damage"				"18 29 46"
+			"wolf_damage"				"18 50 120"
 		}
 		"05"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"wolf_hp"					"200 240 280"
+			"wolf_hp"					"200 350 450"
 		}
 		"06" // Extra variables for "SpawnUnit" to decide which level of wolves will be used
 		{
@@ -12006,14 +12009,15 @@
 	"MaxLevel"						"3"
 	"AbilityTextureName"			"shadow_shaman_mass_serpent_ward"
 	"RequiredLevel"          "3"
+	"FightRecapLevel"				"2"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"450 550 600"
+	"AbilityCastRange"				"150 240 350"
 	"AbilityCastPoint"				"0.3"
 	
 	// Time		
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCooldown"				"90 60 45"
+	"AbilityCooldown"				"180 120 90"
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
@@ -12236,7 +12240,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	"FightRecapLevel"				"3"
 	"AbilityTextureName"			"invoker_sun_strike"
 	"MaxLevel"              		 "3"
 	"AbilityCastRange"				"600"
@@ -12383,7 +12387,7 @@
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
-	"FightRecapLevel"				"1"
+	"FightRecapLevel"				"3"
 	"AbilityTextureName"			"invoker_sun_strike"
 	"MaxLevel"              		 "3"
 	"AbilityCastRange"				"600"
@@ -13237,7 +13241,7 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"120 90 60"
+		"AbilityCooldown"				"180 120 90"
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -13250,7 +13254,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"				"100 300 500"
+				"radius"				"50 100 150"
 			}
 			"02"
 			{
@@ -13260,7 +13264,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"70 2500 5000"
+				"damage"					"35 100 500"
 			}
 			"04"
 			{
@@ -13294,7 +13298,7 @@
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
-		"FightRecapLevel"				"2"
+		"FightRecapLevel"				"3"
 		"AbilitySound"					"Ability.Ravage"
 		"RequiredLevel"          "8"
 		// Casting
@@ -13309,7 +13313,7 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"15 50 1000"
+		"AbilityDamage"					"15 25 40"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -13353,6 +13357,7 @@
 		"AbilitySound"					"Hero_BountyHunter.Target"
 		"FightRecapLevel"				"2"
 		"MaxLevel"						"3"
+		"RequiredLevel"          		"3"
 		// Unit Targeting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -13396,12 +13401,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"10.0 15.0 20.0"
+				"duration"				"5.0 10.0 15.0"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_tooltip"			"300 500 900"
+				"cast_range_tooltip"			"300 500 600"
 			}
 			"07"
 			{

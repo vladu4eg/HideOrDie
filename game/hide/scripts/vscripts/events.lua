@@ -171,17 +171,17 @@ function trollnelves2:OnItemPickedUp(keys)
     local itemname = keys.itemname
     
     if (hero:IsAngel() or hero:IsElf()) and (string.match(itemname,"hp") or string.match(itemname,"armor") or string.match(itemname,"dmg") or string.match(itemname,"spd") or string.match(itemname,"boots")  or string.match(itemname,"repair")) then 
-    hero:RemoveItem(itemEntity)
-    return
-end  
-
-if hero:GetNumItemsInInventory() > 6 then
-    local spawnPoint = hero:GetAbsOrigin() + RandomFloat(50, 100)
-    local newItem = CreateItem(itemname, nil, nil)
-    local drop = CreateItemOnPositionForLaunch(spawnPoint, newItem)
-    newItem:LaunchLootInitialHeight(false, 0, 150, 0.5, spawnPoint)
-    hero:RemoveItem(itemEntity)
-end
+        hero:RemoveItem(itemEntity)
+        return
+    end  
+    
+    if hero:GetNumItemsInInventory() > 6 then
+        local spawnPoint = hero:GetAbsOrigin() + RandomFloat(50, 100)
+        local newItem = CreateItem(itemname, nil, nil)
+        local drop = CreateItemOnPositionForLaunch(spawnPoint, newItem)
+        newItem:LaunchLootInitialHeight(false, 0, 150, 0.5, spawnPoint)
+        hero:RemoveItem(itemEntity)
+    end
 end
 
 --[[
@@ -239,17 +239,6 @@ function trollnelves2:OnEntityKilled(keys)
             Pets.DeletePet(info)
             PlayerResource:ModifyLumber( PlayerResource:GetSelectedHeroEntity(attackerPlayerID), 1)
             elseif killed:IsTroll() then
-            
-                local roll_chance = RandomFloat(0, 500)
-                if roll_chance <= 1000 then
-                    attacker_hero:AddItemByName("item_glyph_ability")
-                end
-                local roll_chance = RandomFloat(0, 500)
-                if roll_chance <= 500 then
-                    attacker_hero:ClearInventoryBlink()
-                    attacker_hero:AddItemByName("item_blink_mega_datadriven")
-                end
-            
             if CheckElfVictory() then
                 GameRules:SendCustomMessage("Please do not leave the game.", 1, 1)
                 local status, nextCall = ErrorCheck(function() 
@@ -258,6 +247,19 @@ function trollnelves2:OnEntityKilled(keys)
                 GameRules:SendCustomMessage("The game can be left, thanks!", 1, 1)
                 return
             end
+            
+            if attacker_hero ~= nil then
+                local roll_chance = RandomFloat(0, 500)
+                if roll_chance <= 100 then
+                    attacker_hero:AddItemByName("item_glyph_ability")
+                end
+                local roll_chance = RandomFloat(0, 500)
+                if roll_chance <= 200 then
+                    attacker_hero:ClearInventoryBlink()
+                    attacker_hero:AddItemByName("item_blink_mega_datadriven")
+                end
+            end
+            
             bounty = 512000
             killed:SetRespawnPosition(Vector(0, -640, 256))
             killed:SetTimeUntilRespawn(TROLL_RESPAWN_TIME)
@@ -278,7 +280,7 @@ function trollnelves2:OnEntityKilled(keys)
             drop:RollItemDrop(killed)
             Pets.DeletePet(info)
             elseif killed:IsAngel() then            
-            ReturnElf(killedPlayerID)
+            ReturnElf(killedPlayerID, attackerPlayerID)
             Pets.DeletePet(info)
             
         end
@@ -538,14 +540,15 @@ function ChooseHelpSide(eventSourceIndex, event)
         PlayerResource:SetGold(hero, 0)
         PlayerResource:SetLumber(hero, 0)
     end)
-
+    
 end
 
-function ReturnElf(event)
-    local playerID = event
+function ReturnElf(killed, attacker)
+    local playerID = killed
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+    local hero_attacker = PlayerResource:GetSelectedHeroEntity(attacker)
     hero.legitChooser = false
-       
+    
     local newHeroName
     local message
     local pos
@@ -570,6 +573,10 @@ function ReturnElf(event)
     hero:AddNewModifier(hero, nil, "modifier_fountain_glyph", {duration = FOUNTAIN_GLYPH_TIME} )
     PlayerResource:SetGold(hero, GoldHero[playerID])
     PlayerResource:SetLumber(hero, LumberHero[playerID])
+    
+    PlayerResource:ModifyGold(hero_attacker, math.floor(GoldHero[playerID]/2))
+	PlayerResource:ModifyLumber(hero_attacker, math.floor(LumberHero[playerID]/2))
+    
 end
 
 function RandomAngelLocation()
@@ -578,43 +585,43 @@ function RandomAngelLocation()
     GameRules.angel_spawn_points[RandomInt(1,
     #GameRules.angel_spawn_points)]:GetAbsOrigin() or
     Vector(0, 0, 0)
-end
-
-function Halloween(npc)
+    end
+    
+    function Halloween(npc)
     if string.match(GetMapName(),"halloween") then
-        wearables:RemoveWearables(npc)
-        if npc:IsAngel() then
-            UpdateModel(npc, "models/heroes/death_prophet/death_prophet.vmdl", 1)  
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_head/drowned_siren_head.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_drowned_siren_skirt/drowned_siren_drowned_siren_skirt.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_armor/drowned_siren_armor.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/exorcism/drowned_siren_drowned_siren_crowned_fish/drowned_siren_drowned_siren_crowned_fish.vmdl")
-            wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_misc/drowned_siren_misc.vmdl")
-            elseif npc:IsWolf() then
-            UpdateModel(npc, "models/heroes/life_stealer/life_stealer.vmdl", 1)  
-            wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_belt/bloody_ripper_belt.vmdl")
-        wearables:AttachWearable(npc, "models/items/lifestealer/promo_bloody_ripper_back/promo_bloody_ripper_back.vmdl")
-        wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_arms/bloody_ripper_arms.vmdl")       
-        wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_head/bloody_ripper_head.vmdl")   
-        elseif npc:IsTroll() then            
-        UpdateModel(npc, "models/items/wraith_king/arcana/wraith_king_arcana.vmdl", 1)  
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_weapon.vmdl")
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_arms.vmdl")
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_shoulder.vmdl")
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_armor.vmdl")
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_back.vmdl")
-        wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_head.vmdl")
-        
-        --UpdateModel(npc, "models/heroes/pudge/pudge.vmdl", 1)  
-        -- wearables:AttachWearable(npc, "models/items/pudge/blackdeath_offhand/blackdeath_offhand.vmdl")
-        --wearables:AttachWearable(npc, "models/items/pudge/blackdeath_belt/blackdeath_belt.vmdl")
-        --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_head/blackdeath_head.vmdl")
-        --   wearables:AttachWearable(npc, "models/items/pudge/blackdeath_back/blackdeath_back.vmdl")
-        --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_weapon/blackdeath_weapon.vmdl")
-        --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_shoulder/blackdeath_shoulder.vmdl")
-        --   wearables:AttachWearable(npc, "models/items/pudge/blackdeath_arms/blackdeath_arms.vmdl")
-        elseif npc:IsElf() then
-        UpdateModel(npc, "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl", 1)  
-        end
-        end 
-        end                                        
+    wearables:RemoveWearables(npc)
+    if npc:IsAngel() then
+    UpdateModel(npc, "models/heroes/death_prophet/death_prophet.vmdl", 1)  
+    wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_head/drowned_siren_head.vmdl")
+    wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_drowned_siren_skirt/drowned_siren_drowned_siren_skirt.vmdl")
+    wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_armor/drowned_siren_armor.vmdl")
+    wearables:AttachWearable(npc, "models/items/death_prophet/exorcism/drowned_siren_drowned_siren_crowned_fish/drowned_siren_drowned_siren_crowned_fish.vmdl")
+    wearables:AttachWearable(npc, "models/items/death_prophet/drowned_siren_misc/drowned_siren_misc.vmdl")
+    elseif npc:IsWolf() then
+    UpdateModel(npc, "models/heroes/life_stealer/life_stealer.vmdl", 1)  
+    wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_belt/bloody_ripper_belt.vmdl")
+    wearables:AttachWearable(npc, "models/items/lifestealer/promo_bloody_ripper_back/promo_bloody_ripper_back.vmdl")
+    wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_arms/bloody_ripper_arms.vmdl")       
+    wearables:AttachWearable(npc, "models/items/lifestealer/bloody_ripper_head/bloody_ripper_head.vmdl")   
+    elseif npc:IsTroll() then            
+    UpdateModel(npc, "models/items/wraith_king/arcana/wraith_king_arcana.vmdl", 1)  
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_weapon.vmdl")
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_arms.vmdl")
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_shoulder.vmdl")
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_armor.vmdl")
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_back.vmdl")
+    wearables:AttachWearable(npc, "models/items/wraith_king/arcana/wraith_king_arcana_head.vmdl")
+    
+    --UpdateModel(npc, "models/heroes/pudge/pudge.vmdl", 1)  
+    -- wearables:AttachWearable(npc, "models/items/pudge/blackdeath_offhand/blackdeath_offhand.vmdl")
+    --wearables:AttachWearable(npc, "models/items/pudge/blackdeath_belt/blackdeath_belt.vmdl")
+    --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_head/blackdeath_head.vmdl")
+    --   wearables:AttachWearable(npc, "models/items/pudge/blackdeath_back/blackdeath_back.vmdl")
+    --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_weapon/blackdeath_weapon.vmdl")
+    --  wearables:AttachWearable(npc, "models/items/pudge/blackdeath_shoulder/blackdeath_shoulder.vmdl")
+    --   wearables:AttachWearable(npc, "models/items/pudge/blackdeath_arms/blackdeath_arms.vmdl")
+    elseif npc:IsElf() then
+    UpdateModel(npc, "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep.vmdl", 1)  
+    end
+    end 
+    end                                            

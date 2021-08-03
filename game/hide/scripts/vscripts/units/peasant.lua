@@ -1,8 +1,8 @@
-LUMBER_STACK_T1 = 16
-LUMBER_STACK_T2 = 40
-LUMBER_STACK_T3 = 100
-LUMBER_STACK_T4 = 300
-LUMBER_STACK_T4 = 900
+LUMBER_STACK_T1 = 42
+LUMBER_STACK_T2 = 120
+LUMBER_STACK_T3 = 250
+LUMBER_STACK_T4 = 500
+LUMBER_STACK_T5 = 900
 
 Debug_Peasant = false
 
@@ -122,26 +122,26 @@ function GatherLumber( event )
 		return
 	end
 
-	local max_lumber_carried = LUMBER_STACK_T1 * 1
+	local max_lumber_carried = LUMBER_STACK_T1 * 2
 	local single_chop = LUMBER_STACK_T1
 
 	if caster:GetUnitName() == "wood_worker_2" then 
-		max_lumber_carried = LUMBER_STACK_T2 * 2
+		max_lumber_carried = LUMBER_STACK_T2 * 3
 		single_chop = LUMBER_STACK_T2
 	end
 
 	if caster:GetUnitName() == "wood_worker_3" then 
-		max_lumber_carried = LUMBER_STACK_T3 * 3
+		max_lumber_carried = LUMBER_STACK_T3 * 4
 		single_chop = LUMBER_STACK_T3
 	end
 	
 	if caster:GetUnitName() == "wood_worker_4" then 
-		max_lumber_carried = LUMBER_STACK_T4 * 4
+		max_lumber_carried = LUMBER_STACK_T4 * 5
 		single_chop = LUMBER_STACK_T4
 	end
 
 	if caster:GetUnitName() == "wood_worker_5" then 
-		max_lumber_carried = LUMBER_STACK_T5 * 4
+		max_lumber_carried = LUMBER_STACK_T5 * 6
 		single_chop = LUMBER_STACK_T5
 	end
 

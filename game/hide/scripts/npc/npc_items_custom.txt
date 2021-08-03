@@ -5205,7 +5205,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"2"
+				"lumber_cost"			"3"
 			}
 			"04"
 			{

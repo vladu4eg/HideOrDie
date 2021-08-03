@@ -725,8 +725,8 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 	    "BountyXP"          "100"                 // Experience earn.
-	    "BountyGoldMin"       "80"                   // Gold earned min.
-	    "BountyGoldMax"       "300"                   // Gold earned max.	
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "100"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "9"
@@ -798,8 +798,8 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 	    "BountyXP"          "150"                 // Experience earn.
-	    "BountyGoldMin"       "100"                   // Gold earned min.
-	    "BountyGoldMax"       "350"                   // Gold earned max.	
+	    "BountyGoldMin"       "60"                   // Gold earned min.
+	    "BountyGoldMax"       "120"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "10"
@@ -1130,7 +1130,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"40"
+		"Limit"						"60"
 		"StartingBuilding"          "1"
 		"BountyXP"					"50"		// Experience earn.
 		"BountyGoldMin"				"10"		// Gold earned min.
@@ -1144,13 +1144,13 @@
 	        "Count"     "6"
 	        "1"{
 				"unit_name"			"rock_2"
-				"gold_cost"			"25"
-				"lumber_cost"		"50"
+				"gold_cost"			"512"
+				"lumber_cost"		"0"
 			}
 	        "2"{
 				"unit_name"			"rock_4"
-				"gold_cost"			"0"
-				"lumber_cost"		"20"
+				"gold_cost"			"1024"
+				"lumber_cost"		"64"
 			}
 			"3"{
 				"unit_name"			"rock_7"
@@ -1159,13 +1159,13 @@
 			}
 			"4"{
 				"unit_name"			"rock_10"
-				"gold_cost"			"20248"
-				"lumber_cost"		"6969"
+				"gold_cost"			"5000"
+				"lumber_cost"		"2000"
 			}
 			"5"{
 				"unit_name"			"rock_8"
-				"gold_cost"			"256000"
-				"lumber_cost"		"20000"
+				"gold_cost"			"65000"
+				"lumber_cost"		"10000"
 			}
 			"6"{
 				"unit_name"			"rock_9"
@@ -1189,8 +1189,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "1500"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1240,7 +1240,7 @@
 	        "1"{
 				"unit_name"			"rock_3"
 				"gold_cost"			"1024"
-				"lumber_cost"		"512"
+				"lumber_cost"		"0"
 			}
 	    }
 		"Requirements"{
@@ -1259,8 +1259,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "2"
-		"StatusHealth"              "1200"
+	    "ArmorPhysical"             "6"
+		"StatusHealth"              "2200"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1309,8 +1309,13 @@
 		}
 		"Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 			"1"{
+				"unit_name"			"rock_4"
+				"gold_cost"			"1024"
+				"lumber_cost"		"64"
+			}
+			"2"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
 				"lumber_cost"		"128000"
@@ -1329,8 +1334,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "2"
-		"StatusHealth"              "1800"
+	    "ArmorPhysical"             "8"
+		"StatusHealth"              "2500"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1379,8 +1384,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_5"
-				"gold_cost"			"1200"
-				"lumber_cost"		"800"
+				"gold_cost"			"5000"
+				"lumber_cost"		"128"
 			}
 	    }
 		"Requirements"{
@@ -1399,8 +1404,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "4"
-		"StatusHealth"              "800"
+	    "ArmorPhysical"             "8"
+		"StatusHealth"              "3500"
 	    "StatusHealthRegen"         "4"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1449,8 +1454,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_6"
-				"gold_cost"			"60000"
-				"lumber_cost"		"8000"
+				"gold_cost"			"128000"
+				"lumber_cost"		"64000"
 			}
 	    }
 		"Requirements"{
@@ -1469,8 +1474,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "10"
-		"StatusHealth"              "1200"
+	    "ArmorPhysical"             "12"
+		"StatusHealth"              "5000"
 	    "StatusHealthRegen"         "6"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1541,8 +1546,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "80"
-		"StatusHealth"              "2500"
+	    "ArmorPhysical"             "60"
+		"StatusHealth"              "8000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1624,8 +1629,8 @@
 	    // General
 	    //-----------------------------
 	    
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "5000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0.5"
 	    "StatusManaRegen"           "300"
@@ -1767,7 +1772,7 @@
 	    //-----------------------------
 	    
 	    "ArmorPhysical"             "100"
-		"StatusHealth"              "6000"
+		"StatusHealth"              "8000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1985"
 	    "StatusManaRegen"           "0"
@@ -1790,9 +1795,9 @@
 	    "MovementSpeed"             "0"
 		
 		"AttackDamageMin"			"500"		// Damage range min.
-		"AttackDamageMax"			"1000"		// Damage range max.
+		"AttackDamageMax"			"2000"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackRate"				"0.80"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
 		"AttackRange"				"400"		// Range within a target can be attacked.
@@ -1850,7 +1855,7 @@
 	    //-----------------------------
 	    
 	    "ArmorPhysical"             "10"
-		"StatusHealth"              "1000"
+		"StatusHealth"              "3000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "100"
 	    "StatusManaRegen"           "0"
@@ -1991,13 +1996,13 @@
 			}
 			"2"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"1800"
-				"lumber_cost"		"1800"
+				"gold_cost"			"6000"
+				"lumber_cost"		"6000"
 			}
 			"3"{
 				"unit_name"			"true_sight_tower"
-				"gold_cost"			"100"
-				"lumber_cost"		"100"
+				"gold_cost"			"75"
+				"lumber_cost"		"25"
 			}
 	    }
 		
@@ -2020,7 +2025,7 @@
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"81"		// Damage range min.
-		"AttackDamageMax"			"90"		// Damage range max.
+		"AttackDamageMax"			"110"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.00"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
@@ -2036,8 +2041,8 @@
 		"BountyGoldMin"				"10"		// Gold earned min.
 		"BountyGoldMax"				"30"		// Gold earned max.		
 		
-	    "ArmorPhysical"             "1"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "800"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "300"
 	    "StatusManaRegen"           "0.5"
@@ -2087,8 +2092,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_3"
-				"gold_cost"			"4000"
-				"lumber_cost"		"4000"
+				"gold_cost"			"2000"
+				"lumber_cost"		"2000"
 			}
 	    }
 		
@@ -2122,8 +2127,8 @@
 	
 		"AttackDamageMin"			"51"		// Damage range min.
 		"AttackDamageMax"			"55"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "1000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2183,8 +2188,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_4"
-				"gold_cost"			"7000"
-				"lumber_cost"		"7000"
+				"gold_cost"			"4000"
+				"lumber_cost"		"5000"
 			}
 	    }
 		
@@ -2220,8 +2225,8 @@
 	
 		"AttackDamageMin"			"151"		// Damage range min.
 		"AttackDamageMax"			"155"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "6"
+		"StatusHealth"              "1200"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2281,6 +2286,16 @@
 		"Requirements"{
 		
 		}
+
+		"Upgrades"
+	    {
+	        "Count"     "1"
+	        "1"{
+				"unit_name"			"tower_5"
+				"gold_cost"			"4000"
+				"lumber_cost"		"5000"
+			}
+	    }
 		
 		// Abilities
 		//----------------------------------------------------------------
@@ -2308,8 +2323,8 @@
 	
 		"AttackDamageMin"			"301"		// Damage range min.
 		"AttackDamageMax"			"305"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "1200"
+	    "ArmorPhysical"             "7"
+		"StatusHealth"              "1500"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2333,11 +2348,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-		"Wearable1" {"ItemDef" "13804"}//back("Cape of the Rising Gale")
-		"Wearable2" {"ItemDef" "13808"}//offhand_weapon("Quiver of the Rising Gale")
-		"Wearable3" {"ItemDef" "13807"}//shoulder("Armor of the Rising Gale")
-		"Wearable4" {"ItemDef" "13806"}//head("Compass of the Rising Gale")
-		"Wearable5" {"ItemDef" "13805"}//("Longbow of the Rising Gale")
+		"Wearable1" {"ItemDef" "18435"}//("Bow of the Papillion Weald")
+		"Wearable2" {"ItemDef" "18434"}//shoulder("Dress of the Papillion Weald")
+		"Wearable3" {"ItemDef" "18433"}//head("Hair of the Papillion Weald")
+		"Wearable4" {"ItemDef" "18431"}//offhand_weapon("Quiver of the Papillion Weald")
+		"Wearable5" {"ItemDef" "18430"}//back("Wings of the Papillion Weald")
 	        }
 	    }
 	}
@@ -2393,7 +2408,7 @@
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"2"			// Speed of attack.
+		"AttackRate"				"1.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
@@ -2404,8 +2419,8 @@
 	
 		"AttackDamageMin"			"601"		// Damage range min.
 		"AttackDamageMax"			"605"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "8"
+		"StatusHealth"              "1600"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2490,7 +2505,7 @@
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.5"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
@@ -2502,8 +2517,8 @@
 
 		"AttackDamageMin"			"801"		// Damage range min.
 		"AttackDamageMax"			"805"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "200"
+	    "ArmorPhysical"             "9"
+		"StatusHealth"              "1800"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2577,7 +2592,7 @@
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -2588,8 +2603,8 @@
 	
 		"AttackDamageMin"			"1201"		// Damage range min.
 		"AttackDamageMax"			"1205"		// Damage range max.
-	    "ArmorPhysical"             "0"
-		"StatusHealth"              "1200"
+	    "ArmorPhysical"             "10"
+		"StatusHealth"              "2000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2663,7 +2678,7 @@
 	    //-----------------------------
 	    
 	    "ArmorPhysical"             "5"
-		"StatusHealth"              "200"
+		"StatusHealth"              "800"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
