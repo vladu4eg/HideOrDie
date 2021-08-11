@@ -5,6 +5,7 @@ function Blink(keys)
 	local difference = point - casterPos
 	local ability = keys.ability
 	local range = ability:GetLevelSpecialValueFor("blink_range", (ability:GetLevel() - 1))
+	local stun = ability:GetLevelSpecialValueFor("stun", (ability:GetLevel() - 1))
 	local team = caster:GetTeamNumber()
 	
 	if difference:Length2D() > range then
@@ -13,6 +14,7 @@ function Blink(keys)
 	caster:SetHullRadius(1) --160
 	FindClearSpaceForUnit(caster, point, false)
 	ProjectileManager:ProjectileDodge(caster)
+	caster:AddNewModifier(nil, nil, "modifier_stunned", {duration = stun})
 	if team == DOTA_TEAM_BADGUYS then
 		caster:SetHullRadius(32) --160
 	end

@@ -75,8 +75,8 @@
 		"Ability6"    	    "troll_teleport"
 		"Ability7"    	    "lina_light_strike_infernal_ult_datadriven"
 		"Ability8"    	    "reveal_area"
-		"Ability9"    	    "attribute_bonuses"
-		"Ability10"    	    ""
+		"Ability9"    	    "treewrecker"
+		"Ability10"    	    "attribute_bonuses"
 		"Ability11"   	    ""
 		"Ability12"   	    ""
 		"Ability13"   	    ""
@@ -94,11 +94,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
-		"AttributeBaseAgility"    "5"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeBaseAgility"    "0"                   // Base agility
+		"AttributeAgilityGain"    "20"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -134,8 +134,8 @@
 		"Ability6"    	    "troll_teleport"
 		"Ability7"    	    "furion_force_of_nature_datadriven"
 		"Ability8"    	    "reveal_area"
-		"Ability9"    	    "attribute_bonuses"
-		"Ability10"    	    ""
+		"Ability9"    	    "treewrecker"
+		"Ability10"    	    "attribute_bonuses"
 		"Ability11"   	    ""
 		"Ability12"   	    ""
 		"Ability13"   	    ""
@@ -154,9 +154,9 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "5"                   // Strength bonus per level.
-		"AttributeBaseIntelligence" "5"                   // Base intelligence
-		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeBaseIntelligence" "0"                   // Base intelligence
+		"AttributeIntelligenceGain" "20"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
 		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
 		
@@ -194,8 +194,8 @@
 		"Ability6"    	    "troll_teleport"
 		"Ability7"    	    "tidehunter_ravage"
 		"Ability8"    	    "reveal_area"
-		"Ability9"    	    "attribute_bonuses"
-		"Ability10"    	    ""
+		"Ability9"    	    "treewrecker"
+		"Ability10"    	    "attribute_bonuses"
 		"Ability11"   	    ""
 		"Ability12"   	    ""
 		"Ability13"   	    ""
@@ -212,12 +212,12 @@
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"   "5"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeBaseStrength"   "0"                   // Base strength
+		"AttributeStrengthGain"   "20"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "5"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "5"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.

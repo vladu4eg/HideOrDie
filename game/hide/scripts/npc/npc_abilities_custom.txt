@@ -664,7 +664,7 @@
 	
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"160 120 90"
+	"AbilityManaCost"				"200 250 300"
 	
 	// Special	
 	//-------------------------------------------------------------------------------------------------------------
@@ -673,13 +673,18 @@
 		"01"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"blink_range"			"100 155 255"
+			"blink_range"			"120 165 255"
 		}
 		
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
 			"min_blink_range"		"100"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"stun"					"0.5 0.8 1.0"
 		}
 	}
 
@@ -1592,7 +1597,7 @@
 		"06"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"attribute_bonus_per_level"		"10"
+			"attribute_bonus_per_level"		"150"
 		}	
 	}
 
@@ -9186,17 +9191,17 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"6000"
+				"gold_cost"			"52000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"3000"
+				"lumber_cost"		"64000"
 			}	
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"2"
+				"food_cost"			"10"
 			}	
 			"04"
 			{
@@ -9212,7 +9217,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"5"
+		"AbilityChannelTime"		"25"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9251,12 +9256,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"35000"
+				"gold_cost"			"256000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"25000"
+				"lumber_cost"		"200000"
 			}	
 			"03"
 			{
@@ -9277,7 +9282,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"50"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9315,7 +9320,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"120000"
+				"gold_cost"			"182000"
 			}	
 			"02"
 			{
@@ -9341,7 +9346,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"16"
+		"AbilityChannelTime"		"60"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9384,7 +9389,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"256000"
+				"lumber_cost"		"512000"
 			}	
 			"03"
 			{
@@ -9405,7 +9410,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"25"
+		"AbilityChannelTime"		"90"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -11039,7 +11044,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 100 90"
+	"AbilityManaCost"				"120 150 200"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -11204,7 +11209,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"100 120 145"
+	"AbilityManaCost"				"100 200 330"
 	
 	// Damage.
 	//-------------------------------------------------------------------------------------------------------------
@@ -11227,7 +11232,7 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"length"			"500 6700 1100"
+			"length"			"500 800 1100"
 		}
 		"04"
 		{
@@ -11337,7 +11342,7 @@
 	"AbilityCastRange"				"550"
 	"AbilityCastPoint"				"0.7 0.8 0.5"
 	"AbilityCooldown"				"45 35 30"
-	"AbilityManaCost"				"160 160 160"
+	"AbilityManaCost"				"160 250 350"
 	"AOERadius"						"%area_of_effect"
 	
 	"RequiredLevel"          		"8"
@@ -11587,7 +11592,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"140"
+	"AbilityManaCost"				"140 240 340"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -11736,7 +11741,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"145"
+	"AbilityManaCost"				"145 200 250"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -12035,17 +12040,17 @@
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"full_splash_radius"	"15 25 40"
+			"full_splash_radius"	"0 0 0"
 		}
 		"03"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"mid_splash_radius"		"75 100 110"
+			"mid_splash_radius"		"0 0 0"
 		}
 		"04"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"min_splash_radius"		"150 200 220"
+			"min_splash_radius"		"0 0 0"
 		}
 		"05"
 		{
@@ -12092,17 +12097,17 @@
 		"13"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"splash_full"			"100"
+			"splash_full"			"0"
 		}
 		"14"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"splash_medium"			"40"
+			"splash_medium"			"0"
 		}
 		"15"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"splash_small"			"20"
+			"splash_small"			"0"
 		}
 
 	}
@@ -12415,7 +12420,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"120 100 90"
+	"AbilityManaCost"				"120 150 250"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -12628,7 +12633,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage"					"125"
+				"damage"					"15"
 			}
 			"02"
 			{
@@ -13245,7 +13250,7 @@
 	
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110 130 170"
+		"AbilityManaCost"				"500 800 1000"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -13313,11 +13318,11 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"15 25 40"
+		"AbilityDamage"					"10 20 25"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"120 100 80"
+		"AbilityManaCost"				"120 250 600"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -13326,7 +13331,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"400 600 900"
+				"radius"			"400 600 700"
 			}
 			"02"
 			{
@@ -13370,7 +13375,7 @@
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 
 		"AbilityCooldown"				"80 60 50"
-		"AbilityManaCost"				"150 120 80"
+		"AbilityManaCost"				"150 200 350"
 			
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -13473,4 +13478,155 @@
 			
 		}
 	}
+
+
+    "treewrecker"
+    {
+        "BaseClass" "ability_datadriven"
+
+        "AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+
+        //"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+        //"AbilityBehavior" "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityTextureName" "shredder_whirling_death"
+        "MaxLevel"                      "1"
+        "AbilityManaCost"                       "50"
+        "AbilityChannelledManaCostPerSecond"    "100"
+
+
+        "OnToggleOn"
+        {
+            "ApplyModifier"
+            {
+                "ModifierName" "treewreckx"
+                "Target" "CASTER"
+            }
+            "ApplyModifier"
+            {
+                "ModifierName" "fakefly"
+                "Target" "CASTER"
+            }
+        }
+        "OnToggleOff"
+        {
+            "RemoveModifier"
+            {
+                "Target" "CASTER"
+                "ModifierName" "treewreckx"
+            }
+            "RemoveModifier"
+            {
+                "Target" "CASTER"
+                "ModifierName" "fakefly"
+            }
+        }
+
+        "Modifiers"
+        {
+            "fakefly"
+            {
+                //"States"
+                //{
+                //    "MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"                  "MODIFIER_STATE_VALUE_ENABLED"
+                //}
+
+                "IsDebuff" "0"
+                "IsPurgable" "0"
+                "IsHidden" "1"
+                "ThinkInterval" "0.01" 
+
+                "OnIntervalThink"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "scripts/vscripts/abilities/timber.lua"
+                        "Function"          "fakefly"
+                        "Target"            "CASTER"
+                    }
+                }
+            }
+
+            "treewreckx"
+            {
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "85"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "2"
+                }
+
+                "IsDebuff" "0"
+                "IsPurgable" "0"
+                "IsHidden" "0"
+                "ThinkInterval" "0.2" 
+
+                "OnIntervalThink"
+                {
+                    "FireEffect"
+                    {
+                        "Target" "CASTER"
+
+                        "ControlPointEntities"
+                        {
+                            "CASTER"        "attach_hitloc"
+                            "CASTER"    "attach_hitloc"
+                        }
+
+                        "EffectName" "particles/units/heroes/hero_shredder/shredder_whirling_death_spin_blades.vpcf"
+                        "EffectAttachType"  "follow_customorigin"
+                        "EffectLifeDurationScale" "1"
+                        "EffectColorA" "255 255 0"
+                    }
+                    "FireEffect"
+                    {
+                        "Target" "CASTER"
+
+                        "ControlPointEntities"
+                        {
+                            "CASTER"        "attach_hitloc"
+                            "CASTER"    "attach_hitloc"
+                        }
+
+                        "EffectName" "particles/dire_fx/tower_bad_face_end_explode.vpcf"
+                        "EffectAttachType"  "follow_customorigin"
+                        "EffectLifeDurationScale" "1"
+                        "EffectColorA" "255 255 0"
+                    }
+                    "FireEffect"
+                    {
+                        "Target" "CASTER"
+
+                        "ControlPointEntities"
+                        {
+                            "CASTER"        "attach_hitloc"
+                            "CASTER"    "attach_hitloc"
+                            "CASTER"    "attach_hitloc"
+                            "CASTER"    "attach_hitloc"
+                        }
+
+                        "EffectName" "particles/units/heroes/hero_sven/sven_storm_bolt_projectile_explosion_trail.vpcf"
+                        "EffectAttachType"  "start_at_customorigin"
+                        "EffectLifeDurationScale" "1"
+                        "EffectColorA" "255 255 0"
+                    }
+
+                    //"DestroyTrees"
+                    //{
+                    //    "Target"
+                    //    {
+                    //        "Center"    "TARGET"
+                    //        "Radius"    "250"
+                    //    }
+                    //    "Radius"    "250"
+                    //} 
+
+                    "RunScript"
+                    {
+                        "ScriptFile"        "scripts/vscripts/custom_abilities.lua"
+                        "Function"          "eatmana"
+                    } 
+                }
+            }
+        }
+    }
+
 }

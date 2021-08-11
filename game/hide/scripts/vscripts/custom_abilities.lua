@@ -1172,3 +1172,12 @@ function troll_buff(keys)
 	local unit = keys:GetCaster()
 	EmitSoundOn("Hero_TrollWarlord.BattleTrance.Cast", unit)
 end						
+
+function eatmana(keys)
+    mana = keys.ability:GetCaster():GetMana()
+    if mana<20 then
+        keys.ability:ToggleAbility()
+    else
+        keys.ability:GetCaster():ReduceMana(20)
+    end
+end

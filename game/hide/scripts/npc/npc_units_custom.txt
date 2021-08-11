@@ -1991,13 +1991,13 @@
 	        "Count"     "3"
 	        "1"{
 				"unit_name"			"tower_2"
-				"gold_cost"			"1000"
-				"lumber_cost"		"1000"
+				"gold_cost"			"2000"
+				"lumber_cost"		"2000"
 			}
 			"2"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"6000"
-				"lumber_cost"		"6000"
+				"gold_cost"			"26000"
+				"lumber_cost"		"28000"
 			}
 			"3"{
 				"unit_name"			"true_sight_tower"
@@ -2092,8 +2092,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_3"
-				"gold_cost"			"2000"
-				"lumber_cost"		"2000"
+				"gold_cost"			"6000"
+				"lumber_cost"		"8000"
 			}
 	    }
 		
@@ -2188,8 +2188,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_4"
-				"gold_cost"			"4000"
-				"lumber_cost"		"5000"
+				"gold_cost"			"10000"
+				"lumber_cost"		"12000"
 			}
 	    }
 		
@@ -2292,8 +2292,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"4000"
-				"lumber_cost"		"5000"
+				"gold_cost"			"26000"
+				"lumber_cost"		"28000"
 			}
 	    }
 		
@@ -2385,8 +2385,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_6"
-				"gold_cost"			"8200"
-				"lumber_cost"		"8200"
+				"gold_cost"			"35000"
+				"lumber_cost"		"35000"
 			}
 	    }
 		
@@ -2481,8 +2481,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_7"
-				"gold_cost"			"16400"
-				"lumber_cost"		"16400"
+				"gold_cost"			"55000"
+				"lumber_cost"		"55000"
 			}
 	    }
 		
@@ -4708,8 +4708,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "9000"
-		"StatusHealthRegen"                     "2"
+		"StatusHealth"                          "2000"
+		"StatusHealthRegen"                     "1"
 		"StatusMana"                            "0"
 		"StatusManaRegen"                       "0"
 
@@ -4757,7 +4757,7 @@
 
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"                         "20"
+		"ArmorPhysical"                         "5"
 		"MagicalResistance"                     "0"
 
 		
@@ -4765,8 +4765,8 @@
 		//----------------------------------------------------------------
 		
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"2000"		// Damage range min.
-		"AttackDamageMax"			"6000"		// Damage range max.
+		"AttackDamageMin"			"1000"		// Damage range min.
+		"AttackDamageMax"			"3000"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.00"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
@@ -4815,7 +4815,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"                          "5000"
+		"StatusHealth"                          "1000"
 		"StatusHealthRegen"                     "2"
 		"StatusMana"                            "0"
 		"StatusManaRegen"                       "0"
