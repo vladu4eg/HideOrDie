@@ -4328,7 +4328,7 @@
 		} 
 	}
 	
-	"item_book_of_strength"
+		"item_book_of_strength"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -4367,6 +4367,14 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"lumber_cost"			"0"
+			}
+		}
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"UseItem"
 			}
 		}
 	}
@@ -4413,6 +4421,14 @@
 				"lumber_cost"			"0"
 			}
 		}
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"UseItem"
+			}
+		}
 	}
 
 	"item_book_of_intelligence"
@@ -4457,13 +4473,21 @@
 				"lumber_cost"			"0"
 			}
 		}
+		"OnCreated"
+		{
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"UseItem"
+			}
+		}
 	}
+
 		//=================================================================================================================
 	// Tome of Knowledge
 	//=================================================================================================================
 	"item_tome_of_knowledge"
 	{
-		"ID"							"257"	
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
@@ -4485,8 +4509,6 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"999"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"600.0"			  
-		"ItemInitialStockTime"			"690.0"  
 		"BonusDelayedStockCount"		"1"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ItemSupport"					"1"	
@@ -4497,11 +4519,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"xp_bonus"				"100"
-			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
@@ -4512,10 +4529,13 @@
 				"var_type"				"FIELD_INTEGER"
 				"lumber_cost"			"0"
 			}
-			"04"
+		}
+		"OnCreated"
+		{
+			"RunScript"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"xp_per_use"			"10"
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"Knowledge"
 			}
 		}
 	}
@@ -4523,7 +4543,7 @@
 	//=================================================================================================================
 	// Quelling Blade
 	//=================================================================================================================
-	"item_quelling_blade"
+	"item_quelling_blade_data"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -4573,6 +4593,26 @@
 				"var_type"				"FIELD_INTEGER"
 				"cast_range_ward"			"200"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"90"
+			}
+		}
+		"OnSpellStart"
+		{
+		"RunScript"
+			{
+				"ScriptFile"	"custom_abilities.lua"
+				"Function"		"GiveWoodGoldForAttackTree"
+				"Gold"			"0"
+				"Wood"			"2"
+			}	
+			"DestroyTrees"
+		    {
+		    	"Target"	"POINT"
+				"Radius"	"%radius"
+		    }
 		}
 	}
 	
@@ -6245,6 +6285,760 @@
 			}
 		}
 	}
+		//=================================================================================================================
+	// Aghanim's Shard
+	//=================================================================================================================
+	"item_aghanims_shard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"int;str;agi;mana_pool;health_pool;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"ags;shard;aghanim's shard;aghs"
+		
+		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
+
+		
+		"ItemPermanent"					"0"
+		"ItemStockTime"					"1"			  
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"1"
+		"ItemInitialStockTime"			"1290.0"
+		"ItemInitialStockTimeTurbo"		"645.0"
+	}
+	
+	//End of file item_lia_rune_of_agility.txt
+
+
+	//Start of file item_lia_rune_of_healing.txt
+	    "item_lia_rune_of_healing"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+	
+		
+		"Model"							"models/props_gameplay/rune_regeneration01.vmdl"
+		"Effect"						"particles/generic_gameplay/rune_regeneration.vpcf"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_bloodseeker/bloodseeker_bloodbath_heal.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center" 	"CASTER"
+					"Radius" 	"%radius"
+					"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					"Types" 	"DOTA_UNIT_TARGET_HERO"
+					"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			
+				"Action"    
+				{
+					"Heal"
+					{
+						"Target"        "TARGET"
+						"HealAmount"	"%heal"
+					}
+					"FireEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_bloodseeker/bloodseeker_bloodbath_heal.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+			}
+			"FireSound"
+			{
+				"EffectName"	"Rune.Regen"
+				"Target" 		"CASTER"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"3000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"5000"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_healing.txt
+//Start of file item_lia_rune_of_mana.txt
+	    "item_lia_rune_of_mana"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_regeneration01.vmdl"
+		"Effect"						"particles/rune_mana.vpcf"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"	
+		"precache"
+		{
+			"particle"  "particles/rune_mana.vpcf"
+		}
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center" 	"CASTER"
+					"Radius" 	"%radius"
+					"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					"Types" 	"DOTA_UNIT_TARGET_HERO"
+					"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			
+				"Action"    
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/mana.lua"
+						"Function"		"GiveMana"
+						"mana_amount"	"%mana"
+					}
+					"FireEffect"
+					{
+						"EffectName"        "particles/items3_fx/mango_active.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Regen"
+				"Target" 		"CASTER"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"					"3000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"5000"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_mana.txt
+
+
+	//Start of file item_lia_rune_of_restoration.txt
+	    "item_lia_rune_of_restoration"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_regeneration01.vmdl"
+		"Effect"						"particles/rune_restoretion.vpcf"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_chakra_magic.vpcf"
+			"particle"	"particles/rune_restoretion.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_keeper_of_the_light.vsndevts"
+		}
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center" 	"CASTER"
+					"Radius" 	"%radius"
+					"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					"Types" 	"DOTA_UNIT_TARGET_HERO"
+					"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			
+				"Action"    
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/mana.lua"
+						"Function"		"GiveMana"
+						"mana_amount"	"%mana"
+					}
+					"Heal"
+					{
+						"Target"        "TARGET"
+						"HealAmount"	"%heal"
+					}
+					"FireEffect"
+					{
+						"EffectName"        "particles/units/heroes/hero_keeper_of_the_light/keeper_of_the_light_chakra_magic.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+					}
+				}
+			}
+		
+			"FireSound"
+			{
+				"EffectName"	"Rune.Regen"
+				"Target" 		"CASTER"
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana"					"5000"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"5000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"5000"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_restoration.txt
+
+//Start of file item_lia_rune_of_speed.txt
+	    "item_lia_rune_of_speed"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityTextureName"			"custom/lia_rune_of_speed"
+		"Model"							"models/props_gameplay/rune_doubledamage01.vmdl"
+		"Effect"						"particles/generic_gameplay/rune_doubledamage.vpcf"
+	
+		"precache"
+		{
+			"particle"  "particles/rune_mana.vpcf"
+			"particle"  "particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
+		}
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+		"AbilitySpecial"
+		{
+	
+			"1"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"5000"
+			}
+			"2"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"15"
+			}
+			"3"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed_bonus"			"200"
+			}
+		}
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_rune_of_speed"
+	
+				"Target"
+				{
+					"Center" 	"CASTER"
+					"Radius" 	"%radius"
+					"Teams" 	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+					"Types" 	"DOTA_UNIT_TARGET_HERO"
+					"Flags"     "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				}
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Haste"
+				"Target" 		"CASTER"
+			}
+		}
+	
+		"Modifiers"
+		{
+			"modifier_rune_of_speed"
+			{
+				"IsBuff"		"1"
+				"IsPurgable"	"1"
+				"Duration"		"%duration"
+				"TextureName"	"rune_doubledamage"
+	
+				"EffectName"		"particles/units/heroes/hero_dark_seer/dark_seer_surge.vpcf"
+				"EffectAttachType"	"follow_hitloc"
+	
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%speed_bonus"
+				}
+			}
+		}
+	
+	}
+	//End of file item_lia_rune_of_speed.txt
+	//Start of file item_lia_rune_of_strength.txt
+	    "item_lia_rune_of_strength"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
+		"Effect"						"particles/rune_lifeinarena_red.vpcf"
+	
+		"precache"
+		{
+			"particle"  "particles/rune_lifeinarena_red.vpcf"
+		}
+			
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneOfStrength"
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Illusion"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_strength.txt
+
+	//Start of file item_lia_rune_of_agility.txt
+	    "item_lia_rune_of_agility"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
+		"Effect"						"particles/rune_lifeinarena_green.vpcf"
+	
+		"precache"
+		{
+			"particle"  "particles/rune_lifeinarena_green.vpcf"
+		}
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneOfAgility"
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Illusion"
+				"Target" 		"CASTER"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_agility.txt
+//Start of file item_lia_rune_of_intellect.txt
+	    "item_lia_rune_of_intellect"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
+		"Effect"						"particles/rune_lifeinarena_blue.vpcf"
+	
+		"precache"
+		{
+			"particle"  "particles/rune_lifeinarena_blue.vpcf"
+		}
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneOfIntellect"
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Illusion"
+				"Target" 		"CASTER"
+			}
+		}
 	
 	
+	
+	}
+	//End of file item_lia_rune_of_intellect.txt
+
+	//Start of file item_lia_rune_gold.txt
+	    "item_lia_rune_gold"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/gold_coin001.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneGold"
+			}
+	
+			//"FireSound"
+			//{
+			//	"EffectName"	"Rune.Bounty"
+			//	"Target" 		"CASTER"
+			//}	
+		}
+	
+	
+	
+	}
+	//End of file item_lia_rune_gold.txt
+
+
+	//Start of file item_lia_rune_lumber.txt
+	"item_lia_rune_lumber"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/branch.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+	
+		"OnSpellStart"
+		{
+			"SpendCharge" 
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneLumber"
+			}
+	
+			"FireSound"
+			{
+				"EffectName"	"Rune.Bounty"
+				"Target" 		"CASTER"
+			}
+		}
+	
+	
+	
+	}
+	//End of file item_lia_rune_lumber.txt
+//Start of file item_lia_rune_of_lifesteal.txt
+	    "item_lia_rune_of_lifesteal"
+	{
+		"BaseClass"                     "item_lua"
+		"ScriptFIle"					"items\runes.lua"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_haste01.vmdl"
+		"Effect"						"particles/generic_gameplay/rune_haste.vpcf"
+	
+		"precache"
+		{
+			"particle" "particles/econ/items/bloodseeker/bloodseeker_eztzhok_weapon/bloodseeker_bloodrage_ground_eztzhok.vpcf"
+		}
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifesteal_percent"		"100"
+			}
+		}
+	}
+	//End of file item_lia_rune_of_lifesteal.txt
+
+
+	//Start of file item_lia_rune_of_luck.txt
+	    "item_lia_rune_of_luck"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		
+		"Model"							"models/props_gameplay/rune_goldxp.vmdl"
+		"Effect"						"particles/generic_gameplay/rune_bounty.vpcf"
+	
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"tome of knowledge"
+		"ItemStackable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"AbilitySharedCooldown"			"tome"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDisplayCharges"			"1"
+		"ItemStockMax"					"999"
+		"ItemStockInitial"				"0"
+		"BonusDelayedStockCount"		"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemSupport"					"1"	
+		"IsTempestDoubleClonable"		"0"
+		"ItemCastOnPickup" 				"1"
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile" 	"items\runes.lua"
+				"Function"		"RuneOfLuck"
+			}
+			
+			"FireSound"
+			{
+				"EffectName"	"Rune.Bounty"
+				"Target" 		"CASTER"
+			}
+		}
+	
+	
+	
+	}
+	//End of file item_lia_rune_of_luck.txt
+
 }

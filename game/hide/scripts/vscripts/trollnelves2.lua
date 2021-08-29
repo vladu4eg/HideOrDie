@@ -1,7 +1,7 @@
 -- This is the primary trollnelves2 trollnelves2 script and should be used to assist in initializing your game mode
 -- Set this to true if you want to see a complete debug output of all events/processes done by trollnelves2
 -- You can also change the cvar 'trollnelves2_spew' at any time to 1 or 0 for output/no output
-TROLLNELVES2_DEBUG_SPEW = false
+TROLLNELVES2_DEBUG_SPEW = true
 LinkLuaModifier("modifier_movespeed_x4",
     "libraries/modifiers/modifier_movespeed_x4.lua",
 LUA_MODIFIER_MOTION_NONE)
@@ -31,6 +31,8 @@ require('libraries/team')
 require('libraries/player')
 require('libraries/entity')
 require('libraries/animations')
+
+require('runes')
 
 require('internal/trollnelves2')
 
@@ -309,7 +311,7 @@ function InitializeBuilder(hero)
     PlayerResource:ModifyFood(hero, 0)
     PlayerResource:ModifyWisp(hero, 0)
     hero:SetStashEnabled(false)
-    hero:AddItemByName("item_quelling_blade")
+    hero:AddItemByName("item_quelling_blade_data")
     hero:AddItemByName("item_blink_datadriven")
     if GameRules:GetGameTime() >= BUFF_ENIGMA_TIME then
         hero:AddAbility("troll_warlord_battle_trance_datadriven")
@@ -506,6 +508,7 @@ function trollnelves2:PreStart()
                             playerHero:RemoveModifierByName("modifier_stunned")
                         end
                     end
+                    StartRunesSpawn()
                     Timers:CreateTimer(END_GAME_TIME, function() 
                         GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
                     end)   

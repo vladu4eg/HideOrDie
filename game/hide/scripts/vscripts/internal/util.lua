@@ -105,16 +105,18 @@ function ShowWearables( event )
   end
 end
 
-function CDOTA_Item:Use()
-    local caster = self:GetOwner()
-    if caster ~= nil and (caster:IsHero() or caster:HasInventory()) then
-        local newCharges = self:GetCurrentCharges() - 1
-        if newCharges > 0 then
-            self:SetCurrentCharges(newCharges)
-        else
-            caster:RemoveItem(self)
-        end
-    end
+function CDOTA_Item:Use(item_name)
+  DebugPrint("self:GetNumItemsInInventory() " .. self:GetNumItemsInInventory())
+  DebugPrint("self:GetNumItemsInStash() " .. self:GetNumItemsInStash())
+  local caster = self:GetOwner()
+  if caster ~= nil and (caster:IsHero() or caster:HasInventory()) then
+	  for i=1, 9 do
+		  local item = self:GetItemInSlot(i)
+		    if item ~= nil and item_name == item:GetAbilityName() then
+        	self:RemoveItem(item)
+		    end
+	  end
+  end
 end
 
 function FindClearSpaceForUnit_IgnoreNeverMove(unit,position,useInterp)

@@ -1239,8 +1239,8 @@
 		"DOTA_Tooltip_ability_item_dmg_5_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_item_dmg_5_lumber_cost"                                     "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_item_quelling_blade"                                                 "Quelling Blade"
-		"DOTA_Tooltip_ability_item_quelling_blade_Description"                                     ""
+		"DOTA_Tooltip_ability_item_quelling_blade_data"                                                 "Quelling Blade"
+		"DOTA_Tooltip_ability_item_quelling_blade_datae_Description"                                     ""
 
 		"DOTA_Tooltip_ability_item_gem"                                                 "Gem of True Sight"
 		"DOTA_Tooltip_ability_item_gem_Description"                                     ""
@@ -1696,6 +1696,19 @@
 		"DOTA_Tooltip_ability_item_disable_repair_2_bonus_damage"                                   "BONUS DAMAGE: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_gold_cost"                                      "GOLD COST: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_lumber_cost"                                    "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_item_lia_rune_of_healing"	"Руна Исцеления"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_mana"	"Руна Маны"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_restoration"	"Руна Восстановления"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_speed"	"Руна Скорости"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_strength"	"Руна Силы"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_agility"	"Руна Ловкости"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_intellect"	"Руна Интеллекта"
+		"DOTA_Tooltip_Ability_item_lia_rune_gold"			"Монетка"
+		"DOTA_Tooltip_Ability_item_lia_rune_lumber"			"Дерево"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_lifesteal"	"Руна Вампиризма"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_luck"		"Руна Удачи"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_protection"		"Руна Защиты"
 
         "topptext"                                      									"Лучшие игроки в общем рейтинге: "
         "topwtext"                                      									"Лучшие игроки за Эльфа: " 

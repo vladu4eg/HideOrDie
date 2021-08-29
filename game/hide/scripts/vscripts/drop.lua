@@ -8,8 +8,10 @@ item_drop = {
 	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
 	{items = {"item_event_birthday"}, limit = 1, chance = 2, units = {"barracks_3"} },
 	{items = {"item_recipe2_arcane_boots_datadriven","item_recipe2_phase_boots_datadriven","item_recipe2_power_treads_datadriven"}, limit = 3, chance = 100, units = {"npc_dota_hero_furion"} },
-	
-	--{items = {"item_lifesteal"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
+	{items = {"item_lia_rune_gold", "item_lia_rune_lumber", "item_lia_rune_of_strength", "item_lia_rune_of_agility", "item_lia_rune_of_intellect", "item_lia_rune_of_restoration", "item_lia_rune_of_luck", "item_lia_rune_of_speed", "item_lia_rune_of_lifesteal"}, limit = 50, chance = 500, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
+	{items = {"item_lia_rune_lumber"}, limit = 10, chance = 5, units = {"ent_dota_tree"} },
+		
+--{items = {"item_lifesteal"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
 	--{items = {"item_dmg_14"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
 	--{items = {"item_reaver"}, limit = 200, chance = 70, units = {"npc_neutral_boss_1"} },
 	
@@ -24,7 +26,7 @@ item_drop = {
 }
 
 function drop:RollItemDrop(unit)
-	local unit_name = unit:GetUnitName()
+	local unit_name = unit:GetUnitName() 
 	if GameRules.PlayersCount >= MIN_RATING_PLAYER then
 		for _,drop in ipairs(item_drop) do
 			local items = drop.items or nil

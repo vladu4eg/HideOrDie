@@ -117,8 +117,8 @@
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.
 		
-		"VisionDaytimeRange"    "800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "600"                  // Range of vision at night time.
+		"VisionDaytimeRange"    "600"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "800"                  // Range of vision at night time.
 		"DisableWearables"         "1"
 	}
 	"npc_dota_hero_warlock"{
@@ -177,8 +177,8 @@
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.
 		
-		"VisionDaytimeRange"    "800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "600"                  // Range of vision at night time.
+		"VisionDaytimeRange"    "600"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "800"                  // Range of vision at night time.
 		"DisableWearables"         "1"
 	}
 	"npc_dota_hero_night_stalker"{
@@ -236,8 +236,8 @@
 		"StatusMana"        "135"                   // Base mana.
 		"StatusManaRegen"     "0.1"                 // Mana regeneration rate.
 		
-		"VisionDaytimeRange"    "800"                  // Range of vision at night time.
-		"VisionNighttimeRange"    "600"                  // Range of vision at night time.
+		"VisionDaytimeRange"    "600"                  // Range of vision at night time.
+		"VisionNighttimeRange"    "800"                  // Range of vision at night time.
 		"DisableWearables"         "1"
 	}
 

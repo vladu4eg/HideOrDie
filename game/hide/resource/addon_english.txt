@@ -8,6 +8,9 @@
 		// ******************** HEROES ********************
 		"npc_dota_hero_treant"                                                  "Treant"
 		"npc_dota_hero_troll_warlord"                                                     "Infernal"
+		"npc_dota_hero_nevermore"                                                    	 "Infernal Hunter"
+		"npc_dota_hero_warlock"                                                     		"Infernal Summoner"
+		"npc_dota_hero_night_stalker"                                                     "Infernal Paralyzer"
 		"npc_dota_hero_lycan"                                                             "Wolf"
 		"npc_dota_hero_crystal_maiden"                                                    "Dead Treant"
 		"npc_dota_hero_bear"                                                    		  "Baby Bear"
@@ -1478,8 +1481,8 @@
 		"DOTA_Tooltip_ability_item_dmg_4_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_item_dmg_4_lumber_cost"                                     "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_item_quelling_blade"                                                 "Quelling Blade"
-		"DOTA_Tooltip_ability_item_quelling_blade_Description"                                     ""
+		"DOTA_Tooltip_ability_item_quelling_blade_data"                                                 "Quelling Blade"
+		"DOTA_Tooltip_ability_item_quelling_blade_data_Description"                                     ""
 		
 		"DOTA_Tooltip_ability_item_gem"                                                 "Gem of True Sight"
 		"DOTA_Tooltip_ability_item_gem_Description"                                     ""
@@ -1967,6 +1970,22 @@
 		"DOTA_Tooltip_ability_item_disable_repair_2_bonus_damage"                                   "BONUS DAMAGE: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_gold_cost"                                      "GOLD COST: "
 		"DOTA_Tooltip_ability_item_disable_repair_2_lumber_cost"                                    "LUMBER COST: "
+
+		"DOTA_Tooltip_Ability_item_lia_rune_of_healing"	"Rune Of Healing"
+
+		"DOTA_Tooltip_Ability_item_lia_rune_of_mana"	"Rune Of Mana"
+
+		"DOTA_Tooltip_Ability_item_lia_rune_of_restoration"	"Rune Of Restoration"
+
+		"DOTA_Tooltip_Ability_item_lia_rune_of_speed"	"Rune Of Speed"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_strength"	"Rune Of Strength"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_agility"	"Rune Of Agility"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_intellect"	"Rune Of Intellect"
+		"DOTA_Tooltip_Ability_item_lia_rune_gold"			"Coin"
+		"DOTA_Tooltip_Ability_item_lia_rune_lumber"			"Lumber"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_lifesteal"			"Rune Of Lifesteal"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_luck"			"Rune Of Fortune"
+		"DOTA_Tooltip_Ability_item_lia_rune_of_protection"		"Rune Of Protection"
 
         "topptext"                                      									"The best players in the overall ranking: "
         "topwtext"                                      									"The best players for the Treant: "

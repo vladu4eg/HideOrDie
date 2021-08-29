@@ -3971,6 +3971,25 @@
 			}
 		}
 	}
+	"upgrade_to_tower_radar"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"build_tower_radar"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityCastPoint"				"0"
+		"MaxLevel"						"1"
+		"Building"						"1"
+		"BuildTime"						"3"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"builder.lua"
+				"Function"		"UpgradeBuilding"
+				"NewName"		"tower_radar"
+			}
+		}
+	}
 	"upgrade_to_troll_hut_2"
 	{
 		"BaseClass"             		"ability_datadriven"
@@ -5043,6 +5062,23 @@
 			}
 		}
 	}
+
+	"buy_reveal_area"{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"			"keeper_of_the_light_blinding_light"
+		"MaxLevel"						"1"
+		
+		"OnSpellStart"{
+			"RunScript"{
+				"ScriptFile"			"custom_abilities.lua"
+				"Function"				"BuyRevealArea"
+				"Target"				"CASTER"
+				"Amount"				"2"
+			}
+		}
+	}
+
 	"buy_buff"{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
@@ -6496,6 +6532,69 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"lumber_cost"		"2"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"0"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"1"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"1"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		}
+	}
+
+		"train_build_worker"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"train_build_worker"
+		"MaxLevel"					"1"
+		"UnitName"					"build_worker"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"2048"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"4096"
 			}	
 			"03"
 			{
@@ -9436,6 +9535,70 @@
 		}
 	}
 
+	"train_attacker_10"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"attacker_10"
+		"MaxLevel"					"1"
+		"UnitName"					"attacker_10"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"64000"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"86000"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"5"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"0"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"20"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		
+		}
+	}
+
 	"train_attacker_teleport_1"
 	{
 		"BaseClass"					"ability_datadriven"
@@ -10999,6 +11162,13 @@
 		
 		"OnSpellStart"
 		{
+			"RunScript"
+			{
+				"ScriptFile"	"custom_abilities.lua"
+				"Function"		"GiveWoodGoldForAttackTree"
+				"Gold"			"2"
+				"Wood"			"0"
+			}	
 			"DestroyTrees"
 		    {
 		    	"Target"	"POINT"
@@ -13628,5 +13798,64 @@
             }
         }
     }
+
+	//=================================================================================================================
+	// Ability: Pudge Dismember
+	//=================================================================================================================
+	"pudge_dismember"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"160"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"			"3.0"
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"0"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"dismember_damage"		"60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"strength_damage"		"0.9"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"ticks"		"1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_units_per_second"		"75"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pull_distance_limit"		"125"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"animation_rate"		"1.5"
+			}
+		}
+	}
+	
 
 }

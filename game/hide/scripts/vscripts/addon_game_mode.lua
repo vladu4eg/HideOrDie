@@ -32,7 +32,7 @@ function Precache( context )
 	PrecacheItemByNameSync("item_glyph_ability", context)
 	PrecacheItemByNameSync("item_night_ability", context)	
 	PrecacheItemByNameSync("item_blink_datadriven", context)
-	PrecacheItemByNameSync("item_quelling_blade", context)
+	PrecacheItemByNameSync("item_quelling_blade_data", context)
 	
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way

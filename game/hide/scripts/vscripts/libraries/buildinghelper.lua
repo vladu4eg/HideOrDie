@@ -421,7 +421,13 @@ function BuildingHelper:OnTreeCut(keys)
         BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
-    
+    local spawnPoint = tree:GetAbsOrigin()	
+	local newItem = CreateItem( "item_lia_rune_lumber", nil, nil )
+	local dropRadius = RandomFloat( 50, 150 )
+	local randRadius = spawnPoint + RandomVector( dropRadius )
+	local drop = CreateItemOnPositionForLaunch( randRadius, newItem )
+	newItem:LaunchLootInitialHeight( false, 0, 150, 0.5, randRadius )
+
     --Create a dummy for clients to be able to detect trees standing and block their grid
     tree.chopped_dummy = CreateUnitByName("npc_dota_units_base2", treePos, false, nil, nil, DOTA_TEAM_NOTEAM)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})

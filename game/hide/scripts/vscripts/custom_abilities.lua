@@ -3,7 +3,9 @@ require('libraries/entity')
 require('trollnelves2')
 require('wearables')
 require('internal/util')
-
+LinkLuaModifier("modifier_all_vision",
+    "libraries/modifiers/modifier_all_vision.lua",
+LUA_MODIFIER_MOTION_NONE)
 --Ability for tents to give gold
 function GainGoldCreate(event)
 	if IsServer() then
@@ -353,6 +355,14 @@ function RevealArea( event )
 		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*2.5 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
 		local visionDuration = string.match(GetMapName(),"creeptown") and event.Duration * 1.5 or event.Duration
 		AddFOWViewer(caster:GetTeamNumber(), point, visionRadius, visionDuration, false)
+		local units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
+			for _,unit in pairs(units) do
+				if unit ~= nil then
+					if unit:GetUnitName() == "tower_radar" then
+						unit:ForceKill(false)
+					end
+				end
+			end
 	end
 end
 
@@ -365,6 +375,14 @@ function TeleportTo (event)
 			break
 		end
 	end
+end
+
+function GiveWoodGoldForAttackTree (event)
+	if IsServer() then
+		local caster = event.caster
+		PlayerResource:ModifyGold(caster, tonumber(event.Gold))
+		PlayerResource:ModifyLumber(caster, tonumber(event.Wood), true)
+	end	
 end
 
 function GoldOnAttack (event)
@@ -515,6 +533,11 @@ function SpawnUnitOnChannelSucceeded(event)
 					--		UpdateModel(unit, "models/gold_wisp.vmdl", 1)     
 				end
 			end
+
+			if unit_name == "attacker_10" then
+				unit:AddItemByName("item_aghanims_shard")
+			end
+
 		end
 	end
 end
@@ -808,7 +831,8 @@ function BuyItem(event)
 		SendErrorMessage(playerID, "#error_no_time_boots")
 		ability:EndCooldown()
 		return	
-	end	hero:DropStash()
+	end	
+	hero:DropStash()
 	PlayerResource:ModifyLumber(hero,-lumber_cost)
 	PlayerResource:ModifyGold(hero,-gold_cost)
 	local item = CreateItem(item_name, hero, hero)
@@ -903,6 +927,37 @@ function BuyLumberTroll(event)
 	PlayerResource:ModifyGold(hero,-price)
 	PlayerResource:ModifyLumber(hero,amount)
 	
+end
+
+function BuyRevealArea(event)
+	local caster = event.caster
+	local playerID = caster.buyer
+	local hero = PlayerResource:GetSelectedHeroEntity(playerID)
+	local amount = event.Amount
+	local price = amount
+	local distance = (caster:GetAbsOrigin() - hero:GetAbsOrigin()):Length()
+	local noDistance = false	
+	if distance > 1000 and not noDistance then
+		SendErrorMessage(playerID, "#error_shop_out_of_range")
+		return false
+	end	
+	
+	if amount > 0 then
+		if price > PlayerResource:GetLumber(playerID) then
+			SendErrorMessage(playerID, "#error_not_enough_lumber")
+			return false
+		end
+	end
+	PlayerResource:ModifyLumber(hero,-amount)
+
+	local units = Entities:FindAllByClassname("npc_dota_creature")
+	for _,unit in pairs(units) do
+		unit:AddNewModifier(unit, unit, "modifier_all_vision", {duration=5})
+		local unit_name = unit:GetUnitName();
+		if unit_name == "tower_radar" then
+			unit:ForceKill(false)
+		end
+	end
 end
 
 function StealGold(event)

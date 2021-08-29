@@ -395,7 +395,7 @@ function ElfKilled(killed)
         end
     end
     
-    PlayerResource:SetCameraTarget(killedID, GameRules.trollHero)
+    PlayerResource:SetCameraTarget(killedID, killed)
     Timers:CreateTimer(3, function()
         PlayerResource:SetCameraTarget(killedID, nil)
     end)
@@ -404,8 +404,11 @@ function ElfKilled(killed)
     args.team = DOTA_TEAM_GOODGUYS
     args.playerID = killedID
     ChooseHelpSide(killedID, args)
-    
-    return 200
+    local bounty = 512
+    if (GameRules:GetGameTime() - GameRules.startTime >= 180) or PlayerResource:GetConnectionState(killedID) ~= 2  then
+        bounty = 50
+    end
+    return bounty
 end
 
 function CheckTrollVictory()
