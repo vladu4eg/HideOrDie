@@ -94,11 +94,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "15"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "15"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "20"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "25"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -119,6 +119,7 @@
 		
 		"VisionDaytimeRange"    "600"                  // Range of vision at night time.
 		"VisionNighttimeRange"    "800"                  // Range of vision at night time.
+
 		"DisableWearables"         "1"
 	}
 	"npc_dota_hero_warlock"{
@@ -154,11 +155,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "10"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "15"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "20"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "25"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "15"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.
@@ -213,11 +214,11 @@
 		
 		//"AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"   "0"                   // Base strength
-		"AttributeStrengthGain"   "20"                   // Strength bonus per level.
+		"AttributeStrengthGain"   "25"                   // Strength bonus per level.
 		"AttributeBaseIntelligence" "0"                   // Base intelligence
-		"AttributeIntelligenceGain" "10"                   // Intelligence bonus per level.
+		"AttributeIntelligenceGain" "15"                   // Intelligence bonus per level.
 		"AttributeBaseAgility"    "0"                   // Base agility
-		"AttributeAgilityGain"    "10"                   // Agility bonus per level.
+		"AttributeAgilityGain"    "15"                   // Agility bonus per level.
 		
 		"BountyXP"          "0"                 // Experience earn.
 		"BountyGoldMin"       "0"                   // Gold earned min.

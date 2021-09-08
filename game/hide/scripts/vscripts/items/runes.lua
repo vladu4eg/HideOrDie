@@ -1,18 +1,30 @@
 function RuneOfStrength(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
-	hero:ModifyStrength(10)
+	if hero:IsElf() then
+		hero:ModifyStrength(2)
+	else
+		hero:ModifyStrength(10)
+	end
 	hero:CalculateStatBonus(true)
 end
 
 function RuneOfAgility(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
-	hero:ModifyAgility(10)
+	if hero:IsElf() then
+		hero:ModifyAgility(2)
+	else
+		hero:ModifyAgility(10)
+	end
 	hero:CalculateStatBonus(true)
 end
 
 function RuneOfIntellect(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
-	hero:ModifyIntellect(10)
+	if hero:IsElf() then
+		hero:ModifyIntellect(2)
+	else
+		hero:ModifyIntellect(10)
+	end
 	hero:CalculateStatBonus(true)
 end
 
@@ -20,11 +32,11 @@ function RuneGold(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
 	local value = 0
 	if hero:IsElf() then
-		PlayerResource:ModifyGold(hero, 1000, true)
-		value = 1000
+		PlayerResource:ModifyGold(hero, 5000, true)
+		value = 5000
 	else
-		PlayerResource:ModifyGold(hero, 100, true)
-		value = 100
+		PlayerResource:ModifyGold(hero, 1000, true)
+		value = 500
 	end
 	SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, event.caster, value, nil )
 end
@@ -33,8 +45,8 @@ function RuneLumber(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
 	local value
 	if hero:IsElf() then
-		PlayerResource:ModifyLumber(hero, 100, true)
-		value = 100
+		PlayerResource:ModifyLumber(hero, 2000, true)
+		value = 5000
 	else
 		PlayerResource:ModifyLumber(hero, 1, true)
 		value = 1

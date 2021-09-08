@@ -311,7 +311,7 @@ function InitializeBuilder(hero)
     PlayerResource:ModifyFood(hero, 0)
     PlayerResource:ModifyWisp(hero, 0)
     hero:SetStashEnabled(false)
-    hero:AddItemByName("item_quelling_blade_data")
+    hero:AddItemByName("item_quelling_blade")
     hero:AddItemByName("item_blink_datadriven")
     if GameRules:GetGameTime() >= BUFF_ENIGMA_TIME then
         hero:AddAbility("troll_warlord_battle_trance_datadriven")
@@ -641,6 +641,9 @@ function trollnelves2:PreStart()
     end
     
     function SetResourceValues()
+        if GameRules.startTime == nil then
+            GameRules.startTime = 1
+        end
     for pID = 0, DOTA_MAX_PLAYERS do
     if PlayerResource:IsValidPlayer(pID) then
     CustomNetTables:SetTableValue("resources",

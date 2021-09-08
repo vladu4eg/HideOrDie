@@ -1,13 +1,17 @@
 "AddonInfo"
 {
   "TeamCount" "2"
-  "maps"      "creeptown spring"
+  "maps"      "creeptown spring hell"
   "IsPlayable"  "1"
   "creeptown"
   {
     "MaxPlayers"                    "14"
   }
   "spring"
+  {
+    "MaxPlayers"                    "14"
+  }
+  "hell"
   {
     "MaxPlayers"                    "14"
   }

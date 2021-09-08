@@ -381,7 +381,7 @@ function GiveWoodGoldForAttackTree (event)
 	if IsServer() then
 		local caster = event.caster
 		PlayerResource:ModifyGold(caster, tonumber(event.Gold))
-		PlayerResource:ModifyLumber(caster, tonumber(event.Wood), true)
+		PlayerResource:ModifyLumber(caster, tonumber(event.Wood))
 	end	
 end
 
@@ -535,7 +535,8 @@ function SpawnUnitOnChannelSucceeded(event)
 			end
 
 			if unit_name == "attacker_10" then
-				unit:AddItemByName("item_aghanims_shard")
+				unit:AddItemByName("item_ultimate_scepter_2")
+				--unit:AddItemByName("item_ultimate_scepter")
 			end
 
 		end
@@ -952,7 +953,7 @@ function BuyRevealArea(event)
 
 	local units = Entities:FindAllByClassname("npc_dota_creature")
 	for _,unit in pairs(units) do
-		unit:AddNewModifier(unit, unit, "modifier_all_vision", {duration=5})
+		unit:AddNewModifier(unit, unit, "modifier_all_vision", {duration=10})
 		local unit_name = unit:GetUnitName();
 		if unit_name == "tower_radar" then
 			unit:ForceKill(false)

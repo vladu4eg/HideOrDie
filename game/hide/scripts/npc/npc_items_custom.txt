@@ -49,6 +49,40 @@
 		}
 	}
 
+		"item_reveal_area"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"AbilityTextureName"            "reveal_area"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"                         "models/props_winter/present.vmdl"
+		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		// Stats        
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"              "0"
+		"AbilityCooldown"				"0.1"
+		"AbilityCastPoint"              "0.0"
+		"AbilityManaCost"               "0"
+		"ItemSellable"					"0"
+		"ItemDroppable"					"1"
+		"ItemPurchasable" 				"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"0"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"5"
+			}
+		}
+	}
+
 	"item_vip"
 	{
 		// General
@@ -4543,12 +4577,14 @@
 	//=================================================================================================================
 	// Quelling Blade
 	//=================================================================================================================
-	"item_quelling_blade_data"
+	"item_quelling_blade"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName"			"topor"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
 
 		"AbilityCastRange"				"200"
@@ -4591,7 +4627,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_ward"			"200"
+				"cast_range_ward"			"800"
 			}
 			"05"
 			{
@@ -4601,11 +4637,11 @@
 		}
 		"OnSpellStart"
 		{
-		"RunScript"
+			"RunScript"
 			{
 				"ScriptFile"	"custom_abilities.lua"
 				"Function"		"GiveWoodGoldForAttackTree"
-				"Gold"			"0"
+				"Gold"			"1"
 				"Wood"			"2"
 			}	
 			"DestroyTrees"
@@ -6685,7 +6721,7 @@
 	{
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		
+		"AbilityTextureName"			"rune_stats"
 		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
 		"Effect"						"particles/rune_lifeinarena_red.vpcf"
 	
@@ -6737,7 +6773,7 @@
 	{
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		
+		"AbilityTextureName"			"rune_stats"
 		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
 		"Effect"						"particles/rune_lifeinarena_green.vpcf"
 	
@@ -6788,7 +6824,7 @@
 	{
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		
+		"AbilityTextureName"			"rune_stats"
 		"Model"							"models/props_gameplay/rune_illusion01.vmdl"
 		"Effect"						"particles/rune_lifeinarena_blue.vpcf"
 	
@@ -6843,7 +6879,8 @@
 	{
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		
+		"AbilityTextureName"			"rune_gold"
+
 		"Model"							"models/props_gameplay/gold_coin001.vmdl"
 		
 		// Item Info
@@ -6891,9 +6928,11 @@
 	//Start of file item_lia_rune_lumber.txt
 	"item_lia_rune_lumber"
 	{
+		"ID"                            "1609"
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		
+		"AbilityTextureName"			"rune_lumber"
+
 		"Model"							"models/props_gameplay/branch.vmdl"
 		
 		// Item Info
@@ -6939,6 +6978,7 @@
 //Start of file item_lia_rune_of_lifesteal.txt
 	    "item_lia_rune_of_lifesteal"
 	{
+		"ID"                            "1610"
 		"BaseClass"                     "item_lua"
 		"ScriptFIle"					"items\runes.lua"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -6994,6 +7034,7 @@
 	//Start of file item_lia_rune_of_luck.txt
 	    "item_lia_rune_of_luck"
 	{
+		"ID"                            "1611"
 		"BaseClass"                     "item_datadriven"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		
@@ -7040,5 +7081,26 @@
 	
 	}
 	//End of file item_lia_rune_of_luck.txt
+	//=================================================================================================================
+	// Scepter
+	//=================================================================================================================
+	"item_ultimate_scepter_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"							"models/props_gameplay/aghanim_scepter.vmdl"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"
+		"ItemShopTags"					"int;str;agi;mana_pool;health_pool;hard_to_tag"
+		"ItemQuality"					"rare"
+		"ItemAliases"					"ags;ultimate;aghanim's scepter;ags"
+		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
+	}
+
+	
+
 
 }

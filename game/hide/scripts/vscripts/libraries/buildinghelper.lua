@@ -421,12 +421,16 @@ function BuildingHelper:OnTreeCut(keys)
         BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
-    local spawnPoint = tree:GetAbsOrigin()	
-	local newItem = CreateItem( "item_lia_rune_lumber", nil, nil )
-	local dropRadius = RandomFloat( 50, 150 )
-	local randRadius = spawnPoint + RandomVector( dropRadius )
-	local drop = CreateItemOnPositionForLaunch( randRadius, newItem )
-	newItem:LaunchLootInitialHeight( false, 0, 150, 0.5, randRadius )
+    local roll_chance = RandomFloat(0, 500)
+    if roll_chance <= CHANCE_DROP_LUMBER then
+        local spawnPoint = tree:GetAbsOrigin()	
+        local newItem = CreateItem( "item_lia_rune_lumber", nil, nil )
+        local dropRadius = RandomFloat( 50, 150 )
+        local randRadius = spawnPoint + RandomVector( dropRadius )
+        CreateItemOnPositionForLaunch( randRadius, newItem )
+        newItem:LaunchLootInitialHeight( false, 0, 150, 0.5, randRadius ) 
+    end
+    
 
     --Create a dummy for clients to be able to detect trees standing and block their grid
     tree.chopped_dummy = CreateUnitByName("npc_dota_units_base2", treePos, false, nil, nil, DOTA_TEAM_NOTEAM)
@@ -445,6 +449,15 @@ DebugPrint("BuildingHelper:FreeGridSquares(2, treePos)")
 		end);
     randTime = nil
     BuildingHelper:FreeGridSquares(2, treePos)
+end
+
+function BuildingHelper:BlockBH()
+    -- Trigger zones named "bh_blocked" will block the terrain for construction
+    local blocked_map_zones = Entities:FindAllByName("*bh_blocked")
+                    -- Check if the position is inside any blocking trigger
+    for _, ent in pairs(blocked_map_zones) do
+        BuildingHelper:IsInsideEntityBounds(ent)
+    end
 end
 
 function BuildingHelper:InitGNV()
@@ -469,15 +482,22 @@ function BuildingHelper:InitGNV()
     local line = {}
     local ASCII_ART = false
     
-    -- Trigger zones named "bh_blocked" will block the terrain for construction
-    local blocked_map_zones = Entities:FindAllByName("*bh_blocked")
-    local entities = Entities:FindAllByClassname("npc_dota_creature")
+   -- local entities = Entities:FindAllByClassname("npc_dota_creature")
     
+    for y = boundY1, boundY2 do
+        if BuildingHelper.Terrain[y] == nil then
+             BuildingHelper.Terrain[y] = {}
+         end
+    end
+    BuildingHelper:BlockBH()
     for y = boundY1, boundY2 do
         local shift = 4
         local byte = 0
-        BuildingHelper.Terrain[y] = {}
+        if BuildingHelper.Terrain[y] == nil then
+            BuildingHelper.Terrain[y] = {}
+        end
         for x = boundX1, boundX2 do
+           -- BuildingHelper:print("y " .. y .. " x" .. x)
             local gridX = GridNav:GridPosToWorldCenterX(x)
             local gridY = GridNav:GridPosToWorldCenterY(y)
             local position = Vector(gridX, gridY, 0)
@@ -488,37 +508,45 @@ function BuildingHelper:InitGNV()
             if BuildingHelper.Settings["UPDATE_TREES"] then
                 terrainBlocked = terrainBlocked and not treeBlocked
             end
-            
+                        --[[
             if not terrainBlocked then
                 -- Check if the position is inside any blocking trigger
                 for _, ent in pairs(blocked_map_zones) do
-                    local triggerBlocked =
-                    BuildingHelper:IsInsideEntityBounds(ent, position)
+                    local triggerBlocked = BuildingHelper:IsInsideEntityBounds(ent, position)
                     if triggerBlocked then
                         terrainBlocked = true
                         break
                     end
                 end
             end
-            if not terrainBlocked then
+
+                if not terrainBlocked then
                 for _, entity in pairs(entities) do
-                    local isInside =
-                    BuildingHelper:IsInsideEntityConstructionArea(entity,
-                    position)
-                    if isInside then
-                        terrainBlocked = true
-                        break
-                    end
+                local isInside =
+                BuildingHelper:IsInsideEntityConstructionArea(entity,
+                position)
+                if isInside then
+                terrainBlocked = true
+                break
                 end
+                end
+                end
+            ]]
+
+           -- BuildingHelper:print("y " .. y .. " x " .. x)
+
+            if BuildingHelper.Terrain[y][x] ~= nil then
+                --BuildingHelper:print("BuildingHelper.Terrain[y][x] == BLOCKED")
+                terrainBlocked = true
             end
-            
+
             if terrainBlocked then
                 BuildingHelper.Terrain[y][x] =
                 BuildingHelper.GridTypes["BLOCKED"]
                 byte = byte + bit.lshift(2, shift)
                 blockedCount = blockedCount + 1
                 if ASCII_ART then line[#line + 1] = '=' end
-                else
+            else
                 BuildingHelper.Terrain[y][x] =
                 BuildingHelper.GridTypes["BUILDABLE"]
                 byte = byte + bit.lshift(1, shift)
@@ -527,7 +555,8 @@ function BuildingHelper:InitGNV()
             end
             
             if treeBlocked then
-                BuildingHelper.Terrain[y][x] = BuildingHelper.GridTypes["BLOCKED"]
+                BuildingHelper.Terrain[y][x] =
+                BuildingHelper.GridTypes["BLOCKED"]
             end
             
             shift = shift - 2
@@ -546,7 +575,7 @@ function BuildingHelper:InitGNV()
             line = {}
         end
     end
-    
+    BuildingHelper:print("local gnv_string = table.concat(gnv, '') ")
     local gnv_string = table.concat(gnv, '')
     
     -- Running-length encoding
@@ -581,7 +610,7 @@ function BuildingHelper:InitGNV()
     -- The construction grid is only known by the server
     BuildingHelper.Grid = BuildingHelper.Terrain
     
-    BuildingHelper.Encoded = gnvRLE_string
+    BuildingHelper.Encoded = BuildingHelper.Encoded .. gnvRLE_string
     BuildingHelper.squareX = squareX
     BuildingHelper.squareY = squareY
     BuildingHelper.minBoundX = boundX1
@@ -3348,23 +3377,45 @@ function BuildingHelper:ClearQueue(builder)
     return towerPos
     end
     
-    -- Used to find if a position is insde the trigger entity bounds
-    function BuildingHelper:IsInsideEntityBounds(entity, location)
+-- Used to find if a position is insde the trigger entity bounds
+function BuildingHelper:IsInsideEntityBounds(entity)
     local origin = entity:GetAbsOrigin()
     local bounds = entity:GetBounds()
     local min = bounds.Mins
     local max = bounds.Maxs
-    local X = location.x
-    local Y = location.y
-    local minX = min.x + origin.x
-    local minY = min.y + origin.y
-    local maxX = max.x + origin.x
-    local maxY = max.y + origin.y
-    local betweenX = X >= minX and X <= maxX
-    local betweenY = Y >= minY and Y <= maxY
+    local minX = min.x + origin.x + 8
+    local minY = min.y + origin.y + 8
+    local maxX = max.x + origin.x - 8
+    local maxY = max.y + origin.y - 8
+    minX = GridNav:WorldToGridPosX(minX)
+    minY = GridNav:WorldToGridPosY(minY)
+
+    maxX = GridNav:WorldToGridPosX(maxX)
+    maxY = GridNav:WorldToGridPosY(maxY)
     
-    return betweenX and betweenY
+    --BuildingHelper:print("minY " .. minY .. " maxY " .. maxY)
+    --BuildingHelper:print("minX " .. minX .. " maxX " .. maxX)
+
+    --BuildingHelper:print("min.y " .. min.y .. " max.y " .. max.y)
+    --BuildingHelper:print("min.x " .. min.x .. " max.x " .. max.x)
+    
+    --BuildingHelper:print("origin.x " .. origin.x .. " origin.y " .. origin.y)
+
+    
+    for y = minY, maxY do
+        for x = minX, maxX do
+            local gridX = GridNav:GridPosToWorldCenterX(x)
+            local gridY = GridNav:GridPosToWorldCenterY(y)
+            --BuildingHelper:print("BuildingHelper.GridTypes[BLOCKED]")
+          -- BuildingHelper:print("gridY " .. gridY .. " gridX " .. gridX)
+          -- BuildingHelper:print("y  " .. y .. " x " .. x)
+            -- BuildingHelper.Grid[y][x] = BuildingHelper.GridTypes["BLOCKED"]
+            BuildingHelper.Terrain[y][x] = BuildingHelper.GridTypes["BLOCKED"]
+           -- BuildingHelper:print("BuildingHelper.Terrain[y][x] " .. BuildingHelper.Terrain[y][x])
+        end
     end
+
+end
     
     function BuildingHelper:IsInsideEntityConstructionArea(entity, location)
     local origin = entity:GetAbsOrigin()

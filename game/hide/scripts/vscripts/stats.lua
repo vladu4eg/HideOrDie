@@ -6,6 +6,9 @@ local isTesting = IsInToolsMode() and false
 Stats.server =  "https://tve3.us/hide/" -- "https://localhost:5001/hide/" --
 
 function Stats.SubmitMatchData(winner,callback)
+	if GameRules.startTime == nil then
+		GameRules.startTime = 1
+	end
 	if not isTesting then
 		if GameRules:IsCheatMode() then 
 			GameRules:SetGameWinner(winner)
@@ -107,8 +110,8 @@ function Stats.SubmitMatchData(winner,callback)
 		end
 	end
 	Timers:CreateTimer(5, function() 
-		SetResourceValues()
 		GameRules:SetGameWinner(winner)
+		SetResourceValues()
 	end)
 end
 

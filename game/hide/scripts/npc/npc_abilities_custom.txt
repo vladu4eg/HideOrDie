@@ -481,7 +481,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"BaseClass"				"ability_datadriven"
 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"		
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"		
 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
 	"AbilityTextureName"			"antimage_mana_break"
 
@@ -500,12 +500,12 @@
 		"01"
 		{
 			"var_type"				"FIELD_FLOAT"
-			"damage_per_burn"		"0.8"
+			"damage_per_burn"		"10"
 		}
 		"02"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"mana_per_hit"			"24"
+			"mana_per_hit"			"20"
 		}
 	}
 
@@ -1597,7 +1597,7 @@
 		"06"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"attribute_bonus_per_level"		"150"
+			"attribute_bonus_per_level"		"250"
 		}	
 	}
 
@@ -3974,7 +3974,7 @@
 	"upgrade_to_tower_radar"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_tower_radar"
+		"AbilityTextureName"			"tower_radar"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -5068,13 +5068,15 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"			"keeper_of_the_light_blinding_light"
 		"MaxLevel"						"1"
-		
+		"ItemName"					"item_reveal_area"
+		"BuyItem"					"1"
+
 		"OnSpellStart"{
 			"RunScript"{
 				"ScriptFile"			"custom_abilities.lua"
 				"Function"				"BuyRevealArea"
 				"Target"				"CASTER"
-				"Amount"				"2"
+				"Amount"				"5"
 			}
 		}
 	}
@@ -6589,12 +6591,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"2048"
+				"gold_cost"			"80000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"4096"
+				"lumber_cost"		"40000"
 			}	
 			"03"
 			{
@@ -8286,6 +8288,17 @@
 		}
 		
 	}
+
+	"food_cost"
+	{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"						"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"			"cheese_icon"
+	"MaxLevel"						"1"
+	}
+
 	"cm_stun"{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
@@ -9488,7 +9501,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"512000"
+				"lumber_cost"		"999999"
 			}	
 			"03"
 			{
@@ -11166,7 +11179,7 @@
 			{
 				"ScriptFile"	"custom_abilities.lua"
 				"Function"		"GiveWoodGoldForAttackTree"
-				"Gold"			"2"
+				"Gold"			"1"
 				"Wood"			"0"
 			}	
 			"DestroyTrees"
@@ -12187,7 +12200,7 @@
 	"FightRecapLevel"				"2"
 	// Casting
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityCastRange"				"150 240 350"
+	"AbilityCastRange"				"175 275 375"
 	"AbilityCastPoint"				"0.3"
 	
 	// Time		
@@ -12257,12 +12270,12 @@
 		"11"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"ward_2_count"			"0 2 0"
+			"ward_2_count"			"0 3 0"
 		}
 		"12"
 		{
 			"var_type"				"FIELD_INTEGER"
-			"ward_3_count"			"0 0 3"
+			"ward_3_count"			"0 0 5"
 		}
 		"13"
 		{
@@ -13434,7 +13447,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"proximity_threshold"				"1.6"
+				"proximity_threshold"				"0"
 			}
 			"03"
 			{
@@ -13856,6 +13869,343 @@
 			}
 		}
 	}
-	
+	//=================================================================================================================
+	// Snapfire Spit Creep
+	//=================================================================================================================
+	"snapfire_spit_creep"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"						"1"
+		"AbilitySound"					"Hero_Snapfire.MortimerBlob.Launch"
 
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_width"		"130"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_radius"			"400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_vision"		"500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_interval"			"0.5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_damage"			"100"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_slow_pct"			"25"
+				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_4"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_ground_duration"	"3.0"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_range"				"0" //"600"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"min_lob_travel_time"	"0.1"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_lob_travel_time"	"2.0"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_linger_duration"	"1.0"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"1.5"
+			}
+			"15"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"min_height_above_lowest"	"150.0"
+			}
+			"16"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"min_height_above_highest"	"100.0"
+			}
+			"17"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"min_acceleration"		"1000.0"
+			}
+			"18"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_acceleration"		"2000.0"
+			}
+		}
+	}
+
+//=================================================================================================================
+	// Snapfire: Gobble Up
+	//=================================================================================================================
+	"snapfire_gobble_up"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"MaxLevel"						"1"
+		"AbilitySound"					"Hero_Snapfire.GobbleUp.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"90"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_time_in_belly"		"60.0"
+				"RequiresScepter"		"0"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+//=================================================================================================================
+	// Ability: Snapfire Mortimer Kisses
+	//=================================================================================================================
+	"snapfire_mortimer_kisses"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Snapfire.MortimerBlob.Launch"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"3000"
+		"AbilityCastPoint"				"0.5"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		// Damage
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"120 110 100"
+		"AbilityDuration"				"6.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_count"		"8"
+				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_speed"		"1300"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_width"		"130"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_radius"			"275"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_impact"		"160 240 320"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_tooltip"		"6.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"projectile_vision"		"500"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"turn_rate"				"75"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_interval"			"0.5"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_damage"			"60 80 100"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"move_slow_pct"			"15 20 25"
+				"LinkedSpecialBonus"	"special_bonus_unique_snapfire_4"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_ground_duration"	"3.0"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"dist_change_speed"		"75"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"min_range"				"600"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"min_lob_travel_time"	"0.8"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"max_lob_travel_time"	"2.0"
+			}
+			"17"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"delay_after_last_projectile"	"0.5"
+			}
+			"18"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"burn_linger_duration"	"1.0"
+			}
+		}	
+	}
+	 	//=================================================================================================================
+	// Ability: Snapfire Special Bonus (Bonus Mortimer Kisses Launched)
+	//=================================================================================================================
+  	"special_bonus_unique_snapfire_1"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"value"				"6"
+				"ad_linked_ability"			"snapfire_mortimer_kisses"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+	"enchantress_untouchable"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"5267"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_attack_speed"		"-350"
+				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_3"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_duration"			"4"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
 }

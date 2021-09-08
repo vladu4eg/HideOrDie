@@ -136,6 +136,7 @@
 		"troll_hut_6"                                                                     "Infernal Hut 6"
 		"troll_hut_7"                                                                     "Infernal Hut 7"
 		"monkey_king"																	  "Хранитель леса"
+		"monkey_king_2"																	  "Хранитель леса 2"
 		
 		"event_boss"																		"Guardian of Crystals"
 		"event_line_boss"																	"Festive stresS_"
@@ -209,9 +210,13 @@
 		"DOTA_Tooltip_modifier_darkness_datadriven_Description"                           ""
 
 
+
 		// ******************** ABILITIES ********************
 		"DOTA_Tooltip_ability_ability_building"                                           "Ability Building"
 		"DOTA_Tooltip_ability_ability_building_Description"                               ""
+		
+		"DOTA_Tooltip_Ability_food_cost"													"Food (Cheese )"
+		"DOTA_Tooltip_Ability_food_cost_Description"										"Увеливает максимальное количество еды (сыра) на 9. Максимум 300 еды (сыра)."
 	
 		"DOTA_Tooltip_ability_build_monkey_king"											"Хранитель леса"
 		"DOTA_Tooltip_ability_build_monkey_king_Description"								"Постройте хранителя леса и вы сможете призвать существ для защиты."
@@ -290,16 +295,16 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Улучшить свой Invisible Guardian!<br>HP:200<br>ARMOR:0"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_8"                                    "Upgrade To Inspiration"
-		"DOTA_Tooltip_ability_upgrade_to_rock_8_Description"                        "Улучшить свой Inspiration!<br>HP:200<br>ARMOR:0"
+		"DOTA_Tooltip_ability_upgrade_to_rock_8_Description"                        "Накладывает Buff на союзников и Debuff на врагов."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Mega Tree Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Улучшить свой Mega Tree Wall!
+		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Улучшить свой Mega Tree Wall!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet LVL 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Улучшить свой Magnet LVL 1!"
+		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "Активное умение спасет вас от ДАЛЬНИХ атак!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_11"                                  "Upgrade To Magnet LVL 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Улучшить свой Magnet LVL 2!"
+		"DOTA_Tooltip_ability_upgrade_to_rock_11_Description"                      "Активное умение спасет вас от ДАЛЬНИХ атак!"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_12"                                  "Upgrade To Demonic Wall 2"
 		"DOTA_Tooltip_ability_upgrade_to_rock_12_Description"                      "Улучшить свой Demonic Wall!<br>HP:20480<br>ARMOR:7"
@@ -494,7 +499,10 @@
 		
 		"DOTA_Tooltip_ability_tower_atk_spd"												"Practise aim"
 		"DOTA_Tooltip_ability_tower_atk_spd_Description"									"Обеспечивает дополнительную скорость атаки с каждым ударом. Дебафф дополнительной скорости атаки действует на врага 10 секунд после того, как последняя автоатака нанесла ему удар. <br/>Bonus attack speed: 7/15/22/27/32/49/56/61/65/70"
-		
+
+		"DOTA_Tooltip_Ability_upgrade_to_tower_radar"									"Tower Radar"
+		"DOTA_Tooltip_Ability_upgrade_to_tower_radar_Description"						"Радар уничтожается, если на вас использовали умение Reveal Area."
+
 		"DOTA_Tooltip_ability_tower_frost_slow"												"Ice arrow"
 		"DOTA_Tooltip_ability_tower_frost_slow_Description"									"Стреляет ледяными стрелами, замедляя врагов при атаки на 1% скорости передвижения и 7 (не процентов) скорости атаки. Суммируется с другими ледяными стрелами. Один заряд длится 3 секунды."
 
@@ -713,6 +721,48 @@
 		"DOTA_Tooltip_ability_gather_lumber_1296_Description"                                "Используйте эту способность на деревья, чтобы начать добывать дерево(lumber). Дает 'Lumber amount' каждые 'Gather interval' секунд. Дерево может быть занято только одним WISP! "
 		"DOTA_Tooltip_ability_gather_lumber_1296_lumber_interval"                            "LUMBER INTERVAL: "
 		
+		"DOTA_Tooltip_ability_train_attacker_teleport_1"                                             "Teleport"
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_Description"                                 "Создайте второй телепорт на другой базе, и вы сможете быстро перемещаться между ними. <br> Если у вас нет второго телепорта, он отправит вас к союзному телепорту. "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_attacker_teleport_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_1"                                            "Train Lumberjack 1"
+		"DOTA_Tooltip_ability_train_wood_worker_1_Description"                                 "Лесоруб добывает дерево(Lumber)!"
+		"DOTA_Tooltip_ability_train_wood_worker_1_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_1_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_2"                                            "Train Lumberjack 2"
+		"DOTA_Tooltip_ability_train_wood_worker_2_Description"                                 "Лесоруб добывает дерево(Lumber)!"
+		"DOTA_Tooltip_ability_train_wood_worker_2_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_2_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_3"                                            "Train Lumberjack 3"
+		"DOTA_Tooltip_ability_train_wood_worker_3_Description"                                 "Лесоруб добывает дерево(Lumber)!"
+		"DOTA_Tooltip_ability_train_wood_worker_3_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_3_unit_count"                                  "UNIT COUNT: "
+
+		"DOTA_Tooltip_ability_train_wood_worker_4"                                            "Train Lumberjack 4"
+		"DOTA_Tooltip_ability_train_wood_worker_4_Description"                                 "Лесоруб добывает дерево(Lumber)!"
+		"DOTA_Tooltip_ability_train_wood_worker_4_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_4_unit_count"                                  "UNIT COUNT: "
+		
+		"DOTA_Tooltip_ability_train_wood_worker_5"                                            "Train Lumberjack 5"
+		"DOTA_Tooltip_ability_train_wood_worker_5_Description"                                 "Лесоруб добывает дерево(Lumber)!"
+		"DOTA_Tooltip_ability_train_wood_worker_5_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_wood_worker_5_unit_count"                                  "UNIT COUNT: "
+
 		"DOTA_Tooltip_ability_train_worker_1"                                             "Train Worker 1"
 		"DOTA_Tooltip_ability_train_worker_1_Description"                                 "Создайте рабочих. Рабочие отлично умеют ремонтировать здания! "
 		"DOTA_Tooltip_ability_train_worker_1_gold_cost"                                   "GOLD COST: "
@@ -1239,8 +1289,8 @@
 		"DOTA_Tooltip_ability_item_dmg_5_gold_cost"                                       "GOLD COST: "
 		"DOTA_Tooltip_ability_item_dmg_5_lumber_cost"                                     "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_item_quelling_blade_data"                                                 "Quelling Blade"
-		"DOTA_Tooltip_ability_item_quelling_blade_datae_Description"                                     ""
+		"DOTA_Tooltip_ability_item_quelling_blade"                                                 "Quelling Blade"
+		"DOTA_Tooltip_ability_item_quelling_blade_Description"                                     "Добывает 2 дерева и 1 золото."
 
 		"DOTA_Tooltip_ability_item_gem"                                                 "Gem of True Sight"
 		"DOTA_Tooltip_ability_item_gem_Description"                                     ""

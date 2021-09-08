@@ -34,7 +34,7 @@ function fakefly(keys)
 
 
 	local treefound = false
-    for _,tree in pairs(GridNav:GetAllTreesAroundPoint(position, 125, true) )  do
+    for _,tree in pairs(GridNav:GetAllTreesAroundPoint(position, 250, true) )  do
     	if tree:IsStanding() then
     		tree:CutDownRegrowAfter(8, unit:GetTeamNumber())
     		treefound = true
