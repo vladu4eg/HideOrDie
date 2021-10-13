@@ -5,9 +5,9 @@ end
 require('settings')
 item_drop = {
 	--{items = {"item_branches"}, chance = 5, duration = 5, limit = 3, units = {} },
-	{items = {"item_vip"}, limit = 1, chance = 1, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
-	{items = {"item_event_birthday"}, limit = 1, chance = 2, units = {"barracks_3"} },
-	{items = {"item_recipe2_arcane_boots_datadriven","item_recipe2_phase_boots_datadriven","item_recipe2_power_treads_datadriven"}, limit = 3, chance = 100, units = {"npc_dota_hero_furion"} },
+	{items = {"item_vip","item_event_desert","item_event_winter","item_event_helheim"}, limit = 3, chance = 50, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
+	{items = {"item_event_birthday"}, limit = 1, chance = 5, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
+	{items = {"item_recipe2_arcane_boots_datadriven","item_recipe2_phase_boots_datadriven","item_recipe2_power_treads_datadriven", "item_recipe2_mega_blade_datadriven"}, limit = 5, chance = 100, units = {"npc_dota_hero_furion"} },
 	{items = {"item_lia_rune_gold", "item_lia_rune_lumber", "item_lia_rune_of_strength", "item_lia_rune_of_agility", "item_lia_rune_of_intellect", "item_lia_rune_of_restoration", "item_lia_rune_of_luck", "item_lia_rune_of_speed", "item_lia_rune_of_lifesteal"}, limit = 50, chance = 500, units = {"npc_dota_hero_nevermore","npc_dota_hero_warlock","npc_dota_hero_night_stalker","npc_dota_hero_furion"} },
 	{items = {"item_lia_rune_lumber"}, limit = 10, chance = 5, units = {"ent_dota_tree"} },
 		

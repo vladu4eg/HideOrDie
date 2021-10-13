@@ -16,7 +16,6 @@ end
 function CDOTA_PlayerResource:SetSelectedHero(playerID, heroName)
     local player = PlayerResource:GetPlayer(playerID)
 	if player == nil then
-		DebugPrint("GameRules.disconnectedHeroSelects[playerID] = heroName " .. heroName)
         GameRules.disconnectedHeroSelects[playerID] = heroName
         return
 	end
@@ -141,7 +140,6 @@ function CDOTA_PlayerResource:ModifyFood(hero, food)
 		food = math.floor(hero.food),
 		maxFood = GameRules.maxFood[playerID],
 	})
-	DebugPrint("maxFood = GameRules.maxFood[playerID] " .. GameRules.maxFood[playerID])
 	end
 end
 

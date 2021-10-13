@@ -328,8 +328,8 @@ function CleanUpUiSchedules() {
 // name is string, like: "IventoryTp"
 function GetKeyBind(name) {
     const context_panel = $.GetContextPanel();
-    context_panel.BCreateChildren('<DOTAHotkey keybind="' + name + '" />');
-
+    //context_panel.BCreateChildren('<DOTAHotkey keybind="' + name + '" />');
+    $.CreatePanelWithProperties("DOTAHotkey", context_panel, "", { keybind: name})
     const key_element = context_panel.GetChild(context_panel.GetChildCount() - 1);
     key_element.DeleteAsync(0);
 

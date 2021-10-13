@@ -1798,7 +1798,7 @@
 		"01"
 		{
 			"var_type"						"FIELD_INTEGER"
-			"presence_armor_reduction"		"-50"
+			"presence_armor_reduction"		"-10"
 		}
 		"02"
 		{
@@ -2144,7 +2144,7 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_attack_range"		"45"
+			"bonus_attack_range"		"80"
 		}
 		"02"
 		{
@@ -5063,12 +5063,12 @@
 		}
 	}
 
-	"buy_reveal_area"{
+	"buy_reveal_area_2"{
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityTextureName"			"keeper_of_the_light_blinding_light"
 		"MaxLevel"						"1"
-		"ItemName"					"item_reveal_area"
+		"ItemName"					"item_reveal_area_2"
 		"BuyItem"					"1"
 
 		"OnSpellStart"{
@@ -5153,12 +5153,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"radius"			"1800"
+				"radius"			"3000"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"duration"			"5"
+				"duration"			"20"
 			}
 			"03"
 			{
@@ -5311,7 +5311,7 @@
 	//-------------------------------------------------------------------------------------------------------------
 	"AbilityCastRange"				"0" // ?? global
 	"AbilityCastPoint"				"3"
-	"AbilityCooldown"				"45"
+	"AbilityCooldown"				"30"
 
 	"precache"
 	{
@@ -6601,7 +6601,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"0"
+				"food_cost"			"50"
 			}	
 			"04"
 			{
@@ -6674,7 +6674,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -6737,7 +6737,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -6800,7 +6800,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -6863,7 +6863,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -6956,7 +6956,103 @@
 			}
 		}
 	}
-	 
+
+	
+
+	"buy_item_lia_troll_vision"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"goblin_scout"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_lia_troll_vision"
+		"BuyItem"					"1"
+				
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+
+	}
+
+	"buy_item_recipe2_mega_blade_datadriven"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"custom/lia_blade_of_incorporeality"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_recipe2_mega_blade_datadriven"
+		"BuyItem"					"1"
+				
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+
+	}
+
+	"buy_item_recipe2_power_treads_datadriven"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"item_power_treads"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_recipe2_power_treads_datadriven"
+		"BuyItem"					"1"
+				
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+
+	}
+
+	"buy_item_recipe2_phase_boots_datadriven"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"item_boots_2"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_recipe2_phase_boots_datadriven"
+		"BuyItem"					"1"
+				
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+
+	}
+	"buy_item_recipe2_arcane_boots_datadriven"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"item_arcane_boots"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"MaxLevel"					"1"
+		"ItemName"					"item_recipe2_arcane_boots_datadriven"
+		"BuyItem"					"1"
+				
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"BuyItem"
+			}
+		}
+
+	}
+
 	"buy_item_dmg_1"
 	{
 		"BaseClass"					"ability_datadriven"
@@ -9516,7 +9612,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -9580,7 +9676,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -9644,7 +9740,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"0"
+				"wisp_cost"			"1"
 			}
 		}
 	 
@@ -10894,17 +10990,17 @@
 		"01"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"radius"					"620"
+			"radius"					"700"
 		}
 		"02"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_damage"				"200"
+			"bonus_damage"				"300"
 		}
 		"03"
 		{
 			"var_type"					"FIELD_INTEGER"
-			"bonus_night_vision"		"620"
+			"bonus_night_vision"		"1100"
 		}
 	}
 
@@ -11775,7 +11871,7 @@
 
 	// Cost
 	//-------------------------------------------------------------------------------------------------------------
-	"AbilityManaCost"				"140 240 340"
+	"AbilityManaCost"				"140 240 1000"
 
 	// Special
 	//-------------------------------------------------------------------------------------------------------------
@@ -11794,7 +11890,7 @@
 		"03"
 		{
 			"var_type"			"FIELD_INTEGER"
-			"bolt_aoe"			"255 350 900"
+			"bolt_aoe"			"255 450 900"
 		}
 		"04"
 		{
@@ -13430,7 +13526,8 @@
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"180 120 90"
-	
+		"AbilityCharges"				"1"
+		"AbilityChargeRestoreTime"		"23"
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"500 800 1000"
@@ -13473,6 +13570,9 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}	
 	
+
+	
+
 //=================================================================================================================
 	// Tidehunter: Ravage
 	//=================================================================================================================
@@ -13480,7 +13580,6 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"5121"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
@@ -13501,7 +13600,7 @@
 
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"					"10 20 25"
+		"AbilityDamage"					"10 20 40"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -13536,7 +13635,6 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"5288"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
@@ -13733,8 +13831,8 @@
             {
                 "Properties"
                 {
-                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "85"
-                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "2"
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "-45"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "-100"
                 }
 
                 "IsDebuff" "0"
@@ -14208,4 +14306,77 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
+
+//=================================================================================================================
+	// Silencer: Last Word
+	//=================================================================================================================
+	"silencer_last_word"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"AbilitySound"					"Hero_Silencer.LastWord.Target"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastRange"				"900"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"99"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.3"	// Applies multiple modifiers
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"1000"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"int_multiplier"	"3"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_4"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"debuff_duration"	"4"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_2"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"	"3"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_radius"		"650"
+				"RequiresScepter"			"1"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_bonus_damage"		"0"
+				"RequiresScepter"			"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
+
 }

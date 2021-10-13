@@ -23,7 +23,6 @@ function CDOTA_BaseNPC:ClearInventoryCM()
 	local blink = self:FindItemInInventory("item_blink_datadriven")
 	for i=0, item_count do
 		local item = self:GetItemInSlot(i)
-		DebugPrint(item)
 		if blink ~= item then
 			self:RemoveItem(item)
 		end
@@ -53,7 +52,6 @@ function CDOTA_BaseNPC:ClearInventoryBlink()
 	local blink = self:FindItemInInventory("item_blink_datadriven")
 	for i=0, item_count do
 		local item = self:GetItemInSlot(i)
-		DebugPrint(item)
 		if blink == item then
 			self:RemoveItem(item)
 		end

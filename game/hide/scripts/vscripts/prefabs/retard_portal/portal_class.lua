@@ -20,11 +20,9 @@ function CRetardPortal:AddPathCornerPortalIn(entity)
 end
 
 function CRetardPortal:OnPortalTouch(portal, unit)
-    DebugPrint(self.currentTriggerPortalName)
     if unit:HasModifier("modifier_retard_portal_ignore") then
         return
     end
-    DebugPrint(self.arUnitsInPortal[unit])
     --if self.arUnitsInPortal[unit] ~= nil then
     --    self.arUnitsInPortal[unit] = nil
    --     return
@@ -39,7 +37,6 @@ function CRetardPortal:OnPortalTouch(portal, unit)
    -- if self.closedPortal[unit] == nil then 
     --    self.closedPortal[unit] = ""
    -- end
-	DebugPrint(wws)
 
     local portalOut = Entities:FindByName(nil, wws) --строка ищет как раз таки нашу точку pnt1
     

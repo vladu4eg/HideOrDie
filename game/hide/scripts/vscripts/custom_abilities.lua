@@ -77,6 +77,21 @@ function ItemEventStresS(event)
 	end
 end
 
+function ItemEventHelheim(event)
+	local data = {}
+	local caster = event.caster
+	local playerID = caster:GetPlayerOwnerID()
+	data.SteamID = tostring(PlayerResource:GetSteamID(playerID))
+	data.Num = "29"
+	data.Srok = "01/09/2020"
+	
+	if GameRules.PlayersCount >= MIN_RATING_PLAYER then
+		Stats.GetVip(data, callback)
+		local item = caster:FindItemInInventory("item_event_helheim")
+		caster:RemoveItem(item)
+	end
+end
+
 function ItemEventDesert(event)
 	local data = {}
 	local caster = event.caster
@@ -93,7 +108,6 @@ function ItemEventDesert(event)
 end
 
 function ItemEventWinter(event)
-	DebugPrintTable(event.ability)
 	local data = {}
 	local caster = event.caster
 	local playerID = caster:GetPlayerOwnerID()
@@ -248,12 +262,9 @@ function build_tree( event )
 	
 	local treePos = Vector(point.x, point.y, 0)
     local tree -- Figure out which tree was cut
-	DebugPrint("kol " .. #BuildingHelper.AllTrees)
-	DebugPrint(treePos)
     for _, t in pairs(BuildingHelper.AllTrees) do
         local pos = t:GetAbsOrigin()
         if IsInsideBoxEntity2(point, pos) then
-			DebugPrint("in")
 			BuildingHelper.TreeDummies[t:GetEntityIndex()] = nil
             UTIL_Remove(t.chopped_dummy)
 			--BuildingHelper:BlockGridSquares(2, 2, pos)
@@ -268,7 +279,6 @@ function TeleportTower( event )
 	local visionRadius = event.Radius
 	local playerID = caster:GetPlayerOwnerID()
 	local unitPos = Vector(point.x, point.y, 0)
-	DebugPrint(unitPos)
 	local nameTeleport2
 	local secondTeleport = nil
 	local helpTeleport = nil
@@ -276,13 +286,9 @@ function TeleportTower( event )
 	local units = Entities:FindAllByClassname("npc_dota_creature")
     for _, unit in pairs(units) do
 		unit_name = unit:GetUnitName()
-		DebugPrint("unit_name" .. unit_name)
-		DebugPrint("playerID" .. playerID)
-		DebugPrint("caster:GetPlayerOwnerID() " .. caster:GetPlayerOwnerID())
 		if string.match(unit_name,"attacker_teleport_1")  and playerID == unit:GetPlayerOwnerID() and caster ~= unit then
 			secondTeleport = unit
 			helpTeleport = nil
-			DebugPrint("secondTeleport " .. secondTeleport:GetUnitName())
 			break
 		elseif string.match(unit_name,"attacker_teleport_1")  and playerID ~= unit:GetPlayerOwnerID() and caster ~= unit then 
 			helpTeleport = unit
@@ -307,7 +313,6 @@ function TeleportTower( event )
 			end
 		end	
 	else
-		DebugPrint("no two teleport")
 	end
 end
 
@@ -352,8 +357,9 @@ function RevealArea( event )
 	if IsServer() then
 		local caster = event.caster
 		local point = event.target_points[1]
-		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*2.5 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
-		local visionDuration = string.match(GetMapName(),"creeptown") and event.Duration * 1.5 or event.Duration
+		local visionRadius = string.match(GetMapName(),"creeptown") and event.Radius*3 or string.match(GetMapName(),"hell") and event.Radius*3 or string.match(GetMapName(),"arena") and event.Radius*0.58 or event.Radius
+		-- local visionDuration = string.match(GetMapName(),"creeptown") and event.Duration * 2 or event.Duration
+		local visionDuration = event.Duration
 		AddFOWViewer(caster:GetTeamNumber(), point, visionRadius, visionDuration, false)
 		local units = FindUnitsInRadius(caster:GetTeamNumber(), point , nil, visionRadius , DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_ALL , DOTA_UNIT_TARGET_FLAG_NONE, 0 , false)
 			for _,unit in pairs(units) do
@@ -429,7 +435,6 @@ function ExchangeLumber(event)
 		
 		--Buy wood
 		if amount > 0 then
-			DebugPrint("Buying " .. amount .. " wood for " .. price .. " gold!")
 			if price > PlayerResource:GetGold(playerID) then
 				SendErrorMessage(playerID, "#error_not_enough_gold")
 				return false
@@ -445,7 +450,6 @@ function ExchangeLumber(event)
 			else
 			amount = -amount
 			price = price + increasePrice
-			DebugPrint("Selling " .. amount .. " wood for " .. price .. " gold!")
 			if amount > PlayerResource:GetLumber(playerID) then
 				SendErrorMessage(playerID, "#error_not_enough_lumber")
 				return false
@@ -532,6 +536,10 @@ function SpawnUnitOnChannelSucceeded(event)
 					--		wearables:RemoveWearables(unit)
 					--		UpdateModel(unit, "models/gold_wisp.vmdl", 1)     
 				end
+			end
+
+			if unit_name ~= "attacker_teleport_1" and unit_name ~= "attacker_9" and unit_name ~= "wood_worker_5" and unit_name ~= "attacker_8" then
+					unit:AddNewModifier(unit, nil, "modifier_kill", {duration = 300})
 			end
 
 			if unit_name == "attacker_10" then
@@ -671,7 +679,6 @@ end
 
 function CancelGather(event)
 	if IsServer() then
-		DebugPrint("Cancel gather---------------------------------------------------------------------")
 		local caster = event.caster
 		local ability = event.ability
 		caster:RemoveModifierByName("modifier_gathering_lumber")
@@ -690,7 +697,6 @@ end
 
 function CancelGatherWisp(event)
 	
-	DebugPrint("Cancel gather---------------------------------------------------------------------")
   	local caster = event.caster
     local ability = event.ability
 	

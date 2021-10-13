@@ -329,7 +329,6 @@ function BuildingHelper:ParseKV()
                 elseif info["BuyItem"] then
                 local itemName = info["ItemName"]
                 local bonus_attr
-                DebugPrint(itemName)
                 if GetItemKV(itemName)["AbilitySpecial"]["01"] then
                     for key, value in pairs(
                         GetItemKV(itemName)["AbilitySpecial"]["01"]) do
@@ -411,13 +410,11 @@ function BuildingHelper:OnTreeCut(keys)
             break
         end
     end
-    DebugPrint("Test1")
     if not tree then
         BuildingHelper:print("ERROR: OnTreeCut couldn't find a tree for pos " ..
         treePos.x .. "," .. treePos.y)
         return
     elseif tree.chopped_dummy then
-        DebugPrint("elseif tree.chopped_dummy then")
         BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
         UTIL_Remove(tree.chopped_dummy)
     end
@@ -437,13 +434,11 @@ function BuildingHelper:OnTreeCut(keys)
     tree.chopped_dummy:AddNewModifier(tree.chopped_dummy, nil, "modifier_tree_cut", {})
     BuildingHelper.TreeDummies[tree:GetEntityIndex()] = tree.chopped_dummy
     
-DebugPrint("BuildingHelper:FreeGridSquares(2, treePos)")
 	local randTime = RandomInt( RESPAWN_TREE_TIME_MIN, RESPAWN_TREE_TIME_MAX )
 		Timers:CreateTimer(randTime, function()
             if IsValidEntity(tree.chopped_dummy) then
                 BuildingHelper.TreeDummies[tree:GetEntityIndex()] = nil
                 UTIL_Remove(tree.chopped_dummy)
-                DebugPrint("delete")
                -- BuildingHelper:BlockGridSquares(2, 2, treePos)
             end
 		end);
@@ -1237,7 +1232,7 @@ function BuildingHelper:SetupBuildingTable(abilityName, builderHandle)
         fModelRotation = GetUnitKV(unitName).ModelRotation or 0
     end
     buildingTable:SetVal("ModelRotation", fModelRotation)
-    DebugPrint("Super unit name - " .. unitName)
+
     local requiresrepair = GetUnitKV(unitName).RequiresRepair or 0
     buildingTable:SetVal("RequiresRepair", requiresrepair)
     
@@ -2653,9 +2648,6 @@ function IsInsideBaseArea(unit, location, nameBuilding, build)
             end
             if GameRules.PlayersBase[playerID] == nil and nameBuilding == "flag" and build then
                 GameRules.PlayersBase[playerID] = baseIndex
-                DebugPrint("Your Base " .. baseIndex)
-                DebugPrint("Your ID " .. playerID)
-                DebugPrintTable(GameRules.base)
                 return true
             else 
                 return true

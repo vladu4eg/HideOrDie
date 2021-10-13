@@ -69,17 +69,17 @@ function trollnelves2:GameSetup()
     if IsServer() then
         for pID = 0, DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
-                --PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
-               -- PlayerResource:SetSelectedHero(pID, ELF_HERO)
+                PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
+                PlayerResource:SetSelectedHero(pID, ELF_HERO)
                 GameRules.Score[pID] = 0
                 GameRules.PlayersFPS[pID] = false
                 local steam = tostring(PlayerResource:GetSteamID(pID))
                 Stats.RequestBonusTroll(pID, steam, callback)
-                GameRules.PlayersCount = GameRules.PlayersCount + 1
             end
         end
-        DebugPrint("count player " .. GameRules.PlayersCount)
         Timers:CreateTimer(TEAM_CHOICE_TIME, function()
+            GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
+            GameRules:SendCustomMessage("<font color='#00FFFF '> Number of players: " .. GameRules.PlayersCount .. "</font>" ,  0, 0)
             SelectHeroes()
             GameRules:FinishCustomGameSetup()
         end)
@@ -244,24 +244,27 @@ function InitializeBadHero(hero)
     end)
     
     -- Give small flying vision around hero to see elf walls/rocks on highground
-    Timers:CreateTimer(function()
-        if not hero or hero:IsNull() then return end
-        if hero:IsAlive() then
-            AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 50, 0.1, false)
-        end
-        return 0.1
-    end)
+--    Timers:CreateTimer(function()
+ --       if not hero or hero:IsNull() then return end
+--        if hero:IsAlive() then
+ --           AddFOWViewer(hero:GetTeamNumber(), hero:GetAbsOrigin(), 50, 0.1, false)
+ --       end
+ --       return 0.1
+ --   end)
     
     Timers:CreateTimer(BUFF_XP1_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
         local abil = hero:FindAbilityByName("reveal_area")
         abil:EndCooldown()
+        hero:CalculateStatBonus(true)
     end)  
     Timers:CreateTimer(BUFF_XP2_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+        hero:CalculateStatBonus(true)
     end)  
     Timers:CreateTimer(BUFF_XP3_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
+        hero:CalculateStatBonus(true)
     end) 
     local abil2 = hero:FindAbilityByName("reveal_area")
     abil2:StartCooldown(BUFF_XP1_TIME)
@@ -327,7 +330,7 @@ function InitializeBuilder(hero)
             RESPAWN_TREE_TIME_MAX = RESPAWN_TREE_TIME_LAST_MAX
         end
     end)  
-    
+    hero:CalculateStatBonus(true)
 end
 
 function InitializeTroll(hero)
@@ -442,7 +445,7 @@ function InitializeTroll(hero)
         end
         return 0.1
     end)    
-    
+    hero:CalculateStatBonus(true)
 end
 
 function InitializeAngel(hero)
@@ -450,6 +453,7 @@ function InitializeAngel(hero)
     --if not string.match(GetMapName(),"halloween") then 
     --    hero:RemoveAbility("silence_datadriven")
     --end
+    hero:CalculateStatBonus(true)
 end
 
 function InitializeWolf(hero)
@@ -470,6 +474,7 @@ function InitializeWolf(hero)
     if GameRules.trollHero.bear ~= nil then
         hero:SetControllableByPlayer(playerID, false)
     end
+    hero:CalculateStatBonus(true)
 end
 
 function trollnelves2:PreStart()
@@ -485,6 +490,17 @@ function trollnelves2:PreStart()
                 duration = 1
             })
             gameStartTimer = gameStartTimer - 1
+            local trollCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
+            for i = 1, trollCount do
+            local pID = PlayerResource:GetNthPlayerIDOnTeam(DOTA_TEAM_BADGUYS, i)
+                if PlayerResource:IsValidPlayerID(pID) then
+                    local hero = PlayerResource:GetSelectedHeroEntity(pID)
+                    if hero ~= nil then
+                        PlayerResource:SetGold(hero , 0)
+                    end
+                end
+            end
+            
             return 1
             else
             
@@ -537,7 +553,7 @@ function trollnelves2:PreStart()
                             Notifications:ClearBottomFromAll()
                             Notifications:BottomToAll(
                                 {
-                                    text = "Troll spawns in " .. trollSpawnTimer,
+                                    text = "Infernals spawns in " .. trollSpawnTimer,
                                     style = {color = '#E62020'},
                                     duration = 1
                                 })
@@ -549,7 +565,7 @@ function trollnelves2:PreStart()
                     Notifications:ClearBottomFromAll()
                     Notifications:BottomToAll(
                         {
-                            text = "Troll hasn't spawned yet!Resetting!",
+                            text = "Infernals hasn't spawned yet!Resetting!",
                             style = {color = '#E62020'},
                             duration = 1
                         })

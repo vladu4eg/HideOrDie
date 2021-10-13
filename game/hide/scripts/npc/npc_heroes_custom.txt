@@ -40,9 +40,9 @@
 	    "AttributeBaseAgility"    "0"                   // Base agility
 	    "AttributeAgilityGain"    "0"                   // Agility bonus per level.
 	
-	    "BountyXP"          "250"                 // Experience earn.
-	    "BountyGoldMin"       "100"                   // Gold earned min.
-	    "BountyGoldMax"       "600"                   // Gold earned max.
+	    "BountyXP"          "1000"                 // Experience earn.
+	    "BountyGoldMin"       "500"                   // Gold earned min.
+	    "BountyGoldMax"       "3000"                   // Gold earned max.
 	
 	    //"BoundsHullName"      "DOTA_HULL_SIZE_SMALL"
 	    //"RingRadius"        "70"
@@ -109,7 +109,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "380"                 // Speed.
+		"MovementSpeed"       "385"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.
@@ -170,7 +170,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "380"                 // Speed.
+		"MovementSpeed"       "385"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.
@@ -229,7 +229,7 @@
 		"CollisionSize"			"48"
 		
 		"MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"       "380"                 // Speed.
+		"MovementSpeed"       "385"                 // Speed.
 		"MovementTurnRate"      "1.0"                 // Turning rate.
 		
 		"StatusHealth"        "12000"                 // Base health.
@@ -242,9 +242,9 @@
 		"DisableWearables"         "1"
 	}
 
-	"npc_dota_hero_crystal_maiden"{
-		"override_hero"     "npc_dota_hero_crystal_maiden"
-		"SoundSet"			"Hero_Crystal_Maiden"
+	"npc_dota_hero_necrolyte"{
+		"override_hero"     "npc_dota_hero_necrolyte"
+		"SoundSet"			"Hero_Necrolyte"
 		"Model"					"models/items/furion/treant_stump.vmdl"
 		"ModelScale"             "0.6"
 		"AbilityLayout"     "4"

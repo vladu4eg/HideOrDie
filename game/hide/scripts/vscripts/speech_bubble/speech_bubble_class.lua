@@ -24,11 +24,9 @@ function CTvESpeechBubble:Init()
 end
 
 function CTvESpeechBubble:SetVisible(activator, name, visible)
-    DebugPrint("CTvESpeechBubble:SetVisible")
     if string.len(name) == 0 then
         return
     end
-    DebugPrint(name)
     local speech = self.speechList[name]
     if speech ~= nil then
         local playerId = activator:GetPlayerOwnerID()

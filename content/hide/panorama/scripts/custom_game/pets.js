@@ -1,7 +1,7 @@
-var names = new Array("TOP1 AUTUMN", "TOP1 WINTER ", "TOP1 SPRING", "TOP1 SUMMER", "PET LVL 1", "PET LVL 2", "PET LVL 3", "PET LVL 4", "PET LVL 5", "PET LVL 6", "DESERT EVENT", "WINTER EVENT", "SPRING EVENT", "SUMMER EVENT", "DISCORD NITRO");
+var names = new Array("TOP1 AUTUMN", "TOP1 WINTER ", "TOP1 SPRING", "TOP1 SUMMER", "PET LVL 1", "PET LVL 2", "PET LVL 3", "PET LVL 4", "PET LVL 5", "PET LVL 6", "DESERT EVENT", "WINTER EVENT", "SPRING EVENT", "SUMMER EVENT", "MEDIA", " FAVORITE GIRLS");
 					//        1              2                  3          4            5           6         7           8             9          10            11              12               13             14              15          16                     17       18           19           20         21             22          23        24       25              26         27               28                29              30             31           32         33                 34                35                 36
-var needs = new Array("#ptop1autumn", "#ptop1winter", "#ptop1spring", "#ptop1summer", "#ppatron1", "#ppatron2", "#ppatron3", "#ppatron4", "#ppatron5", "#ppatron6", "#peventdesert", "#peventwinter", "#peventspring", "#peventsummer", "#discordnitro");
-var poriadok = new Array( 0,1,  2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14);//"#birthday2"
+var needs = new Array("#ptop1autumn", "#ptop1winter", "#ptop1spring", "#ptop1summer", "#ppatron1", "#ppatron2", "#ppatron3", "#ppatron4", "#ppatron5", "#ppatron6", "#peventdesert", "#peventwinter", "#peventspring", "#peventsummer", "#discordnitro", "#grils");
+var poriadok = new Array( 0,1,  2, 3, 4, 5, 6, 7, 8,9,10,11,12,13,14,15);//"#birthday2"
 					
 function UpdateParticles( table_name, key, data )
 {
@@ -25,6 +25,23 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = data[poriadok[x-1]+1];
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+                            //    $.CreatePanelWithProperties(`Panel`, $("#NewPartButt"+myint), `NewTooltip${myint}`, {
+                           //         class: `NewTooltip`,
+                         //           onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                        //            onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                         //       });
+                            }
+                            else
+                            {
+                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                             //   $.CreatePanelWithProperties(`Panel`, $("#NewPartButt"+myint), `NewTooltip${myint}`, {
+                            //        class: `NewTooltip`,
+                            //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                            //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                            //    });
+                            }
                             myint = myint + 1;
                         }
                         else 
@@ -33,6 +50,23 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+                           //     $.CreatePanelWithProperties(`Panel`, $("#NewPartButt"+myint), `NewTooltip${myint}`, {
+                            //        class: `NewTooltip`,
+                           //         onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                           //         onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                             //   });
+                            }
+                            else
+                            {
+                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                            //    $.CreatePanelWithProperties(`Panel`, $("#NewPartButt"+myint), `NewTooltip${myint}`, {
+                            //        class: `NewTooltip`,
+                            //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                            //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                            //    });
+                            }
                             myint = myint + 1;
                         }
                     }
@@ -43,6 +77,23 @@ function UpdateParticles( table_name, key, data )
                             $("#NAPartButt"+myint).visible = true;
                             $("#napartname"+myint).text = names[poriadok[x-1]];
                             $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+                            //    $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                            //        class: `NewTooltip`,
+                            //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                           //         onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                            //    });
+                            }
+                            else
+                            {
+                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                             //   $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                             //       class: `NewTooltip`,
+                             //       onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                            //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                            //    });
+                            }
                             myint = myint + 1;
                         }
                     }
@@ -54,6 +105,23 @@ function UpdateParticles( table_name, key, data )
                         $("#NAPartButt"+myint).visible = true;
                         $("#napartname"+myint).text = names[poriadok[x-1]];
                         $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                        if ($("#NewTooltip"+myint) == null)
+                        {
+                        //    $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                        //        class: `NewTooltip`,
+                        //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                        //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                         //   });
+                        }
+                        else
+                        {
+                            $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                        //    $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                        //        class: `NewTooltip`,
+                        //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                        //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                         //   });
+                        }
                         myint = myint + 1;
                     }
                 }
@@ -68,6 +136,23 @@ function UpdateParticles( table_name, key, data )
                     $("#NAPartButt"+myint).visible = true;
                     $("#napartname"+myint).text = names[poriadok[x-1]];
                     $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                    if ($("#NewTooltip"+myint) == null)
+                    {
+                    //    $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                   //         class: `NewTooltip`,
+                   //         onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                    //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                    //    });
+                    }
+                    else
+                    {
+                    //    $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                    //    $.CreatePanelWithProperties(`Panel`, $("#NAPartButt"+myint), `NewTooltip${myint}`, {
+                    //        class: `NewTooltip`,
+                    //        onmouseover: `UIShowCustomLayoutParametersTooltip(ParticleTooltip${myint},file://{resources}/layout/custom_game/pets_tooltips.xml,num=${poriadok[x-1]+1}`, 
+                    //        onmouseout: `UIHideCustomLayoutTooltip(ParticleTooltip${myint})`,
+                    //    });
+                    }
                     myint = myint + 1;
                 }
             }
@@ -134,21 +219,30 @@ function SetSelectedParticles(data)
     for (var x = 1; x < names.length+1; x = x + 1)
     {
         var stl = (100*(x-1)) + 20
-        $("#CustomUIContainer").BCreateChildren("<Button id='NewPartButt"+x+"' class='NewPartButt' onactivate='SelectPart("+x+");' style='margin-top:"+stl+"px;'/>");// onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip,file://{resources}/layout/custom_game/pets_tooltips.xml,num="+x+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip)' />");
-        $("#NewPartButt"+x).BCreateChildren("<Image id='pereg"+x+"' src='file://{images}/custom_game/all/st.png' style='width:5px; margin-top:0px; margin-left:150px;'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Image id='partapngb"+x+"' src='file://{images}/custom_game/all/activbutt.png'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='NewPartNum"+x+"' text='0'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='partname"+x+"' text='Название эффекта' style='margin-top:20px; margin-left:10px;'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='partnote"+x+"' text='Описание/причина выдачи/примечание' style='margin-top:5px; margin-left:180px;'/>");
+        $.CreatePanelWithProperties(`Button`, $("#CustomUIContainer"), `NewPartButt${x}`, {
+            class: `NewPartButt`,
+            style: `margin-top:${stl}px;`,
+            onactivate: `SelectPart(${x})`, 
+        });
+        $.CreatePanelWithProperties("Image", $("#NewPartButt"+x), `pereg${x}`, { src:"file://{images}/custom_game/all/st.png", style: "width:5px; margin-top:0px; margin-left:150px;" });
+        $.CreatePanelWithProperties("Image", $("#NewPartButt"+x), `partapngb${x}`, { src: "file://{images}/custom_game/all/activbutt.png"});   
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `NewPartNum${x}`, {text: '0' });
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `partname${x}`, { style: "margin-top:20px; margin-left:10px;", text: "Название эффекта" });
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `partnote${x}`, { style: "margin-top:5px; margin-left:180px;", text: "Описание/причина выдачи/примечание" });
+
 
         
         $("#NewPartButt"+x).visible = false;
         $("#NewPartNum"+x).visible = false;
         $("#partapngb"+x).visible = false;
-        $("#CustomUIContainer").BCreateChildren("<Button id='NAPartButt"+x+"' class='NAPartButt' style='margin-top:"+stl+"px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Image id='napereg"+x+"' src='file://{images}/custom_game/all/st.png' style='width:5px; margin-top:0px; margin-left:150px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Label id='napartname"+x+"' text='Название эффекта' style='margin-top:20px; margin-left:10px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Label id='napartnote"+x+"' text='Описание/причина выдачи/примечание' style='margin-top:5px; margin-left:180px;'/>");
+        $.CreatePanelWithProperties(`Button`, $("#CustomUIContainer"), `NAPartButt${x}`, {
+            class: `NAPartButt`,
+            style: `margin-top:${stl}px;`,
+            onactivate: `SelectPart(${x})`, 
+        });
+        $.CreatePanelWithProperties("Image", $("#NAPartButt"+x), `napereg${x}`, { src: "file://{images}/custom_game/all/st.png", style: 'width:5px; margin-top:0px; margin-left:150px;'});  
+        $.CreatePanelWithProperties("Label", $("#NAPartButt"+x), `napartname${x}`, { style: "margin-top:20px; margin-left:10px;", text: "Название эффекта" });
+        $.CreatePanelWithProperties("Label", $("#NAPartButt"+x), `napartnote${x}`, { style: "margin-top:5px; margin-left:180px;", text: "Описание/причина выдачи/примечание" });
         $("#NAPartButt"+x).visible = false;
     }
     CustomNetTables.SubscribeNetTableListener( "Pets_Tabel", UpdateParticles );

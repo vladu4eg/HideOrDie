@@ -1131,7 +1131,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"60"
+		"Limit"						"40"
 		"StartingBuilding"          "1"
 		"BountyXP"					"50"		// Experience earn.
 		"BountyGoldMin"				"10"		// Gold earned min.
@@ -1145,7 +1145,7 @@
 	        "Count"     "4"
 	        "1"{
 				"unit_name"			"rock_2"
-				"gold_cost"			"512"
+				"gold_cost"			"128"
 				"lumber_cost"		"0"
 			}
 	        "2"{
@@ -1230,7 +1230,7 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_3"
-				"gold_cost"			"1024"
+				"gold_cost"			"512"
 				"lumber_cost"		"0"
 			}
 	    }
@@ -1375,7 +1375,7 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"rock_5"
-				"gold_cost"			"5000"
+				"gold_cost"			"2048"
 				"lumber_cost"		"128"
 			}
 	    }
@@ -1575,9 +1575,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-		"BountyXP"					"50"		// Experience earn.
-		"BountyGoldMin"				"10"		// Gold earned min.
-		"BountyGoldMax"				"50"		// Gold earned max.		
+		"BountyXP"					"75"		// Experience earn.
+		"BountyGoldMin"				"25"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.		
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "7"
@@ -1685,7 +1685,7 @@
 		"Ability1"					"dragon_blood_datadriven"
 		"Ability2"					"nevermore_dark_lord_datadriven"
 		"Ability3"					"luna_lunar_blessing_datadriven"
-		"Ability4"					""
+		"Ability4"					"silencer_last_word"
 		"Ability10"					""
 	    
 	    // General
@@ -1694,8 +1694,8 @@
 	    "ArmorPhysical"             "0"
 		"StatusHealth"              "200"
 	    "StatusHealthRegen"         "0"
-	    "StatusMana"                "0"
-	    "StatusManaRegen"           "0"
+	    "StatusMana"                "100"
+	    "StatusManaRegen"           "1"
 	    "MagicalResistance"         "0"
 		
 		"ConstructionSize"          "2"
@@ -1982,13 +1982,13 @@
 	        "Count"     "6"
 	        "1"{
 				"unit_name"			"tower_2"
-				"gold_cost"			"2000"
-				"lumber_cost"		"2000"
+				"gold_cost"			"4000"
+				"lumber_cost"		"4000"
 			}
 			"2"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"26000"
-				"lumber_cost"		"28000"
+				"gold_cost"			"75000"
+				"lumber_cost"		"80000"
 			}
 			"3"{
 				"unit_name"			"true_sight_tower"
@@ -2002,13 +2002,13 @@
 			}
 			"5"{
 				"unit_name"			"tower_radar"
-				"gold_cost"			"64000"
-				"lumber_cost"		"86000"
+				"gold_cost"			"3000"
+				"lumber_cost"		"5000"
 			}
 			"6"{
 				"unit_name"			"rock_8"
 				"gold_cost"			"65000"
-				"lumber_cost"		"10000"
+				"lumber_cost"		"70000"
 			}
 	    }
 		
@@ -2098,8 +2098,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_3"
-				"gold_cost"			"6000"
-				"lumber_cost"		"8000"
+				"gold_cost"			"8000"
+				"lumber_cost"		"10000"
 			}
 	    }
 		
@@ -2192,8 +2192,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_4"
-				"gold_cost"			"10000"
-				"lumber_cost"		"12000"
+				"gold_cost"			"12000"
+				"lumber_cost"		"14000"
 			}
 	    }
 		
@@ -2295,8 +2295,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tower_5"
-				"gold_cost"			"26000"
-				"lumber_cost"		"28000"
+				"gold_cost"			"30000"
+				"lumber_cost"		"32000"
 			}
 	    }
 		
@@ -3354,11 +3354,16 @@
 
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
+		"AbilityLayout"				"10"
 		"Ability1"					"buy_item_book_of_strength"
 		"Ability2"					"buy_item_book_of_agility"
 		"Ability3"					"buy_item_book_of_intelligence"
 		"Ability4"					"buy_item_tome_of_knowledge"
+		"Ability5"					"buy_item_recipe2_power_treads_datadriven"
+		"Ability6"					"buy_item_recipe2_phase_boots_datadriven"
+		"Ability7"					"buy_item_recipe2_arcane_boots_datadriven"
+		"Ability8"					"buy_item_recipe2_mega_blade_datadriven"
+
 	    // General
 	    //-----------------------------
 
@@ -3410,15 +3415,15 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"13"
-		"Ability1"					"buy_item_hp_reg_1"
-		"Ability2"					"buy_item_hp_reg_2"
-		"Ability3"					"buy_item_hp_reg_3"
-		"Ability4"					"buy_item_hp_reg_4"
-		"Ability5"					"buy_item_armor_1"
-		"Ability6"					"buy_item_armor_2"
-		"Ability7"					"buy_item_armor_3"
-		"Ability8"					"buy_item_hp_reg_5"
-		"Ability9"					""
+		"Ability1"					"buy_item_lia_troll_vision"
+		"Ability2"					"buy_item_hp_reg_1"
+		"Ability3"					"buy_item_hp_reg_2"
+		"Ability4"					"buy_item_hp_reg_3"
+		"Ability5"					"buy_item_hp_reg_4"
+		"Ability6"					"buy_item_armor_1"
+		"Ability7"					"buy_item_armor_2"
+		"Ability8"					"buy_item_armor_3"
+		"Ability9"					"buy_item_hp_reg_5"
 		"Ability10"					""
 		"Ability11"					""
 		"Ability12"					""
@@ -3615,7 +3620,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"gain_gold_team"
 		"Ability2"					"fountain_ability"
-		"Ability3"					"buy_reveal_area"
+		"Ability3"					""
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""
@@ -4127,8 +4132,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"                         "50"
-		"BountyGoldMax"                         "100"
+		"BountyGoldMin"                         "500"
+		"BountyGoldMax"                         "1000"
+		"BountyXP"          					"500"                 // Experience earn.
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -6533,6 +6539,79 @@
 	
 		"vscripts"	"AI\TrollHealer.lua"
 	}
+
+			"npc_lia_troll_vision" 
+	{
+		"BaseClass" "npc_dota_creature" 
+		"Model" "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl" 
+		"SoundSet" "n_creep_Melee" 
+		"ModelScale" "0.9" 
+		"Level" "1" 
+	
+	
+	
+	
+		"Ability1" "" 
+		"Ability2" "" 
+	
+	
+	
+	
+		"ArmorPhysical" "2" 
+		"MagicalResistance" "0" 
+	
+	
+	
+		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackDamageMin" "1" 
+		"AttackDamageMax" "10" 
+		"AttackRate" "1" 
+		"AttackAnimationPoint" "0.38" 
+		"AttackAcquisitionRange" "500" 
+		"AttackRange" "100" 
+		"ProjectileModel" "particles/units/heroes/hero_troll_warlord/troll_warlord_base_attack.vpcf" 
+		"ProjectileSpeed" "1200" 
+	
+	
+	
+		"BountyXP" "100" 
+		"BountyGoldMin" "5" 
+		"BountyGoldMax" "5" 
+	
+	
+	
+		"MovementCapabilities" "DOTA_UNIT_CAP_MOVE_GROUND" 
+		"MovementSpeed" "320" 
+		"MovementTurnRate" "0.5" 
+	
+	
+	
+		"StatusHealth" "100" 
+		"StatusHealthRegen" "0" 
+		"StatusMana" "100" 
+		"StatusManaRegen" "0" 
+	
+	
+	
+		"TeamName" "DOTA_TEAM_GOODGUYS" 
+		"CombatClassAttack" "DOTA_COMBAT_CLASS_ATTACK_HERO"
+		"CombatClassDefend" "DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationshipClass" "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		"AttackType"    "pierce"
+		"ArmorType"     "heavy" 
+	
+	
+	
+		"VisionDaytimeRange" "800" 
+		"VisionNighttimeRange" "900" 
+	
+	
+	
+		"HasInventory" "0" 
+	
+	}
+
 		"npc_lia_troll_defender" 
 	{
 		"BaseClass" "npc_dota_creature" 

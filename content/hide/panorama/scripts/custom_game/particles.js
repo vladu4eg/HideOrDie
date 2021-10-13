@@ -25,6 +25,15 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = data[poriadok[x-1]+1];
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
+
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+
+                            }
+                            else
+                            {
+
+                            }
                             myint = myint + 1;
                         }
                         else 
@@ -33,6 +42,14 @@ function UpdateParticles( table_name, key, data )
                             $("#partname"+myint).text = names[poriadok[x-1]];
                             $("#partnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
                             $("#NewPartNum"+myint).text = poriadok[x-1]+1;
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+
+                            }
+                            else
+                            {
+                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                            }
                             myint = myint + 1;
                         }
                     }
@@ -43,6 +60,14 @@ function UpdateParticles( table_name, key, data )
                             $("#NAPartButt"+myint).visible = true;
                             $("#napartname"+myint).text = names[poriadok[x-1]];
                             $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                            if ($("#NewTooltip"+myint) == null)
+                            {
+
+                            }
+                            else
+                            {
+                                $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+                            }
                             myint = myint + 1;
                         }
                     }
@@ -54,6 +79,15 @@ function UpdateParticles( table_name, key, data )
                         $("#NAPartButt"+myint).visible = true;
                         $("#napartname"+myint).text = names[poriadok[x-1]];
                         $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                        if ($("#NewTooltip"+myint) == null)
+                        {
+
+                        }
+                        else
+                        {
+                            $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+
+                        }
                         myint = myint + 1;
                     }
                 }
@@ -68,6 +102,15 @@ function UpdateParticles( table_name, key, data )
                     $("#NAPartButt"+myint).visible = true;
                     $("#napartname"+myint).text = names[poriadok[x-1]];
                     $("#napartnote"+myint).text = $.Localize(needs[poriadok[x-1]]);
+                    if ($("#NewTooltip"+myint) == null)
+                    {
+
+                    }
+                    else
+                    {
+                        $("#NewTooltip"+myint).RemoveAndDeleteChildren();
+
+                    }
                     myint = myint + 1;
                 }
             }
@@ -134,21 +177,36 @@ function SetSelectedParticles(data)
     for (var x = 1; x < names.length+1; x = x + 1)
     {
         var stl = (100*(x-1)) + 20
-        $("#CustomUIContainer").BCreateChildren("<Button id='NewPartButt"+x+"' class='NewPartButt' onactivate='SelectPart("+x+");' style='margin-top:"+stl+"px;'/>");// onmouseover='UIShowCustomLayoutParametersTooltip(ParticleTooltip,file://{resources}/layout/custom_game/particles_tooltips.xml,num="+x+")' onmouseout='UIHideCustomLayoutTooltip(ParticleTooltip)' />");
-        $("#NewPartButt"+x).BCreateChildren("<Image id='pereg"+x+"' src='file://{images}/custom_game/all/st.png' style='width:5px; margin-top:0px; margin-left:150px;'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Image id='partapngb"+x+"' src='file://{images}/custom_game/all/activbutt.png'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='NewPartNum"+x+"' text='0'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='partname"+x+"' text='Название эффекта' style='margin-top:20px; margin-left:10px;'/>");
-        $("#NewPartButt"+x).BCreateChildren("<Label id='partnote"+x+"' text='Описание/причина выдачи/примечание' style='margin-top:5px; margin-left:180px;'/>");
 
-        
+        $.CreatePanelWithProperties(`Button`, $("#CustomUIContainer"), `NewPartButt${x}`, {
+            class: `NewPartButt`,
+            style: `margin-top:${stl}px;`,
+            onactivate: `SelectPart(${x})`, 
+        });
+        $.CreatePanelWithProperties("Image", $("#NewPartButt"+x), `pereg${x}`, { src:"file://{images}/custom_game/all/st.png", style: "width:5px; margin-top:0px; margin-left:150px;" });
+        $.CreatePanelWithProperties("Image", $("#NewPartButt"+x), `partapngb${x}`, { src: "file://{images}/custom_game/all/activbutt.png"});   
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `NewPartNum${x}`, {text: '0' });
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `partname${x}`, { style: "margin-top:20px; margin-left:10px;", text: "Название эффекта" });
+        $.CreatePanelWithProperties("Label", $("#NewPartButt"+x), `partnote${x}`, { style: "margin-top:5px; margin-left:180px;", text: "Описание/причина выдачи/примечание" });
+
+
+
+
+
+
         $("#NewPartButt"+x).visible = false;
         $("#NewPartNum"+x).visible = false;
         $("#partapngb"+x).visible = false;
-        $("#CustomUIContainer").BCreateChildren("<Button id='NAPartButt"+x+"' class='NAPartButt' style='margin-top:"+stl+"px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Image id='napereg"+x+"' src='file://{images}/custom_game/all/st.png' style='width:5px; margin-top:0px; margin-left:150px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Label id='napartname"+x+"' text='Название эффекта' style='margin-top:20px; margin-left:10px;'/>");
-        $("#NAPartButt"+x).BCreateChildren("<Label id='napartnote"+x+"' text='Описание/причина выдачи/примечание' style='margin-top:5px; margin-left:180px;'/>");
+
+        $.CreatePanelWithProperties(`Button`, $("#CustomUIContainer"), `NAPartButt${x}`, {
+            class: `NAPartButt`,
+            style: `margin-top:${stl}px;`,
+            onactivate: `SelectPart(${x})`, 
+        });
+        $.CreatePanelWithProperties("Image", $("#NAPartButt"+x), `napereg${x}`, { src: "file://{images}/custom_game/all/st.png", style: 'width:5px; margin-top:0px; margin-left:150px;'});  
+        $.CreatePanelWithProperties("Label", $("#NAPartButt"+x), `napartname${x}`, { style: "margin-top:20px; margin-left:10px;", text: "Название эффекта" });
+        $.CreatePanelWithProperties("Label", $("#NAPartButt"+x), `napartnote${x}`, { style: "margin-top:5px; margin-left:180px;", text: "Описание/причина выдачи/примечание" });
+
         $("#NAPartButt"+x).visible = false;
     }
     CustomNetTables.SubscribeNetTableListener( "Particles_Tabel", UpdateParticles );
