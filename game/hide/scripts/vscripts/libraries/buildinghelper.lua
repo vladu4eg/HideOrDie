@@ -891,7 +891,7 @@ function BuildingHelper:OrderFilter(order)
                     string.match(
                         EntIndexToHScript(abilityIndex):GetAbilityName(),
                     "upgrade_to") and
-                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[0] then
+                    PlayerResource:GetSelectedHeroEntity(issuerID):GetUnitName() ~= TROLL_HERO[1] then
                     SendErrorMessage(issuerID, "#error_only_troll_can_upgrade")
                     return false
                 end
@@ -2744,6 +2744,22 @@ function BuildingHelper:AddToQueue(builder, location, bQueued)
         if result == false then return end
     end
     
+    if not builder:HasAbility("build_" .. buildingName) then
+        SendErrorMessage(playerID, "#error_take_normal_builder")
+        return
+    end
+
+    if builder.buildingQueue ~= nil then
+        DebugPrint(#builder.buildingQueue)
+        if string.match(buildingName, "gold_mine") and #builder.buildingQueue > 0 then  
+            SendErrorMessage(playerID, "#error_limit_queue_wisp")
+            return
+        elseif #builder.buildingQueue > 20 then
+            SendErrorMessage(playerID, "#error_limit_queue")
+            return
+        end
+    end
+
     BuildingHelper:print("AddToQueue " .. builder:GetUnitName() .. " " ..
         builder:GetEntityIndex() .. " -> location " ..
     VectorString(location))

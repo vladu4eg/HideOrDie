@@ -347,7 +347,7 @@ function UpgradeBuilding( event )
         end
     end)
     if newBuilding:GetUnitName() == "tent_5" or newBuilding:GetUnitName() == "tent_6" then
-        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 9 
+        GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 18 
         PlayerResource:ModifyFood(hero, 0)
     end
 end

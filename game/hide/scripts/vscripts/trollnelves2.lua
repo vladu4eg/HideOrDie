@@ -70,7 +70,7 @@ function trollnelves2:GameSetup()
         for pID = 0, DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
                 PlayerResource:SetCustomTeamAssignment(pID, DOTA_TEAM_GOODGUYS)
-                PlayerResource:SetSelectedHero(pID, ELF_HERO)
+                PlayerResource:SetSelectedHero(pID, ELF_HERO[1])
                 GameRules.Score[pID] = 0
                 GameRules.PlayersFPS[pID] = false
                 local steam = tostring(PlayerResource:GetSteamID(pID))
@@ -171,13 +171,13 @@ function SelectHeroes()
 		for i=1, #trollPlayerID do
             DebugPrint("trollPlayerID[i] " .. trollPlayerID[i])
 			PlayerResource:SetCustomTeamAssignment(trollPlayerID[i] , DOTA_TEAM_BADGUYS)
-			PlayerResource:SetSelectedHero(trollPlayerID[i], TROLL_HERO[i])
+			PlayerResource:SetSelectedHero(trollPlayerID[i], TROLL_HERO[1])
         end
     end
     local elfCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
     for i = 1, elfCount do
         local pID = PlayerResource:GetNthPlayerIDOnTeam(DOTA_TEAM_GOODGUYS, i)
-        PlayerResource:SetSelectedHero(pID, ELF_HERO)
+        PlayerResource:SetSelectedHero(pID, ELF_HERO[1])
         if GameRules.colorCounter <= #PLAYER_COLORS then
             local color = PLAYER_COLORS[GameRules.colorCounter]
             PlayerResource:SetCustomPlayerColor(pID, color[1], color[2], color[3])
@@ -194,7 +194,7 @@ function trollnelves2:OnHeroInGame(hero)
     
     if hero:IsElf() then
         InitializeBuilder(hero)
-        elseif hero:IsTroll() then
+        elseif hero:IsTroll() or PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_wisp" then
         InitializeTroll(hero)
         elseif hero:IsAngel() then
         InitializeAngel(hero)
@@ -227,7 +227,7 @@ end
 
 function InitializeBadHero(hero)
     DebugPrint("Initialize bad hero")
-    
+    local playerID = hero:GetPlayerOwnerID()
     hero.hpReg = 0
     hero.hpRegDebuff = 0
     Timers:CreateTimer(function()
@@ -251,7 +251,7 @@ function InitializeBadHero(hero)
  --       end
  --       return 0.1
  --   end)
-    
+    if PlayerResource:GetSelectedHeroName(playerID) ~= "npc_dota_hero_wisp" then
     Timers:CreateTimer(BUFF_XP1_TIME, function() 
         hero:AddExperience(BUFF_XP1_SUM, DOTA_ModifyXP_Unspecified, false,false)
         local abil = hero:FindAbilityByName("reveal_area")
@@ -277,14 +277,32 @@ function InitializeBadHero(hero)
     abil2 = hero:FindAbilityByName("troll_teleport")
     abil2:SetLevel(abil2:GetMaxLevel())
     hero:AddExperience(50, DOTA_ModifyXP_Unspecified, false,false)
-
+    else    
+    local abil = hero:FindAbilityByName("pick_nevermore")
+    abil:SetLevel(abil:GetMaxLevel())
+    abil = hero:FindAbilityByName("pick_warlock")
+    abil:SetLevel(abil:GetMaxLevel())
+    abil = hero:FindAbilityByName("pick_stalker")
+    abil:SetLevel(abil:GetMaxLevel())
+    abil = hero:FindAbilityByName("pick_druid")
+    abil:SetLevel(abil:GetMaxLevel())
+    abil = hero:FindAbilityByName("pick_dazzle")
+    abil:SetLevel(abil:GetMaxLevel())
+    abil = hero:FindAbilityByName("pick_bristleback")
+    abil:SetLevel(abil:GetMaxLevel())
+    end
     --hero:SetStashEnabled(false)
 end
 
 function InitializeBuilder(hero)
     DebugPrint("Initialize builder")
     local playerID = hero:GetPlayerOwnerID()
-    GameRules.maxFood[playerID] = 30
+    if PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_furion" then
+        GameRules.maxFood[playerID] = 90
+    else
+        GameRules.maxFood[playerID] = 30
+    end
+
     hero.food = 0
     hero.wisp = 0
     hero.alive = true
@@ -321,6 +339,13 @@ function InitializeBuilder(hero)
         local abil = hero:FindAbilityByName("troll_warlord_battle_trance_datadriven")
         abil:SetLevel(abil:GetMaxLevel())
     end
+
+    if GameRules:GetGameTime() >= BUFF_VISION_TIME then
+        hero:AddAbility("elf_debuff_all_vision")
+        local abil = hero:FindAbilityByName("elf_debuff_all_vision")
+        abil:SetLevel(abil:GetMaxLevel())
+    end
+
     Timers:CreateTimer(BUFF_ENIGMA_TIME, function() 
         if hero:IsElf() then
             hero:AddAbility("troll_warlord_battle_trance_datadriven")
@@ -329,7 +354,16 @@ function InitializeBuilder(hero)
             RESPAWN_TREE_TIME_MIN = RESPAWN_TREE_TIME_LAST_MIN
             RESPAWN_TREE_TIME_MAX = RESPAWN_TREE_TIME_LAST_MAX
         end
-    end)  
+    end) 
+    
+    Timers:CreateTimer(BUFF_VISION_TIME, function() 
+        if hero:IsElf() then
+            hero:AddAbility("elf_debuff_all_vision")
+            local abil = hero:FindAbilityByName("elf_debuff_all_vision")
+            abil:SetLevel(abil:GetMaxLevel())
+        end
+    end)
+
     hero:CalculateStatBonus(true)
 end
 
@@ -578,7 +612,7 @@ function trollnelves2:PreStart()
     if IsServer() then
         for pID = 0, DOTA_MAX_TEAM_PLAYERS do
             if PlayerResource:IsValidPlayerID(pID) then
-                local hero = PlayerResource:GetSelectedHeroEntity(pID)
+               -- local hero = PlayerResource:GetSelectedHeroEntity(pID)
                 local steam = tostring(PlayerResource:GetSteamID(pID))
                 Stats.RequestVip(pID, steam, callback)
                 Stats.RequestBonus(pID, steam, callback)
@@ -586,14 +620,14 @@ function trollnelves2:PreStart()
                 Stats.RequestVipDefaults(pID, steam, callback)
                 Stats.RequestPetsDefaults(pID, steam, callback)
                 Stats.RequestPets(pID, steam, callback)
-                Timers:CreateTimer(15, function() wearables:SetPart() end)     
-                Timers:CreateTimer(30, function() SelectPets:SetPets() end)    
+                Timers:CreateTimer(120, function() wearables:SetPart() end)     
+                Timers:CreateTimer(120, function() SelectPets:SetPets() end)    
             end
         end
-        Timers:CreateTimer(5, function() Stats.RequestDataTop10("1", callback) end)
-        Timers:CreateTimer(15, function() Stats.RequestDataTop10("2", callback) end)
-        Timers:CreateTimer(25, function() Stats.RequestDataTop10("3", callback) end)
-        Timers:CreateTimer(45, function() Stats.RequestDataTop10("4", callback) end)
+        Stats.RequestDataTop10("1", callback)
+        Stats.RequestDataTop10("2", callback)
+        Stats.RequestDataTop10("3", callback)
+        Stats.RequestDataTop10("4", callback)
     Donate:CreateList()
     end
     
@@ -678,18 +712,24 @@ function trollnelves2:PreStart()
     end
     
     function GetModifiedName(orgName)
-    if string.match(orgName, TROLL_HERO[1]) or string.match(orgName, TROLL_HERO[2]) or string.match(orgName, TROLL_HERO[3]) then
-    return "<font color='#FF0000'>The Mighty Troll</font>"
-    elseif string.match(orgName, ELF_HERO) then
-    return "<font color='#00CC00'>Elf</font>"
-    elseif string.match(orgName, WOLF_HERO) then
+        for i = 1, #TROLL_HERO do
+            if string.match(orgName, TROLL_HERO[i]) then
+                return "<font color='#FF0000'>The Mighty Infernal</font>"
+            end
+        end
+        for i = 1, #ELF_HERO do
+            if string.match(orgName, ELF_HERO[i]) then
+                return "<font color='#00CC00'>Elf</font>"
+            end
+        end
+    if string.match(orgName, WOLF_HERO) then
     return "<font color='#800000'>Wolf</font>"
     elseif string.match(orgName, ANGEL_HERO) then
     return "<font color='#0099FF'>Angel</font>"
     else
     return "?"
     end
-    end
+end
     
     function SellItem(args)
     local item = EntIndexToHScript(args.itemIndex)
@@ -800,7 +840,7 @@ function trollnelves2:PreStart()
     if currentCount >= limit then disableAbility = true end
     end
     
-    if disableAbility and not GameRules.test then
+    if disableAbility and not GameRules.test2 then
     abilityHandle:SetLevel(0)
     hero.disabledBuildings[unitName] = true
     else

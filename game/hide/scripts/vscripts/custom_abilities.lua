@@ -839,6 +839,11 @@ function BuyItem(event)
 		ability:EndCooldown()
 		return	
 	end	
+	
+	if PlayerResource:GetSelectedHeroName(playerID) == "npc_dota_hero_wisp" then
+		SendErrorMessage(playerID, "#error_no_buy_wisp")
+		return false
+	end	
 	hero:DropStash()
 	PlayerResource:ModifyLumber(hero,-lumber_cost)
 	PlayerResource:ModifyGold(hero,-gold_cost)

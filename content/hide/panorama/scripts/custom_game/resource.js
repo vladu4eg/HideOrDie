@@ -143,7 +143,11 @@ function PlayerPickedHero(args) {
     // Better be safe and just get local player id.
     var localId = Players.GetLocalPlayer();
     var hero = Players.GetPlayerSelectedHero(localId);
-    var panelVisibility = hero === "npc_dota_hero_furion"  ? "visible" : "collapse";
+    var panelVisibility = hero === "npc_dota_hero_furion"  ? "visible": 
+                          hero === "npc_dota_hero_treant"  ? "visible": 
+                          hero === "npc_dota_hero_chen"  ? "visible": 
+                          hero === "npc_dota_hero_tiny"  ? "visible": 
+                          hero === "npc_dota_hero_bounty_hunter"  ? "visible" : "collapse";
     $("#CheeseLumberPricePanel").style.visibility = panelVisibility;
 }
 

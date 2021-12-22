@@ -428,27 +428,27 @@
 		"UniqueBuilding"			"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"30"
+		"Limit"						"15"
 		
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "1"
+	    "Level"                     "2"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_2"
-				"gold_cost"			"40"
-				"lumber_cost"		"60"
+				"gold_cost"			"80"
+				"lumber_cost"		"120"
 			}
 	    }
 		"Requirements"{
 		
 		}
-	    "BountyXP"          "25"                 // Experience earn.
-	    "BountyGoldMin"       "25"                   // Gold earned min.
-	    "BountyGoldMax"       "50"                   // Gold earned max.		
+	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyGoldMin"       "30"                   // Gold earned min.
+	    "BountyGoldMax"       "100"                   // Gold earned max.		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
@@ -458,7 +458,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"2"
+		"LumberAmount"				"3"
 	    // General
 	    //-----------------------------
 	    
@@ -504,20 +504,20 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "30"                 // Experience earn.
-	    "BountyGoldMin"       "30"                   // Gold earned min.
-	    "BountyGoldMax"       "60"                   // Gold earned max.	
+	    "BountyXP"          "60"                 // Experience earn.
+	    "BountyGoldMin"       "40"                   // Gold earned min.
+	    "BountyGoldMax"       "110"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "2"
+	    "Level"                     "4"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_3"
-				"gold_cost"			"40"
-				"lumber_cost"		"80"
+				"gold_cost"			"350"
+				"lumber_cost"		"450"
 			}
 	    }
 		"Requirements"{
@@ -532,7 +532,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"3"	    
+		"LumberAmount"				"8"	    
 	    // General
 	    //-----------------------------
 	    
@@ -577,20 +577,20 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "40"                 // Experience earn.
-	    "BountyGoldMin"       "40"                   // Gold earned min.
-	    "BountyGoldMax"       "70"                   // Gold earned max.	
+	    "BountyXP"          "70"                 // Experience earn.
+	    "BountyGoldMin"       "50"                   // Gold earned min.
+	    "BountyGoldMax"       "120"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "3"
+	    "Level"                     "5"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_4"
-				"gold_cost"			"100"
-				"lumber_cost"		"130"
+				"gold_cost"			"1000"
+				"lumber_cost"		"1500"
 			}
 	    }
 		"Requirements"{
@@ -605,7 +605,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"4"	  
+		"LumberAmount"				"16"	  
 	    
 	    // General
 	    //-----------------------------
@@ -651,20 +651,20 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-	    "BountyXP"          "50"                 // Experience earn.
+	    "BountyXP"          "80"                 // Experience earn.
 	    "BountyGoldMin"       "50"                   // Gold earned min.
-	    "BountyGoldMax"       "80"                   // Gold earned max.	
+	    "BountyGoldMax"       "130"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "5"
+	    "Level"                     "7"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_5"
-				"gold_cost"			"4000"
-				"lumber_cost"		"4500"
+				"gold_cost"			"3000"
+				"lumber_cost"		"3500"
 			}
 	    }
 		"Requirements"{
@@ -679,7 +679,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"16"	  
+		"LumberAmount"				"64"	  
 	    
 	    // General
 	    //-----------------------------
@@ -727,18 +727,18 @@
 		"Scale"						"1"
 	    "BountyXP"          "100"                 // Experience earn.
 	    "BountyGoldMin"       "50"                   // Gold earned min.
-	    "BountyGoldMax"       "100"                   // Gold earned max.	
+	    "BountyGoldMax"       "200"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "9"
+	    "Level"                     "10"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_6"
-				"gold_cost"			"12000"
-				"lumber_cost"		"25000"
+				"gold_cost"			"8000"
+				"lumber_cost"		"12000"
 			}
 	    }
 		"Requirements"{	
@@ -791,7 +791,7 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/barracks_3.vmdl"
+		"Model"						"models/props_structures/radiant_melee_barracks001.vmdl"
 
 		"ModelScale"                "0.34"
 	    "ModelRotation"             "90"
@@ -800,10 +800,10 @@
 		"Scale"						"1"
 	    "BountyXP"          "150"                 // Experience earn.
 	    "BountyGoldMin"       "60"                   // Gold earned min.
-	    "BountyGoldMax"       "120"                   // Gold earned max.	
+	    "BountyGoldMax"       "300"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "10"
+	    "Level"                     "11"
 	    "BuildTime"                 "2"
 	    //"Upgrades"
 	    //{
@@ -862,40 +862,45 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/tent_7.vmdl"
+		"Model"						"models/props_structures/radiant_melee_barracks001.vmdl"
+		"PlayerCanControl"			"1"
+		"UniqueBuilding"			"1"
+		"RequiresRepair"			"1"
+		"StartingBuilding"          "1"
+		"Limit"						"1"
 
-		"ModelScale"                "0.5"
+		"ModelScale"                "0.34"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
-		"PlayerCanControl"			"1"
 		"Scale"						"1"
 
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "7"
-	    "BuildTime"                 "2"
+	    "Level"                     "12"
+	    "BuildTime"                 "60"
 	    "Upgrades"
 	    {
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"barracks_1"
-				"gold_cost"			"3200"
-				"lumber_cost"		"128"
+				"gold_cost"			"50000"
+				"lumber_cost"		"60000"
 			}
 	    }
-		"Requirements"{
-				"rock_9"		"1"
-		}
+	//	"Requirements"{
+	//			"rock_9"		"1"
+	//	}
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"gain_gold"
-		"Ability2"					""
+		"Ability2"					"gather_lumber_tent"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
-	    
+	    "LumberInterval"			"2"
+		"LumberAmount"				"516"	
 	    // General
 	    //-----------------------------
 	    
@@ -906,9 +911,9 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
-		"CollisionSize"				"128"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -932,7 +937,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/barracks_1.vmdl"
 
-	    "ModelScale"                "0.55"
+	    "ModelScale"                "0.34"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -940,30 +945,31 @@
 
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "8"
+	    "Level"                     "14"
 	    "BuildTime"                 "2"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"barracks_2"
-				"gold_cost"			"6400"
-				"lumber_cost"		"256"
-			}
-	    }
-		"Requirements"{
-				"rock_11"	"1"	
-		}
+	  //  "Upgrades"
+	   // {
+	  //      "Count"     "1"
+	  //      "1"{
+	//			"unit_name"			"barracks_2"
+	//			"gold_cost"			"6400"
+	//			"lumber_cost"		"256"
+	//		}
+	  //  }
+	//	"Requirements"{
+		//		"rock_11"	"1"	
+		//}
 		
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"gain_gold"
-		"Ability2"					""
+		"Ability2"					"gather_lumber_tent"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
-	    
+	    "LumberInterval"			"2"
+		"LumberAmount"				"1024"	
 	    // General
 	    //-----------------------------
 	    
@@ -974,9 +980,9 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
-		"CollisionSize"				"128"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
@@ -1131,7 +1137,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"40"
+		"Limit"						"30"
 		"StartingBuilding"          "1"
 		"BountyXP"					"50"		// Experience earn.
 		"BountyGoldMin"				"10"		// Gold earned min.
@@ -1161,7 +1167,7 @@
 			"4"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
-				"lumber_cost"		"128000"
+				"lumber_cost"		"256000"
 			}
 	    }
 		"Requirements"{
@@ -1309,7 +1315,7 @@
 			"2"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
-				"lumber_cost"		"128000"
+				"lumber_cost"		"256000"
 			}
 	    }
 		
@@ -1521,7 +1527,7 @@
 			"1"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
-				"lumber_cost"		"128000"
+				"lumber_cost"		"256000"
 			}
 	    }
 		
@@ -1575,9 +1581,9 @@
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
-		"BountyXP"					"75"		// Experience earn.
-		"BountyGoldMin"				"25"		// Gold earned min.
-		"BountyGoldMax"				"100"		// Gold earned max.		
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"100"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.		
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "7"
@@ -1593,7 +1599,7 @@
 			"1"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
-				"lumber_cost"		"128000"
+				"lumber_cost"		"256000"
 			}
 	    }
 		
@@ -1796,6 +1802,95 @@
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Tower.Water"
 	}
+		//=================================================================================
+	// Building: Ultra Wall 4
+	//=================================================================================	
+	"rock_mega"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/heroes/elder_titan/elder_titan.vmdl"
+
+		"ModelScale"                "1"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"ModelGhostOffset"			"64"
+		"BountyXP"					"500"		// Experience earn.
+		"BountyGoldMin"				"250"		// Gold earned min.
+		"BountyGoldMax"				"500"		// Gold earned max.
+		"RequiresRepair"			"1"		
+		"Limit"						"4"
+		"StartingBuilding"          "1"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"                     "10"
+	    "BuildTime"                 "50"
+		"Requirements"{
+		
+		}
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "8764"}//head("Helm of the Fissured Soul")
+		"Wearable2" {"ItemDef" "8763"}//shoulder("Pauldron of the Fissured Soul")
+		"Wearable3" {"ItemDef" "8762"}//arms("Bracers of the Fissured Soul")
+		"Wearable4" {"ItemDef" "8761"}//("Mace of the Fissured Soul")
+		"Wearable5" {"ItemDef" "8760"}//back("Relic of the Fissured Soul")
+	        }
+	    }
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					""
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+	    "ArmorPhysical"             "100"
+		"StatusHealth"              "15000"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "1985"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"      "600"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+		
+		"AttackDamageMin"			"1500"		// Damage range min.
+		"AttackDamageMax"			"2500"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.80"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
+	}
+	
 
 	//=================================================================================
 	// Building: Ultra Wall 4
@@ -1953,6 +2048,90 @@
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Tower.Water"
 	}
+	"tower_buff"
+	{
+	    // Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+		"Model"						"models/heroes/undying/undying_tower.vmdl"
+
+	    "ModelScale"				"0.6"
+	    "ModelRotation"				"90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"RequiresRepair"			"1"
+		"StartingBuilding"          "1"
+		"Limit"						"1"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"						"1"
+	    "BuildTime"					"50"
+		
+		"Requirements"{
+			"tent"	"1"
+		}
+		
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"10"
+		"Ability1"					"silencer_last_word"
+		"Ability2"					"mars_bulwark"
+		"Ability3"					"slardar_amplify_damage"
+		"Ability4"					"dazzle_shallow_grave"
+		"Ability5"					"greevil_miniboss_white_degen_aura"
+		"Ability6"					"dragon_blood_datadriven"
+		"Ability7"					"nevermore_dark_lord_datadriven"
+		"Ability8"					"luna_lunar_blessing_datadriven"
+		"Ability9"					""
+		"Ability10"					""
+	    
+	    // General
+	    //-----------------------------
+	    
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"512"		// Damage range min.
+		"AttackDamageMax"			"1024"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
+		
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"400"		// Gold earned max.		
+		
+	    "ArmorPhysical"             "4"
+		"StatusHealth"              "5000"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "200"
+	    "StatusManaRegen"           "0.5"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"        "900"  
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+		"MovementTurnRate"      	"1.0" 
+	    "MovementSpeed"             "0"
+	}
 	//=================================================================================
 	// Building: Basic Tower
 	//=================================================================================	
@@ -2002,8 +2181,8 @@
 			}
 			"5"{
 				"unit_name"			"tower_radar"
-				"gold_cost"			"3000"
-				"lumber_cost"		"5000"
+				"gold_cost"			"250"
+				"lumber_cost"		"500"
 			}
 			"6"{
 				"unit_name"			"rock_8"
@@ -2663,6 +2842,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		
+
 	    // Stats
 	    //----------------------------- 
 	    "Level"                     "2"
@@ -2702,6 +2882,72 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "1200"
 	    "VisionNighttimeRange"        "1100"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
+	    "ProjectileCollisionSize"   "100"
+	    "RingRadius"                "100"
+	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
+	    "MovementSpeed"             "0"
+	}
+
+	"true_sight_tower_mega"{
+		// Visual
+	    //-----------------------------
+		"BaseClass"                 "npc_dota_creature"
+	    "Model"                     "models/items/wards/phoenix_ward/phoenix_ward.vmdl"
+		
+	    "precache"
+		{
+			"model"                     "models/items/wards/phoenix_ward/phoenix_ward.vmdl"
+		
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
+		"HealthBarOffset"			"150"
+		"PlayerCanControl"			"1"
+		"Scale"						"1"
+		"RequiresRepair"			"1"
+		"StartingBuilding"          "1"
+		"Limit"						"2"
+
+	    // Stats
+	    //----------------------------- 
+	    "Level"                     "2"
+	    "BuildTime"                 "5"
+		"Requirements"{
+		}
+		// Abilities
+		//----------------------------------------------------------------
+		"AbilityLayout"				"4"
+		"Ability1"					"true_sight_ability_mega"
+		"Ability2"					"riki_permanent_invisibility"
+		"Ability3"					""
+		"Ability4"					""
+		"Ability10"					""
+
+		"BountyXP"					"100"		// Experience earn.
+		"BountyGoldMin"				"50"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.	
+		
+	    // General
+	    //-----------------------------
+	    
+	    "ArmorPhysical"             "5"
+		"StatusHealth"              "8000"
+	    "StatusHealthRegen"         "0"
+	    "StatusMana"                "0"
+	    "StatusManaRegen"           "0"
+	    "MagicalResistance"         "0"
+		
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
+		"CollisionSize"				"64"
+		
+	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
+	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
+	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
+	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
+	    "VisionDaytimeRange"        "1400"
+	    "VisionNighttimeRange"        "1800"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -2781,12 +3027,12 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/heroes/rattletrap/rattletrap.vmdl"
+		"Model"						"models/heroes/furion/furion.vmdl"
 	    "precache"
 		{
-			"model"						"models/heroes/rattletrap/rattletrap.vmdl"
+			"model"						"models/heroes/furion/furion.vmdl"
 	    }
-		"ModelScale"                "1.2"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -2798,10 +3044,13 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	            "1" { "ItemDef" "6481" } // Shoulders
-	            "2" { "ItemDef" "6482" } // Head
-	            "3" { "ItemDef" "6484" } // Weapon
-	            "4" { "ItemDef" "6485" } // Back
+	            "Wearable1" {"ItemDef" "5803"}//neck("Wild Moss Beard of the Fungal Lord")
+		"Wearable2" {"ItemDef" "5802"}//("Staff of the Fungal Lord")
+		"Wearable3" {"ItemDef" "5800"}//shoulder("Shoulders of the Fungal Lord")
+		"Wearable4" {"ItemDef" "5799"}//arms("Ironwood Arms of the Fungal Lord")
+		"Wearable5" {"ItemDef" "5797"}//head("Cap of the Fungal Lord")
+		"Wearable6" {"ItemDef" "5798"}//back("Great Moss Cape of the Fungal Lord")
+		"Wearable7" {"ItemDef" "5806"}//ability3("Shroom Thing")
 	        }
 	    }
 		
@@ -2818,11 +3067,11 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"6"
 		"Ability1"					"train_worker_1"
-		"Ability2"					"train_worker_2"
-		"Ability3"					"train_worker_3"
-		"Ability4"					"train_worker_4"
-		"Ability5"					"train_worker_5"
-		"Ability6"					"train_worker_6"
+		"Ability2"					""
+		"Ability3"					""
+		"Ability4"					""
+		"Ability5"					""
+		"Ability6"					""
 		"Ability10"					""
 	    
 	    // General
@@ -2835,8 +3084,8 @@
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
 		
-		"ConstructionSize"          "4"
-	    "BlockPathingSize"          "4"
+		"ConstructionSize"          "2"
+	    "BlockPathingSize"          "2"
 		"CollisionSize"				"128"
 		
 	    "BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
@@ -2853,9 +3102,9 @@
 	}
 	
 		//=================================================================================
-	// Building: npc_dota_hero_treant
+	// Building: wood_guild
 	//=================================================================================	
-	"hero_treant"
+	"wood_guild"
 	{
 	    // Visual
 	    //-----------------------------
@@ -2872,6 +3121,7 @@
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
+		"Limit"         			 "4"
 
 	    "BountyXP"          "100"                 // Experience earn.
 	    "BountyGoldMin"       "10"                   // Gold earned min.
@@ -2955,7 +3205,7 @@
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"6"
+		"Limit"						"4"
 		"Creature"
 	    {
 	        "AttachWearables" // Dark wood set
@@ -3300,7 +3550,7 @@
 		"Ability10"					"buy_item_dmg_6"
 		"Ability11"					"buy_item_ward_sentry"
 		"Ability12"					"buy_item_ward_observer"
-		"Ability13"					""
+		"Ability13"					"buy_item_mine"
 
 
 	    // General
@@ -3423,8 +3673,8 @@
 		"Ability6"					"buy_item_armor_1"
 		"Ability7"					"buy_item_armor_2"
 		"Ability8"					"buy_item_armor_3"
-		"Ability9"					"buy_item_hp_reg_5"
-		"Ability10"					""
+		"Ability9"					"buy_item_hp_reg_6"
+		"Ability10"					"buy_item_hp_reg_5"
 		"Ability11"					""
 		"Ability12"					""
 		"Ability13"					""
@@ -4120,7 +4370,7 @@
 		"Ability1" 								"build_rock_1"
 		"Ability2"								"build_tower_1"
 		"Ability3"								"build_monkey_king"
-		"Ability4"								"build_hero_treant"
+		"Ability4"								"build_wood_guild"
 		"Ability5"								"lina_light_strike_array_datadriven"
 		"Ability6"								"build_tree"
 		"Ability7"								"blink_datadriven"
@@ -4216,7 +4466,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -4235,6 +4485,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "2"
+		"WispCost"                              "1"
 
 		// Movement
 		//----------------------------------------------------------------
@@ -4316,7 +4567,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -4334,7 +4585,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "10"
-
+		
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -4417,7 +4668,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 
 		// Bounty
 		//----------------------------------------------------------------
@@ -4435,7 +4686,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "2"
-
+		"WispCost"                              "1"
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -4521,7 +4772,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 
 
 		// Bounty
@@ -4629,7 +4880,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -4736,7 +4987,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -4755,7 +5006,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "2"
-
+		"WispCost"                              "1"
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -4842,7 +5093,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -4861,7 +5112,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "2"
-
+		"WispCost"                              "1"
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -4949,7 +5200,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -4968,7 +5219,7 @@
 		// Building Cost Stats
 		//----------------------------------------------------------------
 		"FoodCost"                              "20"
-
+		"WispCost"                              "0"
 		// Movement
 		//----------------------------------------------------------------
 		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
@@ -5059,7 +5310,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -5164,7 +5415,7 @@
 		"Ability7"					""
 		"Ability8"					""
 		"Ability9"					""
-		"Ability10"					""
+		"Ability10"					"commit_suicide"
 	
 
 		// Bounty
@@ -6245,6 +6496,112 @@
 			"particle"	"particles/units/heroes/hero_medusa/medusa_base_attack.vpcf"
 			"model"	"models/heroes/medusa/medusa.vmdl"
 		}
+	}
+
+	"npc_jakiro_creep"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/jakiro/jakiro.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/jakiro/jakiro.vmdl"
+			"particle"								"particles/units/heroes/hero_jakiro/jakiro_base_attack.vpcf"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "10"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"500"		// Damage range min.
+		"AttackDamageMax"			"1100"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_jakiro/jakiro_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1100"		// Speed of projectile.
+	    "SoundSet"                  "Hero_Jakiro"
+	    "GameSoundsFile"            "ssoundevents/game_sounds_heroes/game_sounds_jakiro.vsndevts"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"jakiro_dual_breath"
+		"Ability2" 					""
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+
+
+		// Bounty
+		//----------------------------------------------------------------
+	    "BountyXP"          "250"                 // Experience earn.
+	    "BountyGoldMin"       "100"                   // Gold earned min.
+	    "BountyGoldMax"       "300"                   // Gold earned max.	
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "1"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "0"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"                         "250"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "100"
+		"StatusHealthRegen"                     "1"
+		"StatusMana"                            "100"
+		"StatusManaRegen"                       "1"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"600"
+		"VisionNighttimeRange"					"800"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+			"DisableClumpingBehavior"       "1"
+	        "AttachWearables" // Dark wood set
+	        {
+	            "Wearable1" {"ItemDef" "13025"}//back("Barding of Chimeric Rapport")
+		"Wearable2" {"ItemDef" "13024"}//tail("Tail of Chimeric Rapport")
+		"Wearable3" {"ItemDef" "13026"}//head("Icy Glare of Chimeric Rapport")
+		"Wearable4" {"ItemDef" "13027"}//body_head("Molten Gaze of Chimeric Rapport")
+	        }
+	    }
 	}
 
 	"npc_lia_boar" 
@@ -7888,7 +8245,7 @@
 	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
-	  "Ability5"     ""
+	  "Ability5"     "commit_suicide"
 	
 	  "ArmorPhysical"    "0"
 	  "MagicalResistance"   "0"
@@ -7902,7 +8259,7 @@
 	  "RingRadius"    "40"
 	  "CollisionSize"    "16"
 	  "FormationRank"    "4"
-	
+	"WispCost" 						"1"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
@@ -7919,7 +8276,7 @@
 	  "CombatClassAttack"   "DOTA_COMBAT_CLASS_ATTACK_BASIC"
 	  "CombatClassDefend"   "DOTA_COMBAT_CLASS_DEFEND_BASIC"
 	  "UnitRelationShipClass"  "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-	
+		
 	  "Creature"
 	  {
 	    "DisableClumpingBehavior"  "1"
@@ -7940,7 +8297,7 @@
 	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
-	  "Ability5"     ""
+	  "Ability5"     "commit_suicide"
 	
 	  "ArmorPhysical"    "0"
 	  "MagicalResistance"   "0"
@@ -7954,7 +8311,7 @@
 	  "RingRadius"    "40"
 	  "CollisionSize"    "16"
 	  "FormationRank"    "4"
-	
+	"WispCost" 						"1"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
@@ -7992,7 +8349,7 @@
 	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
-	  "Ability5"     ""
+	  "Ability5"     "commit_suicide"
 	
 	  "ArmorPhysical"    "0"
 	  "MagicalResistance"   "0"
@@ -8008,7 +8365,7 @@
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
-	
+	"WispCost" 						"1"
 	  "StatusHealth"    "6"
 	  "StatusHealthRegen"   "0.25"
 	  "StatusMana"    "5"
@@ -8042,8 +8399,8 @@
 	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
-	  "Ability5"     ""
-	
+	  "Ability5"     "commit_suicide"
+	"WispCost" 						"1"
 	  "ArmorPhysical"    "0"
 	  "MagicalResistance"   "0"
 	
@@ -8093,7 +8450,7 @@
 	  "Ability2"     "return_resources"
 	  "Ability3"     ""
 	  "Ability4"     ""
-	  "Ability5"     ""
+	  "Ability5"     "commit_suicide"
 	
 	  "ArmorPhysical"    "0"
 	  "MagicalResistance"   "0"
@@ -8105,7 +8462,7 @@
 	
 	  "BoundsHullName"   "DOTA_HULL_SIZE_REGULAR"
 	  "RingRadius"    "40"
-	
+	"WispCost" 						"1"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"
@@ -8128,5 +8485,1220 @@
 	    "DisableClumpingBehavior"  "1"
 	  }
 	}
-	
+	// Legacy
+	"npc_dota_scout_hawk"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"2"
+		"ModelScale"				"1.1"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"20"		// Experience earn.
+		"BountyGoldMin"				"30"		// Gold earned min.
+		"BountyGoldMax"				"30"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"270"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"50"		// Base health.
+		"StatusHealthRegen"			"0.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"500"		// Range of vision during day light.
+		"VisionNighttimeRange"		"500"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	// Legacy
+	"npc_dota_greater_hawk"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"6"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"beastmaster_hawk_invisibility"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"65"		// Gold earned min.
+		"BountyGoldMax"				"65"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"400"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"100"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1600"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1200"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	"npc_dota_beastmaster_hawk"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"30"		// Gold earned min.
+		"BountyGoldMax"				"30"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"430"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"350"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1000"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	"npc_dota_beastmaster_hawk_1"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+		"IgnoreAddSummonedToSelection" "0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"beastmaster_hawk_dive"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"30"		// Gold earned min.
+		"BountyGoldMax"				"30"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"300"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"150"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"750"		// Range of vision during day light.
+		"VisionNighttimeRange"		"750"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	"npc_dota_beastmaster_hawk_2"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+		"IgnoreAddSummonedToSelection" "0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"beastmaster_hawk_dive"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"40"		// Gold earned min.
+		"BountyGoldMax"				"40"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"340"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"200"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"800"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	"npc_dota_beastmaster_hawk_3"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+		"IgnoreAddSummonedToSelection" "0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"beastmaster_hawk_dive"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"50"		// Gold earned min.
+		"BountyGoldMax"				"50"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"380"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"250"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"850"		// Range of vision during day light.
+		"VisionNighttimeRange"		"850"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+
+	"npc_dota_beastmaster_hawk_4"
+	{										
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/beastmaster/beastmaster_bird.vmdl"	// Model.
+		"BaseClass"					"npc_dota_beastmaster_hawk"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.2"
+		"IsSummoned"				"1"
+		"UnitLabel"					"hawk"
+		"IgnoreAddSummonedToSelection" "0"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"beastmaster_hawk_dive"			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"165"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"77"		// Experience earn.
+		"BountyGoldMin"				"60"		// Gold earned min.
+		"BountyGoldMax"				"60"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_FLY"
+		"MovementSpeed"				"420"		// Speed.
+		"MovementTurnRate"			"0.6"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"300"		// Base health.
+		"StatusHealthRegen"			"1.5"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"900"		// Range of vision during day light.
+		"VisionNighttimeRange"		"900"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+		
+		"WakesNeutrals"				"0"
+	}	
+	"npc_dota_techies_land_mine"
+	{
+		// General
+		//----------------------------------------------------------------
+		"Model"						"models/heroes/techies/fx_techiesfx_mine.vmdl"	// Model.
+		"BaseClass"					"npc_dota_techies_mines"
+		"SoundSet"					"0"			// Name of sound set.
+		"Level"						"1"
+		"ModelScale"				"1.0"
+		"SelectionGroup"			"Techies_LandMines"
+		"BoundsHullName"			"DOTA_HULL_SIZE_SMALL"			// Hull type used for navigation/locomotion.
+ 		"wearable"				"8644"
+
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					""			// Ability 1
+		"Ability2"					""			// Ability 2
+		"Ability3"					""			// Ability 3
+		"Ability4"					""			// Ability 4
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"			"0"			// Damage range min.
+		"AttackDamageMax"			"0"			// Damage range max.	
+		"AttackRate"				"1.0"		// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"0"			// Range within a target can be acquired.
+		"AttackRange"				"0"			// Range within a target can be attacked.
+		"ProjectileModel"			""			// Particle system model for projectile.
+		"ProjectileSpeed"			"0"			// Speed of projectile.		   
+
+		// Bounds
+		//----------------------------------------------------------------
+		"HealthBarOffset"			"140"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"0"	// Experience earn.
+		"BountyGoldMin"				"25"		// Gold earned min.
+		"BountyGoldMax"				"25"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"  // has to be move ground because something about neutral camps
+		"MovementSpeed"				"0"		// Speed.
+		"MovementTurnRate"			"0.4"		// Turning rate.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1"		// Base health.
+		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
+		
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"		"64"		// Range of vision during day light.
+		"VisionNighttimeRange"		"64"		// Range of vision at night time.
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"					"DOTA_TEAM_NEUTRALS"							// Team name.
+		"CombatClassAttack"			"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"			"DOTA_COMBAT_CLASS_DEFEND_BASIC"
+		"UnitRelationshipClass"		"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_WARD"
+	}
+	"worker_1"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/omniknight/omniknight.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/omniknight/omniknight.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "5"
+		"AttackDamageMax"                       "5"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"2"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "100"
+		"BountyGoldMax"                         "200"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "50"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "500"
+		"StatusHealthRegen"                     "1"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	           "Wearable1" {"ItemDef" "7090"}//arms("Armguards of the Stalwart")
+		"Wearable2" {"ItemDef" "7091"}//("Hammer of the Stalwart Soul")
+		"Wearable3" {"ItemDef" "7092"}//head("Coiffure of the Stalwart Soul")
+		"Wearable4" {"ItemDef" "7093"}//back("Plate of the Stalwart Soul")
+		"Wearable5" {"ItemDef" "7094"}//shoulder("Pauldrons of the Stalwart Soul")
+		"Wearable6" {"ItemDef" "45"}//shoulder("Pauldrons of the Stalwart Soul")
+	        }
+	    }
+	}
+	"worker_2"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/dragon_knight/dragon_knight.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/dragon_knight/dragon_knight.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "1"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "2"
+		"AttackDamageMax"                       "2"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"2"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "2"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+				"DisableClumpingBehavior"       "1"
+				"AttachWearables"
+				{
+						"Wearable1"             {       "ItemDef"               "6789"          } //"Shield of Ascension"
+						"Wearable2"             {       "ItemDef"               "6791"          } //"Pauldrons of Ascension"
+						"Wearable3"             {       "ItemDef"               "6790"          } //"Gauntlets of Ascension"
+						"Wearable4"             {       "ItemDef"               "6788"          } //"Drapes of Ascension"
+						"Wearable5"             {       "ItemDef"               "6787"          } //"Sword of Ascension"
+						"Wearable6"             {       "ItemDef"               "6792"          } //"Helm of Ascension"
+				}
+		}
+	}
+	"worker_3"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/kunkka/kunkka.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/kunkka/kunkka.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "3"
+		"AttackDamageMax"                       "3"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"3"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "4"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+		{
+				"DisableClumpingBehavior"       "1"
+				"AttachWearables"
+				{
+						"Wearable1"             {       "ItemDef"               "5217"          }
+						"Wearable2"             {       "ItemDef"               "5218"          }
+						"Wearable3"             {       "ItemDef"               "5219"          }
+						"Wearable4"             {       "ItemDef"               "5220"          }
+						"Wearable5"             {       "ItemDef"               "5221"          }
+						"Wearable6"             {       "ItemDef"               "5222"          }
+						"Wearable7"             {       "ItemDef"               "5223"          }
+						"Wearable8"             {       "ItemDef"               "5224"          }
+				}
+		}
+	}
+	"worker_4"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/rattletrap/rattletrap.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/rattletrap/rattletrap.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "4"
+		"AttackDamageMax"                       "4"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"4"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "6"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	            "1" { "ItemDef" "6481" } // Shoulders
+	            "2" { "ItemDef" "6482" } // Head
+	            "3" { "ItemDef" "6484" } // Weapon
+	            "4" { "ItemDef" "6485" } // Back
+	        }
+	    }
+	}
+	"worker_5"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/shredder/shredder.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/shredder/shredder.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "5"
+		"AttackDamageMax"                       "5"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"90"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"commit_suicide"
+		"Ability3" 					""
+		"Ability4" 					""
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"5"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "10"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "0"
+		"StatusManaRegen"                       "0"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+	            "1" { "ItemDef" "9552" } // Shoulders
+	            "2" { "ItemDef" "9543" } // Head
+	            "3" { "ItemDef" "9550" } // Weapon
+	            "4" { "ItemDef" "9545" } // Back
+				"5"	{ "ItemDef" "9547" }
+				"5"	{ "ItemDef" "9542" }
+	        }
+	    }
+	}
+
+	"worker_6"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/dazzle/dazzle.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/dazzle/dazzle.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "5"
+		"AttackDamageMax"                       "5"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"180"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"shallow_grave_datadriven"
+		"Ability3" 					"weave_datadriven"
+		"Ability4" 					"commit_suicide"
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"12"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "20"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "300"
+		"StatusManaRegen"                       "1"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "5879"}//arms("Band Of Summoning")
+		"Wearable2" {"ItemDef" "5881"}//legs("Bonedress of the Yuwipi")
+		"Wearable3" {"ItemDef" "5880"}//back("Headdress Of The Yuwipi")
+		"Wearable4" {"ItemDef" "5882"}//("Staff of the Yuwipi")
+	        }
+	    }
+	}
+
+	"worker_7"
+	{
+		// General
+		//----------------------------------------------------------------
+		"BaseClass"                             "npc_dota_creature"
+		"Model"                                 "models/heroes/witchdoctor/witchdoctor.vmdl"
+		"precache"
+		{
+			"model"                                 "models/heroes/witchdoctor/witchdoctor.vmdl"
+		}
+		"ModelScale"                            "0.6"
+		"Level"                                 "2"
+		"HealthBarOffset"                       "140"
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"                         "2"
+		"MagicalResistance"                     "0"
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"            		"DOTA_UNIT_CAP_NO_ATTACK"
+		"AttackDamageMin"                       "5"
+		"AttackDamageMax"                       "5"
+		"AttackRate"                            "1.00"
+		"AttackAnimationPoint"					"0.5"
+		"AttackAcquisitionRange"				"500"
+		"AttackRange"							"220"
+
+		"AbilityLayout"				"4"
+		"Ability1" 					"repair"
+		"Ability2" 					"paralyzing_cask_datadriven"
+		"Ability3" 					""
+		"Ability4" 					"commit_suicide"
+		"Ability5"					""
+		"Ability6" 					""
+		"Ability7"					""
+		"Ability8"					""
+		"Ability9"					""
+		"Ability10"					""
+		"RepairAbility"				"repair"
+		"FixedRepair"				"0"
+		"RepairSpeed"				"12"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"                         "0.0"
+		"BountyGoldMax"                         "0.0"
+
+		// Bounds
+		//----------------------------------------------------------------
+		"BoundsHullName"                        "DOTA_HULL_SIZE_SMALL"
+		"RingRadius"                            "70"
+		"CollisionSize"                         "8"
+		"FormationRank"                         "0"
+
+		// Building Cost Stats
+		//----------------------------------------------------------------
+		"FoodCost"                              "20"
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"					"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"                         "270"
+		"MovementTurnRate"                      "0.6"
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"                          "10"
+		"StatusHealthRegen"                     "0.25"
+		"StatusMana"                            "300"
+		"StatusManaRegen"                       "1"
+
+		// Vision
+		//----------------------------------------------------------------
+		"VisionDaytimeRange"					"900"
+		"VisionNighttimeRange"					"600"
+
+		// Team
+		//----------------------------------------------------------------
+		"TeamName"								"DOTA_TEAM_NEUTRALS"
+		"CombatClassAttack"						"DOTA_COMBAT_CLASS_ATTACK_BASIC"
+		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_HERO"
+		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+		// Creature Data
+		//----------------------------------------------------------------
+		"Creature"
+	    {
+	        "AttachWearables" // Dark wood set
+	        {
+		"Wearable1" {"ItemDef" "9522"}//belt("Apron of the Outlandish Gourmet")
+		"Wearable2" {"ItemDef" "9520"}//("Implements of the Outlandish Gourmet")
+		"Wearable3" {"ItemDef" "9519"}//head("Visage of the Outlandish Gourmet")
+		"Wearable4" {"ItemDef" "9518"}//shoulder("Garb of the Outlandish Gourmet")
+		"Wearable5" {"ItemDef" "9517"}//back("Cauldron of the Outlandish Gourmet")
+	        }
+	    }
+	}
 }

@@ -166,10 +166,10 @@
 		"DOTA_Tooltip_modifier_gathering_lumber"                                          "Gathering Lumber"
 		"DOTA_Tooltip_modifier_gathering_lumber_Description"                              ""
 
-		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
-		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Создает дровосеков для добычи древесины(lumber). Lumberjack Guardian должен быть возле дерева."
-		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
-		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
+		"DOTA_Tooltip_ability_build_wood_guild"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_wood_guild_Description"                              "Создает дровосеков для добычи древесины(lumber). Lumberjack Guardian должен быть возле дерева."
+		"DOTA_Tooltip_ability_build_wood_guild_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_wood_guild_lumber_cost"                              "LUMBER COST: "
 
 
 		"DOTA_Tooltip_modifier_gathering_lumber_1"                                          "Gathering Lumber"
@@ -1115,7 +1115,7 @@
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy Medusa"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5_Description"                              ""
 
-		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy HP Reg.  Lv 6"
+		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy Jakiro"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_6_Description"                              ""
 
 		"DOTA_Tooltip_ability_buy_item_hp_reg_7"                                          "Buy HP Reg.  Lv 7"
@@ -1230,7 +1230,7 @@
 
 
 		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
-		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+3 ко всем атрибутам."
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+5 ко всем атрибутам."
 
 		// ***********************************************
 		// ******************** ITEMS ********************

@@ -1,6 +1,7 @@
 local lastSendTime = {}
 local GoldHero = {}
 local LumberHero = {}
+local selectHero = {}
 require('stats')
 require('libraries/entity')
 require('drop')
@@ -50,12 +51,10 @@ function trollnelves2:OnNPCSpawned(keys)
             trollnelves2:OnHeroInGame(npc)
         end
     end
-    if npc:IsAngel() and
-        PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 then
+   if npc:IsAngel() and PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 then
         npc:AddNewModifier(nil, nil, "modifier_disconnected", {})
     end
-    if npc:IsWolf() and
-        PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 then
+    if npc:IsWolf() and PlayerResource:GetConnectionState(npc:GetPlayerOwnerID()) ~= 2 then
         npc:AddNewModifier(nil, nil, "modifier_disconnected", {})
     end
     if npc:IsRealHero() then
@@ -250,7 +249,7 @@ function trollnelves2:OnEntityKilled(keys)
             
             if attacker_hero ~= nil then
                 local roll_chance = RandomFloat(0, 500)
-                if roll_chance <= 100 then
+                if roll_chance <= 100 and not attacker_hero:HasItemInInventory("item_glyph_ability") then
                     attacker_hero:AddItemByName("item_glyph_ability")
                 end
                 local roll_chance = RandomFloat(0, 500)
@@ -376,7 +375,7 @@ function trollnelves2:OnEntityKilled(keys)
         end
         
         if killed:GetUnitName() == "tent_5" or killed:GetUnitName() == "tent_6" then
-            GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 9
+            GameRules.maxFood[killedPlayerID] = GameRules.maxFood[killedPlayerID] - 18
             PlayerResource:ModifyFood(hero, 0)
         end
         
@@ -404,7 +403,7 @@ function ElfKilled(killed)
     args.team = DOTA_TEAM_GOODGUYS
     args.playerID = killedID
     ChooseHelpSide(killedID, args)
-    local bounty = 512
+    local bounty = math.min(math.floor((PlayerResource:GetGold(killedID)/1000) + 512), 5000) 
     if (GameRules:GetGameTime() - GameRules.startTime >= 180) or PlayerResource:GetConnectionState(killedID) ~= 2  then
         bounty = 50
     end
@@ -514,20 +513,17 @@ function ChooseHelpSide(eventSourceIndex, event)
     local playerID = event.playerID
     local hero = PlayerResource:GetSelectedHeroEntity(playerID)
     hero.legitChooser = false
-    
+    selectHero[playerID] = PlayerResource:GetSelectedHeroName(playerID)
+
     GoldHero[playerID] = math.floor(PlayerResource:GetLumber(playerID)/2+200)
     LumberHero[playerID] = math.floor(PlayerResource:GetGold(playerID)/2+200)
     PlayerResource:SetGold(hero, 0)
     PlayerResource:SetLumber(hero, 0)
-    local newHeroName
-    local message
-    local timer
-    local pos
-    newHeroName = ANGEL_HERO
-    message = "%s1 will keep helping elves and now is an " ..
-    GetModifiedName(ANGEL_HERO)
-    timer = ANGEL_RESPAWN_TIME * PlayerResource:GetDeaths(playerID)
-    pos = RandomAngelLocation()
+
+    local message = "%s1 became a Dead Treant. Lost " .. GoldHero[playerID] .. " gold and " .. LumberHero[playerID] .. " lumber. "
+
+    local timer = ANGEL_RESPAWN_TIME * PlayerResource:GetDeaths(playerID)
+    local pos = RandomAngelLocation()
     PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS)
     Timers:CreateTimer(function()
         GameRules:SendCustomMessage(message, playerID, 0)
@@ -535,7 +531,7 @@ function ChooseHelpSide(eventSourceIndex, event)
     
     hero:SetTimeUntilRespawn(timer)
     Timers:CreateTimer(timer, function()
-        PlayerResource:ReplaceHeroWith(playerID, newHeroName, 0, 0)
+        PlayerResource:ReplaceHeroWith(playerID, ANGEL_HERO, 0, 0)
         UTIL_Remove(hero)
         hero = PlayerResource:GetSelectedHeroEntity(playerID)
         PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
@@ -552,20 +548,12 @@ function ReturnElf(killed, attacker)
     local hero_attacker = PlayerResource:GetSelectedHeroEntity(attacker)
     hero.legitChooser = false
     
-    local newHeroName
-    local message
-    local pos
-    newHeroName = ELF_HERO
-    message = "%s1 will keep helping elves and now is an " .. GetModifiedName(ELF_HERO)
-    timer = 1
-    pos = RandomAngelLocation()
-    PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS)
-    Timers:CreateTimer(function()
-        GameRules:SendCustomMessage(message, playerID, 0)
-    end)
     
-    hero:SetTimeUntilRespawn(timer)
-    PlayerResource:ReplaceHeroWith(playerID, newHeroName, 0, 0)
+    local pos = RandomAngelLocation()
+    PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS)
+
+    hero:SetTimeUntilRespawn(1)
+    PlayerResource:ReplaceHeroWith(playerID, selectHero[playerID], 0, 0)
     UTIL_Remove(hero)
     hero = PlayerResource:GetSelectedHeroEntity(playerID)
     PlayerResource:SetCustomTeamAssignment(playerID, DOTA_TEAM_GOODGUYS) -- A workaround for wolves sometimes getting stuck on elves team, I don't know why or how it happens.
@@ -579,7 +567,9 @@ function ReturnElf(killed, attacker)
     
     PlayerResource:ModifyGold(hero_attacker, math.floor(GoldHero[playerID]/2))
 	PlayerResource:ModifyLumber(hero_attacker, math.floor(LumberHero[playerID]/2))
-    
+
+    local message = "%s1 frees himself and gives his savior ".. math.floor(GoldHero[playerID]/2) .. " gold and ".. math.floor(LumberHero[playerID]/2) .. " lumber."
+    GameRules:SendCustomMessage(message, playerID, 0)
 end
 
 function RandomAngelLocation()

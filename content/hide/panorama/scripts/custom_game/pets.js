@@ -196,7 +196,7 @@ function DefaultButton()
     }
     else
     {
-        GameEvents.SendCustomGameEventToServer( "SetDefaultPart", { id: Players.GetLocalPlayer(),part:""} );
+        GameEvents.SendCustomGameEventToServer( "SetDefaultPets", { id: Players.GetLocalPlayer(),part:""} );
     } 
     $("#DefaultButton").RemoveClass("DefaultButtonact");
     $("#DefaultButton").AddClass("DefaultButtondis");

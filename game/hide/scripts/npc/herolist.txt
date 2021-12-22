@@ -5,9 +5,24 @@
 
 "CustomHeroList"
 {
-  "npc_dota_hero_necrolyte" "-1"
+  "npc_dota_hero_treant" "-1"
+  "npc_dota_hero_chen" "-1"
+  "npc_dota_hero_tiny"  "-1"
   "npc_dota_hero_furion" "-1"
+  "npc_dota_hero_bounty_hunter" "-1"
+
   "npc_dota_hero_nevermore" "1"
+  "npc_dota_hero_lone_druid" "1"
+
   "npc_dota_hero_warlock" "1"
+  "npc_dota_hero_dazzle"    "1"
+
   "npc_dota_hero_night_stalker" "1"
+  "npc_dota_hero_bristleback" "1"
+  
+  "npc_dota_hero_wisp"  "-1"
+  "npc_dota_hero_dark_seer" "-1"
+
+  "npc_dota_hero_necrolyte" "-1"
+  
 }

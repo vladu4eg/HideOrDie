@@ -168,10 +168,14 @@ end
 
 function CDOTA_PlayerResource:GetType(pID)
 	local heroName = PlayerResource:GetSelectedHeroName(pID)
-    return string.match(heroName,TROLL_HERO[1]) and "troll"
-			or string.match(heroName,TROLL_HERO[2]) and "troll"
-			or string.match(heroName,TROLL_HERO[3]) and "troll"
-            or string.match(heroName,ANGEL_HERO) and "angel"
+	for i = 1, #TROLL_HERO do
+		if self:GetUnitName() ~= nil then 
+			if self:GetUnitName() == TROLL_HERO[i] then
+				return "troll"
+			end
+		end
+	end
+    return string.match(heroName,ANGEL_HERO) and "angel"
             or string.match(heroName,WOLF_HERO) and "wolf"
             or "elf"
 end
@@ -277,11 +281,22 @@ end
 
 
 function CDOTA_BaseNPC:IsElf()
-    return self:GetUnitName() == ELF_HERO
+    for i = 2, #ELF_HERO do
+		if self:GetUnitName() == ELF_HERO[i] then
+			return true
+		end
+	end
+	return false
 end
 function CDOTA_BaseNPC:IsTroll()
-	return self:GetUnitName() == TROLL_HERO[1] or self:GetUnitName() == TROLL_HERO[2] or self:GetUnitName() == TROLL_HERO[3]
+	for i = 2, #TROLL_HERO do
+		if self:GetUnitName() == TROLL_HERO[i] then
+			return true
+		end
+	end
+	return false
 end
+
 function CDOTA_BaseNPC:IsAngel()
     return self:GetUnitName() == ANGEL_HERO
 end

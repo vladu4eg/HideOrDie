@@ -128,7 +128,7 @@
 		"wood_worker_3"															  "Lumberjack 3"
 		"wood_worker_4"															  "Lumberjack 4"
 		"wood_worker_5"															  "Lumberjack 5"
-		"hero_treant"                                        							  "Lumberjack Guardian"
+		"wood_guild"                                        							  "Lumberjack Guardian"
 		"wisp_1"                                                                          "Wisp 1"
 		"wisp_2"                                                                          "Wisp 2"
 		"wisp_3"                                                                          "Wisp 3"
@@ -181,7 +181,8 @@
 		"spherical_staff_fire_golem"	"Fire Golem"
 		"npc_lia_boar" 	"Boar"
 		"npc_medusa_creep" 	"Medusa"
-		
+		"npc_jakiro_creep" 	"Jakiro"
+
 		"white_wolf_bm"	"White Wolf"
 		"jungle_stalker_bm" "Elder Jungle Stalker"
 		"phoenix_bm" "Phoenix"
@@ -783,7 +784,7 @@
 		"DOTA_Tooltip_Ability_furion_force_of_nature_datadriven_Description"					"Converts an area of trees into Death units."
 		
 		"DOTA_Tooltip_Ability_attribute_bonuses"												"Attribute Bonus"
-		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+3 to all attributes."
+		"DOTA_Tooltip_Ability_attribute_bonuses_Description"										"+5 to all attributes."
 
 		"DOTA_Tooltip_ability_build_tree"                                                     "Power of nature"
 		"DOTA_Tooltip_ability_build_tree_Description"                                         "Restores felled trees. Does not work if there is a building on the tree."
@@ -882,10 +883,10 @@
 		"DOTA_Tooltip_ability_train_worker_6_food_cost"                                   "FOOD COST: "
 		"DOTA_Tooltip_ability_train_worker_6_unit_count"                                  "UNIT COUNT: "		
 		
-		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
-		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Создает дровосеков для добычи древесины. Lumberjack Guardian должен быть возле дерева."
-		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
-		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
+		"DOTA_Tooltip_ability_build_wood_guild"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_wood_guild_Description"                              "Создает дровосеков для добычи древесины. Lumberjack Guardian должен быть возле дерева."
+		"DOTA_Tooltip_ability_build_wood_guild_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_wood_guild_lumber_cost"                              "LUMBER COST: "
 
 		"DOTA_Tooltip_Ability_upgrade_to_tower_radar"									"Tower Radar"
 		"DOTA_Tooltip_Ability_upgrade_to_tower_radar_Description"						"The radar is destroyed if the Reveal Area skill is used on you."
@@ -1173,10 +1174,10 @@
 		"DOTA_Tooltip_Ability_attribute_antibonuses"										""
 		"DOTA_Tooltip_Ability_attribute_antibonuses_Description"							""
 
-		"DOTA_Tooltip_ability_build_hero_treant"                                          "Lumberjack Guardian"
-		"DOTA_Tooltip_ability_build_hero_treant_Description"                              "Creates lumberjacks to extract wood. Lumberjack Guardian should be near the tree."
-		"DOTA_Tooltip_ability_build_hero_treant_gold_cost"                                "GOLD COST: "
-		"DOTA_Tooltip_ability_build_hero_treant_lumber_cost"                              "LUMBER COST: "
+		"DOTA_Tooltip_ability_build_wood_guild"                                          "Lumberjack Guardian"
+		"DOTA_Tooltip_ability_build_wood_guild_Description"                              "Creates lumberjacks to extract wood. Lumberjack Guardian should be near the tree."
+		"DOTA_Tooltip_ability_build_wood_guild_gold_cost"                                "GOLD COST: "
+		"DOTA_Tooltip_ability_build_wood_guild_lumber_cost"                              "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_build_gold_mine_1"                                          "Build Gold Mine 1"
 		"DOTA_Tooltip_ability_build_gold_mine_1_Description"                              "Gold mine gives gold like a tent, but you can build as many as you like and it expires after 8 min/x1 and 4 min/x2."
@@ -1356,7 +1357,7 @@
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5"                                          "Buy Medusa"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_5_Description"                              ""
 
-		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy HP Reg.  Lv 6"
+		"DOTA_Tooltip_ability_buy_item_hp_reg_6"                                          "Buy Jakiro"
 		"DOTA_Tooltip_ability_buy_item_hp_reg_6_Description"                              ""
 
 		"DOTA_Tooltip_ability_buy_item_hp_reg_7"                                          "Buy HP Reg.  Lv 7"
@@ -1450,6 +1451,9 @@
 
 		"DOTA_Tooltip_Ability_itemь_medusa"                                      "Spawn Medusa"
 		"DOTA_Tooltip_Ability_itemь_medusa_Description"                          ""
+
+		"DOTA_Tooltip_Ability_itemь_jakiro"                                      "Spawn Jakiro"
+		"DOTA_Tooltip_Ability_itemь_jakiro_Description"                          ""
 
 		"DOTA_Tooltip_ability_item_building_destroy"                                      "Destroy Building"
 		"DOTA_Tooltip_ability_item_building_destroy_Description"                          "Destroy building. You do not get your resources back, cannot destroy if enemy is nearby! "

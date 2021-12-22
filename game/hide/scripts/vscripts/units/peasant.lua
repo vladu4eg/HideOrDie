@@ -276,7 +276,7 @@ function FindClosestResourceDeposit( caster )
 	local buildings = Entities:FindAllByClassname("npc_dota_creature*") 
 	local sawmills = {}
 	for _,building in pairs(buildings) do
-		if string.match("hero_treant", building:GetUnitName())  then
+		if string.match("wood_guild", building:GetUnitName())  then
 			table.insert(sawmills, building)
 		end
 	end

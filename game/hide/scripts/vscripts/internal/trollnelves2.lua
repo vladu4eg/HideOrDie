@@ -142,6 +142,7 @@ function trollnelves2:GoldFilter( kv )
 end
 
 function trollnelves2:DamageFilter( kv )
+    if kv.entindex_attacker_const ~= nil then
     local heroAttacker = EntIndexToHScript(kv.entindex_attacker_const)
     local heroKilled = EntIndexToHScript(kv.entindex_victim_const)
     local team = heroAttacker:GetTeamNumber()
@@ -150,4 +151,5 @@ function trollnelves2:DamageFilter( kv )
         kv.damage = 0
     end
     return true
+  end
 end

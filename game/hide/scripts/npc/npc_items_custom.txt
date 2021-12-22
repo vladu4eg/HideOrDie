@@ -1155,7 +1155,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1900"
+				"gold_cost"				"1400"
 			}	
 			"03"
 			{
@@ -5313,12 +5313,141 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"lumber_cost"			"3"
+				"lumber_cost"			"2"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"duration"				"600"
+			}
+		}
+	}
+
+	"item_mine"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"5599"	
+		"BaseClass"                     "item_datadriven"													// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"100"
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"0"
+		"AbilityCharges"				"3"
+		"AbilityChargeRestoreTime"		"23"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 130 150 170"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"				"400"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"proximity_threshold"				"1.6"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage"					"200 380 560 740"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"burn_duration"				"5"
+			}	
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"building_damage_pct"		"30"
+			}	
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"activation_delay"			"1.75"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"cast_range_scepter_bonus"		"300"
+				"RequiresScepter"			"1"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"AbilityChargeRestoreTime"	""
+				"LinkedSpecialBonus"		"special_bonus_unique_techies_3"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"item_jakiro"
+	{
+		"BaseClass"                     "item_datadriven"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName"            "jakiro"
+		
+	 	//"ItemStockInitial" "1"
+		//"ItemStockMax" "1"
+		//"ItemStockTime" "30"	
+	
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemAliases"					"кабан;boar"
+		"ItemPermanent"					"0"
+		"AbilityCooldown"               "60"
+		"ItemKillable"                  "0"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		"ItemInitialCharges"            "1"
+		"ItemStackable"					"1"
+		
+		"OnSpellStart"
+		{
+			"SpendCharge"
+			{}
+			"RunScript"
+			{
+				"ScriptFile"	"items\jakiro.lua"
+				"Function"		"SpawnJakiro"
+			}
+			
+		}
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"0"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration"				"120"
 			}
 		}
 	}
@@ -5363,7 +5492,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"400"
+				"gold_cost"				"350"
 			}	
 			"03"
 			{
@@ -5470,7 +5599,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"50"
+				"gold_cost"				"25"
 			}	
 			"03"
 			{
@@ -7462,8 +7591,288 @@
 		"ItemAliases"					"ags;ultimate;aghanim's scepter;ags"
 		//"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"		// heroes for whom this is a problem solve it in their code - ogre magi, meepo
 	}
-
 	
+
+	"item_mines"
+{
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"                     "item_datadriven"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityTextureName"            "item_land_mine"
+    "AOERadius"                     "%small_radius"
+
+    // Precache
+    //-------------------------------------------------------------------------------------------------------------
+    "precache"
+    {
+        "soundfile"     "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"       
+        "particle"      "particles/units/heroes/hero_techies/techies_land_mine.vpcf"
+        "particle"      "particles/units/heroes/hero_techies/techies_land_mine_explode.vpcf"
+        "model"         "models/heroes/techies/fx_techiesfx_mine.vmdl"  
+    }
+
+    // Item Details
+    //-------------------------------------------------------------------------------------------------------------  
+    "ItemDroppable"         "0"
+    "ItemKillable"          "0"
+    "ItemShareability"      "ITEM_NOT_SHAREABLE"
+	"ItemSellable"         "1"
+
+    "ItemInitialCharges"    "1"
+    "ItemPermanent"         "0"
+	"ItemStackable"					"1"
+
+	"ItemStockInitial" "1" 
+	"ItemStockMax" "1"
+	"ItemStockTime" "20"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"              "100"
+    "AbilityCastPoint"              "0.0"
+    
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "180"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "damage"                    "150"
+        }
+		"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"gold_cost"				"1500"
+			}	
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lumber_cost"			"0"
+			}
+        "04"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "activation_time"           "0"
+        }
+        "05"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "max_mines"                 "20"
+        }
+        "06"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "explode_delay"             "0.1"
+        }
+        "07"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "fade_time"                 "1"
+        }
+        // Extra
+        "08"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "vision_radius"             "150"
+        }
+        "09"
+        {
+            "var_type"                  "FIELD_FLOAT"
+            "vision_duration"           "1.0"
+        }
+		"10"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "small_radius"              "100"
+        }
+        "11"
+        {
+            "var_type"                  "FIELD_INTEGER"
+            "big_radius"                "150"
+        }
+    }
+
+    "OnSpellStart"
+    {
+
+        "FireSound"
+        {
+            "EffectName"    "Hero_Techies.LandMine.Plant"
+            "Target"        "CASTER"
+        }
+
+        "RunScript"
+        {
+            "ScriptFile"    "abilities/mines.lua"
+            "Function"      "LandMinesPlant"
+            "Target"        "POINT"
+            "modifier_land_mine"    "modifier_land_mine_datadriven"
+            "modifier_tracker"      "modifier_land_mine_tracker_datadriven"
+            "modifier_caster"       "modifier_land_mine_caster_datadriven"
+            "modifier_land_mine_invisibility"   "modifier_land_mine_invisibility_datadriven"
+        }
+    }
+
+    "Modifiers"
+    {
+        "modifier_land_mine_datadriven"
+        {
+            "IsHidden"      "1"
+            "IsPurgable"    "0"
+
+            "OnDeath"
+            {
+                "CreateThinker"
+                {
+                    "ModifierName"  "modifier_land_mine_thinker"
+                    "Target"        "UNIT"
+                }               
+
+                "FireEffect"
+                {
+                    "EffectName"        "particles/units/heroes/hero_techies/techies_land_mine_explode.vpcf"
+                    "EffectAttachType"  "follow_hitloc"
+                    "Target"
+                    {
+                        "Center"    "UNIT"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                    }
+                }
+
+                "ActOnTargets"
+                {
+                    "Target"
+                    {
+                        "Center"    "UNIT"
+                        "Radius"    "%small_radius"
+                        "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                    }
+                
+                    "Action"    
+                    {
+                        "Damage"
+                        {
+                            "Target"
+                            {
+                                "Center"    "TARGET"
+                                "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                            }
+                            "Type"          "DAMAGE_TYPE_PHYSICAL"
+                            "Damage"        "%damage / 2"
+                        }
+                    }
+                }
+
+                "ActOnTargets"
+                {
+                    "Target"
+                    {
+                        "Center"    "UNIT"
+                        "Radius"    "%big_radius"
+                        "Teams"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+                        "Types"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                    }
+                
+                    "Action"    
+                    {
+                        "Damage"
+                        {
+                            "Target"
+                            {
+                                "Center"    "TARGET"
+                                "Flags"     "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+                            }
+                            "Type"          "DAMAGE_TYPE_PHYSICAL"
+                            "Damage"        "%damage / 2"
+                        }
+                    }                   
+                }
+
+                "RunScript"
+                {
+                    "ScriptFile"    "abilities/mines.lua"
+                    "Function"      "LandMinesDeath"
+                    "modifier_caster"   "modifier_land_mine_caster_datadriven"
+                }
+            }
+
+            "States"
+            {
+                "MODIFIER_STATE_NO_UNIT_COLLISION"      "MODIFIER_STATE_VALUE_ENABLED"
+            }
+        }
+
+        "modifier_land_mine_tracker_datadriven"
+        {
+            "IsHidden"      "1"
+            "IsPurgable"    "0"
+
+            "EffectName"    "particles/units/heroes/hero_techies/techies_land_mine.vpcf"
+            "EffectAttachType"  "follow_origin"
+
+            "ThinkInterval"  "0.1"
+            "OnIntervalThink"
+            {
+                "RunScript"
+                {
+                    "ScriptFile"    "abilities/mines.lua"
+                    "Function"      "LandMinesTracker"
+                }
+            }
+        }
+
+        "modifier_land_mine_caster_datadriven"
+        {
+            "IsHidden"      "1"
+            "IsBuff"        "1"
+            "IsPurgable"    "0"
+        }
+
+        "modifier_land_mine_invisibility_datadriven"
+        {
+            "IsHidden"      "1"
+            "IsPurgable"    "0"
+
+            "States"
+            {
+                "MODIFIER_STATE_INVISIBLE"      "MODIFIER_STATE_VALUE_ENABLED"
+            }
+        }
+
+        "modifier_land_mine_thinker"
+        {
+            "Duration"  "0.03"
+            "OnCreated"
+            {
+                "FireSound"
+                {
+                    "EffectName"    "Hero_Techies.LandMine.Detonate"
+                    "Target"
+                    {
+                        "Center"    "TARGET"
+                        "Flags"     "DOTA_UNIT_TARGET_FLAG_DEAD"
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 }

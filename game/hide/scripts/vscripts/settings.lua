@@ -1,15 +1,15 @@
 MAXIMUM_ATTACK_SPEED = 600
 MINIMUM_ATTACK_SPEED = 20
 
-TROLL_HERO = {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} -- {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} 
-ELF_HERO = "npc_dota_hero_furion"
+TROLL_HERO = {"npc_dota_hero_wisp", "npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker", "npc_dota_hero_lone_druid", "npc_dota_hero_dazzle", "npc_dota_hero_bristleback"} -- {"npc_dota_hero_nevermore", "npc_dota_hero_warlock", "npc_dota_hero_night_stalker"} 
+ELF_HERO = {"npc_dota_hero_dark_seer","npc_dota_hero_treant","npc_dota_hero_tiny","npc_dota_hero_chen","npc_dota_hero_furion","npc_dota_hero_bounty_hunter"}
 ANGEL_HERO = "npc_dota_hero_necrolyte"
 WOLF_HERO = "npc_dota_hero_lycan"
 BEAR_HERO = "npc_dota_hero_bear"
 
 TEAM_CHOICE_TIME = 30
 WOLF_START_SPAWN_TIME = 300 -- When the players will be able to choose wolf instead of auto chosen to angels. In seconds.
-TROLL_SPAWN_TIME = 30
+TROLL_SPAWN_TIME = 15
 PRE_GAME_TIME = 40
 
 TROLL_RESPAWN_TIME = 120
@@ -26,7 +26,7 @@ TROLL_STARTING_GOLD_X2 = 300
 STARTING_LUMBER_PRICE = 150
 MINIMUM_LUMBER_PRICE = 10
 STARTING_MAX_FOOD = 20
-STARTING_MAX_WISP = 20
+STARTING_MAX_WISP = 30
 
 BUFF_XP1_TIME = 1230
 BUFF_XP1_SUM = 2000
@@ -36,6 +36,7 @@ BUFF_XP3_TIME = 2130
 BUFF_XP3_SUM = 8000
 
 BUFF_ENIGMA_TIME = 1870
+BUFF_VISION_TIME = 2170
 END_GAME_TIME = 2400
 
 

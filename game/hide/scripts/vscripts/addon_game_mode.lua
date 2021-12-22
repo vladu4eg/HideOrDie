@@ -36,7 +36,6 @@ function Precache( context )
 	
 	-- Entire heroes (sound effects/voice/models/particles) can be precached with PrecacheUnitByNameSync
 	-- Custom units from npc_units_custom.txt can also have all of their abilities and precache{} blocks precached in this way
-	PrecacheUnitByNameSync(ELF_HERO, context)
 	PrecacheUnitByNameSync(TROLL_HERO[1], context)
 	PrecacheUnitByNameSync(TROLL_HERO[2], context)
 	PrecacheUnitByNameSync(TROLL_HERO[3], context)

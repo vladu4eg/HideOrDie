@@ -49,10 +49,11 @@ end
 
 function CDOTA_BaseNPC:ClearInventoryBlink()
 	local item_count = self:GetNumItemsInInventory()
-	local blink = self:FindItemInInventory("item_blink_datadriven")
+	local blink1 = self:FindItemInInventory("item_blink_datadriven")
+	local blink2 = self:FindItemInInventory("item_blink_mega_datadriven")
 	for i=0, item_count do
 		local item = self:GetItemInSlot(i)
-		if blink == item then
+		if (blink1 == item) or (blink2 == item) then
 			self:RemoveItem(item)
 		end
 	end
