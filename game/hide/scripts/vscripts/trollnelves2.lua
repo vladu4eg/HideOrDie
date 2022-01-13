@@ -192,7 +192,7 @@ function trollnelves2:OnHeroInGame(hero)
     InitializeHero(hero)
     if team == DOTA_TEAM_BADGUYS then InitializeBadHero(hero) end
     
-    if hero:IsElf() then
+    if hero:IsElf() or PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_dark_seer" then
         InitializeBuilder(hero)
         elseif hero:IsTroll() or PlayerResource:GetSelectedHeroName(hero:GetPlayerOwnerID()) == "npc_dota_hero_wisp" then
         InitializeTroll(hero)

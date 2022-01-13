@@ -46,7 +46,7 @@ function RuneLumber(event)
 	local value
 	if hero:IsElf() then
 		PlayerResource:ModifyLumber(hero, 2000, true)
-		value = 5000
+		value = 2000
 	else
 		PlayerResource:ModifyLumber(hero, 1, true)
 		value = 1

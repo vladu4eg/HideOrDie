@@ -106,7 +106,8 @@
 				"IsHidden"			"1"
 				"States"
 				{
-					"MODIFIER_STATE_SPECIALLY_DENIABLE" 	"MODIFIER_STATE_VALUE_ENABLED" // Allows attacking own buildings
+					"MODIFIER_STATE_SPECIALLY_DENIABLE" 	"MODIFIER_STATE_VALUE_ENABLED" // 
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY" 	"MODIFIER_STATE_VALUE_ENABLED" // 
 				}
 			}
 		}		
@@ -8469,7 +8470,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"MaxLevel"					"1"
 		"ItemName"					"item_mines"
-		"AbilityCooldown"			"180"
+		"AbilityCooldown"			"60"
 		
 		"BuyItem"					"1"
 		
@@ -9733,7 +9734,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"10"
+				"food_cost"			"2"
 			}	
 			"04"
 			{
@@ -9990,7 +9991,7 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"5"
+				"food_cost"			"20"
 			}	
 			"04"
 			{
@@ -11582,7 +11583,6 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
 		"AbilityCastRange"				"300"
-		"AbilityCooldown"				"0.5"
 		
 		"AbilitySpecial"
 		{
@@ -14098,7 +14098,7 @@
         "MaxLevel"                      "1"
         "AbilityManaCost"                       "50"
         "AbilityChannelledManaCostPerSecond"    "100"
-
+		"AbilityCooldown"						"1"
 
         "OnToggleOn"
         {
@@ -14156,8 +14156,8 @@
             {
                 "Properties"
                 {
-                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "-45"
-                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "-100"
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "-35"
+                    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "-50"
                 }
 
                 "IsDebuff" "0"

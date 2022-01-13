@@ -28,7 +28,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"300"
+				"gold_cost"				"250"
 			}	
 			"03"
 			{
@@ -1136,7 +1136,7 @@
 		"ItemContributesToNetWorthWhenDropped"	"0"
 		"AllowedInBackpack"				"0"
 		"IsTempestDoubleClonable"		"0"
-		
+		"ItemIsNeutralDrop"				"1"
 		// Sound
 		//-------------------------------------------------------------------------------------------------------------			
 		"UIPickupSound"					"Item.PickUpGemShop"
@@ -4293,7 +4293,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
+				"gold_cost"				"100"
 			}
 			"03"
 			{
@@ -4998,7 +4998,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"200"
+				"gold_cost"				"100"
 			}	
 			"03"
 			{
@@ -6180,7 +6180,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"AbilityTextureName"            "item_recipe_pickup_world"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
+		"ItemSellable"                  "1"
 		"ItemCost"						"0"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6188,7 +6188,7 @@
 		"ItemShopTags"					""
 		
 		"ItemStackable"                 "0"
-		"ItemSellable" 					"0"
+		"ItemSellable" 					"1"
 		"ItemPermanent"                 "1"
 		"ItemDroppable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -6218,7 +6218,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"AbilityTextureName"            "item_recipe_pickup_world"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
+		"ItemSellable"                  "1"
 		"ItemCost"						"0"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6226,7 +6226,7 @@
 		"ItemShopTags"					""
 		
 		"ItemStackable"                 "0"
-		"ItemSellable" 					"0"
+		"ItemSellable" 					"1"
 		"ItemPermanent"                 "1"
 		"ItemDroppable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -6385,7 +6385,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"AbilityTextureName"            "item_recipe_pickup_world"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
+		"ItemSellable"                  "1"
 		"ItemCost"						"0"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6393,7 +6393,7 @@
 		"ItemShopTags"					""
 		
 		"ItemStackable"                 "0"
-		"ItemSellable" 					"0"
+		"ItemSellable" 					"1"
 		"ItemPermanent"                 "1"
 		"ItemDroppable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -6641,7 +6641,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"AbilityTextureName"            "item_recipe_pickup_world"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		
+		"ItemSellable"                  "1"
 		"ItemCost"						"0"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -6649,7 +6649,7 @@
 		"ItemShopTags"					""
 		
 		"ItemStackable"                 "0"
-		"ItemSellable" 					"0"
+		"ItemSellable" 					"1"
 		"ItemPermanent"                 "1"
 		"ItemDroppable"					"1"
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE_STACKING"
@@ -7621,13 +7621,9 @@
     "ItemShareability"      "ITEM_NOT_SHAREABLE"
 	"ItemSellable"         "1"
 
-    "ItemInitialCharges"    "1"
+    "ItemInitialCharges"    "0"
     "ItemPermanent"         "0"
-	"ItemStackable"					"1"
-
-	"ItemStockInitial" "1" 
-	"ItemStockMax" "1"
-	"ItemStockTime" "20"
+	"ItemStackable"					"0"
 
     // Casting
     //-------------------------------------------------------------------------------------------------------------
@@ -7654,7 +7650,7 @@
 		"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"gold_cost"				"1500"
+				"gold_cost"				"1000"
 			}	
 			"03"
 			{

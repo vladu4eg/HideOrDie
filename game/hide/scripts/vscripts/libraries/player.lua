@@ -169,15 +169,17 @@ end
 function CDOTA_PlayerResource:GetType(pID)
 	local heroName = PlayerResource:GetSelectedHeroName(pID)
 	for i = 1, #TROLL_HERO do
-		if self:GetUnitName() ~= nil then 
-			if self:GetUnitName() == TROLL_HERO[i] then
-				return "troll"
-			end
+		if heroName == TROLL_HERO[i] then
+			return "troll"
+		end
+	end
+	for i = 1, #ELF_HERO do
+		if heroName == ELF_HERO[i] then
+			return "elf"
 		end
 	end
     return string.match(heroName,ANGEL_HERO) and "angel"
             or string.match(heroName,WOLF_HERO) and "wolf"
-            or "elf"
 end
 
 function CDOTA_PlayerResource:GetScoreBonus(pID)
