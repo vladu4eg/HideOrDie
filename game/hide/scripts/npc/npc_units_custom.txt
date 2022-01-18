@@ -439,8 +439,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_2"
-				"gold_cost"			"80"
-				"lumber_cost"		"120"
+				"gold_cost"			"60"
+				"lumber_cost"		"110"
 			}
 	    }
 		"Requirements"{
@@ -516,8 +516,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_3"
-				"gold_cost"			"350"
-				"lumber_cost"		"450"
+				"gold_cost"			"250"
+				"lumber_cost"		"350"
 			}
 	    }
 		"Requirements"{
@@ -589,8 +589,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_4"
-				"gold_cost"			"1000"
-				"lumber_cost"		"1500"
+				"gold_cost"			"800"
+				"lumber_cost"		"1000"
 			}
 	    }
 		"Requirements"{
@@ -663,8 +663,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_5"
-				"gold_cost"			"3000"
-				"lumber_cost"		"3500"
+				"gold_cost"			"2500"
+				"lumber_cost"		"3000"
 			}
 	    }
 		"Requirements"{
@@ -737,8 +737,8 @@
 	        "Count"     "1"
 	        "1"{
 				"unit_name"			"tent_6"
-				"gold_cost"			"8000"
-				"lumber_cost"		"12000"
+				"gold_cost"			"6000"
+				"lumber_cost"		"10000"
 			}
 	    }
 		"Requirements"{	

@@ -21,7 +21,7 @@ end
 function RuneOfIntellect(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
 	if hero:IsElf() then
-		hero:ModifyIntellect(2)
+		hero:ModifyIntellect(5)
 	else
 		hero:ModifyIntellect(10)
 	end
@@ -32,12 +32,11 @@ function RuneGold(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
 	local value = 0
 	if hero:IsElf() then
-		PlayerResource:ModifyGold(hero, 5000, true)
-		value = 5000
+		value = 5000 * math.ceil(GameRules:GetGameTime()/60)
 	else
-		PlayerResource:ModifyGold(hero, 1000, true)
-		value = 500
+		value = 500 * math.ceil(GameRules:GetGameTime()/60)
 	end
+	PlayerResource:ModifyGold(hero, value, true)
 	SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, event.caster, value, nil )
 end
 
@@ -45,12 +44,11 @@ function RuneLumber(event)
 	local hero = PlayerResource:GetSelectedHeroEntity(event.caster:GetPlayerOwnerID())
 	local value
 	if hero:IsElf() then
-		PlayerResource:ModifyLumber(hero, 2000, true)
-		value = 2000
+		value = 2000 * math.ceil(GameRules:GetGameTime()/60)
 	else
-		PlayerResource:ModifyLumber(hero, 1, true)
-		value = 1
+		value = math.ceil(GameRules:GetGameTime()/1800)
 	end
+	PlayerResource:ModifyLumber(hero, value, true)
 	PopupLumber(hero, value, true)
 end
 
