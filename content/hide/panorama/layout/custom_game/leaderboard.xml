@@ -1,0 +1,51 @@
+<root>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/leaderboard.js" />
+	</scripts>
+
+	<styles>
+		<include src="file://{resources}/styles/custom_game/leaderboard.css" />
+	</styles>
+	<Panel class="LeaderboardMain" hittest="false"> 
+		<Panel id="LeaderboardButton" onactivate="ToggleLeaderboard();">
+			<Panel class="LeaderboardButtonIcon" />
+			<Label class="LeaderboardButtonLabel" text="#leaderboard_button" />
+		</Panel>
+		<Panel id="Leaderboard">
+			<Panel class="LeaderboardForExitCheck" hittest="false">
+				<Panel class="Menu" >
+					<Label class="LeaderboardText"	text="#leaderboard_name"/>
+				</Panel>
+				<Panel class="Panels" >
+					<Panel id="LeaderboardPanel1" class="LeaderboardPanel">
+						<Panel class="RatingPlayersColumn">
+							<Panel class="ColumnInfo">
+								<Label class="ColumnInfoLabel" text="#leaderboard_1" />
+							</Panel>	
+							<Panel id="PlayersColumnMainRating" class="RatingPlayers"/>
+						</Panel>
+						<Panel class="RatingPlayersColumn">
+							<Panel class="ColumnInfo">
+								<Label class="ColumnInfoLabel" text="#leaderboard_2" />
+							</Panel>
+							<Panel id="PlayersColumnElvesRating" class="RatingPlayers"/>
+						</Panel>
+						<Panel class="RatingPlayersColumn">
+							<Panel class="ColumnInfo">
+								<Label class="ColumnInfoLabel" text="#leaderboard_3" />
+							</Panel>
+							<Panel id="PlayersColumnTrollRating" class="RatingPlayers"/>
+						</Panel>
+						<Panel class="RatingPlayersColumn">
+							<Panel class="ColumnInfo">
+								<Label class="ColumnInfoLabel" text="#leaderboard_event" />
+							</Panel>
+							<Panel id="PlayersColumnEventRating" class="RatingPlayers"/>
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel class="CloseLeaderboard" onactivate="ToggleLeaderboard();"/>
+		</Panel>
+	</Panel>
+</root>

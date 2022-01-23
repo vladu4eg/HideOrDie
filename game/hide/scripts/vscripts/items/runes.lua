@@ -34,7 +34,7 @@ function RuneGold(event)
 	if hero:IsElf() then
 		value = 5000 * math.ceil(GameRules:GetGameTime()/60)
 	else
-		value = 500 * math.ceil(GameRules:GetGameTime()/60)
+		value = 75 * math.ceil(GameRules:GetGameTime()/60)
 	end
 	PlayerResource:ModifyGold(hero, value, true)
 	SendOverheadEventMessage(hero:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, event.caster, value, nil )

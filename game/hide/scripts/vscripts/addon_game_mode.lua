@@ -295,11 +295,14 @@ function Activate()
 	GameRules.Score = {}
 	GameRules.PlayersBase = {}
 	GameRules.PlayersFPS = {}
-	GameRules.test = false
-	GameRules.test2 = false
+	GameRules.test = true
+	GameRules.test2 = true
 	GameRules.PlayersCount = 0
 	GameRules.KickList = {}
 	GameRules.TrollCount = 0
+
+	GameRules.isTesting = false
+	GameRules.server =   "https://tve3.us/hide/"  -- "https://localhost:5001/test/" --
 
 	GameRules.trollnelves2 = trollnelves2()
 	GameRules.trollnelves2:Inittrollnelves2()

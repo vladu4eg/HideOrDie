@@ -38,6 +38,7 @@
 				var playerPanel = playersContainer.FindChild("_dynamic_player_" + playerId);
 				if(playerPanel){
 					var playerResourceStats = CustomNetTables.GetTableValue("resources",playerId + "_resource_stats");
+					var playerStatsScore = CustomNetTables.GetTableValue("scorestats",playerId.toString());
                     if(playerResourceStats) {
 						$.Msg("Setting end game resources for playerId: ", playerId, "; playerResourceStats: ", playerResourceStats, "; ");
 						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerGoldAmount", Math.round(playerResourceStats.gold/1000) );
@@ -46,8 +47,13 @@
 						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerLPSAmount", Math.round(playerResourceStats.lumberGained/playerResourceStats.timePassed) );
 						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerGoldGivenAmount", Math.round(playerResourceStats.goldGiven/1000) );
 					    _ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerLumberGivenAmount", Math.round(playerResourceStats.lumberGiven/1000) );
-						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerScore", playerResourceStats.playerScore );
+						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerChangeScore", playerResourceStats.PlayerChangeScore );
 					}
+					if(playerStatsScore)
+					{
+						_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerScore", (parseInt(playerStatsScore.playerScoreElf) + parseInt(playerStatsScore.playerScoreTroll)).toString());			
+					}
+					
 				}
 			}
 		}

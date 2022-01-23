@@ -12,6 +12,7 @@
 		"donate",
 		"Particles_Tabel",
 		"scorestats",
-		"Pets_Tabel"
+		"Pets_Tabel",
+		"Shop"
     ]
 } 

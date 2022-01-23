@@ -1,5 +1,8 @@
 "use strict";
 
+var type_panel = 3 // 1 - mini, 2 - medium, 3 - full
+ChangePanelType("Maximum")
+
 //=============================================================================
 //=============================================================================
 function _ScoreboardUpdater_SetTextSafe( panel, childName, textValue )
@@ -36,12 +39,92 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 	var playerInfo = Game.GetPlayerInfo( playerId );
 	var playerStatsScore = CustomNetTables.GetTableValue("scorestats",playerId.toString());
 
+
+
+	var score_check = playerPanel.FindChildInLayoutFile( "PlayerScoreInformation" )
+	var full_res_check = playerPanel.FindChildInLayoutFile( "GiveResourcesTable" )
+	var kick_flag_check = playerPanel.FindChildInLayoutFile( "DopPanels" )
+
 	if ( playerInfo )
 	{
 		isTeammate = ( playerInfo.player_team_id == localPlayerTeamId );
 
+
+
+
+
 		playerPanel.SetHasClass( "player_dead", ( playerInfo.player_respawn_seconds >= 0 ) );
 		playerPanel.SetHasClass( "local_player_teammate", isTeammate && ( playerId != Game.GetLocalPlayerID() ) );
+
+
+		if (type_panel == 3) {
+			if ($("#Legend")){
+				$("#Legend").style.visibility = "visible";
+			}
+			if (score_check) {
+				score_check.style.visibility = "visible"
+			}
+			if ( (!playerPanel.BHasClass("is_local_player")) && (isTeammate) ) {
+				if (full_res_check) {
+					full_res_check.style.visibility = "visible"
+				}
+				if (kick_flag_check) {
+					kick_flag_check.style.visibility = "visible"
+				}
+			}
+			else
+			{
+				if (kick_flag_check)
+				{
+					kick_flag_check.style.visibility = "collapse"
+				}
+				else if (full_res_check)
+				{
+					full_res_check.style.visibility = "collapse"
+				}	
+			}
+
+		} else if (type_panel == 2) {
+			if ($("#Legend")){
+				$("#Legend").style.visibility = "collapse";
+			}
+			if (score_check) {
+				score_check.style.visibility = "collapse"
+			}
+			if ( (!playerPanel.BHasClass("is_local_player")) && (isTeammate) ) {
+				if (full_res_check) {
+					full_res_check.style.visibility = "visible"
+				}
+				if (kick_flag_check) {
+					kick_flag_check.style.visibility = "collapse"
+				}
+			}
+			else
+			{
+				kick_flag_check.style.visibility = "collapse"
+				full_res_check.style.visibility = "collapse"
+			}
+		} else if (type_panel == 1) {
+			if ($("#Legend")){
+				$("#Legend").style.visibility = "collapse";
+			}
+			if (score_check) {
+				score_check.style.visibility = "collapse"
+			}
+			if ( (!playerPanel.BHasClass("is_local_player")) && (isTeammate) ) {
+				if (full_res_check) {
+					full_res_check.style.visibility = "collapse"
+				}
+				if (kick_flag_check) {
+					kick_flag_check.style.visibility = "collapse"
+				}
+			}
+			else
+			{
+				kick_flag_check.style.visibility = "collapse"
+				full_res_check.style.visibility = "collapse"
+			}
+		}
 
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "RespawnTimer", ( playerInfo.player_respawn_seconds + 1 ) ); // value is rounded down so just add one for rounded-up
 		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerName", playerInfo.player_name );
@@ -53,26 +136,62 @@ function _ScoreboardUpdater_UpdatePlayerPanel( scoreboardConfig, playersContaine
 		var lumberValue = ui.playerLumber[playerId];
 
 
-		$.Msg("Scoreboard update... playerId: ", playerId, "; goldValue: ", goldValue, "; lumberValue: ", lumberValue);
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerGoldAmount", goldValue );
-		_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerLumberAmount", lumberValue );
+		//$.Msg("Scoreboard update... playerId: ", playerId, "; goldValue: ", goldValue, "; lumberValue: ", lumberValue);
 
-		$.Msg("Setting Scoreboard resources for playerId: ", playerId, "; playerStatsScore: ", playerStatsScore, "; ");
+
+		if (isTeammate) {
+			var lumber_icon = playerPanel.FindChildInLayoutFile( "GoldPanel" );
+			var gold_icon = playerPanel.FindChildInLayoutFile( "LumberPanel" );
+			if (lumber_icon) {
+				lumber_icon.style.visibility = "visible"
+			}
+			if (gold_icon) {
+				gold_icon.style.visibility = "visible"
+			}
+			_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerGoldAmount", goldValue );
+			_ScoreboardUpdater_SetTextSafe( playerPanel, "PlayerLumberAmount", lumberValue );
+		} else {
+			var lumber_icon = playerPanel.FindChildInLayoutFile( "GoldPanel" );
+			var gold_icon = playerPanel.FindChildInLayoutFile( "LumberPanel" );
+			if (lumber_icon) {
+				lumber_icon.style.visibility = "collapse"
+			}
+			if (gold_icon) {
+				gold_icon.style.visibility = "collapse"
+			}
+		}
+
+
+		//$.Msg("Setting Scoreboard resources for playerId: ", playerId, "; playerStatsScore: ", playerStatsScore, "; ");
 		if(playerStatsScore)
 		{
 			_ScoreboardUpdater_SetTextSafe( playerPanel, "ElfScore", playerStatsScore.playerScoreElf.toString() );
 			_ScoreboardUpdater_SetTextSafe( playerPanel, "TrollScore", playerStatsScore.playerScoreTroll.toString() );
 		}
+		////..////////////
 		var playerPortrait = playerPanel.FindChildInLayoutFile( "HeroIcon" );
 		if ( playerPortrait )
 		{
+
+			var portrait_path = "file://{images}/heroes/"
+
 			if ( playerInfo.player_selected_hero !== "" )
 			{
-				playerPortrait.SetImage( "file://{images}/heroes/" + playerInfo.player_selected_hero + ".png" );
+				playerPortrait.SetImage( portrait_path + playerInfo.player_selected_hero + ".png" );
 			}
 			else
 			{
 				playerPortrait.SetImage( "file://{images}/custom_game/unassigned.png" );
+			}
+
+		}
+
+		var playerPortrait_end = playerPanel.FindChildInLayoutFile( "HeroIconEnd" );
+		if ( playerPortrait_end )
+		{
+			if ( playerInfo.player_selected_hero !== "" )
+			{
+				playerPortrait_end.SetImage( "file://{images}/heroes/icons/" + playerInfo.player_selected_hero + ".png" );
 			}
 		}
 
@@ -173,7 +292,7 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 	var teamId = teamDetails.team_id;
 //	$.Msg( "_ScoreboardUpdater_UpdateTeamPanel: ", teamId );
 
-	$.Msg("ID - " + teamId);
+	//$.Msg("ID - " + teamId);
 	var teamPanelName = "_dynamic_team_" + teamId;
 	var teamPanel = containerPanel.FindChild( teamPanelName );
 	if ( teamPanel === null )
@@ -211,7 +330,7 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 		for( var i = 0;i<16;i++){
 			var playerPanel = playersContainer.FindChild("_dynamic_player_" + i);
 			if(playerPanel){
-				$.Msg("Found " + playerPanel.id + " in team " + teamId);
+				//$.Msg("Found " + playerPanel.id + " in team " + teamId);
 				if(teamPlayers.indexOf(i) == -1){
 					playerPanel.style.visibility = "collapse";
 					playerPanel.RemoveAndDeleteChildren();
@@ -232,7 +351,6 @@ function _ScoreboardUpdater_UpdateTeamPanel( scoreboardConfig, containerPanel, t
 		teamsInfo.max_team_players = teamPlayers.length;
 	}
 
-	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamScore", teamDetails.team_score )
 	_ScoreboardUpdater_SetTextSafe( teamPanel, "TeamName", $.Localize( teamDetails.team_name ) )
 
 	if ( GameUI.CustomUIConfig().team_colors )
@@ -434,3 +552,44 @@ function ScoreboardUpdater_GetSortedTeamInfoList( scoreboardHandle )
 	return teamsList;
 }
 
+
+
+
+
+function ChangePanelType(PanelType) {
+
+	if ($("#MinType")) {
+		$("#MinType").style.brightness = "1";
+	}
+	if ($("#MedType")) {
+		$("#MedType").style.brightness = "1";
+	}
+	if ($("#MaxType")) {
+		$("#MaxType").style.brightness = "1";
+	}
+	
+	
+	
+
+	
+
+
+
+
+	if (PanelType == "Mini") {
+		if ($("#MinType")) {
+			$("#MinType").style.brightness = "4";
+		}
+		type_panel = 1
+	} else if (PanelType == "Medium") {
+		if ($("#MedType")) {
+			$("#MedType").style.brightness = "4";
+		}
+		type_panel = 2
+	} else if (PanelType == "Maximum") {
+		if ($("#MaxType")) {
+			$("#MaxType").style.brightness = "4";
+		}
+		type_panel = 3
+	}
+}

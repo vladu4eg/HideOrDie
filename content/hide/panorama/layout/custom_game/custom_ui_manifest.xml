@@ -14,23 +14,239 @@
     <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/building_helper.xml" />
     <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/selection.xml" /> 
     <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_help_side.xml" /> 
-	<!--<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_kick_side.xml" /> --> 
+	<!--
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_kick_side.xml" /> 
 	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/choose_flag_side.xml" /> 
-    <CustomUIElement type="GameSetup"			layoutfile="file://{resources}/layout/custom_game/vote_hud.xml" />
-   <!-- <CustomUIElement type="GameInfo"			layoutfile="file://{resources}/layout/custom_game/game_info.xml" />--> 
+    
+    <CustomUIElement type="GameInfo"			layoutfile="file://{resources}/layout/custom_game/game_info.xml" /> 
+	-->
+	<CustomUIElement type="GameSetup"			layoutfile="file://{resources}/layout/custom_game/vote_hud.xml" />
     <CustomUIElement type="FlyoutScoreboard"    layoutfile="file://{resources}/layout/custom_game/multiteam_flyout_scoreboard.xml" />
     <CustomUIElement type="EndScreen"           layoutfile="file://{resources}/layout/custom_game/multiteam_end_screen.xml" />
 	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/discord.xml" />
 	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/patreon.xml" />
-	<!--<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/donate.xml" /> -->
-	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/tops.xml" />   
-	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/event.xml" />   
+	<!--
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/donate.xml" /> 
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/tops.xml" />  
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/event.xml" /> 
 	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/particles.xml" />
-	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/pets.xml" />  
+	<CustomUIElement type="Hud"                 layoutfile="file://{resources}/layout/custom_game/pets.xml" />   
+	-->
     <CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_worldpanels.xml" />
     <CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/barebones_notifications.xml" /> 
 	<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/ability_tooltip.xml" />
- 	<!--<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_hud_base.xml" /> -->
+	<!--<CustomUIElement type="Hud" 				layoutfile="file://{resources}/layout/custom_game/barebones_hud_base.xml" /> --> 
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/donate_shop.xml" />
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/leaderboard.xml" /> 
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/battlepass.xml" /> 
+
+	<CustomUIElement type="Hud"					layoutfile="file://{resources}/layout/custom_game/dota_hud_chat_wheel.xml" />	
+
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_1.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_2.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_3.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_4.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_5.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_6.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_7.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_8.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_9.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_10.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_11.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_12.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_13.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_14.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_15.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_16.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_17.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_18.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_19.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_20.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_21.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_22.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_23.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_24.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_25.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_26.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_27.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_28.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_29.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_30.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_31.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_32.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_33.png" />
+
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_34.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_35.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_36.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_37.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_38.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_39.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_40.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_41.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_42.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_43.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_44.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_45.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_46.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_47.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_48.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_49.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_50.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_51.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/pet_52.png" />
+		
+
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_2.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_3.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_4.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_5.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_6.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_7.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_8.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_9.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_10.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_11.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_12.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_13.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_14.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_15.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_16.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_17.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_18.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_19.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_20.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_21.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_22.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_23.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_24.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_25.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_26.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_27.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_28.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_29.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_30.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_31.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_32.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_33.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_34.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_35.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_36.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_37.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_38.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_39.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_40.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_41.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_42.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_43.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_44.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_45.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/particle_46.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/bonus.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chance.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/ads/ads1.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/discord.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/patreon.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/paypal.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/donate.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_1.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_2.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_3.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_4.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_5.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_6.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_7.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_8.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_9.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_10.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_11.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_12.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_13.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_14.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_15.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_16.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_17.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_18.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_19.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_20.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_21.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_22.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_23.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_24.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_25.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_26.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_27.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_28.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_29.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_30.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_35.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_36.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_37.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_38.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_39.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_40.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_41.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/skin_42.png" />
+		
+		
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/sounds.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/gold.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_1.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_2.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_3.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_4.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_5.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_6.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_7.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_8.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_9.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_10.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_11.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_12.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_13.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_14.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_15.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_16.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_17.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_18.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_19.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_20.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/chest_21.png" />
+		
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_1.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_2.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_3.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_4.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_5.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_6.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_7.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_8.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_9.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_10.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_11.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_12.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_13.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_14.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_15.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_16.png" />
+		
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_17.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_18.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_19.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_20.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_21.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_22.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_23.png" />
+		<Image style="opacity:0;" src="file://{images}/custom_game/shop/itemicon/spray_24.png" />
+		
+		
   </Panel>
 
 </root>

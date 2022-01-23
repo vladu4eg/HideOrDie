@@ -73,6 +73,21 @@ function trollnelves2:GameSetup()
                 PlayerResource:SetSelectedHero(pID, ELF_HERO[1])
                 GameRules.Score[pID] = 0
                 GameRules.PlayersFPS[pID] = false
+                GameRules.PoolTable = {}
+                GameRules.PoolTable[0] = {}
+                GameRules.PoolTable[1] = {}
+                GameRules.PoolTable[2] = {}
+                GameRules.PoolTable[3] = {}
+                GameRules.PoolTable[4] = {}
+                GameRules.PoolTable[5] = {}
+                GameRules.PoolTable[0][0] = {}
+                GameRules.PoolTable[1][0] = {}
+                GameRules.PoolTable[2][0] = {}
+                GameRules.PoolTable[3][0] = {}
+                GameRules.PoolTable[4][0] = {}
+                GameRules.PoolTable[4][0][0] = {}
+                GameRules.PoolTable[5][0] = {}
+                CustomNetTables:SetTableValue("Shop", tostring(pID), GameRules.PoolTable)
                 local steam = tostring(PlayerResource:GetSteamID(pID))
                 Stats.RequestBonusTroll(pID, steam, callback)
             end
@@ -705,7 +720,7 @@ function trollnelves2:PreStart()
     goldGiven = PlayerResource:GetGoldGiven(pID),
     lumberGiven = PlayerResource:GetLumberGiven(pID),
     timePassed = GameRules:GetGameTime() - GameRules.startTime,
-    playerScore = GameRules.Score[pID]
+    PlayerChangeScore = GameRules.Score[pID]
     })
     end
     end

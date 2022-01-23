@@ -4,16 +4,15 @@
 {
 	width: 100%;
     height: 100%;
-    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000FF ), color-stop( 0.12, #000000ff ), color-stop( 0.5, #00000022 ), to( #00000000 ) );
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #000000FF ), color-stop( 0.12, #000000ff ), color-stop( 1, rgba(0,0,0,0.8) ), to( #00000000 ) );
 }
 
 #VictoryRow
 {
+	margin-top: 200px;
 	flow-children: right;
-    horizontal-align: right;
-	margin-right: 8px;
+    horizontal-align: center;
 	margin-bottom: 16px;
-
 	transition-property: opacity, transform;
     transition-duration: 1s;
 	opacity: 0;
@@ -44,11 +43,9 @@
 
 .EndScreenWindow
 {
-    margin-top: 100px;
-    margin-right: 200px;
+    margin-top: 250px;
     flow-children: down;
-    horizontal-align: right;
-	flow-children: down;
+    align: center top;
 }
 
 .AspectRatio4x3 .EndScreenWindow, .AspectRatio5x4 .EndScreenWindow
@@ -65,8 +62,8 @@
 {
 	background-color: #121618;
 	border: 3px solid #4d5051;
-    margin-top: 50px;
-    horizontal-align: right;
+    margin-top: 20px;
+    horizontal-align: center;
 	vertical-align: bottom;
 	width: 200px;
 }
@@ -96,13 +93,13 @@
 
 #TeamsContainer
 {
-	horizontal-align: right;
+	horizontal-align: center;
     flow-children: down;
 }
 
 .FlyoutTeam
 {
-	margin-top: 3px;
+	margin-top: 10px;
 	margin-bottom: 3px;
 
     transition-property: opacity, transform;
@@ -161,7 +158,7 @@
 
 .local_player_team #PlayersContainer
 {
-    box-shadow: fill #ffffff40 -3px -3px 3px 6px;
+
 }
 
 .TeamId
@@ -212,15 +209,17 @@
 .Legend
 {
 	flow-children: right;
-	horizontal-align: right;
-	margin-right: 8px;
+	height: 30px;
+	background-color: gradient( linear, 0% 0%, 90% 100%, from( #1d304c ), to( #0c1d32) );
+	box-shadow: 0px 1px 2px 1px #000000;
 }
 
 .Legend Label
 {
 	text-transform: uppercase;
 	font-size: 12px;
-	color: #90999b;
+	color: white;
+	vertical-align: center;
 }
 
 .PlayerRow
@@ -234,33 +233,23 @@
 	height: 32px;
 }
 
-#HeroIcon
+#HeroIconEnd
 {
-    vertical-align: middle;
-	border: 1px solid black;
-}
-
-#LevelContainer,
-#KillsContainer,
-#ScoreContainer,
-#DeathsContainer,
-#AssistsContainer
-{
-	height: 100%;
+	width: 25px;
+	height: 25px;
+    align: center center;
 }
 
 .ScoreboardPanel
 {
-    background-color: BACKGROUND_COLOR;
+    background-color: rgba(0,0,0,0.8);
 	margin-top: 1px;
-	margin-left: 1px;
 	height: 100%;
 }
 
 .LegendPanel
 {
 	margin-top: 1px;
-	margin-left: 1px;
 }
 
 .ScoreboardPanel Label
@@ -300,11 +289,9 @@
 	margin-top: 3px;
 }
 
-#PlayerGoldAmount,#PlayerGPSAmount,#PlayerGoldGivenAmount,#PlayerLumberAmount,#PlayerLPSAmount,#PlayerLumberGivenAmount#PlayerScore
+#PlayerGoldAmount,#PlayerGPSAmount,#PlayerGoldGivenAmount,#PlayerLumberAmount,#PlayerLPSAmount,#PlayerLumberGivenAmount, #PlayerScore, #PlayerChangeScore
 {
-	horizontal-align: center;
-	vertical-align: center;
-	text-align: center;
+	align: center center;
 	font-size: 20px;
 	margin-top: 3px;
 }
@@ -315,13 +302,12 @@
 
 #PlayerName
 {
-	font-size: 14px;
+	margin-left: 2px;
+	font-size: 16px;
 	font-weight: bold;
-	margin-bottom: -4px;
-	margin-top: 0px;
-	padding-left: 4px;
 	color: #cccccc;
 	white-space: nowrap;
+	vertical-align: center;
 }
 
 #HeroNameAndDescription
@@ -366,12 +352,12 @@
 
 .ScoreCol_TeamInfo
 {
-	width: 80px;
+	width: 10px;
 }
 
 .ScoreCol_PlayerDetails
 {
-	width: 170px;
+	width: 160px;
 }
 
 .ScoreCol_TeamScore
@@ -382,7 +368,7 @@
 
 .ScoreCol_Hero
 {
-	width: 53px;
+	width: 30px;
 }
 
 .ScoreCol_Level
@@ -392,11 +378,20 @@
 }
 
 .ScoreCol_Kills,
-.ScoreCol_Score,
 .ScoreCol_Deaths,
 .ScoreCol_Assists
 {
 	width: 50px;
+	text-align: center;
+}
+
+.ScoreCol_Score {
+	width: 100px;
+	text-align: center;
+}
+
+.ScoreCol_ChangeScore {
+	width: 80px;
 	text-align: center;
 }
 
@@ -410,4 +405,108 @@
 {
 	width: 70px;
 	text-align: center;
+}
+
+
+.ScoreCol_lumber
+{
+	width: 100px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.NewStyleScore_Kills
+{
+	width: 50px;
+	text-align: center;
+	margin-left: 200px;
+}
+
+.NewStyleScore_Deaths
+{
+	width: 50px;
+	text-align: center;
+}
+.NewStyleScore_Gold
+{
+	width: 70px;
+	text-align: center;
+}
+.NewStyleScore_Lumber
+{
+	width: 70px;
+	text-align: center;
+}
+.NewStyleScore_GPS
+{
+	width: 70px;
+	text-align: center;
+}
+.NewStyleScore_LPS
+{
+	width: 70px;
+	text-align: center;
+}
+.NewStyleScore_GG
+{
+	width: 70px;
+	text-align: center;
+}
+.NewStyleScore_LG
+{
+	width: 100px;
+	text-align: center;
+}
+.NewStyleScore_Rating
+{
+	width: 100px;
+	text-align: center;
+}
+.NewStyleScore_ChangeRating
+{
+	width: 80px;
+	text-align: center;
+}
+
+
+
+#ActiveButtons {
+	margin-top: 50px;
+	flow-children: right;
+	horizontal-align: center;
+}
+
+.ActiveButton {
+	width: 200px;
+	height: 50px;
+	margin-left: 7px;
+	margin-right: 7px;
+	border: 1px solid black;
+	background-color: red;
+}
+
+.ActiveButton:hover {
+	brightness: 1.5;
+}
+
+.ActiveButton:active {
+	brightness: 1.2;
 }

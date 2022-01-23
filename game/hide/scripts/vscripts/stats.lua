@@ -2,14 +2,12 @@ require('top')
 
 Stats = Stats or {}
 local dedicatedServerKey = GetDedicatedServerKeyV2("1")
-local isTesting = true --IsInToolsMode() and false
-Stats.server =  "https://tve3.us/hide/" -- "https://localhost:5001/hide/" --
 
 function Stats.SubmitMatchData(winner,callback)
 	if GameRules.startTime == nil then
 		GameRules.startTime = 1
 	end
-	if not isTesting then
+	if not GameRules.isTesting then
 		if GameRules:IsCheatMode() then 
 			GameRules:SetGameWinner(winner)
 			SetResourceValues()
@@ -116,10 +114,10 @@ function Stats.SubmitMatchData(winner,callback)
 end
 
 function Stats.SendData(data,callback)
-	local req = CreateHTTPRequest("POST",Stats.server)
+	local req = CreateHTTPRequest("POST",GameRules.server)
 	local encData = json.encode(data)
 	DebugPrint("***********************************************")
-	DebugPrint(Stats.server)
+	DebugPrint(GameRules.server)
 	DebugPrint(encData)
 	DebugPrint("***********************************************")
 	
@@ -145,7 +143,7 @@ function Stats.SendData(data,callback)
 end
 
 function Stats.RequestData(pId, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. tostring(PlayerResource:GetSteamID(pId)))
+	local req = CreateHTTPRequest("GET",GameRules.server .. tostring(PlayerResource:GetSteamID(pId)))
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	
@@ -189,7 +187,7 @@ function Stats.RequestData(pId, callback)
 end
 
 function Stats.RequestDataTop10(idTop, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. "all/" .. idTop)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "all/" .. idTop)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)
@@ -211,9 +209,9 @@ end
 
 function Stats.RequestVip(pID, steam, callback)
 	local parts = {}
-	local req = CreateHTTPRequest("GET",Stats.server .. "vip/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "vip/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
-	DebugPrint("RequestVip ***********************************************" .. Stats.server )
+	DebugPrint("RequestVip ***********************************************" .. GameRules.server )
 	req:Send(function(res)
 		if res.StatusCode ~= 200 then
 			DebugPrint("Connection failed! Code: ".. res.StatusCode)
@@ -251,7 +249,7 @@ end
 
 function Stats.RequestEvent(pID, steam, callback)
 	local parts = {}
-	local req = CreateHTTPRequest("GET",Stats.server .. "event/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "event/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)
@@ -278,13 +276,13 @@ function Stats.RequestEvent(pID, steam, callback)
 end
 
 function Stats.GetVip(data,callback)
-	if not isTesting then
+	if not GameRules.isTesting then
 		if GameRules:IsCheatMode() then return end
 	end
-	local req = CreateHTTPRequest("POST",Stats.server)
+	local req = CreateHTTPRequest("POST",GameRules.server)
 	local encData = json.encode(data)
 	DebugPrint("***********************************************")
-	DebugPrint(Stats.server)
+	DebugPrint(GameRules.server)
 	DebugPrint(encData)
 	DebugPrint("***********************************************")
 	
@@ -309,7 +307,7 @@ function Stats.GetVip(data,callback)
 	end	
 	
 	function Stats.RequestVipDefaults(pID, steam, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. "vip/defaults/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "vip/defaults/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)
@@ -333,7 +331,7 @@ function Stats.GetVip(data,callback)
 	end
 	
 	function Stats.RequestPetsDefaults(pID, steam, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. "pets/defaults/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "pets/defaults/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)
@@ -357,7 +355,7 @@ function Stats.GetVip(data,callback)
 	end
 	
 	function Stats.RequestBonus(pID, steam, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. "bonus/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "bonus/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)
@@ -383,7 +381,7 @@ function Stats.GetVip(data,callback)
 	end)
 	end
 	function Stats.RequestBonusTroll(pID, steam, callback)
-	local req = CreateHTTPRequest("GET",Stats.server .. "troll/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "troll/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	local tmp = 0
@@ -415,7 +413,7 @@ function Stats.GetVip(data,callback)
 	
 	function Stats.RequestPets(pID, steam, callback)
 	local parts = {}
-	local req = CreateHTTPRequest("GET",Stats.server .. "pets/" .. steam)
+	local req = CreateHTTPRequest("GET",GameRules.server .. "pets/" .. steam)
 	req:SetHTTPRequestHeaderValue("Dedicated-Server-Key", dedicatedServerKey)
 	DebugPrint("***********************************************")
 	req:Send(function(res)

@@ -63,20 +63,12 @@ end
 
 function SelectPets:SetDefaultPets(event)
     local player = PlayerResource:GetPlayer(event.PlayerID)
-    if player.parttimerok == nil then player.parttimerok = true end
-    if player.parttimerok == true then
-        player.parttimerok = false
-        Timers:CreateTimer(120, function()
-            player.parttimerok = true
-            CustomGameEventManager:Send_ServerToPlayer( player, "DefaultButtonReadyPets", {})
-		end)
 		local data = {}
 		if event.part ~=  nil then
 			DebugPrint("no save")
 			data.SteamID = tostring(PlayerResource:GetSteamID(event.PlayerID))
 			data.Num = tostring(event.part)
 			data.TypeDonate = "2"
-			Stats.GetVip(data, callback)
+			Shop.GetVip(data, callback)
 		end
-	end
 end		

@@ -1,0 +1,178 @@
+<root>
+
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.css" />
+		<include src="s2r://panorama/styles/custom_game/donate_shop.css" />
+	</styles>
+
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/donate_shop.js" />
+	</scripts>
+
+	<Panel hittest="false" class="DonateShopMainPanel">
+		<Panel id="ShopButton" onactivate="ToggleShop();">
+			<Panel class="ShopButtonIcon" />
+			<Label class="ShopButtonLabel" text="#shop_button" />
+		</Panel>
+
+		<Panel id="DonateShopPanel">
+
+			<Panel id="DonateShopTopPanel"> 
+				<Panel class="DonateShopTopButtons"> 
+					<Panel class="DonateMenuButton" onactivate="SwitchTab('MainContainer', 'DonateMainButton');" id="DonateMainButton"> <Label text="#shop_main" class="ButtonText" /> </Panel>
+					<Panel class="DonateMenuButton" onactivate="SwitchTab('ItemsContainer', 'DonateItemsButton');" id="DonateItemsButton"> <Label text="#shop_items" class="ButtonText" /> </Panel>
+					<Panel class="DonateMenuButton" onactivate="SwitchTab('InventoryContainer', 'DonateInventoryButton');" id="DonateInventoryButton"> <Label text="#shop_inventory" class="ButtonText" /> </Panel>
+
+					<Panel id="TrollChance">
+						<Panel class="TrollIcon" />
+					</Panel>
+					<Panel id="BonusRate">
+						<Panel class="BonusRateIcon" />
+					</Panel>
+				</Panel>
+				<Panel class="DonateShopTopCurrency"> 
+					<Panel class="DonateShopCurrencyMain">
+						<Panel class="DonateShopCurrency">
+							<Label id="Currency" text="0" class="GoldText" />
+							<Panel class="DonateShopGiveDonate">
+								<Panel class="PlusLabel" onactivate="BuyCurrencyPanelActive();"/>
+							</Panel>
+						</Panel>
+						<Panel class="CurrencyIconMain" />
+					</Panel>
+
+					<Panel class="DonateShopCurrencyMain2">
+						<Panel class="DonateShopCurrency2">
+							<Label id="Currency2" text="0" class="GoldText2" />
+							<Panel class="DonateShopGiveDonate2">
+								<Panel class="PlusLabel2" onactivate="BuyCurrencyPanelActive();"/>
+							</Panel>
+						</Panel>
+						<Panel class="CurrencyIconMain2" />
+					</Panel>
+
+				</Panel>
+				<Panel class="CloseShop" onactivate="ToggleShop();"/>
+			</Panel>
+
+			<Panel id="MainContainer" class="DonateShopPanelSecond">
+				<Panel id="PopularityRecomDonate">
+					<Label text="#shop_recomended" id="PopularityRecomDonateInfo"/>
+					<Panel id="PopularityRecomDonateItems" />
+				</Panel>
+				<Panel id="PopularityDonate">
+					<Panel id="ContainerOnePanel"> 
+						<Panel id="AdsChests" onactivate="SwitchTab('ItemsContainer', 'DonateItemsButton'); SwitchShopTab('SubscribeDonateItems', 'SubscribeButton');">
+							<Label id="ChestItemText" class="AdsTextChest" text=""/>
+						</Panel>
+					</Panel>
+					<Panel id="ContainerTwoPanel"> 
+						<Panel id="AdsItem_1" onactivate="SwitchTab('ItemsContainer', 'DonateItemsButton'); SwitchShopTab('ChestDonateItems', 'ChestButton');">
+							<Label id="AdsItemText" class="AdsText" text=""/>
+						</Panel>
+					</Panel>
+				</Panel>
+			</Panel>
+
+
+			<Panel id="ItemsContainer" class="DonateShopPanelSecond">
+				<Panel id="MenuItems">
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('AllDonateItems', 'AllItemsButton');" id="AllItemsButton"> <Label text="#shop_all" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('PetsDonateItems', 'PetsButton');" id="PetsButton"> <Label text="#shop_pets" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('EffectsDonateItems', 'EffectsButton');" id="EffectsButton"> <Label text="#shop_particles" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('GemDonateItems', 'GemButton');" id="GemButton"> <Label text="#shop_gem" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('SubscribeDonateItems', 'SubscribeButton');" id="SubscribeButton"> <Label text="#shop_subscribe" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('ChestDonateItems', 'ChestButton');" id="ChestButton"> <Label text="#shop_chests" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('SkinDonateItems', 'SkinButton');" id="SkinButton"> <Label text="#skin_chests" class="ButtonText" /> </Panel>
+					
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('SoundsDonateItems', 'SoundsButton');" id="SoundsButton"> <Label text="#shop_sounds" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchShopTab('SpraysonateItems', 'SpraysButton');" id="SpraysButton"> <Label text="#shop_sprays" class="ButtonText" /> </Panel>
+					
+				</Panel>
+				<Panel id="AllDonateItems" class="ItemsPanel"/>
+				<Panel id="PetsDonateItems" class="ItemsPanel"/>
+				<Panel id="EffectsDonateItems" class="ItemsPanel"/>
+				<Panel id="GemDonateItems" class="ItemsPanel"/>
+				<Panel id="SubscribeDonateItems" class="ItemsPanel"/>
+				<Panel id="ChestDonateItems" class="ItemsPanel"/>
+				<Panel id="SkinDonateItems" class="ItemsPanel"/>
+
+				<Panel id="SoundsDonateItems" class="ItemsPanel"/>
+				<Panel id="SpraysonateItems" class="ItemsPanel"/>
+			</Panel>
+
+
+
+
+
+
+
+
+
+			<Panel id="InventoryContainer" class="DonateShopInventory">
+				<Panel id="MenuInventory">
+					<Panel class="ItemsCategoryButton" onactivate="SwitchInventoryShopTab('CouriersPanel', 'CouriersButtonInventory');" id="CouriersButtonInventory"> <Label text="#shop_pets" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchInventoryShopTab('EffectsPanel', 'EffectsButtonInventory');" id="EffectsButtonInventory"> <Label text="#shop_particles" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchInventoryShopTab('ChestsPanel', 'ChestsButtonInventory');" id="ChestsButtonInventory"> <Label text="#shop_chests" class="ButtonText" /> </Panel>
+					<Panel class="ItemsCategoryButton" onactivate="SwitchInventoryShopTab('SkinPanel', 'SkinButtonInventory');" id="SkinButtonInventory"> <Label text="#skin_chests" class="ButtonText" /> </Panel>
+				</Panel>
+				<Panel id="CouriersPanel" class="PlayerItemsContainer" />
+				<Panel id="EffectsPanel" class="PlayerItemsContainer" />
+				<Panel id="ChestsPanel" class="PlayerItemsContainer" />
+				<Panel id="SkinPanel" class="PlayerItemsContainer" />
+			</Panel>
+
+
+
+
+
+
+			<Panel id="GemContainer" class="DonateShopPanelSecond">
+				<Panel id="GemPanel" class="PlayerItemsContainer" />
+			</Panel>
+
+
+		</Panel>
+
+
+
+		<Button id="ChestOpenPanelMainClosed">
+			<Panel id="ChestOpenPanelMain" >
+				<Panel class="ChestOpenPanelTop">
+					<Label text="ItemName" id="ChestName" class="ChestNameInfoLabel"/>
+					<Panel class="CloseInfoItem" onactivate="CloseOpenChest();"/>
+				</Panel>
+				<Panel id="ChestBodyInfo" />
+			</Panel>
+		</Button>
+
+
+
+
+		<Button id="chest_opened_animation">
+			
+		</Button>
+
+
+
+
+		<Button id="info_item_buy">
+			<Panel id="ItemInfoPanel" >
+				<Panel class="InfoItemTop">
+					<Label text="ItemName" id="ItemNameInfo" class="ItemNameInfoLabel"/>
+					<Panel class="CloseInfoItem" onactivate="CloseItemInfo();"/>
+				</Panel>
+				<Panel id="ItemInfoBody" />
+			</Panel>
+		</Button>
+
+		<Button id="shop_error_panel">
+			<Label text="Error" id="shop_error_label"/>
+		</Button>
+
+		<Button id="shop_buy_panel">
+			<Label text="Buy" id="shop_buy_label"/>
+		</Button>
+
+	</Panel>
+</root>

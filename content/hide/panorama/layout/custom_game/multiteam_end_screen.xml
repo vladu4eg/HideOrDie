@@ -1,6 +1,6 @@
 <root>
     <styles>
- 		<include src="file://{resources}/styles/dotastyles.css" />
+ 		<include src="s2r://panorama/styles/dotastyles.css" />
         <include src="file://{resources}/styles/custom_game/multiteam_end_screen.css" />
     </styles>
 
@@ -10,30 +10,40 @@
     </scripts>
 
 	<Panel hittest="false" class="EndScreenRoot">
+		<Panel id="VictoryRow">
+			<Label id="EndScreenVictory" text="#custom_end_screen_victory_message" />
+		</Panel>
 		<Panel hittest="false" class="EndScreenWindow">
-			<Panel id="VictoryRow">
-				<Panel id="WinningTeamLogo" />
-				<Label id="EndScreenVictory" text="#custom_end_screen_victory_message" />
-			</Panel>
 			<Panel class="Legend">
-				<Panel class="LegendPanel ScoreCol_TeamInfo" />
-				<Panel class="LegendPanel ScoreCol_Hero" />
-				<Panel class="LegendPanel ScoreCol_PlayerDetails" />
-				<Label class="LegendPanel ScoreCol_TeamScore" text="#custom_end_screen_legend_team_score" />
-				<Label class="LegendPanel ScoreCol_Score" text="Rating" />
-				<Label class="LegendPanel ScoreCol_Kills" text="#custom_end_screen_legend_kills" />
-				<Label class="LegendPanel ScoreCol_Deaths" text="#custom_end_screen_legend_deaths" />
-				<Label class="LegendPanel ScoreCol_Gold" text="#custom_end_screen_legend_gold" />
-				<Label class="LegendPanel ScoreCol_Gold" text="Lumber" />
-				<Label class="LegendPanel ScoreCol_Gold" text="GPS" />
-				<Label class="LegendPanel ScoreCol_Gold" text="LPS" />
-				<Label class="LegendPanel ScoreCol_Gold" text="Gold Given" />
-				<Label class="LegendPanel ScoreCol_Gold" text="Lumber Given" />
+				<Label class="LegendPanel NewStyleScore_Kills" text="#custom_end_screen_legend_kills" />
+				<Label class="LegendPanel NewStyleScore_Deaths" text="#custom_end_screen_legend_deaths" />
+				<Label class="LegendPanel NewStyleScore_Gold" text="#custom_end_screen_legend_gold" />
+				<Label class="LegendPanel NewStyleScore_Lumber" text="Lumber" />
+				<Label class="LegendPanel NewStyleScore_GPS" text="GPS" />
+				<Label class="LegendPanel NewStyleScore_LPS" text="LPS" />
+				<Label class="LegendPanel NewStyleScore_GG" text="Gold Given" />
+				<Label class="LegendPanel NewStyleScore_LG" text="Lumber Given" />
+				<Label class="LegendPanel NewStyleScore_Rating" text="Rating" />
+				<Label class="LegendPanel NewStyleScore_ChangeRating" text="Change" />
 			</Panel>
 			<Panel id="TeamsContainer" />
 			<Button id="CloseButton" onactivate="Game.FinishGame();">
 				<Label text="#CustomEndScreenClose" />
 			</Button>
+			<Panel id="ActiveButtons" >
+				<Panel class="ActiveButton" id="Button_1" onactivate="ExternalBrowserGoToURL('https://patreon.com/hidedie');" >
+					<Label class="ActiveButton_text" text="Patreon" />
+				</Panel>
+				<Panel class="ActiveButton"  id="Button_2" onactivate="ExternalBrowserGoToURL('https://paypal.me/vladu4eg');" >
+					<Label class="ActiveButton_text" text="PayPal" />
+				</Panel>
+				<Panel class="ActiveButton"  id="Button_3" onactivate="ExternalBrowserGoToURL('https://donate.stream/en/vladu4eg');" >
+					<Label class="ActiveButton_text" text="DStream" />
+				</Panel>
+				<Panel class="ActiveButton"  id="Button_4" onactivate="ExternalBrowserGoToURL('https://discord.gg/9k29hP2uVy');" >
+					<Label class="ActiveButton_text" text="Discord" />
+				</Panel>
+			</Panel>
 		</Panel>
 	</Panel>
 </root>

@@ -3135,7 +3135,7 @@
 	"upgrade_to_rock_9"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_wood_guild"
+		"AbilityTextureName"			"build_rock_9"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"

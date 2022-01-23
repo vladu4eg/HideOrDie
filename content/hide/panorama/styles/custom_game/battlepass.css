@@ -1,0 +1,333 @@
+#BattlePassButton
+{
+    margin-left: 285px;
+    flow-children: down;
+    margin-top: 1px;
+}
+
+#BattlePassButton:hover .BattlePassButtonIcon
+{
+    brightness: 2.0;
+}
+
+.BattlePassButtonIcon {
+    background-image: url("file://{images}/custom_game/battlepass/bp_button.png");
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+    brightness: 1;
+    wash-color: #CDF;
+    opacity: 0.7;
+    horizontal-align: center;
+}
+
+.BattlePassButtonLabel {
+    color: white;
+    horizontal-align: center;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px 2 black;
+    margin-top: 1px;
+}
+
+.BattlePassMainPanel {
+    width: 100%;
+    height: 100%;
+}
+
+#BattlePassPanel.sethidden {
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#BattlePassPanel.setvisible {
+    pre-transform-scale2d: 1;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#BattlePassPanel {
+    width: 1000px;
+    height: 600px;
+    background-image: url("file://{images}/custom_game/shop/background.png");
+    background-size: contain;
+    align: center center;
+    visibility: collapse;
+    flow-children: down;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+    margin-bottom: 100px;
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+.TopPanel {
+    width: 100%;
+    height: 50px;
+    margin-top: 15px;
+}
+
+
+
+.CloseShop {
+    width: 25px;
+    height: 25px;
+    margin-left: 40px;
+    margin-top: 10px;
+    background-image: url("s2r://panorama/images/control_icons/x_close_grey_psd.vtex");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #000000bb;
+    wash-color: #888888;
+    transition-property: wash-color;
+    transition-duration: 0.1s;
+    horizontal-align: right;
+    margin-right: 30px;
+}
+
+.CloseShop:hover {
+    background-color: #000000bb;
+    wash-color: white;
+}
+
+.BattlePassName {
+    horizontal-align: center;
+    font-size: 36px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-shadow: 0px 0px 1px 3 black;
+}
+
+.BattlePassIcon {
+    background-image: url("file://{images}/custom_game/battlepass/bp_large.png");
+    width: 40px;
+    height: 40px;
+    background-size: 100%;
+    align: center center;
+}
+
+.BpDecort {
+    flow-children: right;
+    horizontal-align: center;
+}
+
+#BattlePass_Donate {
+    height: 160px;
+    flow-children: right;
+}
+
+#BattlePass_Free {
+    height: 160px;
+    flow-children: right;
+}
+
+.BattlePass_Rewards {
+    width: 900px;
+    horizontal-align: center;
+    margin-top: 10px;
+    flow-children: down;
+    overflow:  scroll squish;
+    height: 380px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#BattlePass_Progress {
+    horizontal-align: center;   
+    height: 50px;
+    width: 900px;
+    margin-top: 25px;
+}
+
+
+#BattlePass_Progress_2 {  
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( #00000084 ), color-stop( 0.95, #ebebeb00 ), to( #0000 ) );
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-brush: gradient( linear, 0% 0%, 100% 0%, from( #00000084 ), color-stop( 0.3, #ebebeb00 ), to( #0000 ) );
+    height: 100%;
+    width: 500px;
+    flow-children: right;
+}
+
+#Levels {
+    height: 50px;
+    flow-children: right;
+}
+
+.LevelText {
+    vertical-align: center;
+    margin-left: 10px;
+    color: white;
+}
+
+.ExpText {
+    align: center center;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 0px 1px 2 black;
+}
+
+#BattlePass_Progress_3 {
+    margin-left: 10px;
+    height: 100%;
+    flow-children: right;
+}
+
+#BattlePass_Progress_4 {
+    margin-left: 10px;
+    vertical-align: center;
+    width: 200px;
+    height: 20px;
+}
+
+
+#BattlePass_Progress_5 {
+    width: 100%;  
+    height: 100%;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #101932 ), color-stop( 0.2, #172447 ), color-stop( .5, #162244), to( #101932 ) );
+}
+
+
+#BattlePass_Progress_6 {
+    width: 50%; 
+    height: 100%;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #2b4287 ), color-stop( 0.2, #4165ce ), color-stop( .5, #4a73ea), to( #2b4287 ) );
+}
+
+#ManaBurner {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+
+.RewardPanelDonate {
+    width: 150px;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flow-children: down;
+    border: 1px solid #ffffff;
+    border-brush: gradient( linear, 0% 0%, 0% 100%, from( #efa153aa ), to( #9F6F33aa) );
+}
+
+.RewardPaneClear {
+    width: 150px;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.RewardPanelFree {
+    width: 150px;
+    height: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flow-children: down;
+    border: 1px solid #ffffff;
+    border-brush: gradient( linear, 0% 0%, 0% 100%, from( white ), to( #2e2c2aaa ) );
+}
+
+#HorizontalScrollBar, HTMLHorizontalScrollBar {
+    height: 5px;
+}
+
+.LevelPanel {
+    width: 150px;
+    height: 30px;
+    vertical-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    border: 1px solid #ffffff;
+    border-brush: gradient( linear, 0% 0%, 0% 100%, from( #efa153aa ), to( #9F6F33aa) );
+    background-image: url("s2r://panorama/images/leaf_pages/debut_marci/btn_01_psd.vtex");
+    background-img-opacity: 0.15;
+}
+
+.LevelTextPanel {
+    align: center center;
+    color: #ffeeac;
+    text-shadow: 0px 0px 5px 1 #a83d1c;
+}
+
+.reward_image {
+    width: 100%;
+    height: 100px;
+}
+
+.PanelLock {
+    width: 100%;
+    height: 24px;
+    border-top: 1px solid black;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #307663 ), to( #245a4b ) );
+}
+
+.PanelLock:hover {
+    brightness: 1.5;
+}
+
+.PanelLock:active {
+    brightness: 1.2;
+}
+
+.PanelGives {
+    width: 100%;
+    height: 24px;
+    border-top: 1px solid black;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #1f3831 ), to( #092925 ) );
+}
+
+.PanelLockOn {
+    width: 100%;
+    height: 24px;
+    border-top: 1px solid black;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #969696 ), to( #111212 ) );
+}
+
+.PanelDesc {
+    width: 100%;
+    height: 24px;
+    border-top: 1px solid black;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #433620 ), to( #141b21 ) );
+}
+
+#BpLockedText {
+    align: center center;
+    color: white;
+    horizontal-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px 2 black;
+}
+
+.BpDonateIcon {
+    background-image: url("file://{images}/custom_game/battlepass/bp_large.png");
+    width: 22px;
+    height: 22px;
+    background-size: 100%;
+    align: center center;
+}
+
+#BpDonateText {
+    vertical-align: center;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px 2 black;
+}
+
+.DonateInfo {
+    height: 24px;
+    flow-children: right;
+    align: center center;
+}

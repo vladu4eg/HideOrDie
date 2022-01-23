@@ -1,0 +1,215 @@
+.LeaderboardMain {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+#LeaderboardButton
+{
+    margin-left: 215px;
+    margin-top: 1px;
+    flow-children: down;
+}
+
+#LeaderboardButton:hover .LeaderboardButtonIcon
+{
+    brightness: 2.0;
+}
+
+.LeaderboardButtonIcon {
+    background-image: url("file://{images}/custom_game/leaderboard/leaderboard_icon.png");
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+    brightness: 1;
+    wash-color: #CDF;
+    opacity: 0.7;
+    horizontal-align: center;
+}
+.LeaderboardButtonLabel {
+    color: white;
+    horizontal-align: center;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px 2 black;
+    margin-top: 1px;
+}
+
+#Leaderboard {
+    background-image: url("file://{images}/custom_game/shop/background.png");
+    background-size: 100% 100%;
+	width: 1550px;
+	height: 850px;
+	align: center center;
+	margin-bottom: 130px;
+	visibility: collapse;
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#Leaderboard.sethidden {
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#Leaderboard.setvisible {
+    pre-transform-scale2d: 1;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+.LeaderboardForExitCheck {
+	flow-children: down;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+.RatingPlayersColumn {
+	width: 350px;
+	height: 100%;
+	margin-left: 10px;
+	margin-right: 10px;
+	flow-children: down;
+}
+
+.RatingPlayers {
+	background-color: rgba(0,0,0,0.7);
+	width: 350px;
+	height: 600px;
+	flow-children: down;
+	/*overflow:  squish scroll; */
+}
+
+.ColumnInfo {
+	width: 100%;
+	height: 35px;
+	background-color: rgba(0,0,0,0.7);
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+
+.ColumnInfoLabel {
+    color: white;
+    align: center center;
+    font-size: 16px;
+    text-shadow: 1px 1px 1px 2 black;
+    text-transform: uppercase;
+	font-weight: semi-bold;
+}
+
+.LinePlayer{
+	width: 100%;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	height: 52px;
+	border: 1px solid #38424b;
+	flow-children: right;
+}
+
+#AvatarLeaderboard {
+	width: 50px;
+	height: 50px;
+	border: 1px solid red;
+}
+
+
+.RatingLabel {
+	font-size: 25px;    
+	color: white;
+	align: center center;
+	text-transform: uppercase;
+	font-weight: semi-bold;
+}
+
+
+#LeaderButton {
+	box-shadow: 0px 0px 1px 0px white;
+}
+
+
+
+
+
+
+
+
+
+.Menu {
+	width: 100%;
+	height: 120px;
+	flow-children: right;
+	margin-top: 45px;
+}
+
+
+.LeaderboardText {
+	font-size: 45px;    
+	color: white;
+	align: center center;
+	text-transform: uppercase;
+	font-weight: semi-bold;
+	text-shadow: 0px 0px 5px 2 black;
+	letter-spacing: 3px;
+}
+
+.CloseLeaderboard {
+    width: 35px;
+    height: 35px;
+    horizontal-align: right;
+    margin-top: 40px;
+    margin-right: 40px;
+    background-image: url("s2r://panorama/images/control_icons/x_close_grey_psd.vtex");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #000000bb;
+    wash-color: #888888;
+    transition-property: wash-color;
+    transition-duration: 0.1s;
+}
+
+.CloseLeaderboard:hover {
+    background-color: #000000bb;
+    wash-color: white;
+}
+
+
+
+#MenuButtons {
+	horizontal-align: center;
+	flow-children:right;
+	margin-top: 10px;
+}
+
+.Leaderboardbutton {
+	width: 150px;
+	height: 50px;
+    background-image: url("file://{images}/custom_game/shop/button_background.png");
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 5px 1px black;
+	margin: 10px;
+}
+
+
+.ButtonText {
+	font-size: 16px;    
+	color: white;
+	align: center center;
+	text-transform: uppercase;
+	font-weight: semi-bold;	
+}
+
+
+.Panels {
+	width: 100%;
+	height: 640px;
+}
+
+.LeaderboardPanel {
+	align: center center;
+	height: 690px;
+	flow-children: right;
+}

@@ -1,6 +1,6 @@
 <root>
     <styles>
-        <include src="file://{resources}/styles/dotastyles.css"/>
+        <include src="s2r://panorama/styles/dotastyles.css" />
         <include
                 src="file://{resources}/styles/custom_game/shared_scoreboard_styles.css"/>
         <include
@@ -116,52 +116,88 @@
     </script>
     <Panel class="PlayerRow">
         <Panel id="PlayerRowContainer">
-            <Panel onactivate="showHero()" id="Hero" class="ScoreCol_Hero ScoreboardPanel">
-                <Image id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect"/>
-                <Panel id="PlayerColor"></Panel>
-            </Panel>
-            <Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
-                <Panel id="PlayerAndHeroName">
-                    <Label id="PlayerName" text="AAAAA"/>
-                    <Label id="HeroNameAndDescription"
-                           text="#custom_scoreboard_hero_name_and_desc"/>
+
+            <Panel id="PlayerMainInformation" class="ScoreboardPanel" >
+                <Panel id="PlayerOneMainInformation" > 
+                    <Panel onactivate="showHero()" id="Hero" class="ScoreCol_Hero ScoreboardPanel">
+                        <Image id="HeroIcon" heroimagestyle="landscape" scaling="stretch-to-fit-preserve-aspect"/>
+                        <Panel id="PlayerColor"></Panel>
+                    </Panel>
+                    <Panel id="PlayerDetailsContainer" class="ScoreCol_PlayerDetails ScoreboardPanel">
+                        <Panel id="PlayerAndHeroName">
+                            <Label id="PlayerName" text="AAAAA"/>
+                            <Label id="HeroNameAndDescription"
+                                   text="#custom_scoreboard_hero_name_and_desc"/>
+                        </Panel>
+                        <Button id="MuteButton" onactivate="ToggleMute();"/>
+                    </Panel>
                 </Panel>
-                <Panel id="ResourcesAmount">
-                    <Label id="PlayerGoldAmount" text="999"/>
-                    <Label id="PlayerLumberAmount" text="745"/>
+                <Panel id="PlayerTwoMainInformation" > 
+                    <Panel id="GoldPanel">
+                        <Panel class="GoldIcon" />
+                        <Label id="PlayerGoldAmount" text=""/>
+                    </Panel>
+                    <Panel id="LumberPanel">
+                        <Panel class="LumberIcon" />
+                        <Label id="PlayerLumberAmount" text=""/>
+                    </Panel>
                 </Panel>
-                <Button id="MuteButton" onactivate="ToggleMute();"/>
             </Panel>
-            <Panel id="TeamScoreSpace" class="ScoreCol_TeamScore"/>
-            <Panel id="KillsContainer" class="ScoreCol_Kills ScoreboardPanel">
-                <Label id="Kills" text="999"/>
+
+            <Panel id="PlayerScoreInformation" class="ScoreboardPanel" >
+                <Panel id="KillsContainer" class="ScoreCol_Kills ScoreboardPanel">
+                    <Label id="Kills" text="999"/>
+                </Panel>
+                <Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
+                    <Label id="Deaths" text="999"/>
+                </Panel>
+                <Panel id="ElfScoreContainer"
+                       class="ScoreCol_ElfScore ScoreboardPanel">
+                    <Label id="ElfScore" text="no"/>
+                </Panel>
+                <Panel id="TrollScoreContainer"
+                       class="ScoreCol_TrollScore ScoreboardPanel">
+                    <Label id="TrollScore" text="no"/>
+                </Panel>
             </Panel>
-            <Panel id="DeathsContainer" class="ScoreCol_Deaths ScoreboardPanel">
-                <Label id="Deaths" text="999"/>
-            </Panel>
-            <Panel id="ElfScoreContainer"
-                   class="ScoreCol_ElfScore ScoreboardPanel">
-                <Label id="ElfScore" text="no"/>
-            </Panel>
-            <Panel id="TrollScoreContainer"
-                   class="ScoreCol_TrollScore ScoreboardPanel">
-                <Label id="TrollScore" text="no"/>
-            </Panel>
+
+
+
             <Panel id="GiveResourcesTable" class="ScoreboardPanel">
-                <TextEntry id="GoldEntry" maxchars="7" placeholder="Gold.."/>
-                <TextEntry id="LumberEntry" maxchars="7" placeholder="Lumber.."/>
-                <Button class="flyout-button"  id="GiveResourcesButton" onactivate="OnGiveResourcesButton()">
-                    <Label id="Give1" text="Give!" />
-                </Button>
-                <Button class="flyout-button" id="GiveAllLumberButton" onactivate="OnGiveAllLumberButton()">
-                    <Image class="lumber" src="file://{images}/custom_game/lumber_icon.png" />
-                </Button>
-                <Button class="flyout-button" id="GiveAllGoldButton" onactivate="OnGiveAllGoldButton()">
-                    <Image class="gold" src="s2r://panorama/images/hud/icon_gold.psd" />
-                </Button>
-                <Button class="flyout-button" id="GiveAllResourcesButton" onactivate="OnGiveAllResourcesButton()">
-                    <Label id="GiveAll1" text="Give All!" />
-                </Button>
+
+                <Panel id="ResourcePanels">
+                    <Panel class="ResourcePanelSwapOne">
+                        <TextEntry id="GoldEntry" maxchars="7" placeholder="Gold.."/>
+                        <TextEntry id="LumberEntry" maxchars="7" placeholder="Lumber.."/>
+                        <Button class="GiveButton"  id="GiveResourcesButton" onactivate="OnGiveResourcesButton()">
+                            <Label id="GiveText" text="Give!" />
+                        </Button>
+                    </Panel>
+
+                    <Panel class="ResourcePanelSwapTwo">
+                        <Button class="ButtonLumberC" id="GiveAllLumberButton" onactivate="OnGiveAllLumberButton()">
+                            <Label id="GiveAllResouce" text="Give All" />
+                            <Panel class="lumberImage" />
+                        </Button>
+                        <Button class="ButtonGoldC" id="GiveAllGoldButton" onactivate="OnGiveAllGoldButton()">
+                            <Label id="GiveAllResouce" text="Give All" />
+                            <Panel id="goldImage" />
+                        </Button>
+                        <Button class="GiveButton" id="GiveAllResourcesButton" onactivate="OnGiveAllResourcesButton()">
+                            <Label id="GiveText" text="Give All!" />
+                        </Button>
+                    </Panel>
+                </Panel>
+
+                <Panel id="DopPanels">
+                    <Button class="flyout-button" id="VotekickButton" onactivate="OnVoteKickButton()"> 
+                        <Label text="Kick"/>
+                    </Button>
+                    
+                    <Button class="flyout-button" id="FlagButton" onactivate="OnVoteFlagButton()"> 
+                        <Label id="Flag" text="Flag"/>
+                    </Button>
+                </Panel>
            
 			</Panel>
         </Panel>

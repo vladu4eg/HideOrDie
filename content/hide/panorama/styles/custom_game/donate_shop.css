@@ -1,0 +1,1147 @@
+#ShopButton
+{
+    margin-left: 145px;
+    flow-children: down;
+}
+
+#ShopButton:hover .ShopButtonIcon
+{
+    brightness: 2.0;
+}
+
+.ShopButtonIcon {
+    background-image: url("file://{images}/custom_game/shop/main_button.png");
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+    brightness: 1;
+    wash-color: #CDF;
+    opacity: 0.7;
+    horizontal-align: center;
+}
+.ShopButtonLabel {
+    color: white;
+    horizontal-align: center;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px 2 black;
+    margin-top: 1px;
+}
+
+
+.DonateShopMainPanel {
+    width: 100%;
+    height: 100%;
+}
+
+#DonateShopPanel {
+    width: 1300px;
+    height: 850px;
+    background-image: url("file://{images}/custom_game/shop/background.png");
+    background-size: 100%;
+    align: center center;
+    visibility: collapse;
+    flow-children: down;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+    margin-bottom: 100px;
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#DonateShopTopPanel {
+    width: 100%;
+    height: 70px;
+    margin-top: 30px;
+    flow-children: right;
+}
+
+.DonateShopTopButtons {
+    margin-left: 50px;
+    height: 100%;
+    flow-children: right;
+}
+
+.DonateMenuButton {
+    width: 125px;
+    height: 50px;
+    background-image: url("file://{images}/custom_game/shop/button_background.png");
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 5px 1px black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+#TrollChance {
+    width: 50px;
+    height: 50px;
+    background-image: url("file://{images}/custom_game/shop/button_background.png");
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 1px 0px black;
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#TrollChance:hover .TrollIcon {
+    pre-transform-scale2d: 1.15;
+}
+
+.TrollIcon {
+    background-image: url("s2r://panorama/images/heroes/icons/npc_dota_hero_troll_warlord_png.vtex");
+    width: 70%;
+    height: 70%;
+    align: center center;
+    background-size: 100%;
+    transition-duration: 0.25s;
+    transition-property: pre-transform-scale2d;
+}
+
+
+.ButtonText {
+    text-align: center;
+    font-size: 23px;
+    color:#daebff;
+    font-weight: bold;
+    align:  center center;
+}
+
+.DonateShopTopCurrency {
+    margin-left: 180px;
+    height: 100%;
+    flow-children: right;
+}
+
+.DonateShopCurrencyMain {
+    width: 210px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flow-children: left;
+}
+
+.DonateShopCurrency {
+    width: 150px;
+    height: 30px;
+    align: center center;
+    flow-children: right;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.GoldText {
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+    align:  center center;
+    width: 120px;
+}
+
+.DonateShopGiveDonate {
+    width: 30px;
+    height: 100%;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #307645 ), to( #245a2c ) );
+    align: right center;
+}
+
+.PlusLabel {
+    width: 100%;
+    height: 100%;
+    background-image: url("s2r://panorama/images/control_icons/plus_png.vtex");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: gradient( linear, 0% 100%, 0% 0%, from( #3f513e ), to( #5c9c7d ) );
+    background-size: 70% 70%;
+    wash-color: #a8eabc;
+}
+
+.CurrencyIconMain {
+    width: 58px;
+    background-size: 100%;
+    height: 100%;
+    background-image: url("file://{images}/custom_game/shop/gold_icon.png");
+    transform: translateX( 30px ) translateY( -2px );
+}
+
+.DonateShopCurrencyMain2 {
+    width: 210px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flow-children: left;
+}
+
+.DonateShopCurrency2 {
+    width: 150px;
+    height: 30px;
+    align: center center;
+    flow-children: right;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.GoldText2 {
+    text-align: center;
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+    align:  center center;
+    width: 120px;
+}
+
+.DonateShopGiveDonate2 {
+    width: 30px;
+    height: 100%;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #303d76 ), to( #24255a ) );
+    align: right center;
+}
+
+.PlusLabel2 {
+    width: 100%;
+    height: 100%;
+    background-image: url("s2r://panorama/images/control_icons/plus_png.vtex");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: gradient( linear, 0% 100%, 0% 0%, from( #3f3e51 ), to( #5c619c ) );
+    background-size: 70% 70%;
+    wash-color: #a8adea;
+}
+
+
+.PlusLabel2:hover {
+    brightness: 2;
+}
+
+.PlusLabel:hover {
+    brightness: 2;
+}
+
+.CurrencyIconMain2 {
+    width: 45px;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-image: url("file://{images}/custom_game/shop/gem_icon.png");
+    transform: translateX( 30px ) translateY( 3px );
+}
+
+
+
+
+.DonateShopPanelSecond {
+    width: 100%;
+    height: 100%;
+    flow-children: right;
+}
+
+#MainContainer {
+
+}
+
+#ItemsContainer {
+    visibility: collapse;
+}
+
+#CouriersContainer {
+    visibility: collapse;
+}
+
+#EffectsContainer {
+    visibility: collapse;
+}
+
+#DonateMainButton {
+    box-shadow: 0px 0px 2px 0px white;
+}
+
+
+#HorizontalScrollBar {
+    height: 6px;
+}
+
+#PopularityRecomDonate{
+    width: 650px;
+    height: 625px;
+    flow-children: down;
+    margin-left: 50px;
+    margin-top: 35px;
+    border: 2px solid rgba(0,0,0,0.8);
+    box-shadow: inset #141414 0px 0px 8px 5px;
+    background-color: #0009;
+}
+
+
+
+
+
+
+
+
+
+#PopularityRecomDonateItems{
+    width: 100%;
+    height: 100%;
+    flow-children: right-wrap;
+    margin-top: 10px;
+}
+
+.PopularityRecomDonateItemsRow{
+    width: 100%;
+    height: 170px;
+    flow-children: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.RecomItem {
+    width: 190px;
+    height: 170px;
+    background-color: #0009;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    border: 1px solid black;
+    box-shadow: inset gray 0px 0px 2px 1px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    background-size: contain;
+    flow-children: down;
+}
+
+.RecomItem:hover {
+    pre-transform-scale2d: 1.05;
+}
+
+
+.ItemImage {
+    width: 150px;
+    height: 100px;
+    margin-top: 10px;
+    horizontal-align: center;
+    background-size: contain;
+}
+
+#PopularityRecomDonateInfo {
+    text-align: center;
+    horizontal-align: center;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.ItemName {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    horizontal-align: center;
+}
+
+.BuyItemPanel {
+    width: 150px;
+    height: 20px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ));
+    horizontal-align: center;
+    margin-top: 5px;
+}
+
+.ItemPrice{
+    align: center center;
+    flow-children: right;
+}
+
+
+
+.PriceIcongold {
+    width: 20px;
+    background-size: 100%;
+    height: 100%;
+    background-image: url("file://{images}/custom_game/shop/gold_icon.png");
+}
+
+.PriceIcongem {
+    width: 15px;
+    background-size: 100%;
+    height: 100%;
+    background-image: url("file://{images}/custom_game/shop/gem_icon.png");
+}
+
+.PriceLabel {
+    text-align: center;
+    font-size: 15px;
+    color: white;
+}
+
+
+
+
+#PopularityDonate {
+    width: 100%;
+    height: 100%;
+    flow-children: down;
+}
+
+#ContainerOnePanel {
+    flow-children: down;
+    height: 50%;
+    horizontal-align: center;
+}
+
+#ContainerTwoPanel {
+    flow-children: down;
+    horizontal-align: center;
+}
+
+#AdsChests{
+    align: center center;
+    width: 450px;
+    height: 300px;
+    box-shadow: black 0px 0px 10px 2px;
+}
+
+#AdsChests:hover {
+    brightness: 1.25;
+}
+
+
+
+
+.AdsTextChest {
+    width: 235px;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( #9D5599 ), to( #3A103A ) );
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+#AdsItem_1{
+    align: center center;
+    width: 350px;
+    height: 250px;
+    margin-top: 10px;
+    box-shadow: black 0px 0px 10px 2px;
+}
+
+#AdsItem_1:hover {
+    brightness: 1.25;
+}
+
+.AdsText {
+    width: 235px;
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( #1F5599 ), to( #3A103A ) );
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+#PetsDonateItems,
+#EffectsDonateItems,
+#GemDonateItems,
+#SubscribeDonateItems,
+#CurrencysDonateItems,
+#SkinDonateItems,
+#SoundsDonateItems,
+#SpraysonateItems,
+#ChestDonateItems {
+    visibility: collapse;
+}
+
+#EffectsDonateItems {
+    visibility: collapse;
+}
+#GemDonateItems {
+    visibility: collapse;
+}
+
+#MenuItems {
+    width: 20%;
+    height: 600px;
+    flow-children: down;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.ItemsPanel {
+    width: 980px;
+    height: 720px;
+    overflow:  squish scroll;
+    flow-children: right-wrap;
+    box-shadow: inset rgba(0,0,0,0.6) 0px 0px 8px 1px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.RowDonateItems{
+    horizontal-align: center;
+    width: 840px;
+    height: 180px;
+    flow-children: right;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ItemsCategoryButton {
+    width: 200px;
+    horizontal-align: center;
+    height: 50px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #2B3D53 ), to( #3B5A6F ) );
+    box-shadow: 0px 0px 1px 1px black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ItemShop {
+    width: 190px;
+    height: 170px;
+    background-color: #0009;
+    margin-left: 27.5px;
+    margin-right: 27.5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    flow-children: down;
+}
+
+.ItemShop:hover {
+    pre-transform-scale2d: 1.05;
+}
+
+#DonateShopPanel.sethidden {
+    pre-transform-scale2d: 0;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+#DonateShopPanel.setvisible {
+    pre-transform-scale2d: 1;
+    transition-property: pre-transform-scale2d;
+    transition-duration: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+#info_item_buy {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: collapse;
+}
+
+#ItemInfoPanel {
+    width: 500px;
+    background-image: url("file://{images}/custom_game/shop/background.png");
+    background-size: 100%;
+    align: center center;
+    flow-children: down;
+}
+
+.InfoItemTop {
+    width: 100%;
+    height: 80px;
+}
+
+.CloseInfoItem {
+    align: right center;
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+    background-image: url("s2r://panorama/images/control_icons/x_close_grey_psd.vtex");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #000000bb;
+    wash-color: #888888;
+    transition-property: wash-color;
+    transition-duration: 0.1s;
+}
+
+.CloseInfoItem:hover {
+    background-color: #000000bb;
+    wash-color: white;
+}
+
+.ItemNameInfoLabel {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    align: center center;
+}
+
+
+#ItemInfoBody {
+    width: 100%;
+    flow-children: down;
+}
+
+
+
+
+
+
+.BuyItemPanelInfo {
+    width: 150px;
+    height: 40px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ));
+    align: center bottom;
+    margin-bottom: 30px;
+}
+
+.BuyItemPanelInfo:hover {
+    brightness: 1.5;
+}
+
+.PriceLabelInfo {
+    align: center center;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+}
+
+#PatreonButton:hover {
+    brightness: 1.5;
+}
+#Paypal:hover {
+    brightness: 1.5;
+}
+#DonateStream:hover {
+    brightness: 1.5;
+}
+#Discord:hover {
+    brightness: 1.5;
+}
+
+
+
+
+
+
+.ItemInventory {
+    width: 190px;
+    height: 170px;
+    background-color: #0009;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    flow-children: down;
+}
+
+
+
+
+
+
+
+
+
+
+#BonusRate {
+    width: 50px;
+    height: 50px;
+    background-image: url("file://{images}/custom_game/shop/button_background.png");
+    background-size: 100% 100%;
+    box-shadow: 0px 0px 1px 0px black;
+    border: 1px solid black;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#BonusRate:hover .BonusRateIcon {
+    pre-transform-scale2d: 1.15;
+}
+
+.BonusRateIcon {
+    background-image: dotaPlusLogoSmall;
+    width: 30px;
+    height: 30px;
+    align: center center;
+    background-size: 90% 100%;
+    transition-duration: 0.25s;
+    background-repeat: no-repeat;
+    transition-property: pre-transform-scale2d;
+}
+
+
+#AllItemsButton {
+    box-shadow: 0px 0px 1px 1px white;
+}
+
+#CouriersButtonInventory {
+    box-shadow: 0px 0px 1px 1px white;
+}
+
+
+
+.column_donate {
+    height: 160px;
+    flow-children: down;
+    margin: 20px;
+}
+
+
+.columns_donate {
+    height: 200px;  
+    flow-children: right;
+    align: center center;
+}
+
+#PatreonButton {
+    width: 180px;
+    height: 60px;
+    margin-top: 25px;
+   /* background-color: gradient( linear, 0% 0%, 0% 100%, from( #d5e0c6 ), to( #c4eb9b )); */
+    background-image: url("s2r://panorama/images/custom_game/shop/patreon.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#Paypal {
+    width: 180px;
+    height: 60px;
+    margin-top: 25px;
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #565c4f75 ), to( #060804 )); */
+    background-image: url("s2r://panorama/images/custom_game/shop/paypal.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#DonateStream {
+    width: 180px;
+    height: 60px;
+    margin-top: 25px;
+   /* background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d )); */
+    background-image: url("s2r://panorama/images/custom_game/shop/donate.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#Discord {
+    width: 180px;
+    height: 60px;
+    margin-top: 25px;
+    /*background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d )); */
+    background-image: url("s2r://panorama/images/custom_game/shop/discord.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
+.CloseShop {
+    width: 35px;
+    height: 35px;
+    margin-left: 40px;
+    margin-top: 10px;
+    background-image: url("s2r://panorama/images/control_icons/x_close_grey_psd.vtex");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: #000000bb;
+    wash-color: #888888;
+    transition-property: wash-color;
+    transition-duration: 0.1s;
+}
+
+.CloseShop:hover {
+    background-color: #000000bb;
+    wash-color: white;
+}
+
+
+
+
+#shop_error_panel {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    visibility: collapse;
+}
+
+#shop_error_label{
+    align: center center;
+    color: red;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 45px;
+    text-shadow: 1px 1px 1px 5 black;
+}
+
+.error_visible
+{
+    opacity: 0;
+}
+
+
+#shop_buy_panel {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 100;
+    visibility: collapse;
+}
+
+#shop_buy_label{
+    align: center center;
+    color: rgb(30, 255, 0);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 45px;
+    text-shadow: 1px 1px 1px 5 black;
+}
+
+.buy_visible
+{
+    opacity: 0;
+}
+
+.Panel_for_desc {
+    width: 400px;
+    border-top: 1px solid black;
+    height: 100px;
+    align: center center;
+    margin-bottom: 10px;
+}
+
+.Item_desc {
+    text-align: center;
+    font-size: 16px;
+    color:#daebff;
+    align:  center center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#MenuInventory {
+    width: 20%;
+    height: 600px;
+    flow-children: down;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.PlayerItemsContainer {
+    width: 980px;
+    height: 720px;
+    overflow:  squish scroll;
+    flow-children: right-wrap;
+    box-shadow: inset rgba(0,0,0,0.6) 0px 0px 8px 1px;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.DonateShopInventory {
+    width: 100%;
+    height: 100%;
+    flow-children: right;
+}
+
+#EffectsPanel,
+#SkinPanel,
+#ChestsPanel {
+    visibility: collapse;
+}
+
+
+
+
+
+
+
+
+
+.ItemChest {
+    width: 190px;
+    height: 185px;
+    background-color: #0009;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    flow-children: down;
+}
+
+
+.OpenChestPanel {
+    width: 150px;
+    height: 20px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ));
+    horizontal-align: center;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+#ChestOpenPanelMainClosed {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: collapse;
+}
+
+#ChestOpenPanelMain {
+    width: 1200px;
+    height: 700px;
+    background-image: url("file://{images}/custom_game/shop/background.png");
+    background-size: 100%;
+    align: center center;
+    flow-children: down;
+}
+
+.ChestOpenPanelTop {
+    width: 100%;
+    height: 80px;
+}
+
+
+.ChestNameInfoLabel {
+    text-align: center;
+    font-size: 28px;
+    color: white;
+    align: center center;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+
+#ChestBodyInfo {
+    width: 1120px;
+    height: 590px;
+    horizontal-align: center;
+    flow-children: down;
+}
+
+.ChestImageInfo {
+    width: 300px;
+    height: 200px;
+    horizontal-align: center;
+}
+
+.OpenChestButton {
+    width: 180px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ));
+    horizontal-align: center;
+    border-right: 1px solid #00000085;
+    border-top: 1px solid #ffffff11;
+    border-left: 1px solid #ffffff06;
+    border-bottom: 1px solid #00000088;
+
+}
+
+.OpenChestButton:hover {
+    brightness: 1.2;
+}
+.OpenChestButton:active {
+    brightness: 1.4;
+}
+
+.ChestAllRewardsPanel {
+    horizontal-align: center;
+    width: 100%;
+    height: 310px;
+    margin-top: 20px;
+    box-shadow: inset rgba(0,0,0,0.6) 0px 0px 8px 1px;
+    background-color: rgba(0,0,0,0.6);
+    flow-children: right-wrap;
+}
+
+.OpenChest_Label {
+    align: center center;
+    color: white;
+    horizontal-align: center;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px 2 black;
+}
+
+
+
+
+
+.Chest_in_item {
+    width: 200px;
+    background-color: #0009;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 10px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    flow-children: down;
+}
+
+.ItemChestImage {
+    width: 100%;
+    height: 120px;
+    background-size: contain;
+    align: center center;
+    background-size: contain;
+}
+
+.ItemChestName {
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    align: center center;
+}
+
+.RarePanel {
+    width: 100%;
+    height: 20px;
+}
+
+
+#chest_opened_animation {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    visibility: collapse;
+
+}
+
+.ChestOpenImage {
+    width: 300px;
+    height: 200px;
+    align: center center;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.ChestOpenImageItem {
+    width: 210px;
+    height: 150px;
+    align: center center;
+    transition-property: opacity;
+    transition-duration: 2s;
+}
+
+.AcceptButton {
+    width: 150px;
+    height: 40px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ));
+    align: center center;
+    margin-top: 20%;  
+    border-right: 1px solid #00000085;
+    border-top: 1px solid #ffffff11;
+    border-left: 1px solid #ffffff06;
+    border-bottom: 1px solid #00000088;
+}
+
+.AcceptButton:hover {
+    brightness: 2;
+}
+
+.AcceptButton:active {
+    brightness: 1.3;
+}
+
+.LabelAccept {
+    font-size: 18px;
+    align: center center;
+    color: white;
+}
+
+.CountChest {
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    horizontal-align: center;
+}
+
+.ChestItemPreview{
+    flow-children: right-wrap;
+    margin-bottom: 20px;
+    width: 450px;
+    horizontal-align: center;
+}
+
+.Chest_in_item_preview {
+    width: 76px;
+    background-color: #0009;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 10px;
+    transition-duration: 0.1s;
+    transition-property: pre-transform-scale2d;
+    flow-children: down;
+}
+
+.ItemChestImage_preview {
+    width: 100%;
+    height: 76px;
+    background-size: contain;
+    align: center center;
+    background-size: contain;
+}
+
+.ItemChestName_preview {
+    text-align: center;
+    font-size: 8px;
+    color: white;
+    font-weight: bold;
+    align: center center;
+}

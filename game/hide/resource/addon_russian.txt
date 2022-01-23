@@ -31,7 +31,7 @@
 		"rock_6"                                                                    "Armored Tree Wall 3"
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
-		"rock_9"                                                                    "Mega Tree Wall"
+		"rock_9"                                                                    "Tree Wall"
 		"rock_10"                                                                    "Magnet LVL 1"
 		"rock_11"                                                                  "Magnet LVL 2"
 		"rock_12"                                                                  "Demonic Wall 2"

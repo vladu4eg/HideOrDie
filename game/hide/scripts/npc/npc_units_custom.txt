@@ -1130,7 +1130,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl"
 
-	    "ModelScale"                "1.2"
+	    "ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"ModelGhostOffset"			"64"
 		"HealthBarOffset"			"150"
@@ -1219,7 +1219,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl"
 
-		"ModelScale"                "1.4"
+		"ModelScale"                "0.9"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1274,8 +1274,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1289,7 +1289,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/shroomling_treant/shroomling_treant.vmdl"
 
-		"ModelScale"                "1.6"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1349,8 +1349,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1364,7 +1364,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/ravenous_woodfang/ravenous_woodfang.vmdl"
 
-		"ModelScale"                "1.2"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1419,8 +1419,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1434,7 +1434,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/ravenous_woodfang/ravenous_woodfang.vmdl"
 
-		"ModelScale"                "1.4"
+		"ModelScale"                "0.9"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1489,8 +1489,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1504,7 +1504,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/items/furion/treant/ravenous_woodfang/ravenous_woodfang.vmdl"
 
-		"ModelScale"                "1.6"
+		"ModelScale"                "1"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1561,8 +1561,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1644,8 +1644,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1715,8 +1715,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -1730,7 +1730,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/heroes/treant_protector/treant_protector.vmdl"
 
-		"ModelScale"                "1.2"
+		"ModelScale"                "0.6"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1786,8 +1786,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 		
@@ -1796,8 +1796,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.80"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"400"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"100"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Tower.Water"
@@ -1812,7 +1812,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/heroes/elder_titan/elder_titan.vmdl"
 
-		"ModelScale"                "1"
+		"ModelScale"                "0.5"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1874,8 +1874,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 		
@@ -1884,8 +1884,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.80"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"400"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"100"		// Range within a target can be acquired.
+		"AttackRange"				"100"		// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
 		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Tower.Water"
@@ -2243,8 +2243,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 		"MovementTurnRate"      	"1.0" 
 	    "MovementSpeed"             "0"
@@ -2329,8 +2329,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 		"MovementTurnRate"      	"1.0" 
 	    "MovementSpeed"             "0"
@@ -2425,8 +2425,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 		"Creature"
@@ -2522,8 +2522,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 
@@ -2609,8 +2609,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 
@@ -2709,8 +2709,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 
@@ -2797,8 +2797,8 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"        "900"  
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 				"Creature"
@@ -2883,8 +2883,8 @@
 	    "VisionDaytimeRange"        "1200"
 	    "VisionNighttimeRange"        "1100"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -3013,8 +3013,8 @@
 	    "VisionDaytimeRange"        "1200"
 	    "VisionNighttimeRange"        "1100"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -3095,8 +3095,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
@@ -3179,8 +3179,8 @@
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
-	    "ProjectileCollisionSize"   "100"
-	    "RingRadius"                "100"
+	    "ProjectileCollisionSize"   "24"
+	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 	}
