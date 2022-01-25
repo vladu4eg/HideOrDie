@@ -3617,7 +3617,7 @@
 	"build_true_sight_tower_mega"{
 		"BaseClass"				"ability_datadriven"
 		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"AbilityTextureName"	"build_tower"
+		"AbilityTextureName"	"build_true_sight_tower_mega"
 		"AbilityCastRange"		"150"
 		"Building"				"1"
 		"BuildTime"				"5"
@@ -9472,12 +9472,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"2000"
+				"gold_cost"			"500"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"50"
+				"lumber_cost"		"15"
 			}	
 			"03"
 			{
@@ -9522,6 +9522,72 @@
 			}
 		}
 	}
+
+
+	"train_attacker_4"
+	{
+		"BaseClass"					"ability_datadriven"
+		"AbilityTextureName"		"train_attacker_4"
+		"MaxLevel"					"1"
+		"UnitName"					"attacker_4"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gold_cost"			"2000"
+			}	
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"lumber_cost"		"200"
+			}	
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"food_cost"			"2"
+			}	
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"unit_count"		"1"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"wisp_cost"			"1"
+			}
+		}
+	 
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+	 
+		"AbilityChannelTime"		"5"
+		"OnSpellStart"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnSpellStart"
+			}
+		}
+		"OnChannelSucceeded"
+		{	 
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelSucceeded"
+			}
+		}
+		"OnChannelInterrupted"{
+			"RunScript"
+			{
+				"ScriptFile"		"custom_abilities.lua"
+				"Function"			"SpawnUnitOnChannelInterrupted"
+			}
+		
+		}
+	}
+
 	"train_attacker_5"
 	{
 		"BaseClass"					"ability_datadriven"
@@ -9648,70 +9714,6 @@
 		}
 	}
 
-	"train_attacker_4"
-	{
-		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"train_attacker_4"
-		"MaxLevel"					"1"
-		"UnitName"					"attacker_4"
-		
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"4000"
-			}	
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"200"
-			}	
-			"03"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"food_cost"			"2"
-			}	
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"unit_count"		"1"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"wisp_cost"			"1"
-			}
-		}
-	 
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-	 
-		"AbilityChannelTime"		"5"
-		"OnSpellStart"{
-			"RunScript"
-			{
-				"ScriptFile"		"custom_abilities.lua"
-				"Function"			"SpawnUnitOnSpellStart"
-			}
-		}
-		"OnChannelSucceeded"
-		{	 
-			"RunScript"
-			{
-				"ScriptFile"		"custom_abilities.lua"
-				"Function"			"SpawnUnitOnChannelSucceeded"
-			}
-		}
-		"OnChannelInterrupted"{
-			"RunScript"
-			{
-				"ScriptFile"		"custom_abilities.lua"
-				"Function"			"SpawnUnitOnChannelInterrupted"
-			}
-		
-		}
-	}
-
 	"train_attacker_6"
 	{
 		"BaseClass"					"ability_datadriven"
@@ -9724,12 +9726,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"52000"
+				"gold_cost"			"26000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"64000"
+				"lumber_cost"		"12000"
 			}	
 			"03"
 			{
@@ -9750,7 +9752,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"20"
+		"AbilityChannelTime"		"15"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9789,12 +9791,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gold_cost"			"256000"
+				"gold_cost"			"128000"
 			}	
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"lumber_cost"		"200000"
+				"lumber_cost"		"100000"
 			}	
 			"03"
 			{
@@ -9815,7 +9817,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"35"
+		"AbilityChannelTime"		"15"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9879,7 +9881,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"60"
+		"AbilityChannelTime"		"20"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -9943,7 +9945,7 @@
 	 
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 	 
-		"AbilityChannelTime"		"90"
+		"AbilityChannelTime"		"30"
 		"OnSpellStart"{
 			"RunScript"
 			{
@@ -14156,7 +14158,7 @@
             {
                 "Properties"
                 {
-                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "-35"
+                    "MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"        "-50"
                     "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "-50"
                 }
 

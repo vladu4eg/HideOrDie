@@ -2591,19 +2591,9 @@
 	"tower_buff"				"Mega Buff"
 	"DOTA_Tooltip_Ability_build_rock_mega"					"Build Mega Rock"
 	"rock_mega"					"Build Mega Rock"
-	
 
-
-
-
-
-
-
-
-
-
-
-
+	"DOTA_Tooltip_Ability_build_true_sight_tower_mega"                                "Upgrade To Mega True Sight Tower"
+	"DOTA_Tooltip_Ability_build_true_sight_tower_mega_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "
 
 
 		"seveasdefault"																			"Save as default"

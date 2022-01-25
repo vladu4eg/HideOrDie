@@ -1730,7 +1730,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/heroes/treant_protector/treant_protector.vmdl"
 
-		"ModelScale"                "0.6"
+		"ModelScale"                "0.7"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1812,7 +1812,7 @@
 		"BaseClass"                 "npc_dota_creature"
 		"Model"						"models/heroes/elder_titan/elder_titan.vmdl"
 
-		"ModelScale"                "0.5"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -9091,11 +9091,11 @@
 	    {
 	        "AttachWearables" // Dark wood set
 	        {
-	           "Wearable1" {"ItemDef" "7090"}//arms("Armguards of the Stalwart")
-		"Wearable2" {"ItemDef" "7091"}//("Hammer of the Stalwart Soul")
-		"Wearable3" {"ItemDef" "7092"}//head("Coiffure of the Stalwart Soul")
-		"Wearable4" {"ItemDef" "7093"}//back("Plate of the Stalwart Soul")
-		"Wearable5" {"ItemDef" "7094"}//shoulder("Pauldrons of the Stalwart Soul")
+	           "Wearable1" {"ItemDef" "4266"}//arms("Armguards of the Stalwart")
+		"Wearable2" {"ItemDef" "4268"}//("Hammer of the Stalwart Soul")
+		"Wearable3" {"ItemDef" "4269"}//head("Coiffure of the Stalwart Soul")
+		"Wearable4" {"ItemDef" "4267"}//back("Plate of the Stalwart Soul")
+		"Wearable5" {"ItemDef" "20036"}//shoulder("Pauldrons of the Stalwart Soul")
 		"Wearable6" {"ItemDef" "45"}//shoulder("Pauldrons of the Stalwart Soul")
 	        }
 	    }
