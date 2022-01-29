@@ -3154,7 +3154,7 @@
 	"upgrade_to_rock_10"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_rock_10"
+		"AbilityTextureName"			"build_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"
@@ -3173,7 +3173,7 @@
 	"upgrade_to_rock_11"
 	{
 		"BaseClass"             		"ability_datadriven"
-		"AbilityTextureName"			"build_rock_10"
+		"AbilityTextureName"			"build_tower"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"AbilityCastPoint"				"0"
 		"MaxLevel"						"1"

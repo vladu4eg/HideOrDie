@@ -329,7 +329,7 @@ function UpgradeBuilding( event )
         local abil = hero:FindAbilityByName("lone_druid_spirit_bear_datadriven")
         abil:SetLevel(abil:GetMaxLevel())
     end
-
+    
     Timers:CreateTimer(buildTime,function()
         if newBuilding:IsNull() or not newBuilding:IsAlive() then
             return
@@ -349,6 +349,10 @@ function UpgradeBuilding( event )
     if newBuilding:GetUnitName() == "tent_5" or newBuilding:GetUnitName() == "tent_6" then
         GameRules.maxFood[playerID] = GameRules.maxFood[playerID] + 18 
         PlayerResource:ModifyFood(hero, 0)
+    end
+    if newBuildingName == "rock_10" or newBuildingName == "rock_11" or newBuildingName == "tower_buff" then
+        local abil = newBuilding:FindAbilityByName("mars_bulwark")
+        abil:ToggleAutoCast()
     end
 end
 

@@ -1137,7 +1137,7 @@
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
-		"Limit"						"30"
+		"Limit"						"40"
 		"StartingBuilding"          "1"
 		"BountyXP"					"50"		// Experience earn.
 		"BountyGoldMin"				"10"		// Gold earned min.
@@ -1148,7 +1148,7 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "4"
+	        "Count"     "6"
 	        "1"{
 				"unit_name"			"rock_2"
 				"gold_cost"			"128"
@@ -1160,11 +1160,21 @@
 				"lumber_cost"		"64"
 			}
 			"3"{
+				"unit_name"			"tower_2"
+				"gold_cost"			"4000"
+				"lumber_cost"		"4000"
+			}
+			"4"{
+				"unit_name"			"tower_5"
+				"gold_cost"			"75000"
+				"lumber_cost"		"80000"
+			}
+			"5"{
 				"unit_name"			"rock_7"
 				"gold_cost"			"30"
 				"lumber_cost"		"50"
 			}
-			"4"{
+			"6"{
 				"unit_name"			"rock_9"
 				"gold_cost"			"512000"
 				"lumber_cost"		"256000"
@@ -1203,11 +1213,22 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"5"		// Damage range min.
+		"AttackDamageMax"			"10"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
 	}
 	//=================================================================================
 	// Building: Rock 2
@@ -1273,11 +1294,22 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"15"		// Damage range min.
+		"AttackDamageMax"			"25"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
 	}
 	//=================================================================================
 	// Building: Rock 3
@@ -1348,11 +1380,22 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"35"		// Damage range min.
+		"AttackDamageMax"			"45"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
 	}
 	//=================================================================================
 	// Building: Rock 4
@@ -1418,11 +1461,22 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"55"		// Damage range min.
+		"AttackDamageMax"			"80"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
 	}
 	//=================================================================================
 	// Building: Rock 5
@@ -1448,8 +1502,18 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "3"
 	        "1"{
+				"unit_name"			"tower_2"
+				"gold_cost"			"3000"
+				"lumber_cost"		"2048"
+			}
+			"2"{
+				"unit_name"			"tower_5"
+				"gold_cost"			"65000"
+				"lumber_cost"		"75000"
+			}
+			"3"{
 				"unit_name"			"rock_6"
 				"gold_cost"			"128000"
 				"lumber_cost"		"64000"
@@ -1473,7 +1537,7 @@
 	    
 	    "ArmorPhysical"             "12"
 		"StatusHealth"              "5000"
-	    "StatusHealthRegen"         "6"
+	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
 	    "MagicalResistance"         "0"
@@ -1488,11 +1552,22 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"85"		// Damage range min.
+		"AttackDamageMax"			"120"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.00"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
+		"AttackRange"				"400"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Tower.Water"
 	}
 	//=================================================================================
 	// Building: Ultra Wall 1
@@ -1544,7 +1619,7 @@
 	    //-----------------------------
 	    
 	    "ArmorPhysical"             "60"
-		"StatusHealth"              "8000"
+		"StatusHealth"              "12000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -1560,11 +1635,24 @@
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
 	    "VisionDaytimeRange"        "900"
 	    "VisionNighttimeRange"      "600"  
-	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
+
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.5"			// Speed of attack.
+		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"950"		// Range within a target can be acquired.
+		"AttackRange"				"950"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/units/heroes/hero_windrunner/windrunner_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"1250"		// Speed of projectile.
+	    "SoundSet"                  "Hero_Windrunner"
+		
+	
+		"AttackDamageMin"			"1201"		// Damage range min.
+		"AttackDamageMax"			"1500"		// Damage range max.
 	}
 	//=================================================================================
 	// Building: Ultra Wall 2
@@ -1692,7 +1780,7 @@
 		"Ability2"					"nevermore_dark_lord_datadriven"
 		"Ability3"					"luna_lunar_blessing_datadriven"
 		"Ability4"					"silencer_last_word"
-		"Ability10"					""
+		"Ability10"					"true_sight_ability"
 	    
 	    // General
 	    //-----------------------------
@@ -1712,8 +1800,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "1300"
+	    "VisionNighttimeRange"      "1200"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
@@ -1769,7 +1857,7 @@
 	    //-----------------------------
 	    
 	    "ArmorPhysical"             "100"
-		"StatusHealth"              "8000"
+		"StatusHealth"              "15000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "1985"
 	    "StatusManaRegen"           "0"
@@ -1791,8 +1879,8 @@
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
 		
-		"AttackDamageMin"			"500"		// Damage range min.
-		"AttackDamageMax"			"2000"		// Damage range max.
+		"AttackDamageMin"			"1500"		// Damage range min.
+		"AttackDamageMax"			"2500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.80"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
@@ -1900,9 +1988,9 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/props_structures/tower_upgrade/tower_upgrade.vmdl"
+		"Model"						"models/props_structures/default/radiant_tower002_dest_lvl2.vmdl"
 
-		"ModelScale"                "0.4"
+		"ModelScale"                "0.6"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -1932,7 +2020,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"mars_bulwark"
-		"Ability2"					""
+		"Ability2"					"true_sight_ability"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
@@ -1955,8 +2043,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"      "600"  
+	    "VisionDaytimeRange"        "1000"
+	    "VisionNighttimeRange"      "800"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
 	    "ProjectileCollisionSize"   "100"
 	    "RingRadius"                "100"
@@ -1983,9 +2071,9 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/props_structures/tower_upgrade/tower_upgrade.vmdl"
+		"Model"						"models/props_structures/radiant_tower002.vmdl"
 
-		"ModelScale"                "0.4"
+		"ModelScale"                "0.8"
 	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
@@ -2006,7 +2094,7 @@
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
 		"Ability1"					"mars_bulwark"
-		"Ability2"					""
+		"Ability2"					"true_sight_ability"
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
@@ -2132,6 +2220,7 @@
 		"MovementTurnRate"      	"1.0" 
 	    "MovementSpeed"             "0"
 	}
+
 	//=================================================================================
 	// Building: Basic Tower
 	//=================================================================================	
@@ -2140,16 +2229,20 @@
 	    // Visual
 	    //-----------------------------
 		"BaseClass"                 "npc_dota_creature"
-		"Model"						"models/tower_6.vmdl"
-
-	    "ModelScale"				"0.6"
-	    "ModelRotation"				"90"
+		"Model"						"models/items/wards/ti10_ward/ti10_ward.vmdl"
+		 "precache"
+		{
+			"model"                     "models/items/wards/ti10_ward/ti10_ward.vmdl"
+		
+	    }
+		"ModelScale"                "1.2"
+	    "ModelRotation"             "90"
 		"HealthBarOffset"			"150"
 		"PlayerCanControl"			"1"
 		"Scale"						"1"
 		"RequiresRepair"			"1"
 		"StartingBuilding"          "1"
-		"Limit"						"30"
+		"Limit"						"15"
 
 	    // Stats
 	    //----------------------------- 
@@ -2158,33 +2251,18 @@
 		
 		"Upgrades"
 	    {
-	        "Count"     "6"
-	        "1"{
-				"unit_name"			"tower_2"
-				"gold_cost"			"4000"
-				"lumber_cost"		"4000"
-			}
-			"2"{
-				"unit_name"			"tower_5"
-				"gold_cost"			"75000"
-				"lumber_cost"		"80000"
-			}
-			"3"{
-				"unit_name"			"true_sight_tower"
-				"gold_cost"			"75"
-				"lumber_cost"		"25"
-			}
-			"4"{
+	        "Count"     "3"
+			"1"{
 				"unit_name"			"rock_10"
 				"gold_cost"			"5000"
 				"lumber_cost"		"2000"
 			}
-			"5"{
+			"2"{
 				"unit_name"			"tower_radar"
 				"gold_cost"			"250"
 				"lumber_cost"		"500"
 			}
-			"6"{
+			"3"{
 				"unit_name"			"rock_8"
 				"gold_cost"			"65000"
 				"lumber_cost"		"70000"
@@ -2198,27 +2276,12 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"6"
-		"Ability1"					""
+		"Ability1"					"true_sight_ability"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
 		"Ability10"					""
 	    
-	    // General
-	    //-----------------------------
-	    
-		
-		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"81"		// Damage range min.
-		"AttackDamageMax"			"110"		// Damage range max.
-		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"1.00"			// Speed of attack.
-		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"400"		// Range within a target can be acquired.
-		"AttackRange"				"400"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"1250"		// Speed of projectile.
-	    "SoundSet"                  "Tower.Water"
 		
 		// Bounty
 		//----------------------------------------------------------------
@@ -2237,16 +2300,16 @@
 	    "BlockPathingSize"          "2"
 		"CollisionSize"				"64"
 		
-	    "BoundsHullName"            "DOTA_HULL_SIZE_HERO"
+	  	"BoundsHullName"            "DOTA_HULL_SIZE_BUILDING"
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "900"
-	    "VisionNighttimeRange"        "900"  
+	    "VisionDaytimeRange"        "800"
+	    "VisionNighttimeRange"        "600"  
+	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
-		"MovementTurnRate"      	"1.0" 
 	    "MovementSpeed"             "0"
 	}
 	//=================================================================================
@@ -2310,10 +2373,10 @@
 	    "SoundSet"                  "Hero_Morphling"
 		
 	
-		"AttackDamageMin"			"51"		// Damage range min.
-		"AttackDamageMax"			"55"		// Damage range max.
-	    "ArmorPhysical"             "4"
-		"StatusHealth"              "1000"
+		"AttackDamageMin"			"85"		// Damage range min.
+		"AttackDamageMax"			"120"		// Damage range max.
+	    "ArmorPhysical"             "12"
+		"StatusHealth"              "6000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2407,9 +2470,9 @@
 		
 	
 		"AttackDamageMin"			"151"		// Damage range min.
-		"AttackDamageMax"			"155"		// Damage range max.
-	    "ArmorPhysical"             "6"
-		"StatusHealth"              "1200"
+		"AttackDamageMax"			"200"		// Damage range max.
+	    "ArmorPhysical"             "15"
+		"StatusHealth"              "7000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2503,10 +2566,10 @@
 	    "SoundSet"                  "Hero_Morphling"
 		
 	
-		"AttackDamageMin"			"301"		// Damage range min.
-		"AttackDamageMax"			"305"		// Damage range max.
-	    "ArmorPhysical"             "7"
-		"StatusHealth"              "1500"
+		"AttackDamageMin"			"350"		// Damage range min.
+		"AttackDamageMax"			"500"		// Damage range max.
+	    "ArmorPhysical"             "20"
+		"StatusHealth"              "8000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2592,8 +2655,8 @@
 	
 		"AttackDamageMin"			"601"		// Damage range min.
 		"AttackDamageMax"			"605"		// Damage range max.
-	    "ArmorPhysical"             "8"
-		"StatusHealth"              "1600"
+	    "ArmorPhysical"             "25"
+		"StatusHealth"              "8000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2692,8 +2755,8 @@
 
 		"AttackDamageMin"			"801"		// Damage range min.
 		"AttackDamageMax"			"805"		// Damage range max.
-	    "ArmorPhysical"             "9"
-		"StatusHealth"              "1800"
+	    "ArmorPhysical"             "35"
+		"StatusHealth"              "10000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2751,6 +2814,16 @@
 	    "Level"                     "7"
 	    "BuildTime"                 "3"
 		
+		"Upgrades"
+	    {
+	        "Count"     "1"
+	        "1"{
+				"unit_name"			"rock_6"
+				"gold_cost"			"96000"
+				"lumber_cost"		"96000"
+			}
+	    }
+
 		"Requirements"{
 		}
 		
@@ -2780,8 +2853,8 @@
 	
 		"AttackDamageMin"			"1201"		// Damage range min.
 		"AttackDamageMax"			"1205"		// Damage range max.
-	    "ArmorPhysical"             "10"
-		"StatusHealth"              "2000"
+	    "ArmorPhysical"             "40"
+		"StatusHealth"              "10000"
 	    "StatusHealthRegen"         "0"
 	    "StatusMana"                "0"
 	    "StatusManaRegen"           "0"
@@ -2801,17 +2874,6 @@
 	    "RingRadius"                "24"
 	    "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_NONE"
 	    "MovementSpeed"             "0"
-				"Creature"
-	    {
-	        "AttachWearables" // Dark wood set
-	        {
-		"Wearable1" {"ItemDef" "8806"}//head("Crown of the Protean Emperor")
-		"Wearable2" {"ItemDef" "8807"}//misc("Ornaments of the Protean Emperor")
-		"Wearable3" {"ItemDef" "8808"}//shoulder("Pauldrons of the Protean Emperor")
-		"Wearable4" {"ItemDef" "8809"}//arms("Bracers of the Protean Emperor")
-		"Wearable5" {"ItemDef" "8810"}//back("Spikes of the Protean Emperor")
-	        }
-	    }
 		"Creature"
 	    {
 	        "AttachWearables" // Dark wood set
@@ -2982,7 +3044,7 @@
 		// Abilities
 		//----------------------------------------------------------------
 		"AbilityLayout"				"4"
-		"Ability1"					""
+		"Ability1"					"true_sight_ability"
 		"Ability2"					""
 		"Ability3"					""
 		"Ability4"					""
@@ -3010,8 +3072,8 @@
 	    "TeamName"                  "DOTA_TEAM_NEUTRALS"
 	    "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_HERO"
 	    "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_BUILDING"
-	    "VisionDaytimeRange"        "1200"
-	    "VisionNighttimeRange"        "1100"  
+	    "VisionDaytimeRange"        "900"
+	    "VisionNighttimeRange"        "800"  
 	    "AttackCapabilities"        "DOTA_UNIT_CAP_NO_ATTACK"
 	    "ProjectileCollisionSize"   "24"
 	    "RingRadius"                "24"
@@ -4350,6 +4412,7 @@
 		"Level"                                 "1"
 		"HealthBarOffset"                       "140"
 		"WispCost"                              "1"
+		"FoodCost"                              "50"
 		"precache"
 		{
 			"model"                                 "models/heroes/furion/treant.vmdl"
@@ -4382,8 +4445,8 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyGoldMin"                         "500"
-		"BountyGoldMax"                         "1000"
+		"BountyGoldMin"                         "100"
+		"BountyGoldMax"                         "500"
 		"BountyXP"          					"500"                 // Experience earn.
 
 		// Bounds
@@ -5643,8 +5706,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 	    "BountyXP"          "2000"                 // Experience earn.
-	    "BountyGoldMin"       "1000"                   // Gold earned min.
-	    "BountyGoldMax"       "9000"                   // Gold earned max.	
+	    "BountyGoldMin"       "250"                   // Gold earned min.
+	    "BountyGoldMax"       "1500"                   // Gold earned max.	
 
 		// Bounds
 		//----------------------------------------------------------------
@@ -6628,8 +6691,8 @@
 	
 		"AttackCapabilities" "DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackDamageMin" "25" 
-		"AttackDamageMax" "45" 
+		"AttackDamageMin" "12" 
+		"AttackDamageMax" "32" 
 		"AttackRate" "1.0" 
 		"AttackAnimationPoint" "0.33" 
 		"AttackAcquisitionRange" "500" 
@@ -8463,6 +8526,7 @@
 	  "BoundsHullName"   "DOTA_HULL_SIZE_REGULAR"
 	  "RingRadius"    "40"
 	"WispCost" 						"1"
+	"FoodCost" 						"1"
 	  "MovementCapabilities"  "DOTA_UNIT_CAP_MOVE_GROUND"
 	  "MovementSpeed"    "100"
 	  "MovementTurnRate"   "0.6"

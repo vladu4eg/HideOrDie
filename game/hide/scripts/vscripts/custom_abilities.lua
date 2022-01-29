@@ -546,7 +546,10 @@ function SpawnUnitOnChannelSucceeded(event)
 				unit:AddItemByName("item_ultimate_scepter_2")
 				--unit:AddItemByName("item_ultimate_scepter")
 			end
-
+			if string.match(unit_name,"%a+") == "worker" then
+				ABILITY_Repair = unit:FindAbilityByName("repair")
+				ABILITY_Repair:ToggleAutoCast()
+			end
 		end
 	end
 end
