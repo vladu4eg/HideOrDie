@@ -7,9 +7,9 @@ runeTypes = {
 	item_lia_rune_of_agility = 0.9,
 	item_lia_rune_of_intellect = 1,
 	item_lia_rune_of_lifesteal = 1,
-	item_lia_rune_of_luck = 0.6,
+	item_lia_rune_of_luck = 1,
 	item_lia_rune_gold = 0.5,
-	item_lia_rune_lumber = 0.4, --эта руна будет появляться в два раза реже руны с значением 1
+	item_lia_rune_lumber = 0.5, --эта руна будет появляться в два раза реже руны с значением 1
 }
 
 runeSpawnTime = 30 --период появления рун

@@ -78,7 +78,7 @@
 		"Ability6"					"build_tower_buff"
 		"Ability7" 					"lina_light_strike_array_datadriven"
 		"Ability8"					"build_tree"
-		"Ability9"					"cm_stun"
+		"Ability9"					"penitence_datadriven"
 		"Ability10"					"repair"
 		"Ability11"					""
 		"Ability12"   	    		""
@@ -140,8 +140,8 @@
 		"Ability6"					"build_rock_mega" 
 		"Ability7" 					"lina_light_strike_array_datadriven"
 		"Ability8"					"build_tree"
-		"Ability9"					"repair"
-		"Ability10"					""
+		"Ability9"					"cm_stun"
+		"Ability10"					"repair"
 		"Ability11"					""
 		"Ability12"   	    		""
 		"Ability13"   	    		"attribute_antibonuses"
@@ -176,7 +176,7 @@
 	    "MovementSpeed"       "330"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "45"                 // Base health.
+	    "StatusHealth"        "80"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
@@ -202,14 +202,14 @@
 		"Ability6"					"build_workers_guild"
 		"Ability7" 					"lina_light_strike_array_datadriven"
 		"Ability8"					"build_tree"
-		"Ability9"					"repair"
-		"Ability10"					""
+		"Ability9"					"nevermore_dark_lord_datadriven"
+		"Ability10"					"repair"
 		"Ability11"					""
 		"Ability12"   	    		""
 		"Ability13"   	    		"attribute_antibonuses"
 		"RepairAbility"				"repair"
 		"FixedRepair"				"0"
-		"RepairSpeed"				"2"
+		"RepairSpeed"				"5"
 		
 		
 		"ArmorPhysical"       "0"                 // Physical protection.
@@ -264,8 +264,8 @@
 		"Ability6"					"build_true_sight_tower_mega"
 		"Ability7" 					"lina_light_strike_array_datadriven"
 		"Ability8"					"build_tree"
-		"Ability9"					"repair"
-		"Ability10"					"attribute_antibonuses"
+		"Ability9"					"dark_seer_surge"
+		"Ability10"					"repair"
 		"Ability11"					""
 		"Ability12"   	    		""
 		"Ability13"   	    		""
@@ -273,7 +273,7 @@
 		"Ability15"   	    		""
 		"Ability16"   	    		""
 		"Ability17"   	    		""
-		"Ability18"   	    		""
+		"Ability18"   	    		"attribute_antibonuses"
 		"Ability19"   	    		"special_bonus_cooldown_reduction_10"
 		"Ability20"   	    		"special_bonus_cast_range_300"
 		"RepairAbility"				"repair"
@@ -304,7 +304,7 @@
 	    //"RingRadius"        "70"
 	
 	    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
-	    "MovementSpeed"       "380"                 // Speed.
+	    "MovementSpeed"       "410"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
 	    "StatusHealth"        "25"                 // Base health.
@@ -312,8 +312,8 @@
 	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
 	
-	    "VisionDaytimeRange"    "600"                  // Range of vision at night time.
-	    "VisionNighttimeRange"    "1100"                  // Range of vision at night time.
+	    "VisionDaytimeRange"    "800"                  // Range of vision at night time.
+	    "VisionNighttimeRange"    "1500"                  // Range of vision at night time.
 		
 		"AttackDesire"			"0.5"
 		"DisableWearables"         "1"
@@ -345,7 +345,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
@@ -406,7 +406,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
@@ -468,7 +468,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
@@ -529,7 +529,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
@@ -589,7 +589,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		
@@ -649,7 +649,7 @@
 		"MagicalResistance"       "0"                 // Magical protection (percentage).
 		
 		"AttackCapabilities"    "DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackRange"			"64"
+		"AttackRange"			"72"
 		"AttackDamageMin"     "250"                   // Damage range min.
 		"AttackDamageMax"     "270"                   // Damage range max.
 		

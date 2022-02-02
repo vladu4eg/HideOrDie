@@ -39,9 +39,9 @@
 		"rock_1"                                                                          "Tree Wall 1"
 		"rock_2"                                                                          "Tree Wall 2"
 		"rock_3"                                                                          "Tree Wall 3"
-		"rock_4"                                                                          "Armored Tree Wall 1"
-		"rock_5"                                                                          "Armored Tree Wall 2"
-		"rock_6"                                                                    "Armored Tree Wall 3"
+		"rock_4"                                                                          "Tree Wall 1"
+		"rock_5"                                                                          "Tree Wall 2"
+		"rock_6"                                                                    "Mega Tree Wall 3"
 		"rock_7"                                                                    "Invisible Guardian"
 		"rock_8"                                                                    "Inspiration"
 		"rock_9"                                                                    "Mega Tree Wall"
@@ -58,13 +58,13 @@
 		"rock_20"                                                              	"Fire Dragon Wall"
 		"rock_21"                                                              	"Crystal Golem Wall"
 		"rock_22"                                                              	"Dark Golem Wall"
-		"tower_1"                                                                         "Tower 1"
-		"tower_2"                                                                         "Water Tower 1"
-		"tower_3"                                                                         "Water Tower 2"
-		"tower_4"                                                                         "Water Tower 3"
-		"tower_5"                                                                         "Wind Tower 1"
-		"tower_6"                                                                         "Wind Tower 2"
-		"tower_7"                                                                         "Wind Tower 3"
+		"tower_1"                                                                         "Vision Tower"
+		"tower_2"                                                                         "Water Wall 1"
+		"tower_3"                                                                         "Water Wall 2"
+		"tower_4"                                                                         "Water Wall 3"
+		"tower_5"                                                                         "Wind Wall 1"
+		"tower_6"                                                                         "Wind Wall 2"
+		"tower_7"                                                                         "Wind Wall 3"
 		"tower_8"                                                                         "Tower 8"
 		"tower_9"                                                                         "Tower 9"
 		"tower_10"                                                                        "Tower 10 lvl 1"
@@ -329,25 +329,25 @@
 		"DOTA_Tooltip_ability_build_tent_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_2"                                          "Upgrade To Tent 2"
-		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent!<br>Gold: 2<br>Lumber: 3"
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Upgrade your tent!<br>Gold: 16<br>Lumber: 8"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Upgrade To Tent 3"
-		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent!<br>Gold: 4<br>Lumber: 4"
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Upgrade your tent!<br>Gold: 32<br>Lumber: 16"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Upgrade To Tent 4"
-		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent!<br>Gold: 16<br>Lumber: 16"
+		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Upgrade your tent!<br>Gold: 128<br>Lumber: 64"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_5"                                          "Upgrade To Tent 5"
-		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Upgrade your tent!<br>Gold: 128<br>Lumber: 128"
+		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Upgrade your tent!<br>Gold: 1024<br>Lumber: 128"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_6"                                          "Upgrade To Tent 6"
-		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Upgrade your tent!<br>Gold: 256<br>Lumber: 256"
+		"DOTA_Tooltip_ability_upgrade_to_tent_6_Description"                              "Upgrade your tent!<br>Gold: 2048<br>Lumber: 256"
+		
+		"DOTA_Tooltip_Ability_build_tent_7"                                          "Bild To Barracks 1"
+		"DOTA_Tooltip_Ability_build_tent_7_Description"                              "Upgrade your Barracks!<br>Gold: 4096<br>Lumber: 516"
 
-		"DOTA_Tooltip_ability_upgrade_to_tent_7"                                          "Upgrade To Tent 7"
-		"DOTA_Tooltip_ability_upgrade_to_tent_7_Description"                              "Upgrade your tent! X1:64 or X2:128 gold per/sec"
-
-		"DOTA_Tooltip_ability_upgrade_to_barracks_1"                                      "Upgrade To Barracks 1"
-		"DOTA_Tooltip_ability_upgrade_to_barracks_1_Description"                          "Upgrade your tent! X1:128 or X2:256 gold per/sec"
+		"DOTA_Tooltip_ability_upgrade_to_barracks_1"                                      "Upgrade To Barracks 2"
+		"DOTA_Tooltip_ability_upgrade_to_barracks_1_Description"                          "Upgrade your Barracks!<br>Gold: 16384<br>Lumber: 1024"
 
 		"DOTA_Tooltip_ability_upgrade_to_barracks_2"                                      "Upgrade To Barracks 2"
 		"DOTA_Tooltip_ability_upgrade_to_barracks_2_Description"                          "Upgrade your barracks! X1:256 or X2:512 gold per/sec"
@@ -364,19 +364,19 @@
 		"DOTA_Tooltip_ability_build_rock_1_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_2"                                          "Upgrade To Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Upgrade your Tree!<br>HP:2200<br>ARMOR:6"
+		"DOTA_Tooltip_ability_upgrade_to_rock_2_Description"                              "Upgrade your Tree!<br>HP:2200<br>ARMOR:6<br>DAMAGE:15-25"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_3"                                          "Upgrade To Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Upgrade your Tree!<br>HP:2500<br>ARMOR:8"
+		"DOTA_Tooltip_ability_upgrade_to_rock_3_Description"                              "Upgrade your Tree!<br>HP:3500<br>ARMOR:8<br>DAMAGE:35-45"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_4"                                          "Upgrade To Armored Tree 1"
-		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your Armored Tree!<br>HP:3500<br>ARMOR:8"
+		"DOTA_Tooltip_ability_upgrade_to_rock_4_Description"                              "Upgrade your Armored Tree!<br>HP:3500<br>ARMOR:8<br>DAMAGE:55-80"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_5"                                          "Upgrade To Armored Tree 2"
-		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your Armored Tree!<br>HP:5000<br>ARMOR:12"
+		"DOTA_Tooltip_ability_upgrade_to_rock_5_Description"                              "Upgrade your Armored Tree!<br>HP:5000<br>ARMOR:12<br>DAMAGE:85-120"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_6"                                    "Upgrade To Armored Tree 3"
-		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your Armored Tree!<br>HP:6000<br>ARMOR:80"
+		"DOTA_Tooltip_ability_upgrade_to_rock_6_Description"                        "Upgrade your Armored Tree!<br>HP:12000<br>ARMOR:80<br>DAMAGE:1201-1500"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_7"                                    "Upgrade To Invisible Guardian"
 		"DOTA_Tooltip_ability_upgrade_to_rock_7_Description"                        "Upgrade your Invisible Guardian!<br>HP:200<br>ARMOR:0"
@@ -385,7 +385,7 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_8_Description"                        "Inflicts a Buff on allies and a Debuff on enemies."
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_9"                                    "Upgrade To Tree Wall"
-		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your Tree Wall!"
+		"DOTA_Tooltip_ability_upgrade_to_rock_9_Description"                        "Upgrade your Tree Wall!<br>HP:15000<br>ARMOR:100<br>DAMAGE:1500-2500"
 
 		"DOTA_Tooltip_ability_upgrade_to_rock_10"                                    "Upgrade To Magnet LVL 1"
 		"DOTA_Tooltip_ability_upgrade_to_rock_10_Description"                        "An active skill will save you from RANGED attacks!"
@@ -417,28 +417,28 @@
 		"DOTA_Tooltip_ability_upgrade_to_rock_19"                              "Water Dragon Wall"
 		"DOTA_Tooltip_ability_upgrade_to_rock_19_Description"                  "Upgrade your dragon wall!<br>HP:999999<br>ARMOR:192"
 
-		"DOTA_Tooltip_ability_build_tower_1"                                              "Build Tower 1"
-		"DOTA_Tooltip_ability_build_tower_1_Description"                                  "Build tower to defend yourself!<br>Damage: 95"
+		"DOTA_Tooltip_ability_build_tower_1"                                              "Build Vision Tower"
+		"DOTA_Tooltip_ability_build_tower_1_Description"                                  "Build a Vision Tower for a better view of the map.<br> BE SURE TO BUILD A MAGNET!"
 		"DOTA_Tooltip_ability_build_tower_1_gold_cost"                                    "GOLD COST: "
 		"DOTA_Tooltip_ability_build_tower_1_lumber_cost"                                  "LUMBER COST: "
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_2"                                         "Upgrade To Water Tower 1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 53"
+		"DOTA_Tooltip_ability_upgrade_to_tower_2"                                         "Upgrade To Water Wall 1"
+		"DOTA_Tooltip_ability_upgrade_to_tower_2_Description"                             "Upgrade your Wall to improve your defence!<br>HP:6000<br>ARMOR:12<br>DAMAGE:85-120"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_3"                                         "Upgrade To Water Tower 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 153"
+		"DOTA_Tooltip_ability_upgrade_to_tower_3"                                         "Upgrade To Water Wall 2"
+		"DOTA_Tooltip_ability_upgrade_to_tower_3_Description"                             "Upgrade your Wall to improve your defence!<br>HP:7000<br>ARMOR:15<br>DAMAGE:151-200"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_4"                                         "Upgrade To Water Tower 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 303"
+		"DOTA_Tooltip_ability_upgrade_to_tower_4"                                         "Upgrade To Water Wall 3"
+		"DOTA_Tooltip_ability_upgrade_to_tower_4_Description"                             "Upgrade your Wall to improve your defence!<br>HP:8000<br>ARMOR:20<br>DAMAGE:350-500"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_5"                                         "Upgrade To Wind Tower 1"
-		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 603"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5"                                         "Upgrade To Wind Wall 1"
+		"DOTA_Tooltip_ability_upgrade_to_tower_5_Description"                             "Upgrade your Wall to improve your defence!<br>HP:8000<br>ARMOR:25<br>DAMAGE:601-605"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_6"                                         "Upgrade To Wind Tower 2"
-		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 803"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6"                                         "Upgrade To Wind Wall 2"
+		"DOTA_Tooltip_ability_upgrade_to_tower_6_Description"                             "Upgrade your Wall to improve your defence!<br>HP:10000<br>ARMOR:35<br>DAMAGE:801-806"
 
-		"DOTA_Tooltip_ability_upgrade_to_tower_7"                                         "Upgrade To Wind Tower 3"
-		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 1203"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7"                                         "Upgrade To Wind Wall 3"
+		"DOTA_Tooltip_ability_upgrade_to_tower_7_Description"                             "Upgrade your Wall to improve your defence!<br>HP:10000<br>ARMOR:40<br>DAMAGE:1201-1205"
 
 		"DOTA_Tooltip_ability_upgrade_to_tower_8"                                         "Upgrade To Tower 8"
 		"DOTA_Tooltip_ability_upgrade_to_tower_8_Description"                             "Upgrade your tower to improve your defence!<br>Damage: 128"
@@ -2572,18 +2572,34 @@
 	"pet_44_description"						"An item purchased with TvE Coint is valid for at least 1 year, purchased with Gem Lucky is valid for 1 month."
 	"pet_45_description"						"An item purchased with TvE Coint is valid for at least 1 year, purchased with Gem Lucky is valid for 1 month."
 	
-	"DOTA_Tooltip_Ability_pick_nevermore"		"Select Infernal Hunter" 
-	"DOTA_Tooltip_Ability_pick_stalker"		"Select Infernal Summoner"
-	"DOTA_Tooltip_Ability_pick_warlock"		"Select Infernal Paralyzer"
-	"DOTA_Tooltip_Ability_pick_druid"		"Select Infernal Thief"
-	"DOTA_Tooltip_Ability_pick_bristleback"		"Select Infernal Tank"
-	"DOTA_Tooltip_Ability_pick_dazzle"		"Select Infernal Buffer"
+	"DOTA_Tooltip_Ability_pick_nevermore"					"Select Infernal Hunter"
+	"DOTA_Tooltip_Ability_pick_nevermore_Description"		"Blink, Track, Skeleton Walk, Light Strike Array"
+
+	"DOTA_Tooltip_Ability_pick_stalker"						"Select Infernal Paralyzer"
+	"DOTA_Tooltip_Ability_pick_stalker_Description"						"Earth Spike, Strom Hummer, Firestrom, Ravage"
+
+	"DOTA_Tooltip_Ability_pick_warlock"						"Select Infernal Summoner"
+	"DOTA_Tooltip_Ability_pick_warlock_Description"						"Wofl Spawn, Shamans Ward, Chaotic Offering, Death Call"
+
+	"DOTA_Tooltip_Ability_pick_druid"						"Select Infernal Thief"
+	"DOTA_Tooltip_Ability_pick_druid_Description"						"Static Link, Thirst, Rip Tide, Conjure Image"
+
+	"DOTA_Tooltip_Ability_pick_bristleback"					"Select Infernal Tank"
+	"DOTA_Tooltip_Ability_pick_bristleback_Description"					"Bristleback, Flesh Heap, Dragon Blood, Berserkers Blood"
+
+	"DOTA_Tooltip_Ability_pick_dazzle"						"Select Infernal Buffer"
+	"DOTA_Tooltip_Ability_pick_dazzle_Description"						"Arcane Aura, Degreevil Aura, Press the Attack, Lunar Blessing"
 
 	"DOTA_Tooltip_Ability_pick_treant"		"Select Treant Treant Farmer"
+	"DOTA_Tooltip_Ability_pick_treant_Description"		"Mega Tent"
 	"DOTA_Tooltip_Ability_pick_chen"		"Select Treant Treant Buffer"
+	"DOTA_Tooltip_Ability_pick_chen_Description"		"Mega Inspiration"
 	"DOTA_Tooltip_Ability_pick_tiny"		"Select Treant Treant Tank"
+	"DOTA_Tooltip_Ability_pick_tiny_Description"		"Mega Rock"
 	"DOTA_Tooltip_Ability_pick_furion"		"Select Treant Treant Defender"
+	"DOTA_Tooltip_Ability_pick_furion_Description"		"Mega Workers"
 	"DOTA_Tooltip_Ability_pick_bounty_hunter"		"Select Treant Treant Hunter"
+	"DOTA_Tooltip_Ability_pick_bounty_hunter_Description"		"Mega Vision Tower"
 
 	"DOTA_Tooltip_Ability_build_tower_buff"						"Mega Buff"
 	"DOTA_Tooltip_Ability_build_tower_buff_Description"			"Inflicts a Buff on allies and a Debuff on enemies."
@@ -2591,6 +2607,9 @@
 	"tower_buff"				"Mega Buff"
 	"DOTA_Tooltip_Ability_build_rock_mega"					"Build Mega Rock"
 	"rock_mega"					"Build Mega Rock"
+	
+	"DOTA_Tooltip_ability_penitence_datadriven"										  "Forest curse"
+	"DOTA_Tooltip_ability_penitence_datadriven_Description"				 			  "Reduces movement speed by 55.<br>Increases damage taken by 10%."
 
 	"DOTA_Tooltip_Ability_build_true_sight_tower_mega"                                "Upgrade To Mega True Sight Tower"
 	"DOTA_Tooltip_Ability_build_true_sight_tower_mega_Description"                    "Upgrade your tower to true sight tower, which reveals invisible units around itself.. "

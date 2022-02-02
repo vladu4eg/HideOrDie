@@ -141,6 +141,12 @@ function Build( event )
             unit:AddNewModifier(unit, nil, "modifier_invulnerable", {})
             unit:AddNewModifier(unit, nil, "modifier_phased", {})
         end
+
+        if building_name == "tower_buff"  then
+            local abil = unit:FindAbilityByName("mars_bulwark")
+            abil:ToggleAutoCast()
+        end
+
         unit.attackers = {}
         
         for i=0, unit:GetAbilityCount()-1 do

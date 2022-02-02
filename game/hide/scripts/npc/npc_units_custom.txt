@@ -1502,7 +1502,7 @@
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
-	        "Count"     "3"
+	        "Count"     "2"
 	        "1"{
 				"unit_name"			"tower_2"
 				"gold_cost"			"3000"
@@ -1512,11 +1512,6 @@
 				"unit_name"			"tower_5"
 				"gold_cost"			"65000"
 				"lumber_cost"		"75000"
-			}
-			"3"{
-				"unit_name"			"rock_6"
-				"gold_cost"			"128000"
-				"lumber_cost"		"64000"
 			}
 	    }
 		"Requirements"{
@@ -1882,7 +1877,7 @@
 		"AttackDamageMin"			"1500"		// Damage range min.
 		"AttackDamageMax"			"2500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.80"			// Speed of attack.
+		"AttackRate"				"0.6"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"100"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
@@ -1970,7 +1965,7 @@
 		"AttackDamageMin"			"1500"		// Damage range min.
 		"AttackDamageMax"			"2500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.80"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"100"		// Range within a target can be acquired.
 		"AttackRange"				"100"		// Range within a target can be attacked.
@@ -2816,11 +2811,16 @@
 		
 		"Upgrades"
 	    {
-	        "Count"     "1"
+	        "Count"     "2"
 	        "1"{
 				"unit_name"			"rock_6"
 				"gold_cost"			"96000"
 				"lumber_cost"		"96000"
+			}
+			"2"{
+				"unit_name"			"rock_9"
+				"gold_cost"			"512000"
+				"lumber_cost"		"256000"
 			}
 	    }
 
@@ -5330,13 +5330,13 @@
 		// General
 		//----------------------------------------------------------------
 		"BaseClass"                             "npc_dota_creature"
-		"Model"                                 "models/heroes/visage/visage.vmdl"
+		"Model"                                 "models/heroes/visage/visage_familiar.vmdl"
 		"precache"
 		{
-			"model"     "models/heroes/visage/visage.vmdl"
-			"particle"	"particles/units/heroes/hero_visage/visage_base_attack.vpcf"	
+			"model"     "models/heroes/visage/visage_familiar.vmdl"
+			"particle"	"particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf"	
 		}
-		"ModelScale"                            "0.6"
+		"ModelScale"                            "1"
 		"Level"                                 "2"
 		"HealthBarOffset"                       "140"
 
@@ -5355,11 +5355,11 @@
 		"AttackDamageMax"			"1150"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"1.00"			// Speed of attack.
-		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
+		"AttackAnimationPoint"		"0.33"		// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"500"		// Range within a target can be acquired.
 		"AttackRange"				"500"		// Range within a target can be attacked.
-		"ProjectileModel"			"particles/units/heroes/hero_visage/visage_base_attack.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"1250"		// Speed of projectile.
+		"ProjectileModel"			"particles/units/heroes/hero_visage/visage_familiar_base_attack.vpcf"		// Particle system model for projectile.
+		"ProjectileSpeed"			"900"		// Speed of projectile.
 	    "SoundSet"                  "Hero_Visage"
 	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_visage.vsndevts"
 
@@ -5418,18 +5418,6 @@
 		"CombatClassDefend"						"DOTA_COMBAT_CLASS_DEFEND_BASIC"
 		"UnitRelationShipClass"					"DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
-		// Creature Data
-		//----------------------------------------------------------------
-		"Creature"
-		{
-				"DisableClumpingBehavior"       "1"
-				"AttachWearables"
-				{
-		"Wearable1" {"ItemDef" "12865"}//summon("Familiars of the Keeper's Gaze")
-		"Wearable2" {"ItemDef" "12864"}//head("Helm of the Keeper's Gaze")
-		"Wearable3" {"ItemDef" "12863"}//armor("Wings of the Keeper's Gaze")
-				}
-		}
 	}
 	"attacker_9"
 	{
@@ -9106,7 +9094,7 @@
 		"Ability10"					""
 		"RepairAbility"				"repair"
 		"FixedRepair"				"0"
-		"RepairSpeed"				"2"
+		"RepairSpeed"				"4"
 
 		// Bounty
 		//----------------------------------------------------------------

@@ -10,8 +10,8 @@ function picktreant(keys)
     local wood = PlayerResource:GetLumber(keys.caster:GetPlayerOwnerID())
     
     local hero = PlayerResource:ReplaceHeroWith(keys.caster:GetPlayerOwnerID(), "npc_dota_hero_treant", 0, 0)
-    PlayerResource:SetGold(hero, gold+40)
-    PlayerResource:SetLumber(hero, wood+20)
+    PlayerResource:SetGold(hero, gold)
+    PlayerResource:SetLumber(hero, wood)
     UTIL_Remove(info.hero)
 end
 function pickchen(keys)
@@ -23,8 +23,8 @@ function pickchen(keys)
     local wood = PlayerResource:GetLumber(keys.caster:GetPlayerOwnerID())
     
     local hero = PlayerResource:ReplaceHeroWith(keys.caster:GetPlayerOwnerID(), "npc_dota_hero_chen", 0, 0)
-    PlayerResource:SetGold(hero, gold)
-    PlayerResource:SetLumber(hero, wood)
+    PlayerResource:SetGold(hero, gold+40)
+    PlayerResource:SetLumber(hero, wood+20)
     UTIL_Remove(info.hero)
 end
 function picktiny(keys)
@@ -36,8 +36,8 @@ function picktiny(keys)
     local wood = PlayerResource:GetLumber(keys.caster:GetPlayerOwnerID())
     
     local hero = PlayerResource:ReplaceHeroWith(keys.caster:GetPlayerOwnerID(), "npc_dota_hero_tiny", 0, 0)
-    PlayerResource:SetGold(hero, gold)
-    PlayerResource:SetLumber(hero, wood)
+    PlayerResource:SetGold(hero, gold+80)
+    PlayerResource:SetLumber(hero, wood+40)
     UTIL_Remove(info.hero)
 end
 function pickfurion(keys)
@@ -49,8 +49,8 @@ function pickfurion(keys)
     local wood = PlayerResource:GetLumber(keys.caster:GetPlayerOwnerID())
     
     local hero = PlayerResource:ReplaceHeroWith(keys.caster:GetPlayerOwnerID(), "npc_dota_hero_furion", 0, 0)
-    PlayerResource:SetGold(hero, gold)
-    PlayerResource:SetLumber(hero, wood)
+    PlayerResource:SetGold(hero, gold+100)
+    PlayerResource:SetLumber(hero, wood+50)
     UTIL_Remove(info.hero)
 end
 function pickhunter(keys)
@@ -62,8 +62,8 @@ function pickhunter(keys)
     local wood = PlayerResource:GetLumber(keys.caster:GetPlayerOwnerID())
     
     local hero = PlayerResource:ReplaceHeroWith(keys.caster:GetPlayerOwnerID(), "npc_dota_hero_bounty_hunter", 0, 0)
-    PlayerResource:SetGold(hero, gold)
-    PlayerResource:SetLumber(hero, wood)
+    PlayerResource:SetGold(hero, gold+200)
+    PlayerResource:SetLumber(hero, wood+100)
     UTIL_Remove(info.hero)
 end
 

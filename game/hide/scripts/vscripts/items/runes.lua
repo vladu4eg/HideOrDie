@@ -3,7 +3,7 @@ function RuneOfStrength(event)
 	if hero:IsElf() then
 		hero:ModifyStrength(2)
 	else
-		hero:ModifyStrength(10)
+		hero:ModifyStrength(20)
 	end
 	hero:CalculateStatBonus(true)
 end
@@ -13,7 +13,7 @@ function RuneOfAgility(event)
 	if hero:IsElf() then
 		hero:ModifyAgility(2)
 	else
-		hero:ModifyAgility(10)
+		hero:ModifyAgility(20)
 	end
 	hero:CalculateStatBonus(true)
 end
@@ -23,7 +23,7 @@ function RuneOfIntellect(event)
 	if hero:IsElf() then
 		hero:ModifyIntellect(5)
 	else
-		hero:ModifyIntellect(10)
+		hero:ModifyIntellect(20)
 	end
 	hero:CalculateStatBonus(true)
 end
