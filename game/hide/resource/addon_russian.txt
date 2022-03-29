@@ -116,13 +116,13 @@
 		"DOTA_Tooltip_ability_build_tent_lumber_cost"                                     "LUMBER COST: "
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_2"                                          "Upgrade To Tent 2"
-		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Улучшить свой tent!<br>Gold: 16<br>Lumber: 8"
+		"DOTA_Tooltip_ability_upgrade_to_tent_2_Description"                              "Улучшить свой tent!<br>Gold: 128<br>Lumber: 16"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_3"                                          "Upgrade To Tent 3"
-		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Улучшить свой Tent!<br>Gold: 32<br>Lumber: 16"
+		"DOTA_Tooltip_ability_upgrade_to_tent_3_Description"                              "Улучшить свой Tent!<br>Gold: 256<br>Lumber: 32"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_4"                                          "Upgrade To Tent 4"
-		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Улучшить свой Tent!<br>Gold: 128<br>Lumber: 64"
+		"DOTA_Tooltip_ability_upgrade_to_tent_4_Description"                              "Улучшить свой Tent!<br>Gold: 512<br>Lumber: 64"
 
 		"DOTA_Tooltip_ability_upgrade_to_tent_5"                                          "Upgrade To Tent 5"
 		"DOTA_Tooltip_ability_upgrade_to_tent_5_Description"                              "Улучшить свой Tent<br>Gold: 1024<br>Lumber: 128"

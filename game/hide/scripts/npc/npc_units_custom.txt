@@ -432,7 +432,7 @@
 		
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "2"
+	    "Level"                     "5"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
@@ -458,7 +458,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"3"
+		"LumberAmount"				"8"
 	    // General
 	    //-----------------------------
 	    
@@ -509,7 +509,7 @@
 	    "BountyGoldMax"       "110"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "4"
+	    "Level"                     "6"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
@@ -532,7 +532,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"8"	    
+		"LumberAmount"				"16"	    
 	    // General
 	    //-----------------------------
 	    
@@ -582,7 +582,7 @@
 	    "BountyGoldMax"       "120"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "5"
+	    "Level"                     "7"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {
@@ -605,7 +605,7 @@
 		"Ability4"					""
 		"Ability10"					""
 	    "LumberInterval"			"2"
-		"LumberAmount"				"16"	  
+		"LumberAmount"				"32"	  
 	    
 	    // General
 	    //-----------------------------
@@ -656,7 +656,7 @@
 	    "BountyGoldMax"       "130"                   // Gold earned max.	
 	    // Stats
 	    //----------------------------- 
-	    "Level"                     "7"
+	    "Level"                     "8"
 	    "BuildTime"                 "2"
 	    "Upgrades"
 	    {

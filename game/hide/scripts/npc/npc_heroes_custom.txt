@@ -52,7 +52,7 @@
 	    "MovementSpeed"       "360"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "25"                 // Base health.
+	    "StatusHealth"        "35"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
@@ -114,7 +114,7 @@
 	    "MovementSpeed"       "350"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "25"                 // Base health.
+	    "StatusHealth"        "45"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "200"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
@@ -238,7 +238,7 @@
 	    "MovementSpeed"       "350"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "25"                 // Base health.
+	    "StatusHealth"        "50"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
@@ -307,7 +307,7 @@
 	    "MovementSpeed"       "410"                 // Speed.
 	    "MovementTurnRate"      "1.0"                 // Turning rate.
 	
-	    "StatusHealth"        "25"                 // Base health.
+	    "StatusHealth"        "60"                 // Base health.
 	    "StatusHealthRegen"     "1"                 // Health regeneration rate.
 	    "StatusMana"        "160"                   // Base mana.
 	    "StatusManaRegen"     "5"                 // Mana regeneration rate.
