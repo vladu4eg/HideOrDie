@@ -55,35 +55,37 @@ var player_table = [
 
 
 
-
-
 var chests_table = [
 	// ID Cундука, валюта, стоимость, локализация, иконка, массив шмоток в сундуке(проверяется со шмоткми в магазине)+шанс, последняя награда всегда коины шанс + gold/gem, от скольки до скольки коинов
 	// Здесь только визуал, главное не забудь в луа прописывать сундук 4
 
-	["501", "gold", "150", "chest_1", "chest_1", [["704","60"],["705","60"],["818","40"],["24","60"],["117","60"],["130","60"],["116","50"],["602","5"],["603","5"]], [20, "gold"], [15, 150] ],
-	["503", "gold", "150", "chest_3", "chest_3", [["723","60"],["719","60"],["822","40"],["26","60"],["119","60"],["114","60"],["115","60"],["605","5"],["606","5"]], [20, "gold"], [15, 150] ],
-	["516", "gold", "150", "chest_16", "chest_16", [["701","60"],["814","40"],["827","40"],["18","60"],["46","10"],["133","10"],["134","10"],["624","5"],["621","5"]],[20, "gold"], [15, 150] ],
-	["502", "gold", "200", "chest_2", "chest_2", [["712","60"],["716","60"],["819","40"],["25","60"],["118","60"],["131","60"],["602","10"],["603","5"],["604","5"]], [20, "gold"], [20, 200] ],
-	["504", "gold", "200", "chest_4", "chest_4", [["724","60"],["801","40"],["836","40"],["20","60"],["120","60"],["111","60"],["605","10"],["606","5"],["607","5"]], [20, "gold"], [20, 200] ],
-	["517", "gold", "200", "chest_17", "chest_17", [["702","60"],["816","40"],["833","40"],["23","60"],["115","60"],["135","10"],["624","10"],["621","5"],["622","5"]],[20, "gold"], [20, 200] ],
-	["505", "gold", "250", "chest_5", "chest_5", [["720","60"],["802","40"],["838","40"],["21","60"],["122","60"],["112","60"],["606","10"],["607","5"],["608","5"]],  [20, "gold"], [25, 250] ],
-	["518", "gold", "250", "chest_18", "chest_18", [["703","60"],["722","60"],["834","40"],["27","60"],["47","10"],["50","20"],["621","10"],["622","5"],["627","5"]], 	[20, "gold"], [25, 250] ],
-	["506", "gold", "300", "chest_6", "chest_6", [["706","60"],["803","40"],["41","60"],["31","60"],["35","40"],["103","60"],["607","10"],["608","5"],["609","5"]], 	[20, "gold"], [30, 300] ],
-	["519", "gold", "300", "chest_19", "chest_19", [["715","60"],["721","60"],["44","60"],["22","60"],["48","10"],["51","20"],["623","10"],["628","5"],["625","5"]], 	[20, "gold"], [30, 300] ],
-	["507", "gold", "350", "chest_7", "chest_7", [["707","60"],["804","40"],["36","60"],["37","60"],["19","20"],["129","10"],["113","60"],["615","5"],["612","5"]], 	[20, "gold"], [35, 350] ],
-	["508", "gold", "450", "chest_8", "chest_8", [["708","60"],["805","40"],["29","60"],["39","60"],["28","20"],["132","10"],["615","10"],["612","5"],["616","5"]], 	[20, "gold"], [56, 450] ],
-	["509", "gold", "500", "chest_9", "chest_9", [["709","60"],["806","40"],["5","60"],["10","60"],["32","20"],["133","10"],["612","10"],["616","5"],["617","5"]], 		[20, "gold"], [50, 500] ],
-	["520", "gold", "500", "chest_20", "chest_20", [["714","60"],["718","60"],["45","60"],["34","60"],["52","20"],["605","10"],["606","10"],["629","5"],["626","5"]], 	[20, "gold"], [50, 500] ],
-	["510", "gold", "600", "chest_10", "chest_10", [["710","60"],["807","40"],["6","60"],["38","60"],["127","10"],["134","10"],["46","20"],["635","5"],["636","5"]], 	[20, "gold"], [60, 600] ],
-	["511", "gold", "600", "chest_11", "chest_11", [["713","60"],["810","40"],["7","60"],["40","60"],["128","10"],["135","10"],["47","20"],["637","5"],["638","5"]], 	[20, "gold"], [60, 600] ],
-	["512", "gold", "700", "chest_12", "chest_12", [["717","60"],["811","40"],["8","60"],["42","60"],["126","60"],["144","10"],["48","20"],["639","10"],["640","5"]], 	[20, "gold"], [70, 700] ],
-	["513", "gold", "700", "chest_13", "chest_13", [["711","60"],["813","40"],["9","60"],["43","60"],["124","60"],["146","10"],["49","20"],["641","10"],["642","5"]], 	[20, "gold"], [70, 700] ],
+	["501", "gold", "100", "chest_1", "chest_1", [["704","60"],["705","60"],["818","40"],["24","60"],["117","60"],["130","60"],["116","50"],["602","5"],["603","5"]],   [20, "gold"], [10, 100] ],
+	["503", "gold", "100", "chest_3", "chest_3", [["723","60"],["719","60"],["822","40"],["26","60"],["119","60"],["114","60"],["115","60"],["605","5"],["606","5"]],   [20, "gold"], [10, 100] ],
+	["516", "gold", "100", "chest_16", "chest_16", [["701","60"],["814","40"],["827","40"],["18","60"],["46","10"],["133","10"],["134","10"],["624","5"],["621","5"]],  [20, "gold"], [10, 100] ],
+	["502", "gold", "150", "chest_2", "chest_2", [["712","60"],["716","60"],["819","40"],["25","60"],["118","60"],["131","60"],["602","10"],["603","5"],["604","5"]],   [20, "gold"], [15, 150] ],
+	["504", "gold", "150", "chest_4", "chest_4", [["724","60"],["801","40"],["836","40"],["20","60"],["120","60"],["111","60"],["605","10"],["606","5"],["607","5"]],   [20, "gold"], [15, 150] ],
+	["517", "gold", "150", "chest_17", "chest_17", [["702","60"],["816","40"],["833","40"],["23","60"],["115","60"],["135","10"],["624","10"],["621","5"],["622","5"]], [20, "gold"], [15, 150] ],
+	["505", "gold", "200", "chest_5", "chest_5", [["720","60"],["802","40"],["838","40"],["21","60"],["122","60"],["112","60"],["606","10"],["607","5"],["608","5"]],   [20, "gold"], [15, 150] ],
+	["518", "gold", "200", "chest_18", "chest_18", [["703","60"],["722","60"],["834","40"],["27","60"],["47","10"],["50","20"],["621","10"],["622","5"],["627","5"]], 	[20, "gold"], [20, 200] ],
+	["506", "gold", "200", "chest_6", "chest_6", [["706","60"],["803","40"],["41","60"],["31","60"],["35","40"],["103","60"],["607","10"],["613","5"],["609","5"]], 	[20, "gold"], [20, 200] ],
+	["519", "gold", "200", "chest_19", "chest_19", [["715","60"],["721","60"],["44","60"],["22","60"],["48","10"],["51","20"],["623","10"],["628","5"],["625","5"]], 	[20, "gold"], [20, 200] ],
+	["507", "gold", "250", "chest_7", "chest_7", [["707","60"],["804","40"],["36","60"],["37","60"],["19","20"],["129","10"],["113","60"],["615","5"],["612","5"]], 	[20, "gold"], [25, 250] ],
+	["508", "gold", "300", "chest_8", "chest_8", [["708","60"],["805","40"],["29","60"],["39","60"],["28","20"],["132","10"],["615","10"],["612","5"],["616","5"]], 	[20, "gold"], [30, 300] ],
+	["509", "gold", "350", "chest_9", "chest_9", [["709","60"],["806","40"],["5","60"],["10","60"],["32","20"],["133","10"],["614","5"],["616","5"],["617","5"]], 		[20, "gold"], [35, 350] ],
+	["520", "gold", "350", "chest_20", "chest_20", [["714","60"],["718","60"],["45","60"],["34","60"],["52","20"],["610","10"],["611","10"],["629","5"],["626","5"]], 	[20, "gold"], [35, 350] ],
+	["510", "gold", "400", "chest_10", "chest_10", [["710","60"],["807","40"],["6","60"],["38","60"],["127","10"],["134","10"],["46","20"],["635","5"],["636","5"]], 	[20, "gold"], [40, 400] ],
+	["511", "gold", "400", "chest_11", "chest_11", [["713","60"],["810","40"],["7","60"],["40","60"],["128","10"],["135","10"],["47","20"],["637","5"],["638","5"]], 	[20, "gold"], [40, 400] ],
+	["512", "gold", "450", "chest_12", "chest_12", [["717","60"],["811","40"],["8","60"],["42","60"],["126","60"],["144","10"],["48","20"],["639","10"],["640","5"]], 	[20, "gold"], [45, 450] ],
+	["513", "gold", "450", "chest_13", "chest_13", [["711","60"],["813","40"],["9","60"],["43","60"],["124","60"],["146","10"],["49","20"],["641","10"],["642","5"]], 	[20, "gold"], [45, 450] ],
+	
+	["522", "gold", "450", "chest_22", "chest_22", [["808","60"],["809","50"],["825","15"],["33","60"],["53","40"],["54","60"],["55","20"],["618","10"],["619","10"]], [20, "gold"], [45, 450] ],
 
-	["514", "gold", "2000", "chest_14", "chest_14", [["601","60"],["602","60"],["603","50"],["604","20"],["605","40"],["606","30"],["607","20"],["608","10"],["609","10"]], [20, "gold"], [500, 2000] ],
-	["515", "gold", "2000", "chest_15", "chest_15", [["615","60"],["612","10"],["616","50"],["617","20"],["613","40"],["639","10"],["640","10"],["641","10"],["642","10"]], [20, "gold"], [500, 2000] ],
-	["521", "gold", "2000", "chest_21", "chest_21", [["620","60"],["624","50"],["621","40"],["622","60"],["627","40"],["628","60"],["625","50"],["629","10"],["626","10"]], [20, "gold"], [500, 2000] ],
+	["514", "gold", "1000", "chest_14", "chest_14", [["614","30"],["602","60"],["603","50"],["604","20"],["605","40"],["606","30"],["607","20"],["608","10"],["609","10"]], [20, "gold"], [100, 1000] ],
+	["515", "gold", "1000", "chest_15", "chest_15", [["615","60"],["612","10"],["616","50"],["617","20"],["613","40"],["639","10"],["640","10"],["641","10"],["642","10"]], [20, "gold"], [100, 1000] ],
+	["521", "gold", "1000", "chest_21", "chest_21", [["620","60"],["624","50"],["621","40"],["622","60"],["627","40"],["628","60"],["625","50"],["629","10"],["626","10"]], [20, "gold"], [100, 1000] ],
 
+
+	
 ]
 
 
@@ -107,15 +109,16 @@ var chests_table = [
 
 var Items_recomended = [
 	// ID ПРЕДМЕТА для проверки или для добавления в базу,ВАЛЮТА,СТОИМОСТЬ,ИКОНКА(именно название png файла),переменная названия в локализации, можно покупать много раз или один раз(проверка на покупку в базе)
-	["509", "gold", "400", "chest_9", "chest_9", [["709","60"],["806","40"],["5","60"],["10","60"],["32","20"],["133","10"],["612","10"],["616","5"],["617","5"]], 		[20, "gold"], [50, 500] ],
-	["520", "gold", "400", "chest_20", "chest_20", [["714","60"],["718","60"],["45","60"],["34","60"],["52","20"],["605","10"],["606","10"],["629","5"],["626","5"]], 	[20, "gold"], [50, 500] ],
-	["510", "gold", "500", "chest_10", "chest_10", [["710","60"],["807","40"],["6","60"],["38","60"],["127","10"],["134","10"],["46","20"],["635","5"],["636","5"]], 	[20, "gold"], [60, 600] ],
-	["511", "gold", "500", "chest_11", "chest_11", [["713","60"],["810","40"],["7","60"],["40","60"],["128","10"],["135","10"],["47","20"],["637","5"],["638","5"]], 	[20, "gold"], [60, 600] ],
-	["512", "gold", "600", "chest_12", "chest_12", [["717","60"],["811","40"],["8","60"],["42","60"],["126","60"],["144","10"],["48","20"],["639","10"],["640","5"]], 	[20, "gold"], [70, 700] ],
-	["513", "gold", "600", "chest_13", "chest_13", [["711","60"],["813","40"],["9","60"],["43","60"],["124","60"],["146","10"],["49","20"],["641","10"],["642","5"]], 	[20, "gold"], [70, 700] ],
-	["514", "gold", "1800", "chest_14", "chest_14", [["601","60"],["602","60"],["603","50"],["604","20"],["605","40"],["606","30"],["607","20"],["608","10"],["609","10"]], [20, "gold"], [500, 2000] ],
-	["515", "gold", "1800", "chest_15", "chest_15", [["615","60"],["612","10"],["616","50"],["617","20"],["613","40"],["639","10"],["640","10"],["641","10"],["642","10"]], [20, "gold"], [500, 2000] ],
-	["521", "gold", "1800", "chest_21", "chest_21", [["620","60"],["624","50"],["621","40"],["622","60"],["627","40"],["628","60"],["625","50"],["629","10"],["626","10"]], [20, "gold"], [500, 2000] ],
+	["509", "gold", "300", "chest_9", "chest_9", [["709","60"],["806","40"],["5","60"],["10","60"],["32","20"],["133","10"],["612","10"],["616","5"],["617","5"]], 		[20, "gold"], [50, 500] ],
+	["520", "gold", "300", "chest_20", "chest_20", [["714","60"],["718","60"],["45","60"],["34","60"],["52","20"],["605","10"],["606","10"],["629","5"],["626","5"]], 	[20, "gold"], [50, 500] ],
+	["510", "gold", "350", "chest_10", "chest_10", [["710","60"],["807","40"],["6","60"],["38","60"],["127","10"],["134","10"],["46","20"],["635","5"],["636","5"]], 	[20, "gold"], [60, 600] ],
+	["511", "gold", "350", "chest_11", "chest_11", [["713","60"],["810","40"],["7","60"],["40","60"],["128","10"],["135","10"],["47","20"],["637","5"],["638","5"]], 	[20, "gold"], [60, 600] ],
+	["512", "gold", "400", "chest_12", "chest_12", [["717","60"],["811","40"],["8","60"],["42","60"],["126","60"],["144","10"],["48","20"],["639","10"],["640","5"]], 	[20, "gold"], [70, 700] ],
+	["513", "gold", "400", "chest_13", "chest_13", [["711","60"],["813","40"],["9","60"],["43","60"],["124","60"],["146","10"],["49","20"],["641","10"],["642","5"]], 	[20, "gold"], [70, 700] ],
+
+	["514", "gold", "800", "chest_14", "chest_14", [["601","60"],["602","60"],["603","50"],["604","20"],["605","40"],["606","30"],["607","20"],["608","10"],["609","10"]], [20, "gold"], [250, 2000] ],
+	["515", "gold", "800", "chest_15", "chest_15", [["615","60"],["612","10"],["616","50"],["617","20"],["613","40"],["639","10"],["640","10"],["641","10"],["642","10"]], [20, "gold"], [250, 2000] ],
+	["521", "gold", "800", "chest_21", "chest_21", [["620","60"],["624","50"],["621","40"],["622","60"],["627","40"],["628","60"],["625","50"],["629","10"],["626","10"]], [20, "gold"], [250, 2000] ],
 
 ]
 
@@ -213,7 +216,7 @@ var Items_sprays = [
 
 var Items_skin = [
 	// ID ПРЕДМЕТА для проверки или для добавления в базу,ВАЛЮТА,СТОИМОСТЬ,ИКОНКА(именно название png файла),переменная названия в локализации, можно покупать много раз или один раз(проверка на покупку в базе)
-	["601", "gold", "100", "skin_1", "skin_1", false, 7], 
+	["601", "gold", "99999999", "skin_1", "skin_1", false, 7], 
 	["602", "gold", "9999999", "skin_2", "skin_2", false, 7], 
 	["603", "gold", "9999999", "skin_3", "skin_3", false, 7], 
 	["604", "gold", "9999999", "skin_4", "skin_4", false, 7], 
@@ -242,7 +245,7 @@ var Items_skin = [
 	["641", "gold", "9999999", "skin_41", "skin_41", false, 7], 
 	["642", "gold", "9999999", "skin_42", "skin_42", false, 7],
 	
-	["620", "gold", "100", "skin_20", "skin_20", false, 7], 
+	["620", "gold", "99999999", "skin_20", "skin_20", false, 7], 
 	["621", "gold", "9999999", "skin_21", "skin_21", false, 7], 
 	["622", "gold", "9999999", "skin_22", "skin_22", false, 7], 
 	["623", "gold", "9999999", "skin_23", "skin_23", false, 7], 
@@ -295,12 +298,15 @@ var Items_pets = [
 	["23", "gold", "300", "pet_23", "pet_23", false, 3],
 	["27", "gold", "300", "pet_27", "pet_27", false, 3],
 	["22", "gold", "300", "pet_22", "pet_22", false, 3],
+	["54", "gold", "300", "pet_54", "pet_54", false, 3],
+	["53", "gold", "300", "pet_53", "pet_53", false, 3],
 	["34", "gold", "400", "pet_34", "pet_34", false, 4],
 	["35", "gold", "400", "pet_35", "pet_35", false, 4],
 	["19", "gold", "400", "pet_19", "pet_19", false, 4],
 	["28", "gold", "400", "pet_28", "pet_28", false, 5],
 	["32", "gold", "400", "pet_32", "pet_32", false, 5],
 	["33", "gold", "500", "pet_33", "pet_33", false, 5],
+	["55", "gold", "500", "pet_55", "pet_55", false, 5],
 
 	["46", "gold", "9999999", "pet_46", "pet_46", false, 5],
 	["47", "gold", "9999999", "pet_47", "pet_47", false, 5],
@@ -332,21 +338,21 @@ var Items_gem = [
 	// ID ПРЕДМЕТА для проверки или для добавления в базу,ВАЛЮТА,СТОИМОСТЬ,ИКОНКА(именно название png файла),переменная названия в локализации, можно покупать много раз или один раз(проверка на покупку в базе)
 	 
 	
-	["111", "gem", "2000", "particle_11", "particle_11", false, 1], 
-	["112", "gem", "1500", "particle_12", "particle_12", false, 1], 
-	["113", "gem", "1500", "particle_13", "particle_13", false, 1], 
-	["114", "gem", "1500", "particle_14", "particle_14", false, 1], 
-	["115", "gem", "2000", "particle_15", "particle_15", false, 1], 
+	["111", "gem", "1500", "particle_11", "particle_11", false, 1], 
+	["112", "gem", "1000", "particle_12", "particle_12", false, 1], 
+	["113", "gem", "1000", "particle_13", "particle_13", false, 1], 
+	["114", "gem", "1000", "particle_14", "particle_14", false, 1], 
+	["115", "gem", "1500", "particle_15", "particle_15", false, 1], 
 	["116", "gem", "1000", "particle_16", "particle_16", false, 1],
-	["103", "gem", "2500", "particle_3", "particle_3", false, 1],
-	["127", "gem", "3500", "particle_27", "particle_27", false, 1], 
-	["128", "gem", "4000", "particle_28", "particle_28", false, 1], 
-	["129", "gem", "4500", "particle_29", "particle_29", false, 1], 
-	["132", "gem", "5000", "particle_32", "particle_32", false, 1], 
-	["133", "gem", "5000", "particle_33", "particle_33", false, 1], 
-	["134", "gem", "5000", "particle_34", "particle_34", false, 1], 
-	["135", "gem", "5000", "particle_35", "particle_35", false, 1], 
-	["144", "gem", "5500", "particle_44", "particle_44", false, 1], 
+	["103", "gem", "2000", "particle_3", "particle_3", false, 1],
+	["127", "gem", "2500", "particle_27", "particle_27", false, 1], 
+	["128", "gem", "3000", "particle_28", "particle_28", false, 1], 
+	["129", "gem", "3500", "particle_29", "particle_29", false, 1], 
+	["132", "gem", "4000", "particle_32", "particle_32", false, 1], 
+	["133", "gem", "4000", "particle_33", "particle_33", false, 1], 
+	["134", "gem", "4000", "particle_34", "particle_34", false, 1], 
+	["135", "gem", "4000", "particle_35", "particle_35", false, 1], 
+	["144", "gem", "4500", "particle_44", "particle_44", false, 1], 
 
 	["117", "gem", "600", "particle_17", "particle_17", false, 1], 
 	["130", "gem", "600", "particle_30", "particle_30", false, 1], 
@@ -408,22 +414,54 @@ var Items_effects = [
 	["143", "gold", "99999999", "particle_43", "particle_43", false, 8],
 	["121", "gold", "99999999", "particle_21", "particle_21", false, 8], 
 	["125", "gold", "99999999", "particle_25", "particle_25", false, 8],
-	["136", "gold", "99999999", "particle_36", "particle_36", false, 8], 
-	["137", "gold", "99999999", "particle_37", "particle_37", false, 8], 
+	["137", "gold", "99999999", "particle_37", "particle_37", false, 8],
+	["149", "gold", "99999999", "particle_49", "particle_49", false, 8], 
+	["150", "gold", "99999999", "particle_50", "particle_50", false, 8], 
 	["105", "gold", "99999999", "particle_5", "particle_5", false, 8], 
+
+	["153", "gold", "99999999", "particle_53", "particle_53", false, 8],
+	["152", "gold", "99999999", "particle_52", "particle_52", false, 8],  
+	["154", "gold", "99999999", "particle_54", "particle_54", false, 8], 
+	["155", "gold", "99999999", "particle_55", "particle_55", false, 8], 
+	["156", "gold", "99999999", "particle_56", "particle_56", false, 8], 
+	["157", "gold", "99999999", "particle_57", "particle_57", false, 8], 
+	["145", "gold", "99999999", "particle_45", "particle_45", false, 8],
 
 	["106", "gold", "99999999", "particle_6", "particle_6", false, 8],
 	["102", "gold", "99999999", "particle_2", "particle_2", false, 8], 
 	["110", "gold", "99999999", "particle_10", "particle_10", false, 8], 
 	["109", "gold", "99999999", "particle_9", "particle_9", false, 8],
 	["123", "gold", "99999999", "particle_23", "particle_23", false, 8],  
-	["145", "gold", "99999999", "particle_45", "particle_45", false, 8],
+	
 
 	["107", "gold", "99999999", "particle_7", "particle_7", false, 8], 
 	["108", "gold", "99999999", "particle_8", "particle_8", false, 8],
 	["104", "gold", "99999999", "particle_4", "particle_4", false, 8], 
+	["147", "gold", "99999999", "particle_47", "particle_47", false, 8], 
+	["148", "gold", "99999999", "particle_48", "particle_48", false, 8], 
 	
-		
+
+	["151", "gold", "99999999", "particle_51", "particle_51", false, 8], 
+	["158", "gold", "99999999", "particle_58", "particle_58", false, 8], 
+	["159", "gold", "99999999", "particle_59", "particle_59", false, 8], 
+	["160", "gold", "99999999", "particle_60", "particle_60", false, 8], 
+	["161", "gold", "99999999", "particle_61", "particle_61", false, 8], 
+	["162", "gold", "99999999", "particle_62", "particle_62", false, 8], 
+	["163", "gold", "99999999", "particle_63", "particle_63", false, 8], 
+	["164", "gold", "99999999", "particle_64", "particle_64", false, 8], 
+	["165", "gold", "99999999", "particle_65", "particle_65", false, 8], 
+	["166", "gold", "99999999", "particle_66", "particle_66", false, 8], 
+	["167", "gold", "99999999", "particle_67", "particle_67", false, 8], 
+	["168", "gold", "99999999", "particle_68", "particle_68", false, 8], 
+	["169", "gold", "99999999", "particle_69", "particle_69", false, 8], 
+	["170", "gold", "99999999", "particle_70", "particle_70", false, 8], 
+	["171", "gold", "99999999", "particle_71", "particle_71", false, 8], 
+	["172", "gold", "99999999", "particle_72", "particle_72", false, 8], 
+
+	["136", "gold", "99999999", "particle_36", "particle_36", false, 8],
+	["173", "gold", "99999999", "particle_73", "particle_73", false, 8], 
+	["174", "gold", "99999999", "particle_74", "particle_74", false, 8], 
+	["175", "gold", "99999999", "particle_75", "particle_75", false, 8],  
 ]
 
 //////////МАССИВ ПОДПИСКИ///////////
@@ -492,7 +530,7 @@ function ToggleShop() {
 function InitShop() {
 
 	$("#TrollChance").SetPanelEvent('onmouseover', function() {
-	    $.DispatchEvent('DOTAShowTextTooltip', $("#TrollChance"), $.Localize( "shop_trollchance" ) + player_table[2][0] + "%<br>" + $.Localize( "shop_trollchance_date") + player_table[2][1]); 
+	    $.DispatchEvent('DOTAShowTextTooltip', $("#TrollChance"), $.Localize( "#shop_trollchance" ) + player_table[2][0] + "%<br>" + $.Localize( "#shop_trollchance_date") + player_table[2][1]); 
 	});
 	    
 	$("#TrollChance").SetPanelEvent('onmouseout', function() {
@@ -500,7 +538,7 @@ function InitShop() {
 	});
 
 	$("#BonusRate").SetPanelEvent('onmouseover', function() {
-    $.DispatchEvent('DOTAShowTextTooltip', $("#BonusRate"), $.Localize( "shop_bonusrate" ) + player_table[3][0] + "%<br>" + $.Localize( "shop_bonusrate_date") + player_table[3][1]); });
+    $.DispatchEvent('DOTAShowTextTooltip', $("#BonusRate"), $.Localize( "#shop_bonusrate" ) + player_table[3][0] + "%<br>" + $.Localize( "#shop_bonusrate_date") + player_table[3][1]); });
     
 	$("#BonusRate").SetPanelEvent('onmouseout', function() {
 	    $.DispatchEvent('DOTAHideTextTooltip', $("#BonusRate"));
@@ -588,8 +626,8 @@ function InitMainPanel() {
 	for (var i = 0; i < Items_recomended.length; i++) {
 		CreateItemInMain($('#PopularityRecomDonateItems'), Items_recomended, i)
 	}
-	$("#ChestItemText").text = $.Localize( Items_ADS[0][0] )
-	$("#AdsItemText").text = $.Localize( Items_ADS[1][0] )
+	$("#ChestItemText").text = $.Localize("#" +  Items_ADS[0][0] )
+	$("#AdsItemText").text = $.Localize("#" +  Items_ADS[1][0] )
 	$("#AdsChests").style.backgroundImage = 'url("file://{images}/custom_game/shop/ads/' + Items_ADS[0][1] + '.png")';
 	$("#AdsItem_1").style.backgroundImage = 'url("file://{images}/custom_game/shop/ads/' + Items_ADS[1][1] + '.png")';
 	$("#AdsChests").style.backgroundSize = "100% 100%"
@@ -697,7 +735,7 @@ function CreateChestInInventory(panel, table, i) {
 	
 			var CountChest = $.CreatePanel("Label", item_chest, "CountChest");
 			CountChest.AddClass("CountChest");
-			CountChest.text = $.Localize( "shop_chest_count" ) + " " + player_table[4][chest][2]
+			CountChest.text = $.Localize( "#shop_chest_count" ) + " " + player_table[4][chest][2]
 	
 			var OpenChestPanel = $.CreatePanel("Panel", item_chest, "OpenChestPanel");
 			OpenChestPanel.AddClass("OpenChestPanel");
@@ -707,7 +745,7 @@ function CreateChestInInventory(panel, table, i) {
 	
 			var PriceLabel = $.CreatePanel("Label", ItemPrice, "PriceLabel");
 			PriceLabel.AddClass("PriceLabel");
-			PriceLabel.text = $.Localize( "shop_open" )
+			PriceLabel.text = $.Localize( "#shop_open" )
 	
 		}
 	}
@@ -738,7 +776,7 @@ function CreateItemInInventory(panel, table, i) {
 
 			var ItemName = $.CreatePanel("Label", Recom_item, "ItemName");
 			ItemName.AddClass("ItemName");
-			ItemName.text = $.Localize( table[i][4] )
+			ItemName.text = $.Localize("#" +  table[i][4] )
 
 			var BuyItemPanel = $.CreatePanel("Panel", Recom_item, "BuyItemPanel");
 			BuyItemPanel.AddClass("BuyItemPanel");
@@ -748,7 +786,7 @@ function CreateItemInInventory(panel, table, i) {
 
 			var PriceLabel = $.CreatePanel("Label", ItemPrice, "PriceLabel");
 			PriceLabel.AddClass("PriceLabel");
-			PriceLabel.text = $.Localize( "shop_activate" )
+			PriceLabel.text = $.Localize( "#shop_activate" )
 
 			UpdateItemActivate(table[i][0])	
 		}
@@ -784,7 +822,7 @@ function CreateItemInMain(panel, table, i) {
 
 	var ItemName = $.CreatePanel("Label", Recom_item, "");
 	ItemName.AddClass("ItemName");
-	ItemName.text = $.Localize( table[i][4] )
+	ItemName.text = $.Localize("#" +  table[i][4] )
 
 	var BuyItemPanel = $.CreatePanel("Panel", Recom_item, "BuyItemPanel");
 	BuyItemPanel.AddClass("BuyItemPanel");
@@ -824,7 +862,7 @@ function CreateItemInMain(panel, table, i) {
        	if (item == table[i][0]) {
        		Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "gray"
-			PriceLabel.text = $.Localize( "shop_bought" )
+			PriceLabel.text = $.Localize( "#shop_bought" )
 			PriceIcon.DeleteAsync( 0 );
        	}
     }
@@ -853,7 +891,7 @@ function CreateChestInShop(panel, table, i) {
 
 		var ItemName = $.CreatePanel("Label", Recom_item, "ItemName");
 		ItemName.AddClass("ItemName");
-		ItemName.text = $.Localize( table[i][3] )
+		ItemName.text = $.Localize("#" +  table[i][3] )
 	
 		var BuyItemPanel = $.CreatePanel("Panel", Recom_item, "BuyItemPanel");
 		BuyItemPanel.AddClass("BuyItemPanel");
@@ -900,7 +938,7 @@ function CreateItemInShop(panel, table, i) {
 		ItemImage.style.backgroundPosition= "center"
 		var ItemName = $.CreatePanel("Label", Recom_item, "ItemName");
 		ItemName.AddClass("ItemName");
-		ItemName.text = $.Localize( table[i][4] )
+		ItemName.text = $.Localize("#" +  table[i][4] )
 	
 		var BuyItemPanel = $.CreatePanel("Panel", Recom_item, "BuyItemPanel");
 		BuyItemPanel.AddClass("BuyItemPanel");
@@ -942,14 +980,14 @@ function CreateItemInShop(panel, table, i) {
 		{
 			Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "Indigo"
-			PriceLabel.text = $.Localize( "shop_gold" )
+			PriceLabel.text = $.Localize( "#shop_gold" )
 			PriceIcon.DeleteAsync( 0 );
 		}
 		else if(table[i][2] == "99999999")
 		{
 			Recom_item.SetPanelEvent("onactivate", function() {} );
 			BuyItemPanel.style.backgroundColor = "SlateBlue"
-			PriceLabel.text = $.Localize( "shop_event" )
+			PriceLabel.text = $.Localize( "#shop_event" )
 			PriceIcon.DeleteAsync( 0 );
 		}
 		for ( var item in player_table[1] )
@@ -957,7 +995,7 @@ function CreateItemInShop(panel, table, i) {
 			   if (item == table[i][0]) {
 				   Recom_item.SetPanelEvent("onactivate", function() {} );
 				BuyItemPanel.style.backgroundColor = "gray"
-				PriceLabel.text = $.Localize( "shop_bought" )
+				PriceLabel.text = $.Localize( "#shop_bought" )
 				PriceIcon.DeleteAsync( 0 );
 			   }
 		}
@@ -1034,7 +1072,7 @@ function SetItemBuyFunction(panel, table){
     panel.SetPanelEvent("onactivate", function() { 
     	$("#info_item_buy").style.visibility = "visible"
 
-    	$("#ItemNameInfo").text = $.Localize( table[4] )
+    	$("#ItemNameInfo").text = $.Localize("#" +  table[4] )
 
 		$("#ItemInfoBody").style.flowChildren = "down"
 
@@ -1081,7 +1119,7 @@ function SetItemBuyFunction(panel, table){
 
 		var PriceLabel = $.CreatePanel("Label", BuyItemPanel, "PriceLabel");
 		PriceLabel.AddClass("PriceLabelInfo");
-		PriceLabel.text = $.Localize( "shop_buy" )
+		PriceLabel.text = $.Localize( "#shop_buy" )
 
 		BuyItemPanel.SetPanelEvent("onactivate", function() { BuyItemFunction(panel, table); CloseItemInfo(); } );
 
@@ -1139,11 +1177,11 @@ function SelectCourier(num)
 
     	for (var i = 0; i < $("#CouriersPanel").GetChildCount(); i++) {
     		$("#CouriersPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#CouriersPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#CouriersPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         GameEvents.SendCustomGameEventToServer( "SelectPets", { id: Players.GetLocalPlayer(),part:num, offp:false, name:num } );
         courier_selected = num;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPets", { id: Players.GetLocalPlayer(),part:String(courier_selected)} );
@@ -1151,7 +1189,7 @@ function SelectCourier(num)
     else
     {
     	$("#item_inventory_"+courier_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+courier_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+courier_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectPets", { id: Players.GetLocalPlayer(),part:num, offp:true, name:num } );
         courier_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPets", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1171,11 +1209,11 @@ function SelectParticle(num)
 
     	for (var i = 0; i < $("#EffectsPanel").GetChildCount(); i++) {
     		$("#EffectsPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#EffectsPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#EffectsPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
 		numPart = Number(num)-100
         GameEvents.SendCustomGameEventToServer( "SelectPart", { id: Players.GetLocalPlayer(),part:String(numPart), offp:false, name:String(numPart) } );
         particle_selected = num;
@@ -1184,7 +1222,7 @@ function SelectParticle(num)
     else
     {
     	$("#item_inventory_"+particle_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+particle_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+particle_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectPart", { id: Players.GetLocalPlayer(),part:String(numPart) , offp:true, name:String(numPart)  } );
         particle_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultPart", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1200,11 +1238,11 @@ function SelectSkin(num)
 
     	for (var i = 0; i < $("#SkinPanel").GetChildCount(); i++) {
     		$("#SkinPanel").GetChild(i).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        	$("#SkinPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        	$("#SkinPanel").GetChild(i).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
     	} 
 
     	$("#item_inventory_"+num).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        $("#item_inventory_"+num).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         GameEvents.SendCustomGameEventToServer( "SelectSkin", { id: Players.GetLocalPlayer(),part:String(num), offp:false, name:String(num) } );
         skin_selected = num;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultSkin", { id: Players.GetLocalPlayer(),part:String(num)} );
@@ -1212,7 +1250,7 @@ function SelectSkin(num)
     else
     {
     	$("#item_inventory_"+skin_selected).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #60842c ), to( #40601d ))"
-        $("#item_inventory_"+skin_selected).FindChildTraverse("PriceLabel").text = $.Localize( "shop_activate" )
+        $("#item_inventory_"+skin_selected).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_activate" )
         GameEvents.SendCustomGameEventToServer( "SelectSkin", { id: Players.GetLocalPlayer(),part:String(num) , offp:true, name:String(num)  } );
         skin_selected = null;
 		GameEvents.SendCustomGameEventToServer( "SetDefaultSkin", { id: Players.GetLocalPlayer(),part:"0"} );
@@ -1237,7 +1275,7 @@ function BuyItemFunction(panel, table) {
 		SetMainCurrency()
 		panel.SetPanelEvent("onactivate", function() {} );
 		panel.FindChildTraverse("BuyItemPanel").style.backgroundColor = "gray"
-		panel.FindChildTraverse("PriceLabel").text = $.Localize( "shop_bought" )
+		panel.FindChildTraverse("PriceLabel").text = $.Localize( "#shop_bought" )
 		panel.FindChildTraverse("PriceIcon").DeleteAsync( 0 );
 		ShopBuy("shop_nice_buy")
 	} 
@@ -1286,7 +1324,7 @@ function ShopError(data) {
 	$( "#shop_error_panel" ).style.visibility = "visible";
 
 	if (data) {
-		$( "#shop_error_label" ).text = $.Localize( data );
+		$( "#shop_error_label" ).text = $.Localize("#" +  data );
 	} else {
 		$( "#shop_error_label" ).text = "";
 	}
@@ -1307,7 +1345,7 @@ function ShopBuy(data) {
 	$( "#shop_buy_panel" ).style.visibility = "visible";
 
 	if (data) {
-		$( "#shop_buy_label" ).text = $.Localize( data );
+		$( "#shop_buy_label" ).text = $.Localize("#" +  data );
 	} else {
 		$( "#shop_buy_label" ).text = "";
 	}
@@ -1333,14 +1371,14 @@ function UpdateItemActivate(id) {
 		if (id == courier_selected)
 		{
     		$("#item_inventory_"+id).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         }
 	}
 	if (particle_selected !== null) {
 		if (id == particle_selected)
 		{
     		$("#item_inventory_"+id).FindChildTraverse("BuyItemPanel").style.backgroundColor = "gradient( linear, 0% 0%, 0% 100%, from( #84302C ), to( #60321D ))"
-        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "shop_deactivate" )
+        	$("#item_inventory_"+id).FindChildTraverse("PriceLabel").text = $.Localize( "#shop_deactivate" )
         }			
 	}
 }
@@ -1368,7 +1406,7 @@ function SetOpenChestPanel(panel, table){
     panel.SetPanelEvent("onactivate", function() { 
     	$("#ChestOpenPanelMainClosed").style.visibility = "visible"
 
-    	$("#ChestName").text = $.Localize( table[3] )
+    	$("#ChestName").text = $.Localize("#" +  table[3] )
 
 		var ChestImage = $.CreatePanel("Panel",  $("#ChestBodyInfo"), "");
 		ChestImage.AddClass("ChestImageInfo");
@@ -1384,7 +1422,7 @@ function SetOpenChestPanel(panel, table){
 
 		var OpenChest_Label = $.CreatePanel("Label", OpenChestButton, "OpenChest_Label");
 		OpenChest_Label.AddClass("OpenChest_Label");
-		OpenChest_Label.text = $.Localize( "shop_open" )
+		OpenChest_Label.text = $.Localize( "#shop_open" )
 
 		for (var i = 0; i < Items_sounds.length; i++) {
 			CreateItemInChest(ChestAllRewardsPanel, Items_sounds, i, table)
@@ -1511,7 +1549,7 @@ function RewardRequest(data) {
 	
 	var LabelAccept = $.CreatePanel("Label", AcceptButton, "LabelAccept");
 	LabelAccept.AddClass("LabelAccept");
-	LabelAccept.text = $.Localize( "shop_accept" )
+	LabelAccept.text = $.Localize( "#shop_accept" )
  
  	// Если нужно что-то передать в закрытие сундука всунь это в closechest
 	AcceptButton.SetPanelEvent("onactivate", function() { CloseChest(); } );
@@ -1537,7 +1575,7 @@ function CreateItemInChest(panel, table, i, table_chest) {
 				var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + table_chest[5][chest_items][0]);
 				Chest_in_item.AddClass("Chest_in_item");
 
-				CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + table_chest[5][chest_items][1] + "%")
+				CreateItemChance(Chest_in_item, $.Localize("#" + "shop_chance") + " " + table_chest[5][chest_items][1] + "%")
 
 			
 				var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
@@ -1573,7 +1611,7 @@ function CreateItemInChest(panel, table, i, table_chest) {
 			
 				var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 				ItemName.AddClass("ItemChestName");
-				ItemName.text = $.Localize( table[i][4] )
+				ItemName.text = $.Localize("#" +  table[i][4] )
 			
 				for ( var item in player_table[1] )
 				{
@@ -1610,7 +1648,7 @@ function CreateItemInChestPreview(panel, table, i, table_chest) {
 				var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + table_chest[5][chest_items][0]);
 				Chest_in_item.AddClass("Chest_in_item_preview");
 
-				CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + table_chest[5][chest_items][1] + "%")
+				CreateItemChance(Chest_in_item, $.Localize("#" + "shop_chance") + " " + table_chest[5][chest_items][1] + "%")
 
 			
 				var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
@@ -1646,7 +1684,7 @@ function CreateItemInChestPreview(panel, table, i, table_chest) {
 			
 				var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 				ItemName.AddClass("ItemChestName_preview");
-				ItemName.text = $.Localize( table[i][4] )
+				ItemName.text = $.Localize("#" +  table[i][4] )
 			
 				for ( var item in player_table[1] )
 				{
@@ -1666,7 +1704,7 @@ function CreateItemCurrencyPreview(panel, currency, count, chance) {
 	var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + currency);
 	Chest_in_item.AddClass("Chest_in_item_preview");
 
-	CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + chance + "%<br>" + $.Localize("shop_currency_count") + " " + $.Localize("shop_currency_count_from") + " " + count[0] + " " + $.Localize("shop_currency_count_to") + " " + count[1])
+	CreateItemChance(Chest_in_item, $.Localize("#" + "shop_chance") + " " + chance + "%<br>" + $.Localize("#" + "shop_currency_count") + " " + $.Localize("#" + "shop_currency_count_from") + " " + count[0] + " " + $.Localize("#shop_currency_count_to") + " " + count[1])
 
 	var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
 	ItemImage.AddClass("ItemChestImage_preview");
@@ -1679,7 +1717,7 @@ function CreateItemCurrencyPreview(panel, currency, count, chance) {
 
 	var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 	ItemName.AddClass("ItemChestName_preview");
-	ItemName.text = $.Localize( "shop_currency_" + currency)
+	ItemName.text = $.Localize( "#shop_currency_" + currency)
 }
 
 
@@ -1711,7 +1749,7 @@ function CreateItemCurrency(panel, currency, count, chance) {
 	var Chest_in_item = $.CreatePanel("Panel", panel, "item_" + currency);
 	Chest_in_item.AddClass("Chest_in_item");
 
-	CreateItemChance(Chest_in_item, $.Localize("shop_chance") + " " + chance + "%<br>" + $.Localize("shop_currency_count") + " " + $.Localize("shop_currency_count_from") + " " + count[0] + " " + $.Localize("shop_currency_count_to") + " " + count[1])
+	CreateItemChance(Chest_in_item, $.Localize("#" + "shop_chance") + " " + chance + "%<br>" + $.Localize("#" + "shop_currency_count") + " " + $.Localize("#" + "shop_currency_count_from") + " " + count[0] + " " + $.Localize("#" + "shop_currency_count_to") + " " + count[1])
 
 	var ItemImage = $.CreatePanel("Panel", Chest_in_item, "");
 	ItemImage.AddClass("ItemChestImage");
@@ -1724,7 +1762,7 @@ function CreateItemCurrency(panel, currency, count, chance) {
 
 	var ItemName = $.CreatePanel("Label", RarePanel, "ItemName");
 	ItemName.AddClass("ItemChestName");
-	ItemName.text = $.Localize( "shop_currency_" + currency)
+	ItemName.text = $.Localize( "#shop_currency_" + currency)
 }
 
 

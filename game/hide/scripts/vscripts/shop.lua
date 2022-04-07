@@ -23,7 +23,7 @@ function Shop.RequestVip(pID, steam, callback)
 		DeepPrintTable(obj)
 		DebugPrint("***********************************************")
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
-		for id = 1, 46 do
+		for id = 1, 75 do
 			parts[id] = "nill"
 		end
 		CustomNetTables:SetTableValue("Particles_Tabel",tostring(pID),parts)
@@ -179,7 +179,7 @@ function Shop.RequestSkinDefaults(pID, steam, callback)
 		DebugPrint("RequestSkinDefaults ***********************************************")
 		if #obj > 0 then
 			if obj[1].num ~= nil then
-				GameRules.SkinDefaults[pID] = tostring(tonumber(obj[1].num) + 600)
+				GameRules.SkinDefaults[pID] = tonumber(obj[1].num)
 			end
 		end
 		return obj
@@ -280,7 +280,6 @@ function Shop.RequestBonusTroll(pID, steam, callback)
 	end)
 end
 
-
 function Shop.RequestPets(pID, steam, callback)
 	local parts = {}
 	local req = CreateHTTPRequestScriptVM("GET",GameRules.server .. "pets/" .. steam)
@@ -296,7 +295,7 @@ function Shop.RequestPets(pID, steam, callback)
 		local obj,pos,err = json.decode(res.Body)
 		--DeepPrintTable(obj)
 		DebugPrint("***********************************************")
-		for id = 0, 52 do
+		for id = 0, 55 do
 			parts[id] = "nill"
 		end
 		local PoolTable = CustomNetTables:GetTableValue("Shop", tostring(pID))
@@ -492,31 +491,33 @@ Shop.Chests = {
 	--{"501"] = { {1, 10},{2, 10},{3, 10},{4, 10},{5, 10},{6, 10}, {7, 10}, {8, 10}, {9, 10}, {"gold", 10, {100, 300} } },
 	--{"502"] = { {103, 10},{11, 10},{12, 10},{13, 10},{14, 10},{15, 10},{16, 10},{17, 10},{18, 10}, {"gold", 10, {100, 300} } }
 
-	["501"] = {{704,60},{705,60},{818,40},{24,60},{117,60},{130,60},{116,50},{602,5},{603,5}, 	{"gold", 20, {15, 150} } },
-	["502"] = {{712,60},{716,60},{819,40},{25,60},{118,60},{131,60},{602,10},{603,5},{604,5}, 	{"gold", 20, {20, 200} } },
-	["503"] = {{723,60},{719,60},{822,40},{26,60},{119,60},{114,60},{115,60},{605,5},{606,5}, 	{"gold", 20, {15, 150} } },
-	["504"] = {{724,60},{801,40},{836,40},{20,60},{120,60},{111,60},{605,10},{606,5},{607,5}, 	{"gold", 20, {20, 200} } },
-	["505"] = {{720,60},{802,40},{838,40},{21,60},{122,60},{112,60},{606,10},{607,5},{608,5}, 	{"gold", 20, {25, 250} } },
-	["506"] = {{706,60},{803,40},{41,60},{31,60},{35,40},{103,60},{607,10},{608,5},{609,5}, 	{"gold", 20, {25, 300} } },
-	["507"] = {{707,60},{804,40},{36,60},{37,60},{19,20},{129,10},{113,60},{615,5},{612,5}, 	{"gold", 20, {35, 450} } },
-	["508"] = {{708,60},{805,40},{29,60},{39,60},{28,20},{132,10},{615,10},{612,5},{616,5}, 	{"gold", 20, {45, 450} } },
-	["509"] = {{709,60},{806,40},{5,60},{10,60},{32,20},{133,10},{612,10},{616,5},{617,5}, 	{"gold", 20, {50, 500} } },
-	["510"] = {{710,60},{807,40},{6,60},{38,60},{127,10},{134,10},{46,20},{635,5},{636,5}, 	{"gold", 20, {60, 600} } },
-	["511"] = {{713,60},{810,40},{7,60},{40,60},{128,10},{135,10},{47,20},{637,5},{638,5}, 	{"gold", 20, {60, 600} } },
-	["512"] = {{717,60},{811,40},{8,60},{42,60},{126,60},{144,10},{48,20},{639,10},{640,5}, 	{"gold", 20, {70, 700} } },
-	["513"] = {{711,60},{813,40},{9,60},{43,60},{124,60},{146,10},{49,20},{641,10},{642,5}, 	{"gold", 20, {70, 700} } },
+	["501"] = {{704,60},{705,60},{818,40},{24,60},{117,60},{130,60},{116,50},{602,5},{603,5}, 	{"gold", 20, {10, 100} } },
+	["502"] = {{712,60},{716,60},{819,40},{25,60},{118,60},{131,60},{602,10},{603,5},{604,5}, 	{"gold", 20, {15, 150} } },
+	["503"] = {{723,60},{719,60},{822,40},{26,60},{119,60},{114,60},{115,60},{605,5},{606,5}, 	{"gold", 20, {10, 100} } },
+	["504"] = {{724,60},{801,40},{836,40},{20,60},{120,60},{111,60},{605,10},{606,5},{607,5}, 	{"gold", 20, {15, 150} } },
+	["505"] = {{720,60},{802,40},{838,40},{21,60},{122,60},{112,60},{606,10},{607,5},{608,5}, 	{"gold", 20, {15, 150} } },
+	["506"] = {{706,60},{803,40},{41,60},{31,60},{35,40},{103,60},{607,10},{613,5},{609,5}, 	{"gold", 20, {20, 200} } },
+	["507"] = {{707,60},{804,40},{36,60},{37,60},{19,20},{129,10},{113,60},{615,5},{612,5}, 	{"gold", 20, {25, 250} } },
+	["508"] = {{708,60},{805,40},{29,60},{39,60},{28,20},{132,10},{615,10},{612,5},{616,5}, 	{"gold", 20, {30, 300} } },
+	["509"] = {{709,60},{806,40},{5,60},{10,60},{32,20},{133,10},{614,5},{616,5},{617,5}, 	{"gold", 20, {35, 350} } },
+	["510"] = {{710,60},{807,40},{6,60},{38,60},{127,10},{134,10},{46,20},{635,5},{636,5}, 	{"gold", 20, {40, 400} } },
+	["511"] = {{713,60},{810,40},{7,60},{40,60},{128,10},{135,10},{47,20},{637,5},{638,5}, 	{"gold", 20, {40, 400} } },
+	["512"] = {{717,60},{811,40},{8,60},{42,60},{126,60},{144,10},{48,20},{639,10},{640,5}, 	{"gold", 20, {45, 450} } },
+	["513"] = {{711,60},{813,40},{9,60},{43,60},{124,60},{146,10},{49,20},{641,10},{642,5}, 	{"gold", 20, {45, 450} } },
 	--66
-	["514"] = {{601,60},{602,60},{603,50},{604,20},{605,40},{606,30},{607,20},{608,10},{609,10}, 	{"gold", 20, {500, 2000} } },
-	["515"] = {{615,60},{612,10},{616,50},{617,20},{613,40},{639,10},{640,10},{641,10},{642,10}, 	{"gold", 20, {500, 2000} } },
+	["514"] = {{614,30},{602,60},{603,50},{604,20},{605,40},{606,30},{607,20},{608,10},{609,10}, 	{"gold", 20, {100, 1000} } },
+	["515"] = {{615,60},{612,10},{616,50},{617,20},{613,40},{639,10},{640,10},{641,10},{642,10}, 	{"gold", 20, {100, 1000} } },
 
 	--wolf 31
-	["516"] = {{701,60},{814,40},{827,40},{18,60},{46,10},{133,10},{134,10},{624,5},{621,5}, 	{"gold", 20, {15, 150} } },
-	["517"] = {{702,60},{816,40},{833,40},{23,60},{115,60},{135,10},{624,10},{621,5},{622,5}, 	{"gold", 20, {20, 200} } },
-	["518"] = {{703,60},{722,60},{834,40},{27,60},{47,10},{50,20},{621,10},{622,5},{627,5}, 	{"gold", 20, {25, 250} } },
-	["519"] = {{715,60},{721,60},{44,60},{22,60},{48,10},{51,20},{623,10},{628,5},{625,5}, 	{"gold", 20, {30, 300} } },
-	["520"] = {{714,60},{718,60},{45,60},{34,60},{52,20},{605,10},{606,10},{629,5},{626,5}, 	{"gold", 20, {50, 500} } },
+	["516"] = {{701,60},{814,40},{827,40},{18,60},{46,10},{133,10},{134,10},{624,5},{621,5}, 	{"gold", 20, {10, 100} } },
+	["517"] = {{702,60},{816,40},{833,40},{23,60},{115,60},{135,10},{624,10},{621,5},{622,5}, 	{"gold", 20, {15, 150} } },
+	["518"] = {{703,60},{722,60},{834,40},{27,60},{47,10},{50,20},{621,10},{622,5},{627,5}, 	{"gold", 20, {20, 200} } },
+	["519"] = {{715,60},{721,60},{44,60},{22,60},{48,10},{51,20},{623,10},{628,5},{625,5}, 	{"gold", 20, {20, 200} } },
+	["520"] = {{714,60},{718,60},{45,60},{34,60},{52,20},{610,10},{611,10},{629,5},{626,5}, 	{"gold", 20, {35, 350} } },
 
-	["521"] = {{620,60},{624,50},{621,40},{622,60},{627,40},{628,60},{625,50},{629,10},{626,10}, {"gold", 20, {500, 2000} } }
+	["521"] = {{620,60},{624,50},{621,40},{622,60},{627,40},{628,60},{625,50},{629,10},{626,10}, {"gold", 20, {100, 1000} } },
+
+	["522"] = {{808,60},{809,50},{825,15},{33,60},{53,40},{54,60},{55,20},{618,10},{619,10}, {"gold", 20, {45, 450} } }
 
 }
 
@@ -688,19 +689,29 @@ function Shop:SelectVO(keys)
 	if DonateShopIsItemBought(keys.PlayerID, keys.num) then
 		for _,sound in pairs(sounds) do
 			if tostring(keys.num) == tostring(sound) then
-				if lastSounds[keys.PlayerID] == nil or lastSounds[keys.PlayerID] + 300 < GameRules:GetGameTime() then 
+				if lastSounds[keys.PlayerID] == nil or lastSounds[keys.PlayerID] + 1 < GameRules:GetGameTime() then 
 					lastSounds[keys.PlayerID] = GameRules:GetGameTime()
 				else
-					EmitSoundOnClient("General.Cancel", player)
-					local timeLeftTime = math.ceil(lastSounds[keys.PlayerID] + 300 - GameRules:GetGameTime())
+					EmitSoundOnEntityForPlayer("General.Cancel", player, keys.PlayerID)
+					local timeLeftTime = math.ceil(lastSounds[keys.PlayerID] + 1 - GameRules:GetGameTime())
 					SendErrorMessage(keys.PlayerID, "Sound will be available through ".. timeLeftTime .." seconds!")
 					return
 				end
 				local chat = LoadKeyValues("scripts/chat_wheel_rewards.txt")
 
 				local sound_name = "item_wheel_"..keys.num
-				DebugPrint(sound_name)
-				EmitGlobalSound(sound_name)
+				for pID=0,DOTA_MAX_TEAM_PLAYERS do
+					if PlayerResource:IsValidPlayerID(pID) then
+						if GameRules.Mute[pID] == nil then
+							DebugPrint(sound_name)
+							local hero = PlayerResource:GetPlayer(pID)
+							EmitSoundOnClient(sound_name, hero)
+							EmitSound(sound_name)
+							
+						end
+					end
+				end
+				
 
 				local chat = ""
 
@@ -760,11 +771,11 @@ function Shop:SelectVO(keys)
 
 		for _,spray in pairs(sprays) do
 			if tostring(keys.num) == tostring(spray) then
-				if lastSpray[keys.PlayerID] == nil or lastSpray[keys.PlayerID] + 60 < GameRules:GetGameTime() then 
+				if lastSpray[keys.PlayerID] == nil or lastSpray[keys.PlayerID] + 15 < GameRules:GetGameTime() then 
 					lastSpray[keys.PlayerID] = GameRules:GetGameTime()
 				else
-					EmitSoundOnClient("General.Cancel", player)
-					local timeLeftTime = math.ceil(lastSpray[keys.PlayerID] + 60 - GameRules:GetGameTime())
+					EmitSoundOnEntityForPlayer("General.Cancel", player, keys.PlayerID)
+					local timeLeftTime = math.ceil(lastSpray[keys.PlayerID] + 15 - GameRules:GetGameTime())
 					SendErrorMessage(keys.PlayerID, "Spray will be available through ".. timeLeftTime .." seconds!")
 					return
 				end
@@ -778,6 +789,6 @@ function Shop:SelectVO(keys)
 			end
 		end
 	else
-		EmitSoundOnClient("General.Cancel", player)
+		EmitSoundOnEntityForPlayer("General.Cancel", player, keys.PlayerID)
 	end
 end

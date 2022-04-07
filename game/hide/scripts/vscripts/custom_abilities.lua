@@ -544,6 +544,7 @@ function SpawnUnitOnChannelSucceeded(event)
 
 			if unit_name == "attacker_10" then
 				unit:AddItemByName("item_ultimate_scepter_2")
+				unit:AddItemByName("item_aghanims_shard")
 				--unit:AddItemByName("item_ultimate_scepter")
 			end
 			if string.match(unit_name,"%a+") == "worker" then
@@ -965,7 +966,16 @@ function BuyRevealArea(event)
 	end
 	PlayerResource:ModifyLumber(hero,-amount)
 
-	local units = Entities:FindAllByClassname("npc_dota_creature")
+	for pID = 0, DOTA_MAX_TEAM_PLAYERS do
+		if PlayerResource:IsValidPlayerID(pID) then
+			local hero = PlayerResource:GetSelectedHeroEntity(pID)
+			if hero ~= nil then
+				hero:AddNewModifier(hero, hero, "modifier_all_vision", {duration=10})
+			end
+		end
+	end
+
+	--[[ local units = Entities:FindAllByClassname("npc_dota_creature")
 	for _,unit in pairs(units) do
 		unit:AddNewModifier(unit, unit, "modifier_all_vision", {duration=10})
 		local unit_name = unit:GetUnitName();
@@ -973,6 +983,7 @@ function BuyRevealArea(event)
 			unit:ForceKill(false)
 		end
 	end
+	--]]
 end
 
 function StealGold(event)

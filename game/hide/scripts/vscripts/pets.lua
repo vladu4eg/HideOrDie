@@ -64,6 +64,9 @@ function Pets:Init()
 function Pets:OnThink()
 	for _, pet in pairs( Pets.playerPets ) do
 		local owner = pet:GetOwner()
+		if not owner then
+			return
+		end
 		local owner_pos = owner:GetAbsOrigin()
 		local pet_pos = pet:GetAbsOrigin()
 		local distance = ( owner_pos - pet_pos ):Length2D()
@@ -346,7 +349,16 @@ function Pets.CreatePet( keys, num )
 		else
 			model = "models/items/courier/hand_courier/hand_courier_dire_lv7.vmdl" -- hand_courier lvl 7
 		end
-	
+	elseif num == "53" then
+		model = "models/items/courier/boooofus_courier/boooofus_courier.vmdl" -- 
+	elseif num == "54" then
+		model = "models/courier/aghanim_courier/aghanim_courier.vmdl" -- 
+	elseif num == "55" then
+		if roll_chance == 1 then 
+			model = "models/courier/card_courier/imp/card_courier_imp_prop.vmdl" -- 
+		else
+			model = "models/courier/card_courier/imp/card_courier_imp_prop_red.vmdl" -- 
+		end
 	
 	end 
 	

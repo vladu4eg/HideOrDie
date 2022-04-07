@@ -3291,23 +3291,30 @@
 	    //----------------------------- 
 	    "Level"                     "1"
 	    "BuildTime"                 "6"
-	    "Upgrades"
-	    {
-	        "Count"     "1"
-	        "1"{
-				"unit_name"			"monkey_king_2"
-				"gold_cost"			"500"
-				"lumber_cost"		"800"
-			}
-	    }
+	  //  "Upgrades"
+	 //   {
+	 //       "Count"     "1"
+	 //       "1"{
+	//			"unit_name"			"monkey_king_2"
+	//			"gold_cost"			"500"
+	//			"lumber_cost"		"800"
+	//		}
+	//    }
 		
 		// Abilities
 		//----------------------------------------------------------------
-		"AbilityLayout"				"4"
+		"AbilityLayout"				"11"
 		"Ability1" 					"train_attacker_1"
 		"Ability2" 					"train_attacker_2"
 		"Ability3" 					"train_attacker_3"
 		"Ability4" 					"train_attacker_4"
+		"Ability5"					"train_attacker_5"
+		"Ability6"					"train_attacker_6"
+		"Ability7"					"train_attacker_10"
+		"Ability8"					"train_attacker_7"
+		"Ability9"					"train_attacker_8"
+		"Ability10"					"train_attacker_9"
+		"Ability11"					"train_attacker_teleport_1"
 		
 	    
 	    // General
@@ -3385,7 +3392,7 @@
 		"Ability4" 					"train_attacker_4"
 		"Ability5"					"train_attacker_5"
 		"Ability6"					"train_attacker_6"
-		//"Ability7"					"train_attacker_10"
+		"Ability7"					"train_attacker_10"
 		"Ability8"					"train_attacker_7"
 		"Ability9"					"train_attacker_8"
 		"Ability10"					"train_attacker_9"
@@ -3932,7 +3939,7 @@
 		"AbilityLayout"				"4"
 		"Ability1"					"gain_gold_team"
 		"Ability2"					"fountain_ability"
-		"Ability3"					""
+		"Ability3"					"buy_reveal_area_2"
 		"Ability4"					""
 		"Ability5"					""
 		"Ability6"					""
@@ -5529,11 +5536,11 @@
 	{
 		// General
 		//----------------------------------------------------------------
-		"BaseClass"                             "npc_dota_hero_snapfire"
-		"Model"                                 "models/heroes/pudge/pudge.vmdl"
+		"BaseClass"                             "npc_dota_hero_pudge"
+		"Model"                                 "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
 		"precache"
 		{
-			"model"     "models/heroes/pudge/pudge.vmdl"
+			"model"     "models/creeps/lane_creeps/creep_good_siege/creep_good_siege.vmdl"
 		}
 		"ModelScale"                            "0.6"
 		"Level"                                 "2"
@@ -5548,37 +5555,38 @@
 		// Attack
 		//----------------------------------------------------------------
 		
-		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"1"		// Damage range min.
 		"AttackDamageMax"			"500"		// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.50"			// Speed of attack.
-		"AttackAnimationPoint"		"0.0"		// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"150"		// Range within a target can be acquired.
-		"AttackRange"				"150"		// Range within a target can be attacked.
+		"AttackAnimationPoint"		"0.7"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
+		"AttackRange"				"690"		// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_siege_good.vpcf" // Particle system model for projectile.
+		"ProjectileSpeed"			"1100"		// Speed of projectile.
 		//"ProjectileModel"			"particles/units/heroes/hero_sniper/sniper_base_attack.vpcf"		// Particle system model for projectile.
-		"ProjectileSpeed"			"1250"		// Speed of projectile.
 	    "SoundSet"                  "Hero_BountyHunter"
 	    "GameSoundsFile"            "soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
 
 		"AbilityLayout"				"17"
-		"Ability1" 					""
-		"Ability2" 					"snapfire_gobble_up"
-		"Ability3" 					"snapfire_spit_creep"
-		"Ability4" 					"blink_datadriven"
-		"Ability5"					"commit_suicide"
+		"Ability1" 					"pudge_dismember"
+		"Ability2" 					"pudge_eject"
+		"Ability3" 					"blink_datadriven"
+		"Ability4" 					"commit_suicide"
+		"Ability5"					""
 		"Ability6" 					""
 		"Ability7"					""
-		"Ability8"					""
-		"Ability9"					""
-		"Ability10"				"special_bonus_hp_200"
-		"Ability11"				"special_bonus_unique_snapfire_2"
-		"Ability12"				"special_bonus_unique_snapfire_5"
-		"Ability13"				"special_bonus_unique_snapfire_7"
-		"Ability14"				"special_bonus_unique_snapfire_6"
-		"Ability15"				"special_bonus_unique_snapfire_4"
-		"Ability16"				"special_bonus_unique_snapfire_8"
-		"Ability17"				"special_bonus_unique_snapfire_1"
+		"Ability8"					"special_bonus_unique_pudge_3"
+		"Ability9"					"special_bonus_unique_pudge_6"
+		"Ability10"				""
+		"Ability11"				""
+		"Ability12"				""
+		"Ability13"				""
+		"Ability14"				""
+		"Ability15"				""
+		"Ability16"				""
+		"Ability17"				""
 		
 	
 
@@ -5609,7 +5617,7 @@
 		//----------------------------------------------------------------
 		"StatusHealth"                          "300"
 		"StatusHealthRegen"                     "5"
-		"StatusMana"                            "0"
+		"StatusMana"                            "5000"
 		"StatusManaRegen"                       "0"
 
 		// Vision
@@ -5630,13 +5638,13 @@
 				"DisableClumpingBehavior"       "1"
 				"AttachWearables"
 				{
-		"Wearable1" {"ItemDef" "6007"}//head("Murder Mask")
-		"Wearable2" {"ItemDef" "6115"}//back("Pauldron Perch")
-		"Wearable3" {"ItemDef" "6116"}//("Talon Edge")
-		"Wearable4" {"ItemDef" "6202"}//arms("Gauntlet of Dark Feathers")
-		"Wearable5" {"ItemDef" "6203"}//shoulder("Armor of the Black Bird")
-		"Wearable6" {"ItemDef" "6204"}//belt("Dendi Doll")
-		"Wearable7" {"ItemDef" "6212"}//offhand_weapon("The Crow Eater")
+		"Wearable1" {"ItemDef" "7167"}//back("Spine of the Basilisk")
+		"Wearable2" {"ItemDef" "7166"}//arms("Armlet of the Basilisk")
+		"Wearable3" {"ItemDef" "7169"}//belt("Belt of the Basilisk")
+		"Wearable4" {"ItemDef" "7171"}//head("Helm of Tarrasque")
+		"Wearable5" {"ItemDef" "7172"}//offhand_weapon("The Tail Bash")
+		"Wearable6" {"ItemDef" "7173"}//shoulder("Pauldrones of the Basilisk")
+		"Wearable7" {"ItemDef" "7174"}//("Hook of the Basilisk")
 				}
 		}
 	}

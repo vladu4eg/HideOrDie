@@ -47,6 +47,7 @@ require('drop')
 require('wearables')
 require('SelectPets')
 require('pets')
+require('shop')
 require('flag')
 require('filter')
 require('speech_bubble/speech_bubble_class')
@@ -73,25 +74,28 @@ function trollnelves2:GameSetup()
                 PlayerResource:SetSelectedHero(pID, ELF_HERO[1])
                 GameRules.Score[pID] = 0
                 GameRules.PlayersFPS[pID] = false
-                GameRules.PoolTable = {}
-                GameRules.PoolTable[0] = {}
-                GameRules.PoolTable[1] = {}
-                GameRules.PoolTable[2] = {}
-                GameRules.PoolTable[3] = {}
-                GameRules.PoolTable[4] = {}
-                GameRules.PoolTable[5] = {}
-                GameRules.PoolTable[0][0] = {}
-                GameRules.PoolTable[1][0] = {}
-                GameRules.PoolTable[2][0] = {}
-                GameRules.PoolTable[3][0] = {}
-                GameRules.PoolTable[4][0] = {}
-                GameRules.PoolTable[4][0][0] = {}
-                GameRules.PoolTable[5][0] = {}
-                CustomNetTables:SetTableValue("Shop", tostring(pID), GameRules.PoolTable)
                 local steam = tostring(PlayerResource:GetSteamID(pID))
-                Stats.RequestBonusTroll(pID, steam, callback)
+                CustomNetTables:SetTableValue("Shop", tostring(pID), GameRules.PoolTable)
+                Shop.RequestBonusTroll(pID, steam, callback)
+                Shop.RequestVip(pID, steam, callback)
+                Shop.RequestSkin(pID, steam, callback)
+                Shop.RequestPets(pID, steam, callback)
+                Shop.RequestBonus(pID, steam, callback)
+                Shop.RequestVipDefaults(pID, steam, callback)
+                Shop.RequestSkinDefaults(pID, steam, callback)
+                Shop.RequestPetsDefaults(pID, steam, callback)
+                Stats.RequestData(pID)
+                Shop.RequestCoint(pID, steam, callback)
+                Shop.RequestChests(pID, steam, callback)
+                Shop.RequestSounds(pID, steam, callback)
             end
         end
+        Stats.RequestDataTop10("1", callback)
+        Stats.RequestDataTop10("2", callback)
+        Stats.RequestDataTop10("3", callback)
+        Stats.RequestDataTop10("4", callback)
+        Donate:CreateList()
+        DebugPrint("count player " .. GameRules.PlayersCount)
         Timers:CreateTimer(TEAM_CHOICE_TIME, function()
             GameRules.PlayersCount = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS) + PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
             GameRules:SendCustomMessage("<font color='#00FFFF '> Number of players: " .. GameRules.PlayersCount .. "</font>" ,  0, 0)

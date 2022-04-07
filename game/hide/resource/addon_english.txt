@@ -966,7 +966,14 @@
 		"DOTA_Tooltip_ability_train_attacker_9_gold_cost"                                   "GOLD COST: "
 		"DOTA_Tooltip_ability_train_attacker_9_lumber_cost"                                 "LUMBER COST: "
 		"DOTA_Tooltip_ability_train_attacker_9_food_cost"                                   "FOOD COST: "
-		"DOTA_Tooltip_ability_train_attacker_9_unit_count"                                  "UNIT COUNT: "			
+		"DOTA_Tooltip_ability_train_attacker_9_unit_count"                                  "UNIT COUNT: "	
+
+		"DOTA_Tooltip_ability_train_attacker_10"                                             "Train Warrior 10"
+		"DOTA_Tooltip_ability_train_attacker_10_Description"                                 "SAVER"
+		"DOTA_Tooltip_ability_train_attacker_10_gold_cost"                                   "GOLD COST: "
+		"DOTA_Tooltip_ability_train_attacker_10_lumber_cost"                                 "LUMBER COST: "
+		"DOTA_Tooltip_ability_train_attacker_10_food_cost"                                   "FOOD COST: "
+		"DOTA_Tooltip_ability_train_attacker_10_unit_count"                                  "UNIT COUNT: "		
 		
 		"DOTA_Tooltip_ability_train_attacker_teleport_1"                                             "Teleport"
 		"DOTA_Tooltip_ability_train_attacker_teleport_1_Description"                                 "Create a second teleport on another base and you can quickly move between them.<br>If you do not have a second teleporter, then the teleporter will send you to the allied teleporter. "
@@ -1994,19 +2001,19 @@
 		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven_Description" "Infernal Boots + Sage's Mask + Mana Cloak = Arcane Boots"
 
 		"DOTA_Tooltip_ability_item_arcane_boots_datadriven" "Arcane Boots"
-		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description" "Movement speed +85. Mana +55. Attack +10. Intelligence +40."
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description" "Movement speed +85. Mana +55. Attack +100. Intelligence +100."
 
 		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven" "RECIPE: Phase Boots"
 		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven_Description" "Infernal Boots + Drums of Speed ​​= Phase Boots"
 		
 		"DOTA_Tooltip_ability_item_phase_boots_datadriven" "Phase Boots"
-		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description" "Running speed +85. Agility +40. Attack +10."
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description" "Running speed +85. Agility +100. Attack +10."
 
 		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven" 		"RECIPE: Power Treads"
 		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven_Description" 	"Infernal Boots + Shield of Fury + Anti Magic Mask = Power Treads"
 
 		"DOTA_Tooltip_ability_item_power_treads_datadriven" "Power Treads"
-		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description" "Movement speed +75. Attack +10. Strength +50. Defense +20. Magic resistance + 10%."
+		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description" "Movement speed +75. Attack +100. Strength +100. Defense +20. Magic resistance + 10%."
 		
 		"DOTA_Tooltip_Ability_buy_item_recipe2_power_treads_datadriven" 		"RECIPE: Power Treads"
 		"DOTA_Tooltip_Ability_buy_item_recipe2_power_treads_datadriven_Description" 	"Infernal Boots + Shield of Fury + Anti Magic Mask = Power Treads"				

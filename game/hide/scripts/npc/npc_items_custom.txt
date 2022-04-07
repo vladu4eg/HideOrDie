@@ -6326,12 +6326,12 @@
 			"06"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_damage"							"10"
+			"bonus_damage"							"100"
 		}
 			"05"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_stats"							"40"
+			"bonus_stats"							"100"
 		}
 		}
 	
@@ -6466,12 +6466,12 @@
 			"06"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_damage"							"10"
+			"bonus_damage"							"100"
 		}
 			"05"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_stats"							"40"
+			"bonus_stats"							"100"
 		}	
 			
 		}
@@ -6721,12 +6721,12 @@
 			"06"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_damage"							"10"
+			"bonus_damage"							"100"
 		}
 			"05"
 		{
 			"var_type"								"FIELD_INTEGER"
-			"bonus_stats"							"50"
+			"bonus_stats"							"100"
 		}	
 		    "07"
 			{

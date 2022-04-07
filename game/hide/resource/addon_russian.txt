@@ -1589,19 +1589,19 @@
 		"DOTA_Tooltip_ability_item_recipe2_arcane_boots_datadriven_Description"                              	 "Infernal Boots + Sage's Mask + Mana Cloak = Arcane Boots"
 
 		"DOTA_Tooltip_ability_item_arcane_boots_datadriven"                                          	 "Arcane Boots"
-		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description"                              	 "Скорость бега + 85. Мана +55. Атака +10. Интеллект +40."
+		"DOTA_Tooltip_ability_item_arcane_boots_datadriven_Description"                              	 "Скорость бега + 85. Мана +55. Атака +100. Интеллект +100."
 
 		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven"                                          	 "РЕЦЕПТ: Phase Boots"
 		"DOTA_Tooltip_ability_item_recipe2_phase_boots_datadriven_Description"                              	 "Infernal Boots + Drums of Speed = Phase Boots"
 		
 		"DOTA_Tooltip_ability_item_phase_boots_datadriven"                                          	 "Phase Boots"
-		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description"                              	 "Скорость бега +85. Ловкость +40. Атака +10."
+		"DOTA_Tooltip_ability_item_phase_boots_datadriven_Description"                              	 "Скорость бега +85. Ловкость +100. Атака +100."
 
 		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven"                                          	 "РЕЦЕПТ: Power Treads"
 		"DOTA_Tooltip_ability_item_recipe2_power_treads_datadriven_Description"                              	 "Infernal Boots + Shield of Fury + Anti Magic Mask = Power Treads"
 		
 		"DOTA_Tooltip_ability_item_power_treads_datadriven"                                          	 "Power Treads"
-		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description"                              	 "Скорость бега + 75. Атака +10. Силы +50. Защита +20. Сопротивление магии +10%"
+		"DOTA_Tooltip_ability_item_power_treads_datadriven_Description"                              	 "Скорость бега + 75. Атака +100. Силы +100. Защита +20. Сопротивление магии +10%"
 		
 				"DOTA_Tooltip_ability_penitence_datadriven"										  "Forest curse"
 		"DOTA_Tooltip_ability_penitence_datadriven_Description"				 			  "Снижает скорость передвижения на 55.<br>Увеличает получаемый урон на 10%. "

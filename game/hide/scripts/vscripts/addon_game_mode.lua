@@ -301,6 +301,21 @@ function Activate()
 	GameRules.KickList = {}
 	GameRules.TrollCount = 0
 
+	GameRules.PoolTable = {}
+    GameRules.PoolTable[0] = {}
+    GameRules.PoolTable[1] = {}
+    GameRules.PoolTable[2] = {}
+    GameRules.PoolTable[3] = {}
+    GameRules.PoolTable[4] = {}
+    GameRules.PoolTable[5] = {}
+    GameRules.PoolTable[0][0] = {}
+    GameRules.PoolTable[1][0] = {}
+    GameRules.PoolTable[2][0] = {}
+    GameRules.PoolTable[3][0] = {}
+    GameRules.PoolTable[4][0] = {}
+    GameRules.PoolTable[4][0][0] = {}
+    GameRules.PoolTable[5][0] = {}
+
 	GameRules.isTesting = false
 	GameRules.server =   "https://tve3.us/hide/"  -- "https://localhost:5001/test/" --
 

@@ -39,8 +39,10 @@ function wearables:SelectPart(info)
 				npc:SetCustomHealthLabel("#dev",  200, 0, 250)
 			elseif info.part == "37" then
 				npc:SetCustomHealthLabel("#top1winter",  95, 89, 255)
-			elseif info.part == "36" then
-				npc:SetCustomHealthLabel("#top2-3winter",  95, 89, 255)
+			elseif info.part == "49" then
+				npc:SetCustomHealthLabel("#top2winter",  95, 89, 255)
+			elseif info.part == "50" then
+				npc:SetCustomHealthLabel("#top3winter",  95, 89, 255)
 			elseif info.part == "38" then
 				npc:SetCustomHealthLabel("#top1spring",  24, 181, 29)
 			elseif info.part == "39" then
@@ -55,7 +57,20 @@ function wearables:SelectPart(info)
 				npc:SetCustomHealthLabel("#top3summer",  255, 229, 31)
 			elseif info.part == "45" then
 				npc:SetCustomHealthLabel("#top1-3patreon",  36, 233, 255)
+			elseif info.part == "52" then
+				npc:SetCustomHealthLabel("#top2event",  70, 130, 180)
+			elseif info.part == "53" then
+				npc:SetCustomHealthLabel("#top1event",  70, 130, 180)
+			elseif info.part == "54" then
+				npc:SetCustomHealthLabel("#top3event",  70, 130, 180)
+			elseif info.part == "55" then
+				npc:SetCustomHealthLabel("#top1battle",  205, 92, 92)
+			elseif info.part == "56" then
+				npc:SetCustomHealthLabel("#top2battle",  205, 92, 92)
+			elseif info.part == "57" then
+				npc:SetCustomHealthLabel("#top3battle",  205, 92, 92)
 			end
+ 
 		end
 		else
         PlayerResource:GetSelectedHeroEntity(info.PlayerID):RemoveModifierByName("part_mod")
@@ -135,7 +150,7 @@ function wearables:SetSkin()
 		if GameRules.SkinDefaults[i] ~= nil and GameRules.SkinDefaults[i] ~= "" and PlayerResource:GetConnectionState(i) == 2 then
 			local npc = PlayerResource:GetSelectedHeroEntity(i)
 			if not EVENT_START then
-				SetModelVip(npc, GameRules.SkinDefaults[i])
+				SetModelVip(npc, tostring(GameRules.SkinDefaults[i]))
 			end
 		end
 	end

@@ -9974,7 +9974,7 @@
 	"train_attacker_10"
 	{
 		"BaseClass"					"ability_datadriven"
-		"AbilityTextureName"		"attacker_10"
+		"AbilityTextureName"		"train_attacker_10"
 		"MaxLevel"					"1"
 		"UnitName"					"attacker_10"
 		
@@ -14238,14 +14238,42 @@
     }
 
 	//=================================================================================================================
+	// Pudge: Eject
+	//=================================================================================================================
+	"pudge_eject"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"						"1"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_Enchantress.EnchantCreep"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+	}
+	
+	//=================================================================================================================
 	// Ability: Pudge Dismember
 	//=================================================================================================================
 	"pudge_dismember"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"				"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"FightRecapLevel"				"2"
+
+		"HasShardUpgrade"			"1"
+		//"AbilityDraftPreAbility"		"pudge_eject"
 		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -14258,24 +14286,35 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityChannelTime"			"3.0"
 		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
 		
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dismember_damage"		"60"
+				"dismember_damage"		"120"
+				"LinkedSpecialBonus"		"special_bonus_unique_pudge_3"
+				"LinkedSpecialBonusField"		"value"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"strength_damage"		"0.9"
+				"strength_damage"		"0.3"
+				"LinkedSpecialBonus"		"special_bonus_unique_pudge_3"
+				"LinkedSpecialBonusField"		"value"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ticks"		"1"
+				"ticks"		"6"
+				"LinkedSpecialBonus"			"special_bonus_unique_pudge_6"
+				"LinkedSpecialBonusField"		"value2"
 			}
 			"04"
 			{
@@ -14291,6 +14330,35 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"animation_rate"		"1.5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"abilitychanneltime"		""
+				"LinkedSpecialBonus"			"special_bonus_unique_pudge_6"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"creep_dismember_duration_tooltip"		"6.0"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"scepter_regen_pct"			"5"
+				"RequiresShard"			"1"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"order_lock_duration"		"3"
+				"RequiresShard"			"1"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"shard_cast_range"		"300"
+				"RequiresShard"			"1"
 			}
 		}
 	}

@@ -155,7 +155,7 @@ function trollnelves2:OnConnectFull(keys)
     local userID = keys.userid
     GameRules.userIds = GameRules.userIds or {}
     -- The Player ID of the joining player
-    local playerID = player:GetPlayerID()
+   -- local playerID = player:GetPlayerID()
     GameRules.userIds[userID] = playerID
     trollnelves2:_Capturetrollnelves2()
     
